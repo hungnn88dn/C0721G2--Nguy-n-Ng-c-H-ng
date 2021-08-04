@@ -1,50 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<style>
-    .hang-chan td:nth-child(even) {
-        background-color: #ccc;
-    }
-    .hang-chan td:nth-child(odd) {
-        background-color: #cc1d12;
-    }
-    .hang-le td:nth-child(even) {
-        background-color: #cc1d12;
-    }
-    .hang-le td:nth-child(odd) {
-        background-color: #ccc;
-    }
-</style>
+<html>
 <body>
-<table border="1px solid black">
-    <tr class="hang-chan">
-        <td>&nbsp;</td>
-        <td> </td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr class="hang-le">
-        <td>&nbsp;</td>
-        <td> </td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr class="hang-chan">
-        <td>&nbsp;</td>
-        <td> </td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr class="hang-le">
-        <td>&nbsp;</td>
-        <td> </td>
-        <td>&nbsp;</td>
-    </tr>
-    <tr class="hang-chan">
-        <td>&nbsp;</td>
-        <td> </td>
-        <td>&nbsp;</td>
-    </tr>
-</table>
+<button type="button" onclick="abc()">Click here</button>
+<p id="demo"></p>
+<script>
+    function abc(){
+        var fullName = prompt("Nhập họ tên của bạn:");
+        if(fullName != null){
+            document.getElementById("demo").innerHTML = "Họ tên: " + fullName;
+        }else{
+            document.getElementById("demo").innerHTML = "Bạn đã bấm nút hủy";
+        }
+    }
+</script>
 </body>
 </html>
