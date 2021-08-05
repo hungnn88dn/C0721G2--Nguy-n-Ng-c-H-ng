@@ -1,82 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Lich</title>
-</head>
-<body>
- <h1 > Tháng 10- October</h1>
-<table border="1" cellpadding="10">
-    <tr  bgcolor="yellow">
-    </style>
-        <th bgcolor="red">C.Nhật</th>
-        <th>T.Hai</th>
-        <th>T.Ba</th>
-        <th>T.Tưt</th>
-        <th>T.Năm</th>
-        <th>T.Sáu</th>
-        <th bgcolor="#6495ed">T.Bảy</th>
-    </tr>
-     <tr>
-         <td style="color:red">Sun</td>
-         <td>Mon</td>
-         <td>Tue</td>
-         <td>Web</td>
-         <td>Thu</td>
-         <td>Fri</td>
-         <td style="color:#6495ed">Sat</td>
-     </tr>
-
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td> 1<sub>13</sub></td>
-        <td>2<sub>14</sub></td>
-        <td style="color:#6495ed">3<sub>15</sub></td>
-
-    </tr>
-    <tr>
-    <td style="color:red">4<sub>16</sub></td>
-    <td>5<sub>17</sub></td>
-    <td>6<sub>18</sub></td>
-    <td>7<sub>19</sub></td>
-    <td>8<sub>20</sub></td>
-    <td>9<sub>21</sub></td>
-    <td style="color:#6495ed">10<sub>22</sub></td>
-
-</tr>
-
-    <tr>
-        <td style="color:red">11<sub>23</sub></td>
-        <td>12<sub>24</sub></td>
-        <td>13<sub>25</sub></td>
-        <td>14<sub>26</sub></td>
-        <td>15<sub>27</sub></td>
-        <td>16<sub>28</sub></td>
-        <td style="color:#6495ed">17<sub>29</sub></td>
-
-    </tr>
-
-    <tr>
-        <td style="color:red">18<sub>1.9</sub></td>
-        <td>19<sub>2</sub></td>
-        <td>20<sub>3</sub></td>
-        <td>21<sub>4</sub></td>
-        <td>22<sub>5</sub></td>
-        <td>23<sub>6</sub></td>
-        <td style="color:#6495ed">24<sub>7</sub></td>
-    </tr>
-    <tr>
-        <td style="color:red">25<sub>8</sub></td>
-        <td>26<sub>9</sub></td>
-        <td>27<sub>10</sub></td>
-        <td>28<sub>11</sub></td>
-        <td>29<sub>12</sub></td>
-        <td>30<sub>13</sub></td>
-        <td style="color:#6495ed">31<sub>14</sub></td>
-    </tr>
-</table>
-</body>
-</html>
+<form name="calculator">
+    <table>
+        <tr>
+            <td colspan="4">
+                <input type="text" name="display" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" name="one" value="1" onclick="calculator.display.value += 1"></td>
+            <td><input type="button" name="two" value="2" onclick="calculator.display.value += 2"></td>
+            <td><input type="button" name="three" value="3" onclick="calculator.display.value += 3"></td>
+            <td><input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="four" value="4" onclick="calculator.display.value += 4"></td>
+            <td><input type="button" name="five" value="5" onclick="calculator.display.value += 5"></td>
+            <td><input type="button" name="six" value="6" onclick="calculator.display.value += 6"></td>
+            <td><input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" name="seven" value="7" onclick="calculator.display.value += 7"></td>
+            <td><input type="button" name="eight" value="8" onclick="calculator.display.value += 8"></td>
+            <td><input type="button" name="nine" value="9" onclick="calculator.display.value += 9"></td>
+            <td><input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+        </tr>
+        <tr>
+            <td><input type="button" class="operator" id="clear" name="clear" value="C" onclick="calculator.display.value = ''"></td>
+            <td><input type="button" class="operator" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+            <td><input type="button" class="operator" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+            <td><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+        </tr>
+    </table>
+</form>

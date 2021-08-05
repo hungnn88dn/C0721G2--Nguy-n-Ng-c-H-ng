@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Freetuts.net</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<table>
+
+    <tr>
+
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>From Currency</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td id="amount"><input type="text" value="1"></td>
+        <td>
+            <select id="fromCurrency">
+                <option>VietNam</option>
+                <option>USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="toCurrency">
+                <option>USD</option>
+                <option>VietNam</option>
+            </select>
+        </td>
+        <td><button onclick="convert()">Convert</button></td>
+    </tr>
+    <tr>
+        <td id="result">Result</td>
+    </tr>
+</table>
+<script>
+    function convert() {
+        let amount = document.getElementById("amount").value;
+        let fromCurrency = document.getElementById("fromCurrency").value;
+        let toCurrency = document.getElementById("toCurrency").value;
+        if (isNaN(amount) || amount <=0) {
+            alert("Số tiền bạn nhập không phải là số hoặc là số âm")
+        } else {
+            if (fromCurrency == "USD" && toCurrency == "VND") {
+                alert(amount * 23000);
+            } else if (fromCurrency == "VND" && toCurrency == "USD") {
+                alert(amount / 23000)
+            } else {
+                alert("Loại tiền bạn lựa chọn không đúng")
+            }
+        }
+    }
+</script>
+
+<script>
+
+
+
+
+</script>
+</body>
+</html>
