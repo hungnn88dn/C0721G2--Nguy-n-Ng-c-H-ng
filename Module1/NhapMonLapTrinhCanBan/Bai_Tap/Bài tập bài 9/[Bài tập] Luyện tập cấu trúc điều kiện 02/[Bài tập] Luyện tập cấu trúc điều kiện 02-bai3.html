@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số đo cạnh a <input id="number"  type="text"> <button onclick="change()" >Làm phép</button>
+<p id="result"></p>
+<script>
+
+    function change() {
+        let a = document.getElementById("number").value;
+        a = parseInt(a);
+       let s= a*a
+        document.getElementById("result").innerText = s + " " + "m2"
+    }
+
+</script>
+</body>
+</html>

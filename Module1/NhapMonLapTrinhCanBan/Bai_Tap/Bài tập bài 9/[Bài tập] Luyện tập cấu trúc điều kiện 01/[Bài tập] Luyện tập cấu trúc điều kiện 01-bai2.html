@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số : <input id="year" type="text">
+<button onclick="result()"> Kết quả</button>
+
+<script>
+
+    function result() {
+        let a = document.getElementById("year").value;
+        a = parseInt(a);
+
+        if (a > 0) {
+            alert(a + " " + "lớn hơn 0")
+        } else if (a == 0 ) {
+            alert(a + " " + "bằng 0")
+        }
+        else {
+            alert(a + " " + "nhỏ hơn 0")
+        }
+    }
+</script>
+</body>
+</html>

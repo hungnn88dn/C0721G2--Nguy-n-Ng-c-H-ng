@@ -5,59 +5,39 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<h2 > DO YOU LOVVE ME?</h2>
+<button id="hung1" onclick="hungnn1()">Yes</button>
 <table>
-
-    <tr>
-
-        <th>Amount</th>
-        <th>From Currency</th>
-        <th>From Currency</th>
-        <th></th>
-    </tr>
-    <tr>
-        <td id="amount"><input type="text" value="1"></td>
-        <td>
-            <select id="fromCurrency">
-                <option>VietNam</option>
-                <option>USD</option>
-            </select>
-        </td>
-        <td>
-            <select id="toCurrency">
-                <option>USD</option>
-                <option>VietNam</option>
-            </select>
-        </td>
-        <td><button onclick="convert()">Convert</button></td>
-    </tr>
-    <tr>
-        <td id="result">Result</td>
-    </tr>
+<button id="hung2" onmouseover="hungnn2()">No</button>
 </table>
 <script>
-    function convert() {
-        let amount = document.getElementById("amount").value;
-        let fromCurrency = document.getElementById("fromCurrency").value;
-        let toCurrency = document.getElementById("toCurrency").value;
-        if (isNaN(amount) || amount <=0) {
-            alert("Số tiền bạn nhập không phải là số hoặc là số âm")
-        } else {
-            if (fromCurrency == "USD" && toCurrency == "VND") {
-                alert(amount * 23000);
-            } else if (fromCurrency == "VND" && toCurrency == "USD") {
-                alert(amount / 23000)
-            } else {
-                alert("Loại tiền bạn lựa chọn không đúng")
-            }
-        }
+    function hungnn1() {
+        alert("Biết ngay mà")
     }
-</script>
 
-<script>
+    var imgObj = null;
+
+    function init(){
+        imgObj = document.getElementById("hung2");
+        imgObj.style.position= 'relative';
+        imgObj.style.left = '0px';
+    }
+
+    function hungnn2(){
+        var a = Math.floor(Math.random() *100);
+        a=parseInt(a)
+        imgObj.style.left = parseInt(imgObj.style.left) + a + 'px';
+    }
+
+    window.onload =init;
 
 
 
 
+    // var width = window.innerWidth
+    // var height = window.innerHeight
+    // var x = document.getElementById("hung2");
+    // x.innerHTML = "Chiều rộng trình duyệt: " + width + ", Chiều cao của trình duyệt: " + height + ".";
 </script>
 </body>
 </html>

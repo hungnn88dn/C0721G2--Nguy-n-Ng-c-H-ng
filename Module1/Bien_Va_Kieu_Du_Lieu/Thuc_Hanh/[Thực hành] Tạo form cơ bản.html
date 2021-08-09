@@ -1,118 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Bang nang cao</title>
-    <style>
-        .a td:nth-child(odd){background-color: black}
-        .a td:nth-child(even){background-color: white}
-        .b td:nth-child(even){background-color: black}
-        .b td:nth-child(odd){background-color: white}
-    </style>
-</head>
 <body>
-<table style="border-collapse: collapse; width:500px;height:500px;background-color: orange">
-    <tr>
-        <th></th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th style="width: 15px"></th>
-    </tr>
-    <tr class="a">
-        <th>A</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="b">
-        <th>B</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="a">
-        <th>C</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="b">
-        <th>D</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="a">
-        <th>E</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="b">
-        <th>F</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="a">
-        <th>G</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr style="height:15px">
-        <th></th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-    </tr>
-</table>
+<input id="hung1" onclick="hungnn1()" type="checkbox" value="Good"> Good
+<input id="hung2" onclick="hungnn2()" type="checkbox" value="Cheap"> Cheap
+<input id="hung3" onclick="hungnn3()" type="checkbox" value="Fast"> Fast
+<script>
+    // let hungn1=document.getElementById("hung1").checked=true
+    // let hungn10=document.getElementById("hung1").uncheck=false
+    // let hungn2=document.getElementById("hung2").checked=true
+    // let hungn20=document.getElementById("hung2").unchecked=fasle
+    // let hungn3=document.getElementById("hung3").checked=true
+    // let hungn30=document.getElementById("hung3").unchecked=fasle
+// function hungnn1(){
+//     if (document.getElementById("hung1").checked=true) {
+//         document.getElementById("hung2").checked=true
+//     } else {
+//         document.getElementById("hung3").checked=fale
+//     }
+// }
+// function hungnn2(){
+//     if (document.getElementById("hung2").checked=true) {
+//         document.getElementById("hung3").checked=true
+//     } else {
+//         document.getElementById("hung1").checked=fale
+//     }
+// }
+// function hungnn3(){
+//     if (document.getElementById("hung3").checked=true) {
+//         document.getElementById("hung1").checked=true
+//     } else {
+//         document.getElementById("hung2").checked=fale}
+// }
+    function hungnn1(){
+        document.getElementById("hung1").checked=true
+    document.getElementById("hung2").checked=true
+    document.getElementById("hung3").checked=fale }
 
+    function hungnn2(){
+       document.getElementById("hung2").checked=true
+            document.getElementById("hung3").checked=true
+            document.getElementById("hung1").checked=fale
+    }
+
+    function hungnn3(){
+       document.getElementById("hung3").checked=true
+            document.getElementById("hung1").checked=true
+            document.getElementById("hung2").checked=fale}
+
+
+</script>
 </body>
 </html>

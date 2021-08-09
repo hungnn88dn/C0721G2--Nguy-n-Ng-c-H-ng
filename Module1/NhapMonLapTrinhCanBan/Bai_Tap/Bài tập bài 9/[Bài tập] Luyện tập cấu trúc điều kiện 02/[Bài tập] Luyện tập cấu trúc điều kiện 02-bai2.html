@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập mét <input id="number"  type="text"> <button onclick="change()" >Chuyển đổi</button>
+<p id="result"></p>
+<script>
+
+    function change() {
+        let  m = document.getElementById("number").value;
+        m = parseInt(m);
+        let f= m * 3.2808
+        document.getElementById("result").innerText = f + " " + "feet"
+    }
+
+</script>
+</body>
+</html>
+
+</html>

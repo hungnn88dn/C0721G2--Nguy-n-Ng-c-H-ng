@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+         <table id="demo" border="1">
+             <tr>
+                 <td>1</td>
+                 <td>Tiêu đề thứ nhất</td>
+                 <td><button onclick="dong1()">Delete</button></td>
+             </tr>
+             <tr>
+                 <td>2</td>
+                 <td>Tiêu đề thứ hai</td>
+                 <td><button onclick="dong2()">Delete</button></td>
+             </tr>
+             <tr>
+                 <td>3</td>
+                 <td>Tiêu đề thứ ba</td>
+                 <td><button onclick="dong3)">Delete</button></td>
+             </tr>
+             <tr id="hang4">
+                 <td>4</td>
+                 <td id="hungnn">Tiêu đề thứ tư</td>
+                 <td><button onclick="dong4()">Delete</button></td>
+             </tr>
+         </table>
+
+<script>
+    var parent = document.getElementById("demo");
+    var child = document.getElementById("hang4");
+    parent.removeChild(child);
+</script>
+</body>
+</html>

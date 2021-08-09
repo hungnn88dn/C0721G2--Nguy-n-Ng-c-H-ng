@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Bảng thuế thu nhập cá nhân</h2>
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Bậc</th>
+        <th>Thu nhập tính thuế/tháng</th>
+        <th>Thuế suất</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Đến 05 triệu đồng</td>
+        <td>5%</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>trên 05 trd đến 10trd</td>
+        <td>10%</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>trên 10trd đến 18trd</td>
+        <td>15%</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>trên 18trd đến 32trd/td>
+        <td>20%</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>trên 32trd đến 52trd</td>
+        <td>25%</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>trên 52trd đến 80trd</td>
+        <td>30%</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>trên 80trd</td>
+        <td>35%</td>
+    </tr>
+</table>
+<br>
+
+Nhập số lương tháng(trd) <input id="number1" type="text">
+
+<button onclick="change()">Làm phép</button>
+<p id="result"></p><br>
+<script>
+
+    function change() {
+        let a = document.getElementById("number1").value;
+        a = parseInt(a);
+        if (a < 5) {
+            document.getElementById("result").innerText = "Số tiền thuế thu nhập cá nhân là:" + " " + (a*0.05) + " " +"trđ";
+        } else if (a < 10) {
+            document.getElementById("result").innerText = "Số tiền thuế thu nhập cá nhân là:" + " " + (a*0.1) + " " +"trđ";
+        } else if (a < 18) {
+            document.getElementById("result").innerText = "Số tiền thuế thu nhập cá nhân là:" + " " + (a*0.15) + " " +"trđ";
+        } else if (a < 32) {
+            document.getElementById("result").innerText = "Số tiền thuế thu nhập cá nhân là:" + " " + (a*0.2) + " " +"trđ";
+        } else if (a < 52) {
+            document.getElementById("result").innerText = "Số tiền thuế thu nhập cá nhân là:" + " " + (a*0.25) + " " +"trđ";
+        } else if (a < 80) {
+            document.getElementById("result").innerText = "Số tiền thuế thu nhập cá nhân là:" + " " + (a*0.3) + " " +"trđ";
+        } else if (a > 80) {
+            document.getElementById("result").innerText = "Số tiền thuế thu nhập cá nhân là:" + " " + (a*0.35) + " " +"trđ";
+        }
+
+    }
+
+</script>
+</body>
+</html>
