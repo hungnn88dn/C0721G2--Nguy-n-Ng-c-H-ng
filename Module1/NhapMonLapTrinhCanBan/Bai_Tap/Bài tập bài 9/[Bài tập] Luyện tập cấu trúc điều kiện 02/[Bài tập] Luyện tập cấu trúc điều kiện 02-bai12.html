@@ -41,20 +41,20 @@ Nhập số tháng vào đây: <input id="month" type="text"> <br> <br>
 <script>
 
     function change() {
-        let a = document.getElementById("money").value;
-        let b = document.getElementById("month").value;
-        a = parseInt(a);
-        b = parseInt(b);
-        if (b < 3) {
-            document.getElementById("result").innerText = "Số tiền lãi là:" + a* 0.031 + " " +"VND"
-        } else if (b < 6) {
-            document.getElementById("result").innerText = "Số tiền lãi là:" + a*((3* 0.031) + ((b-3)*0.034)) + " " +"VND"
-        } else if (b < 9) {
-            document.getElementById("result").innerText = "Số tiền lãi là:" + a*((3* 0.031) + (3*0.034) + ((b -6)*0.04)) + " " +"VND"
-        } else if (b < 12) {
-            document.getElementById("result").innerText = "Số tiền lãi là:" + a*((3* 0.031) + (3*0.034) + (3*4) + ((b - 9)*0.055)) + " " +"VND"
-        } else if (b < 60) {
-            document.getElementById("result").innerText = "Số tiền lãi là:" + a*((3* 0.031) + (3*0.034) + (3*4) + (3*0.055) + ((b -12)*0.053)) + " "+ "VND"
+        let money = document.getElementById("money").value;
+        let month = document.getElementById("month").value;
+        money = parseInt(money);
+        month = parseInt(month);
+        if (month < 3) {
+            document.getElementById("result").innerText = "Số tiền lãi là:" + money* 0.031 + " " +"VND"
+        } else if (month < 6) {
+            document.getElementById("result").innerText = "Số tiền lãi là:" + money*((3* 0.031) + ((month-3)*0.034)) + " " +"VND"
+        } else if (month < 9) {
+            document.getElementById("result").innerText = "Số tiền lãi là:" + money*((3* 0.031) + (3*0.034) + ((month -6)*0.04)) + " " +"VND"
+        } else if (month < 12) {
+            document.getElementById("result").innerText = "Số tiền lãi là:" + money*((3* 0.031) + (3*0.034) + (3*4) + ((month - 9)*0.055)) + " " +"VND"
+        } else if (month < 60) {
+            document.getElementById("result").innerText = "Số tiền lãi là:" + money*((3* 0.031) + (3*0.034) + (3*4) + (3*0.055) + ((month -12)*0.053)) + " "+ "VND"
         }
     }
 

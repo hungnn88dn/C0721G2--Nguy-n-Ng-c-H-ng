@@ -6,17 +6,17 @@
 </head>
 <body>
 <script>
-    let a= 0
-    let b=1
+    let num1= 0
+    let num2=1
     let count=2
     while ( count < 20) {
-        c = a + b
-        if (c%5 === 0  ) {
-            alert("số chia hết cho 5 đầu tiên trong dãy fibonacci là:" + " " + c);
+        total = num1 + num2
+        if (total%5 === 0  ) {
+            alert("số chia hết cho 5 đầu tiên trong dãy fibonacci là:" + " " + total);
             break;
         } else {
-            a=b
-            b=c
+            num1=num2
+            num2=total
             count++
         }
 

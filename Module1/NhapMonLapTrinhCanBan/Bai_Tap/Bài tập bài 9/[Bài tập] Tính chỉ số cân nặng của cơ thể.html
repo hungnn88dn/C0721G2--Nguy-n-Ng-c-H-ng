@@ -8,8 +8,8 @@
 <script>
     let weight= prompt("Nhập cân nặng của bạn")
     let height= prompt("Nhập chiều cao của bạn")
-    height=parseInt(height)
-    weight=parseInt(weight)
+    height=parseFloat(height)
+    weight=parseFloat(weight)
     let  bmi= weight/(height^2)
     if (bmi < 18)
         document.write("Underweight");

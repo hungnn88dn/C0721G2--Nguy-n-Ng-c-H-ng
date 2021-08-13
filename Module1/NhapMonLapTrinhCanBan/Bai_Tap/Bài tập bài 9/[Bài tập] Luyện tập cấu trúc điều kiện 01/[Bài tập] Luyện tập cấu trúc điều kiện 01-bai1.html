@@ -11,10 +11,10 @@ Nhập số tuổi: <input id="year" type="text">
 <script>
 
     function result() {
-        let a = document.getElementById("year").value;
-        a = parseInt(a);
+        let yearOld = document.getElementById("year").value;
+        yearOld = parseInt(yearOld);
 
-        if (a >= 16) {
+        if (yearOld >= 16) {
             alert("bạn đủ điều kiện học lớp 10")
         } else {
             alert("bạn không đủ điều kiện học lớp 10")

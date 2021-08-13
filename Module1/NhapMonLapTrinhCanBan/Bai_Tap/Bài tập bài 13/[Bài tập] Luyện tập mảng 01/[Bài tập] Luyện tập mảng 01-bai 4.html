@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+   let array1=[]
+    let array2=[]
+      for ( let i=0; i < 5 ; i++ ) {
+          let num=prompt("Nhập vào các số cần so sánh")
+           num=parseInt(num)
+          array1=[num]
+          array2 =array2.concat(array1)
+      }
+      document.write("Các số bạn vừa nhập vào là :" + " " + array2)
+    let v=prompt("Số cần kiểm tra")
+   array3=[v]
+    if ( array3 === array2) {
+        alert("ok")
+    }else {
+        alert("No")
+    }
+
+</script>
+
+</html>

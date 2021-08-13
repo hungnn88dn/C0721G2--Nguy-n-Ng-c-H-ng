@@ -14,22 +14,22 @@ Nhập số c: <input id="number3" type="text">
 <script>
 
     function result() {
-        let a = document.getElementById("number1").value;
-        let b = document.getElementById("number2").value;
-        let c = document.getElementById("number3").value;
-        a = parseInt(a);
-        b = parseInt(b);
-        c = parseInt(c);
-        console.log(a)
-        console.log(b)
-        console.log(c)
-        if (a > b && a > c) {
-            alert(a + " " + "là số lớn nhất")
-        }  else if ( b > c)  {
-            alert(b + " " + "là số lướn nhất")
+        let num1 = document.getElementById("number1").value;
+        let num2 = document.getElementById("number2").value;
+        let num3 = document.getElementById("number3").value;
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        num3 = parseInt(num3);
+        console.log(num1)
+        console.log(num2)
+        console.log(num3)
+        if (num1 > num2 && num1 > num3) {
+            alert(num1 + " " + "là số lớn nhất")
+        }  else if ( num2 > num3)  {
+            alert(num2 + " " + "là số lướn nhất")
                    }
                else  {
-                alert(c + " " + "là số lướn nhất")
+                alert(num3 + " " + "là số lướn nhất")
                }
 
 

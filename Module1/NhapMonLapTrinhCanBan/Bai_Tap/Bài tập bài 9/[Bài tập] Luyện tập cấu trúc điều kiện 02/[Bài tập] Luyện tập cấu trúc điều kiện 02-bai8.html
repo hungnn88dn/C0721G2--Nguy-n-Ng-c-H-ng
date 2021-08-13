@@ -15,11 +15,11 @@ Nhập  số tuổi <input id="number1"  type="text">
 <script>
 
     function kiemtra() {
-        let a = document.getElementById("number1").value;
+        let yearOld = document.getElementById("number1").value;
 
-       if ( a > 0)   {
-           if (a < 120) {
-               document.getElementById("result").innerText = "Tuổi của bạn là " + " " + a; }
+       if ( yearOld > 0)   {
+           if (yearOld < 120) {
+               document.getElementById("result").innerText = "Tuổi của bạn là " + " " + yearOld; }
             else {
                document.getElementById("result").innerText = "Bạn thành tinh rồi"; }
 
