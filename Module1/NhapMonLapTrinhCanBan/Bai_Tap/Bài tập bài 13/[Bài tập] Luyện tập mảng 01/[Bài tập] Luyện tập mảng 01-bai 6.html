@@ -11,13 +11,12 @@
 
     let array1 = []
     let array2 = []
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 3; i++) {
         let num = prompt("Nhập vào các số cần so sánh")
         num = parseInt(num)
-        array1=array1[i]
+        array1.push(num)
         array2 = array2.concat(array1)
     }
-    document.write(array2)
     let v = prompt("Số cần kiểm tra")
     v = parseInt(v)
     let flag
@@ -26,9 +25,9 @@
              flag=true;
         }
     }if (flag == true) {
-        alert("V is in the array")
+        alert("ok")
     } else {
-        alert("V is not in the array")
+        alert("no")
     }
 </script>
 
