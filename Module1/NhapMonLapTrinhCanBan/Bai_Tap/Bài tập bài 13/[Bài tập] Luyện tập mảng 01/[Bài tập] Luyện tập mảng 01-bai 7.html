@@ -9,21 +9,19 @@
 </body>
 <script>
 
-    let array1 = []
-    let array2 = []
+    let array = []
     for (let i = 0; i < 10; i++) {
         let num = prompt("Nhập vào các số cần liệt kê")
         num = parseInt(num)
-        array1.push(num)
-        array2 = array2.concat(array1)
+        array.push(num)
     }
     let v = prompt("Số cần xoá")
     v = parseInt(v)
-    for (let i = 0; i < array1.length; i++) {
-        if (v == array1[i]) {
-            array1.splice(i,1,)
+    for (let i = 0; i < array.length; i++) {
+        if (v == array[i]) {
+            array.splice(i,1,)
         }
-    }document.write(array1)
+    }document.write(array)
 </script>
 
 </html>

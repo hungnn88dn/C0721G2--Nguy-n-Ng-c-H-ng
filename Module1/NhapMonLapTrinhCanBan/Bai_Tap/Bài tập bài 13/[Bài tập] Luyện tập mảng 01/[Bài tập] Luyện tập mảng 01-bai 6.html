@@ -9,25 +9,23 @@
 </body>
 <script>
 
-    let array1 = []
-    let array2 = []
-    for (let i = 0; i < 3; i++) {
+    let array = []
+    for (let i = 0; i < 10; i++) {
         let num = prompt("Nhập vào các số cần so sánh")
         num = parseInt(num)
-        array1.push(num)
-        array2 = array2.concat(array1)
+        array.push(num)
     }
     let v = prompt("Số cần kiểm tra")
     v = parseInt(v)
     let flag
-    for (let i = 0; i < array1.length; i++) {
-        if (v == array1[i]) {
+    for (let i = 0; i < array.length; i++) {
+        if (v == array[i]) {
              flag=true;
         }
     }if (flag == true) {
-        alert("ok")
+        alert("V is in the array")
     } else {
-        alert("no")
+        alert("V is not in the array")
     }
 </script>
 

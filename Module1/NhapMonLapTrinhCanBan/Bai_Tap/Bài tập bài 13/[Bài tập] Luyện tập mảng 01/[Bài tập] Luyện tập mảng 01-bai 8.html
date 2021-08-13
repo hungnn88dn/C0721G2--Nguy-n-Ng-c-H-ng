@@ -9,16 +9,14 @@
 </body>
 <script>
 
-    let array1 = []
-    let array2 = []
+    let array = []
     for (let i = 0; i < 10; i++) {
         let num = prompt("Nhập vào các số cần so sánh")
         num = parseInt(num)
-        array1.push(num)
-        array2 = array2.concat(array1)
-    }document.write("Các số vừa nhập" + " " + array1 + "<br>")
-    array1.sort(function(a, b){return b - a});
-    document.write("Sắp xếp theo chiều giảm dần:" + " " + array1)
+        array.push(num)
+    }document.write("Các số vừa nhập" + "  " + array + "<br>")
+    array.sort(function(a, b){return b - a});
+    document.write("Sắp xếp theo chiều giảm dần:" + " " + array)
 </script>
 
 </html>

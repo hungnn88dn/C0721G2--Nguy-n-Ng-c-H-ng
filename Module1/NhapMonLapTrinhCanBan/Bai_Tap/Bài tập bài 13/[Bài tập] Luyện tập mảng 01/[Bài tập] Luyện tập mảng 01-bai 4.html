@@ -10,17 +10,16 @@
 <script>
     let count=prompt("Nhập vào số lượng các số cần nhập")
     count=parseInt(count)
-   let array1=[]
-    let array2=[]
+   let array=[]
+
       for ( let i=0; i < count ; i++ ) {
           let num=prompt("Nhập vào các số cần đảo")
            num=parseInt(num)
-          array1=[num]
-          array2 =array2.concat(array1)
+          array.push(num)
       }
-      alert("Các số bạn vừa nhập vào là :" + " " + array2)
-    array2=array2.reverse()
-    alert("Đảo lại là" + " " + array2)
+      alert("Các số bạn vừa nhập vào là :" + " " + array)
+    array=array.reverse()
+    alert("Đảo lại là" + " " + array)
 </script>
 
 </html>
