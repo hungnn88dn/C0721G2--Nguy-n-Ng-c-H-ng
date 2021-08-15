@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("Nhập vào chuỗi tạo mảng:")
+    let array = str.split("")
+    let flag
+    for( let i=0; i < array.length; i++) {
+        if (array[i] == "-") {
+            array.splice(i, 1, "_")
+        }
+    }
+    alert(array.join("").toString())
+</script>
+</body>
+</html>=

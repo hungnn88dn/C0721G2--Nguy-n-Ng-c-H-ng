@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = prompt("Nhập vào chuỗi 1:")
+    let str2 = prompt("Nhập vào chuổi 2 :")
+    let array1 = str1.split("")
+    let array2 = str2.split("")
+    let flag
+    if (array1.length == array2.length) {
+        for (let i = 0; i< array1.length; i++) {
+            if (array1[i] == array2[i]) {
+                flag = true
+            }else{
+                flag= false
+            }
+        }
+    }
+    if (flag == true) {
+        alert("hai chuỗi bằng nhau")
+    } else {
+        alert("hay chuỗi ko bằng nhau")
+    }
+</script>
+</body>
+</html>=
