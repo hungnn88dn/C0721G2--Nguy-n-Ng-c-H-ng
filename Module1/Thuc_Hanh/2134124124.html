@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let n = prompt("NHập vào số phần tử cần gán cho mảng")
+    let a = []
+    for (let i = 0; i < n; i++) {
+        num = prompt("Nhập vào các phần tử là số nguyên của mảng:")
+        num = parseInt(num)
+        a.push(num)
+    }
+    let total = 0
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] > 0) {
+            total = total + a[i]
+        }
+    }
+    document.write("Tổng các số dương trong mảng a là:" + " " + total + "<br>")
+    k = prompt("Nhập vào phần tử k:")
+    k = parseInt(k)
+    let flag
+    let s=0
+    for (let i = 0; i < a.length; i++) {
+        if (k == a[i]) {
+            flag = true
+            s= i + 1
+        }
+    }
+    if (flag == true) {
+        document.write("k thuộc phần tử thứ"+ " " + s + " " + "trong mảng" + "<br>")
+    } else {
+        alert("k không thuộc mảng")
+    }
+   document.write( "Sắp xếp mảng theo hướng tăng dần: " + " " + a.sort(function(x, y){return x - y}) + "<br>")
+    p = prompt("Nhập vào phần tử p:")
+    a.splice(1,0,p)
+    document.write("Thêm p vào mảng a" + " "  + a.sort(function(x, y){return x - y}))
+
+
+</script>
+</html>
