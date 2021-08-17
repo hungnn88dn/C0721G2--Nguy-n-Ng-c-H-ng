@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let num = parseInt(prompt("Nhập bán kính đường tròn vào đây:"))
+    if(num < 0) {
+        alert("Vui lòng không nhập số âm")
+    }else {
+    function chuVi(x) {
+        result= x * 2 * 3.14;
+        alert("Chu vi  của hình tròn là "  + result );
+        return;
+    }
+    function dienTich(x) {
+        result= x * x * 3.14;
+        alert("Diện tích của hình tròn là "  + result );
+        return;
+    }
+    chuVi(num);
+    dienTich(num);
+    }
+</script>
+</body>
+</html>
