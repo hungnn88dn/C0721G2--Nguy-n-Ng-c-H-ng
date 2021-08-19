@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="turnOn()">Bật điện thoại</button>
+<br> <br>
+<button onclick="turnOff()">Tắt điện thoại</button>
+<br><br>
+<button onclick="text()">Soạn tin nhắn</button>
+<br><br>
+<button onclick="receive()">Nhận tin nhắn</button>
+<br><br>
+<button onclick="sendmessage()">Gửi tin nhắn</button>
+<br><br>
+<button onclick="inbox()">Hộp thư đến</button>
+<br><br>
+<button onclick="sendbox()">Hộp thư đi</button>
+<br><br>
+<button onclick="charge()">Sạc điện thoại</button>
+<br><br>
+
+<script>
+    function Phone(battery, memoryText, memoryInbox, memorySendbox) {
+        this.battery = battery;
+        this.memoryText = memoryText;
+        this.memoryInbox = memoryInbox;
+        this.memorySendbox = memorySendbox;
+        this.checkpower = function () {
+            if (this.battery > 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+        this.charge = function () {
+            return this.battery++
+        }
+        this.turnon = function () {
+            alert("Điện thoại đang bật")
+
+            this.text = function () {
+                prompt("Vui lòng nhập tin nhắn")
+                this.battery--
+            }
+            this.receive = function () {
+                alert("Bạn đã nhận 01 tin nhắn")
+                return this.memoryInbox++
+                this.battery--
+            }
+            this.sendmessage = function () {
+                alert("bạn đã gửi một tin nhắn")
+                return this.memorySendbox++
+                this.battery--
+            }
+            this.inbox = function () {
+                alert("bạn có " + this.memoryInbox + " tin nhắn đã nhận")
+                this.battery--
+            }
+            this.sendbox = function () {
+                alert("bạn có " + this.memorySendbox + " tin nhắn đã nhận")
+                this.battery--
+            }
+        }
+        this.turnoff = function () {
+            alert("Điện thoại đang tắt")
+        }
+    }
+
+    var phone = new Phone(10, 10, 10, 10);
+
+    function turnOn() {
+        alert(phone.turnon())
+    }
+    function inbox() {
+        alert(phone.inbox())
+    }
+    function text() {
+        alert(phone.text())
+    }
+    function receive() {
+        alert(phone.receive())
+    }
+    function sendmessage() {
+        alert(phone.sendmessage())
+    }
+    function inbox() {
+        alert(phone.inbox())
+    }
+    function sendbox() {
+        alert(phone.sendbox())
+    }
+    function charge() {
+        alert("Bạn đang sạc điện thoại")
+        alert(phone.charge())
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2> Add New Product</h2>
+<table width="400px" cellpadding="10" cellspacing="10" bgcolor="#d3d3d3">
+    <tr>
+        <td><input id="newProduct" style="width: 250px; height: 35px;" type="text" value="New Product">
+            <button onclick="addProduct()"> Add</button>
+        </td>
+    </tr>
+
+</table>
+<p id="displayProduct"></p>
+<p id="editProduct"></p>
+
+<script>
+    let array = ["Sony", "Samsung", "Apple", "LG"]
+    displayProduct();
+
+    function displayProduct() {
+        let data = "<table>"
+        for (let i = 0; i < array.length; i++) {
+            data += "<tr>"
+            data += "<td>" + array[i] + "</td>"
+            data += "<td> <button onclick='editProduct(" + i + ")'>Edit</button> </td>"
+            data += "<td> <button onclick='deleteProduct(" + i + ")'>Delete</button> </td>"
+            data += "</tr>"
+
+        }
+        data += "</table>"
+        document.getElementById("displayProduct").innerHTML = data;
+    }
+
+    function addProduct() {
+        let newP = document.getElementById("newProduct").value;
+        array.push(newP);
+        displayProduct();
+        document.getElementById("newProduct").innerHTML = ""
+    }
+
+    function deleteProduct(index) {
+        if (confirm("Bạn muốn xoá " + array[index])) {
+            array.splice(index, 1)
+            displayProduct();
+        }
+    }
+
+    function editProduct(index) {
+        let data = "<table>"
+        for (let i = 0; i < array.length; i++) {
+            if (i == index) {
+                data += "<tr>"
+                data += "<td><input id='editP' value='" + array[index] + "'></td>"
+                data += "<td> <button  onclick='dataSave(" + i + ")'>Save</button> </td>"
+                data += "</tr>"
+            } else {
+                data += "<tr>"
+                data += "<td>" + array[i] + "</td>"
+                data += "<td> <button onclick='editProduct(" + i + ")'>Edit</button> </td>"
+                data += "<td> <button onclick='deleteProduct(" + i + ")'>Delete</button> </td>"
+                data += "</tr>"
+            }
+        }
+        data += "</table>"
+        document.getElementById("editProduct").innerHTML = data;
+    }
+
+    // function editProduct(index) {
+    //    let data= "<input id='editP' value='"+array[index]+"'>"
+    //     data+= "<butoon onclick='dataSave("+index+")'> Save</butoon> "
+    //     document.getElementById("editProduct").innerHTML=data;
+    //
+    // }
+    function dataSave(index) {
+        array[index] = document.getElementById("editP").value;
+        displayProduct();
+        document.getElementById("editProduct").innerHTML = ""
+    }
+</script>
+</body>
+</html>
