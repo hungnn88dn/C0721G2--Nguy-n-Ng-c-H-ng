@@ -5,27 +5,53 @@
     <title>Title</title>
 </head>
 <body>
+<p id="result"></p>
 <script>
-    let Phone = function (name, brand) {
-        this.name = name;
-        this.brand = brand;
-        this.battery = function () {
-            return this.battery=100
+    let board =[];
+    let flag= true;
+     for (let i = 0; i < 10; i++) {
+            board[i]=["","","","","","","","","",""]
+     }
+     displayCaro();
+    function displayCaro() {
+        let data = "<table border='1' style='width: 500px;height: 500px;text-align: center;border: green '>"
+        for (let i = 0; i < 10; i++) {
+            data = data + "<tr>"
+            for (let j = 0; j < 10; j++) {
+                data = data + "<td onclick='changeValue(" + i + ", " + j + ")'>";
+                data = data + board[i][j]
+            }
         }
-        this.textbox = function () {
+        document.getElementById("result").innerHTML = data
+    }
+    function changeValue(x, y) {
+        if (board[x][y] == "X" || board[x][y] == "O") {
+            alert("Ô này đã đánh rồi")
+        } else {
+            if (flag) {
+                board[x][y] = "X";
+                flag = false;
+            } else {
+                board[x][y] = "O";
+                flag = true;
+            }
         }
-        this.inbox = function () {
-        }
-        this.sendbox = function () {
-        }
-        this.power= function () {
-             if ( this.power == turnon) {
-
-             }
+        displayCaro();
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (board[i][j] == "X") {
+                    if ((board[i][j + 1] == "X" && board[i][j + 2] == "X") || (board[i + 1][j] == "X" && board[i + 2][j] == "X")  ) {
+                        alert("X thắng")
+                    }
+                } else if (board[i][j] == "O") {
+                    if ((board[i][j + 1] == "O" && board[i][j + 2] == "O") || (board[i + 1][j] == "O" && board[i + 2][j] == "O")) {
+                        alert("O thắng")
+                    }
+                }
+            }
         }
 
     }
-
 </script>
 </body>
 </html>
