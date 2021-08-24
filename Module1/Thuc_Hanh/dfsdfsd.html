@@ -6,21 +6,21 @@
 </head>
 <body>
 <script>
-    function maxMinAvg(arr) {
-        arr=[1,5,10, -2]
-          arr.sort(function(a, b){return a - b})
-        let sum=0
-        let arrnew=[]
-        arrnew.push(arr[arr.length - 1]);
-        arrnew.push(arr[0]);
-         for (let i = 0; i < arr.length; i++) {
-             sum= sum + arr[i]
-         }
-         sum= sum/arr.length
-        arrnew.push(sum)
-        return arrnew;
+    let A=[7,2,5,3,5,3]
+    let B=[7,2,5,4,6,3,5,3]
+    let arr=[]
+    for ( let i = 0; i < B.length; i++) {
+        A.unshift(B[i])
+        for ( let j = 1 ; j <A.length ; j++) {
+            if (A[0] != A[j]) {
+               document.write("-")
+            }else {
+                document.write(A[0])
+            }
+        }
     }
-    console.log(maxMinAvg())
+
+
 </script>
 </body>
 </html>
