@@ -6,45 +6,21 @@
 </head>
 <body>
 <script>
-    charge()
-    {
-        return this.battery++
-    }
-    turnon()   {
-        alert("Điện thoại đang bật")
-
-        text()
-        {
-            let message = prompt("Vui lòng nhập tin nhắn")
-            if (confirm("Bạn có muốn gửi " + message)) {
-                this.memoryText.push(message)
-            } else {
-                this.memorySendbox.push(message)
+    function birthdayCakeCandles(candles) {
+        candles.sort((function(a, b){return a - b}));
+        let result= 1
+        let num= candles[0]
+        for (let i = 1; i < candles.length ; i ++) {
+            if( num == candles[i]) {
+                result = result + 1
+            }else{
+                num = candles[i]
             }
-            return this.battery--
         }
-        receive(phoneName, message)
-        {
-            alert("Bạn đã nhận 01 tin nhắn");
-            this.memoryInbox.push(("Tên điện thoại: " + phoneName + " đã gửi tin" +
-                "lời nhắn: " + message))
-            this.battery--
-            ;
-        }
-
-        inbox()
-        {
-            alert("bạn có " + this.memoryInbox + " tin nhắn đã nhận");
-            return this.battery--;
-        }
-        sendbox = function () {
-            alert("bạn có " + this.memorySendbox + " tin nhắn đã nhận");
-            return this.battery--;
-        }
+        return result
     }
-    turnof()
-    {
-        alert("Điện thoại đang tắt")
+    let candles= [3,1,2,3,4,3,5,]
+    console.log(birthdayCakeCandles(candles))
 </script>
 </body>
 </html>

@@ -15,10 +15,10 @@
           this.status= status;
       }
       switchOn(ligth) {
-          light.status = 1;
+          light.status = true;
       }
       switchOff(ligth) {
-          light.status = 0;
+          light.status = false;
       }
   }
   class Light {
@@ -26,15 +26,14 @@
           this.status=status;
       }
       turnOn() {
-          this.status = 1
+          this.status = true
       }
       turnOff() {
-          this.status = 0
+          this.status = false
       }
   }
-       let switchButton= new SwitchButton(1)
-        let light= new Light(1)
-        switchButton.switchOn(light)
+       let switchButton= new SwitchButton(false)
+        let light= new Light(false)
     console.log(light.status)
       function on() {
           document.getElementById("image").innerHTML= "<img src=https://www.w3schools.com/js/pic_bulbon.gif>"
