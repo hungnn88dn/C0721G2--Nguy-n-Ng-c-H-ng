@@ -14,17 +14,20 @@
     let arr = []
     let flag = true
     for (let i = 0; i < m; i++) {
+        arr[i]=[]
         for (let j = 0; j < n; j++) {
             num = parseInt(prompt("Nhập số"))
-            arr.push(num)
+            arr[i].push(num)
             document.write(num + " ")
         }
         document.write("<br>")
     }
     for (let i = 0; i < arr.length; i++) {
-            integer(arr[i])
+        for (let j = 0; j < n; j++) {
+            integer(arr[i][j])
+        }
     }
-
+    console.log(arr[1][1])
     function integer(num) {
         let flag = true
         if (num < 2) {
@@ -41,7 +44,7 @@
             sum= sum + 1
         }
     }
- document.write("<br>" + "Tổng các số nguyên tố trong mảng là: " + sum)
+    document.write("<br>" + "Tổng các số nguyên tố trong mảng là: " + sum)
 </script>
 </body>
 </html>
