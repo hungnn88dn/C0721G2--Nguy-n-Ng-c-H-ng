@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+         let str="cabcaderedaffdfda"
+         let arr=[]
+         arr=str.split("")
+         arr.sort()
+         let arr1=[arr[0]]
+        for(let i = 1; i < arr.length; i ++) {
+            if (arr[i-1] != arr[i] ) {
+                arr1.push(arr[i])
+            }
+        }
+    alert("Số lượng kí tự  khác nhau trong chuỗi là: " + arr1.length +  "   "   + arr1)
+    console.log(arr1)
+</script>
+</body>
+</html>
