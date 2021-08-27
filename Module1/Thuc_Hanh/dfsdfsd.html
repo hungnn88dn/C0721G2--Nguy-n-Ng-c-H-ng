@@ -9,22 +9,21 @@
 
 <script>
 
-    let str = "truong   taN  HAI";
-
-    str.split(" ");
-
-    let array = str.toLowerCase().split(" ");
-    console.log(array);
-    var newString = "";
-
-    for ( let i = 0 ; i <array.length; i++) {
-        if ( array[i] != "") {
-            let firstLetter = array[i].substr(0,1);
-            let result = firstLetter.toUpperCase() + array[i].substr(1,array[i].length);
-            newString += result + " ";
+    let str = "aabcc";
+    let str1 = "adcaa";
+    let arr = str.split("");
+    let arr1 = str1.split("");
+    let count =0;
+    for (let i=0;i<arr.length;i++){
+        for (let j=0;j<arr1.length;j++){
+            if (arr[i] == arr1[j]){
+                arr1.splice(arr1[j],1);
+                count++;
+                break;
+            }
         }
     }
-    console.log(newString);
+    alert("có"+ count+"ký tự trùng nhau");
 </script>
 </body>
 </html>

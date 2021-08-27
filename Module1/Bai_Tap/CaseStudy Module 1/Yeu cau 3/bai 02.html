@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let A = [7, 2, 5, 3, 5, 9, 3]
+    let B = [7, 2, 5, 4, 6, 3, 5, 3]
+    let C = []
+    for (let i = 0; i < A.length; i++) {
+        for (let j = 0; j < B.length; j++) {
+            if (A[i] == B[j]) {
+                A.splice(i, 1);
+                i--
+                B.splice(j, 1);
+                break;
+            }
+        }
+    }
+
+    C=A.concat(B)
+    console.log(C)
+</script>
+</body>
+</html>
