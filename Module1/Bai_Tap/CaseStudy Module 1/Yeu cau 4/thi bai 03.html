@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+
+    function isPrime(arr) {
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < 2) {
+                arr.splice(i, 1);
+            } else {
+                for (let j = 2; j < arr[i]; j++) {
+                    if ((arr[i] % j) == 0) {
+                        arr.splice(i, 1);
+                        break;
+                    }
+
+                }
+
+            }
+        }return arr
+    }
+    console.log(isPrime([1,5,6,23,8,47,10,3]))
+</script>
+</body>
+</html>

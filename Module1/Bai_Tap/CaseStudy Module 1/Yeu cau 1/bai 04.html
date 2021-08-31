@@ -8,17 +8,17 @@
 <script>
 
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i ++) {
         for ( let k = 10; k >= i; k--) {
-            document.write("&nbsp")
+            document.write("&nbsp" )
         }
-        for (let j = 0; j <= i; j++) {
-            if (i ==9 || i == 0   || j ==0 || j == i ) {
+        for (let j = 0; j <= i ; j ++) {
+            if (i ==8 || i == 0   || j ==0 || j == i   ) {
                 document.write("*")
             } else {
-                document.write( "  " + "&nbsp" )
+                document.write(  "&nbsp"  + "  " )
             }
-        }
+        } i++;
         document.write("<br> <br>")
     }
 

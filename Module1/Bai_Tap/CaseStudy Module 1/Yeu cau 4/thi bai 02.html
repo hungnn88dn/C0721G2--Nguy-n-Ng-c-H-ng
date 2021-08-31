@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function lowUpCase(str) {
+        let arr = str.split("")
+        let sum = 0
+        let arrUp = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arrUp.length; j++) {
+                if (arr[i] == arrUp[j]) {
+                    sum = sum + 1
+                }
+            }
+        }
+        if (sum > 0) {
+            alert("The Strings is " + sum + " contain upper char")
+        } else {
+            alert("The Strings is not contain upper char")
+        }
+    }
+
+    lowUpCase("abcd")
+
+
+</script>
+</body>
+</html>
