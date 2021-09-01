@@ -1,4 +1,4 @@
-package _01_intruction_java.Bai01.practice;
+package _01_intruction_java.practice;
 
 public class VariableTypeByte {
     public static void main(String[] args) {

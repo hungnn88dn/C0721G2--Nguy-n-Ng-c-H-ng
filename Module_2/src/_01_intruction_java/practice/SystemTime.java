@@ -1,4 +1,4 @@
-package _01_intruction_java.Bai01.practice;
+package _01_intruction_java.practice;
 
 import java.util.Date;
 

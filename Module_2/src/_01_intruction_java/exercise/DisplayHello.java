@@ -1,4 +1,4 @@
-package _01_intruction_java.Bai01.exercise;
+package _01_intruction_java.exercise;
 
 import java.util.Scanner;
 
