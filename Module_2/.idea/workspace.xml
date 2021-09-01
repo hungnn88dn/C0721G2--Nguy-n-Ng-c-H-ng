@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Module1/Bai_Tap/Bài tập bài 17- Lập trình hướng đối tượng 2/[Bài tập] Phát triển trò chơi cờ ca-ro.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/Area.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/LeapYear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/LinearEquationResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/dayofmonth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/system_time.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/varable_typebyte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Module1/Thuc_Hanh/23123.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module1/Thuc_Hanh/23123.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/baitap_01/hungnn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/baitap_01/hungnn.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1xUB9OVvcdgS8b6ax22cS4zIHmr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RunManager" selected="Application.LeapYear">
+    <configuration name="Area" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Thuc_Hanh.Bai01.Area" />
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Thuc_Hanh.Bai01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LeapYear" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Thuc_Hanh.Bai01.LeapYear" />
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Thuc_Hanh.Bai01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LinearEquationResolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Thuc_Hanh.Bai01.LinearEquationResolver" />
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Thuc_Hanh.Bai01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dayofmonth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Thuc_Hanh.Bai01.dayofmonth" />
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Thuc_Hanh.Bai01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="varable_typebyte" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Thuc_Hanh.Bai01.varable_typebyte" />
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Thuc_Hanh.Bai01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LeapYear" />
+        <item itemvalue="Application.dayofmonth" />
+        <item itemvalue="Application.LinearEquationResolver" />
+        <item itemvalue="Application.Area" />
+        <item itemvalue="Application.varable_typebyte" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="" />
+      <created>1630399634458</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630399634458</updated>
+      <workItem from="1630399636685" duration="4440000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="444" y="114" key="#Project_Structure" timestamp="1630400229785">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="444" y="114" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1630400229785" />
+    <state x="743" y="281" key="FileChooserDialogImpl" timestamp="1630400192138">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
+    <state width="1340" height="254" key="GridCell.Tab.0.bottom" timestamp="1630404709837">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1340" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630404709837" />
+    <state width="1340" height="254" key="GridCell.Tab.0.center" timestamp="1630404709837">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1340" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630404709837" />
+    <state width="1340" height="254" key="GridCell.Tab.0.left" timestamp="1630404709836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1340" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630404709836" />
+    <state width="1340" height="254" key="GridCell.Tab.0.right" timestamp="1630404709837">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1340" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630404709837" />
+    <state x="346" y="160" key="new project wizard" timestamp="1630400207996">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="346" y="160" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1630400207996" />
+  </component>
+</project>
