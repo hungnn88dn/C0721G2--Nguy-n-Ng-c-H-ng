@@ -1,6 +1,6 @@
-package Thuc_Hanh.Bai01;
+package _01_intruction_java.Bai01.practice;
 
-public class varable_typebyte {
+public class VariableTypeByte {
     public static void main(String[] args) {
         int i= 10;
         float f= 20.5f;
@@ -16,4 +16,3 @@ public class varable_typebyte {
         System.out.println("s = " + s);
     }
 }
-

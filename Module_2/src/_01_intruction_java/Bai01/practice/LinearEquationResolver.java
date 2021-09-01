@@ -1,4 +1,4 @@
-package Thuc_Hanh.Bai01;
+package _01_intruction_java.Bai01.practice;
 
 import java.util.Scanner;
 
@@ -27,3 +27,4 @@ public class LinearEquationResolver {
         }
     }
 }
+

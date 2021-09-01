@@ -20,17 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Module1/Bai_Tap/Bài tập bài 17- Lập trình hướng đối tượng 2/[Bài tập] Phát triển trò chơi cờ ca-ro.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/Area.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/LeapYear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/LinearEquationResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/dayofmonth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/system_time.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Thuc_Hanh/Bai01/varable_typebyte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module1/Thuc_Hanh/23123.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module1/Thuc_Hanh/23123.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/baitap_01/hungnn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/baitap_01/hungnn.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_01_intruction_java/Bai01/exercise/DisplayHello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_01_intruction_java/Bai01/exercise/NumberToString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_01_intruction_java/Bai01/practice/Area.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_01_intruction_java/Bai01/practice/BodyMassIndex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_01_intruction_java/Bai01/practice/DayOfMonth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_01_intruction_java/Bai01/practice/LeapYear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_01_intruction_java/Bai01/practice/LinearEquationResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_01_intruction_java/Bai01/practice/SystemTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_01_intruction_java/Bai01/practice/VariableTypeByte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +61,13 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.LeapYear">
+  <component name="RunManager" selected="Application.VariableTypeByte">
     <configuration name="Area" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Thuc_Hanh.Bai01.Area" />
+      <option name="MAIN_CLASS_NAME" value="_01_intruction_java.Bai01.practice.Area" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Thuc_Hanh.Bai01.*" />
+          <option name="PATTERN" value="_01_intruction_java.Bai01.practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,12 +75,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LeapYear" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Thuc_Hanh.Bai01.LeapYear" />
+    <configuration name="DisPlayHello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_01_intruction_java.Bai01.DisPlayHello" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Thuc_Hanh.Bai01.*" />
+          <option name="PATTERN" value="_01_intruction_java.Bai01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinearEquationResolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Thuc_Hanh.Bai01.LinearEquationResolver" />
+    <configuration name="DisplayHello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_01_intruction_java.Bai01.exercise.DisplayHello" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Thuc_Hanh.Bai01.*" />
+          <option name="PATTERN" value="_01_intruction_java.Bai01.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dayofmonth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Thuc_Hanh.Bai01.dayofmonth" />
+    <configuration name="NumberToString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_01_intruction_java.Bai01.NumberToString" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Thuc_Hanh.Bai01.*" />
+          <option name="PATTERN" value="_01_intruction_java.Bai01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="varable_typebyte" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Thuc_Hanh.Bai01.varable_typebyte" />
+    <configuration name="VariableTypeByte" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_01_intruction_java.Bai01.practice.VariableTypeByte" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Thuc_Hanh.Bai01.*" />
+          <option name="PATTERN" value="_01_intruction_java.Bai01.practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LeapYear" />
-        <item itemvalue="Application.dayofmonth" />
-        <item itemvalue="Application.LinearEquationResolver" />
+        <item itemvalue="Application.VariableTypeByte" />
+        <item itemvalue="Application.DisplayHello" />
         <item itemvalue="Application.Area" />
-        <item itemvalue="Application.varable_typebyte" />
+        <item itemvalue="Application.NumberToString" />
+        <item itemvalue="Application.DisPlayHello (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -149,6 +148,7 @@
       <option name="presentableId" value="Default" />
       <updated>1630399634458</updated>
       <workItem from="1630399636685" duration="4440000" />
+      <workItem from="1630469548654" duration="4457000" />
     </task>
     <servers />
   </component>
@@ -165,6 +165,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="444" y="114" key="#Project_Structure" timestamp="1630400229785">
@@ -175,25 +176,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1340" height="254" key="GridCell.Tab.0.bottom" timestamp="1630404709837">
+    <state width="1340" height="254" key="GridCell.Tab.0.bottom" timestamp="1630479016019">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630404709837" />
-    <state width="1340" height="254" key="GridCell.Tab.0.center" timestamp="1630404709837">
+    <state width="1340" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630479016019" />
+    <state width="1340" height="254" key="GridCell.Tab.0.center" timestamp="1630479016019">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630404709837" />
-    <state width="1340" height="254" key="GridCell.Tab.0.left" timestamp="1630404709836">
+    <state width="1340" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630479016019" />
+    <state width="1340" height="254" key="GridCell.Tab.0.left" timestamp="1630479016019">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630404709836" />
-    <state width="1340" height="254" key="GridCell.Tab.0.right" timestamp="1630404709837">
+    <state width="1340" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630479016019" />
+    <state width="1340" height="254" key="GridCell.Tab.0.right" timestamp="1630479016019">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630404709837" />
+    <state width="1340" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630479016019" />
     <state x="346" y="160" key="new project wizard" timestamp="1630400207996">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="346" y="160" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1630400207996" />
+    <state x="825" y="250" key="run.anything.popup" timestamp="1630479064509">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="825" y="250" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1630479064509" />
   </component>
 </project>

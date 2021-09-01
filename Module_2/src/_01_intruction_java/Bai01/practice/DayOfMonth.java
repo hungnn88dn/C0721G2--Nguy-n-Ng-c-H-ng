@@ -1,9 +1,8 @@
-package Thuc_Hanh.Bai01;
-
+package _01_intruction_java.Bai01.practice;
 
 import java.util.Scanner;
 
-public class dayofmonth {
+public class DayOfMonth {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Which month that you want to count days? ");
@@ -36,3 +35,4 @@ public class dayofmonth {
         else System.out.print("Invalid input!");
     }
 }
+
