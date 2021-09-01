@@ -142,7 +142,7 @@ public class NumberToString {
                     break;
             }
             System.out.printf("%s %s", tensOfNumber, onesOfNumber);
-        } else if (number < 999) {
+        } else if (number <= 999) {
             String s = String.valueOf(number);
             String hundredOfNumber = "";
             String tensOfNumber = "";
@@ -237,6 +237,8 @@ public class NumberToString {
                     break;
             }
             System.out.printf("%s %s %s", hundredOfNumber, tensOfNumber, onesOfNumber);
+        }else if ( number > 999) {
+            System.out.println("Vui lòng nhập sô nhỏ hơn 1000");
         }
     }
 }
