@@ -20,9 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_02_loop_java/exercise/DisplayPicture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_02_loop_java/exercise/PrimeNumber100.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_02_loop_java/exercise/PrimeNumber20.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/ConCatArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/DeleteElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/FindMaxElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/FindMinElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/InsertElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/SumCol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/practice/ChangeCF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/practice/FindIndexArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/practice/FindMax.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/practice/FindMin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/practice/NumberStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/practice/Reverse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,13 +65,13 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.PrimeNumber100">
-    <configuration name="Alo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_loop_java.exercise.Alo" />
+  <component name="RunManager" selected="Application.SumCol">
+    <configuration name="ConCatArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_method_java.exercise.ConCatArray" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_loop_java.exercise.*" />
+          <option name="PATTERN" value="_03_array_method_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -70,12 +79,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DisplayPicture" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_loop_java.exercise.DisplayPicture" />
+    <configuration name="FindMaxElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_method_java.exercise.FindMaxElement" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_loop_java.exercise.*" />
+          <option name="PATTERN" value="_03_array_method_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,12 +92,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberToString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_01_intruction_java.exercise.NumberToString" />
+    <configuration name="FindMinElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_method_java.exercise.FindMinElement" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_01_intruction_java.exercise.*" />
+          <option name="PATTERN" value="_03_array_method_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,12 +105,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimeNumber100" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_loop_java.exercise.PrimeNumber100" />
+    <configuration name="NumberStudent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_method_java.practice.NumberStudent" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_loop_java.exercise.*" />
+          <option name="PATTERN" value="_03_array_method_java.practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,12 +118,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimeNumber20" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_02_loop_java.exercise.PrimeNumber20" />
+    <configuration name="SumCol" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_03_array_method_java.exercise.SumCol" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_02_loop_java.exercise.*" />
+          <option name="PATTERN" value="_03_array_method_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PrimeNumber100" />
-        <item itemvalue="Application.Alo" />
-        <item itemvalue="Application.PrimeNumber20" />
-        <item itemvalue="Application.DisplayPicture" />
-        <item itemvalue="Application.NumberToString" />
+        <item itemvalue="Application.SumCol" />
+        <item itemvalue="Application.NumberStudent" />
+        <item itemvalue="Application.FindMinElement" />
+        <item itemvalue="Application.FindMaxElement" />
+        <item itemvalue="Application.ConCatArray" />
       </list>
     </recent_temporary>
   </component>
@@ -145,7 +154,8 @@
       <workItem from="1630399636685" duration="4440000" />
       <workItem from="1630469548654" duration="18353000" />
       <workItem from="1630546101441" duration="10563000" />
-      <workItem from="1630557148996" duration="295000" />
+      <workItem from="1630557148996" duration="497000" />
+      <workItem from="1630650820209" duration="11520000" />
     </task>
     <servers />
   </component>
@@ -169,26 +179,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="444" y="114" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1630400229785" />
+    <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1630652179228">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1630652179228" />
     <state x="743" y="281" key="FileChooserDialogImpl" timestamp="1630400192138">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1876" height="253" key="GridCell.Tab.0.bottom" timestamp="1630557436434">
+    <state width="1876" height="253" key="GridCell.Tab.0.bottom" timestamp="1630663622892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630557436434" />
-    <state width="1876" height="253" key="GridCell.Tab.0.center" timestamp="1630557436433">
+    <state width="1876" height="253" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630663622892" />
+    <state width="1876" height="253" key="GridCell.Tab.0.center" timestamp="1630663622892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630557436433" />
-    <state width="1876" height="253" key="GridCell.Tab.0.left" timestamp="1630557436433">
+    <state width="1876" height="253" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630663622892" />
+    <state width="1876" height="253" key="GridCell.Tab.0.left" timestamp="1630663622892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630557436433" />
-    <state width="1876" height="253" key="GridCell.Tab.0.right" timestamp="1630557436434">
+    <state width="1876" height="253" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630663622892" />
+    <state width="1876" height="253" key="GridCell.Tab.0.right" timestamp="1630663622892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630557436434" />
+    <state width="1876" height="253" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630663622892" />
     <state width="1876" height="342" key="GridCell.Tab.1.bottom" timestamp="1630557115328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
