@@ -8,20 +8,20 @@ public class PrimeNumber20 {
         System.out.println("Nhap so luong cac so nguyen to can in ra :");
         int number = scanner.nextInt();
         int count = 0;
-        int N = 2;
+        int num = 2;
         while (count < number) {
             boolean flag = true;
-            for (int i = 2; i < N; i++) {
-                if ((N % i) == 0) {
+            for (int i = 2; i < num; i++) {
+                if ((num % i) == 0) {
                     flag = false;
                     break;
                 }
             }
             if (flag) {
-                System.out.print(N + " ");
-                count = count + 1;
+                System.out.print(num + " ");
+                count++;
             }
-            N= N + 1;
+            num++;
         }
     }
 }

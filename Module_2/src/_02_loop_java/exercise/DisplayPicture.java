@@ -3,7 +3,6 @@ package _02_loop_java.exercise;
 public class DisplayPicture {
     public static void main(String[] args) {
 
-        ;
         for (int i = 0; i < 3; i ++) {
             for (int j=0; j < 7; j ++) {
                 System.out.print(" *");
