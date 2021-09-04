@@ -11,7 +11,7 @@ public class DeleteElement {
         boolean flag= false;
         for (int i = 0; i < array.length ; i++) {
             if (number == array[i]) {
-                index = index + i;
+                index += i;
                 flag = true;
             }
         }if (!flag) {
