@@ -20,16 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/CharInString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/SumCrossElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/QuadraticEquation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/practice/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/practice/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_02_loop_java/exercise/DisplayPicture.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_02_loop_java/exercise/DisplayPicture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_02_loop_java/exercise/PrimeNumber20.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_02_loop_java/exercise/PrimeNumber20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_03_array_method_java/exercise/SumCol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_03_array_method_java/exercise/SumCol.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_02_loop_java/exercise/DisplayPicture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_02_loop_java/exercise/DisplayPicture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_03_array_method_java/exercise/ConCatArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/ConCatArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_03_array_method_java/exercise/DeleteElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/DeleteElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_03_array_method_java/exercise/SumCol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/SumCol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_03_array_method_java/exercise/CharInString.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_03_array_method_java/exercise/CharInString.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +58,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.CharInString">
+  <component name="RunManager" selected="Application.QuadraticEquation">
     <configuration name="CharInString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_03_array_method_java.exercise.CharInString" />
       <module name="Module_2" />
@@ -89,12 +85,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberStudent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_03_array_method_java.practice.NumberStudent" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_04_Class_Object_java.practice.Main" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_03_array_method_java.practice.*" />
+          <option name="PATTERN" value="_04_Class_Object_java.practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +98,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumCol" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_03_array_method_java.exercise.SumCol" />
+    <configuration name="QuadraticEquation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_04_Class_Object_java.exercise.QuadraticEquation" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_03_array_method_java.exercise.*" />
+          <option name="PATTERN" value="_04_Class_Object_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.QuadraticEquation" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.CharInString" />
         <item itemvalue="Application.SumCrossElement" />
         <item itemvalue="Application.DisplayPicture" />
-        <item itemvalue="Application.SumCol" />
-        <item itemvalue="Application.NumberStudent" />
       </list>
     </recent_temporary>
   </component>
@@ -155,6 +151,7 @@
       <workItem from="1630650820209" duration="11520000" />
       <workItem from="1630729148583" duration="8804000" />
       <workItem from="1630755129397" duration="17000" />
+      <workItem from="1630893499639" duration="3174000" />
     </task>
     <servers />
   </component>
@@ -186,22 +183,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1876" height="249" key="GridCell.Tab.0.bottom" timestamp="1630755113243">
+    <state width="1876" height="249" key="GridCell.Tab.0.bottom" timestamp="1630913250178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630755113243" />
-    <state width="1876" height="249" key="GridCell.Tab.0.center" timestamp="1630755113243">
+    <state width="1876" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630913250178" />
+    <state width="1876" height="249" key="GridCell.Tab.0.center" timestamp="1630913250178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="249" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630755113243" />
-    <state width="1876" height="249" key="GridCell.Tab.0.left" timestamp="1630755113243">
+    <state width="1876" height="249" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630913250178" />
+    <state width="1876" height="249" key="GridCell.Tab.0.left" timestamp="1630913250178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="249" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630755113243" />
-    <state width="1876" height="249" key="GridCell.Tab.0.right" timestamp="1630755113243">
+    <state width="1876" height="249" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630913250178" />
+    <state width="1876" height="249" key="GridCell.Tab.0.right" timestamp="1630913250178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="249" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630755113243" />
+    <state width="1876" height="249" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630913250178" />
     <state width="1876" height="342" key="GridCell.Tab.1.bottom" timestamp="1630557115328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
