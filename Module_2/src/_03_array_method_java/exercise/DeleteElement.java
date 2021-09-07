@@ -14,15 +14,14 @@ public class DeleteElement {
                 index += i;
                 flag = true;
             }
-        }if (!flag) {
+        }
+        if (!flag) {
             System.out.println("Số bạn nhập không nằm trong mảng");
         }
-        array[index]=0;
         for(int i = index + 1; i < array.length; i++) {
-            int temp= array[i - 1];
             array[i -1] = array[i];
-            array[i]= temp;
         }
+        array[array.length -1]=0;
         System.out.println(Arrays.toString(array));
     }
 }
