@@ -20,14 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/Fan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch/MainStopWatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch/StopWatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_02_loop_java/exercise/DisplayPicture.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_02_loop_java/exercise/DisplayPicture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_03_array_method_java/exercise/DeleteElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_03_array_method_java/exercise/DeleteElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/QuadraticEquation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/QuadraticEquation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_03_array_method_java/exercise/DeleteElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/DeleteElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_03_array_method_java/exercise/InsertElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_03_array_method_java/exercise/InsertElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_03_array_method_java/exercise/InsertElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_03_array_method_java/exercise/InsertElement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/Fan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/Fan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/StopWatch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/Fan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/Fan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,13 +60,26 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.InsertElement">
+  <component name="RunManager" selected="Application.test">
     <configuration name="DeleteElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_03_array_method_java.exercise.DeleteElement" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="_03_array_method_java.exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Fan" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_04_Class_Object_java.exercise.StopWatch.Fan" />
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_04_Class_Object_java.exercise.StopWatch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,12 +100,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_04_Class_Object_java.practice.Main" />
+    <configuration name="MainStopWatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_04_Class_Object_java.exercise.StopWatch.MainStopWatch" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_04_Class_Object_java.practice.*" />
+          <option name="PATTERN" value="_04_Class_Object_java.exercise.StopWatch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -100,21 +113,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="QuadraticEquation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_04_Class_Object_java.exercise.QuadraticEquation" />
-      <module name="Module_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_04_Class_Object_java.exercise.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StopWatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_04_Class_Object_java.exercise.StopWatch" />
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_04_Class_Object_java.exercise.test" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
@@ -128,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.test" />
+        <item itemvalue="Application.MainStopWatch" />
+        <item itemvalue="Application.Fan" />
         <item itemvalue="Application.InsertElement" />
         <item itemvalue="Application.DeleteElement" />
-        <item itemvalue="Application.StopWatch" />
-        <item itemvalue="Application.QuadraticEquation" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +155,7 @@
       <workItem from="1630755129397" duration="17000" />
       <workItem from="1630893499639" duration="9764000" />
       <workItem from="1630976122721" duration="3008000" />
-      <workItem from="1630987727759" duration="1992000" />
+      <workItem from="1630987727759" duration="16633000" />
     </task>
     <servers />
   </component>
@@ -183,26 +183,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1630652179228" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1631002188759">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631002188759" />
+    <state x="914" y="421" width="433" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1631003170668">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="914" y="421" width="433" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1631003170668" />
     <state x="743" y="281" key="FileChooserDialogImpl" timestamp="1630400192138">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1876" height="249" key="GridCell.Tab.0.bottom" timestamp="1630989287967">
+    <state width="1340" height="249" key="GridCell.Tab.0.bottom" timestamp="1631012747855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630989287967" />
-    <state width="1876" height="249" key="GridCell.Tab.0.center" timestamp="1630989287967">
+    <state width="1340" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631012747855" />
+    <state width="1340" height="249" key="GridCell.Tab.0.center" timestamp="1631012747855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="249" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630989287967" />
-    <state width="1876" height="249" key="GridCell.Tab.0.left" timestamp="1630989287966">
+    <state width="1340" height="249" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631012747855" />
+    <state width="1340" height="249" key="GridCell.Tab.0.left" timestamp="1631012747855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="249" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630989287966" />
-    <state width="1876" height="249" key="GridCell.Tab.0.right" timestamp="1630989287967">
+    <state width="1340" height="249" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631012747855" />
+    <state width="1340" height="249" key="GridCell.Tab.0.right" timestamp="1631012747855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="249" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630989287967" />
+    <state width="1340" height="249" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631012747855" />
     <state width="1876" height="342" key="GridCell.Tab.1.bottom" timestamp="1630557115328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
