@@ -3,14 +3,14 @@ package _04_Class_Object_java.exercise.StopWatch;
 public class MainStopWatch {
     public static void main(String[] args) {
         StopWatch stopwatch = new StopWatch();
-        int[] array = {1, 2, 3, 4, 5};
-        int sum=0;
-        stopwatch.getStartTime();
-        for(int i=0; i < array.length; i++) {
-            sum+= array[i];
+        stopwatch.start();
+        int arr[] = new int[100000];
+        for (int i = arr.length -1; i >= 0; i--) {
+            arr[i] = i;
         }
-        System.out.println(sum);
-        stopwatch.getEndTime();
-        System.out.println(stopwatch.getElapsedTime());
+        stopwatch.sort(arr);
+        stopwatch.stop();
+        stopwatch.getElapsedTime();
+        System.out.println(stopwatch.getElapsedTime() + " milisecond giay");
     }
 }

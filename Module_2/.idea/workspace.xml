@@ -20,14 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch/MainStopWatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch/StopWatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_03_array_method_java/exercise/InsertElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_03_array_method_java/exercise/InsertElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/Fan.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/Fan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/StopWatch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/Fan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/Fan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/StopWatch/MainStopWatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/StopWatch/MainStopWatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/StopWatch/StopWatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/StopWatch/StopWatch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_04_Class_Object_java/exercise/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch/MainStopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch/MainStopWatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch/StopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/StopWatch/StopWatch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +58,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.test">
+  <component name="RunManager" selected="Application.MainStopWatch">
     <configuration name="DeleteElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_03_array_method_java.exercise.DeleteElement" />
       <module name="Module_2" />
@@ -128,8 +126,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.test" />
         <item itemvalue="Application.MainStopWatch" />
+        <item itemvalue="Application.test" />
         <item itemvalue="Application.Fan" />
         <item itemvalue="Application.InsertElement" />
         <item itemvalue="Application.DeleteElement" />
@@ -155,7 +153,7 @@
       <workItem from="1630755129397" duration="17000" />
       <workItem from="1630893499639" duration="9764000" />
       <workItem from="1630976122721" duration="3008000" />
-      <workItem from="1630987727759" duration="16633000" />
+      <workItem from="1630987727759" duration="18799000" />
     </task>
     <servers />
   </component>
@@ -195,22 +193,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1340" height="249" key="GridCell.Tab.0.bottom" timestamp="1631012747855">
+    <state width="1340" height="249" key="GridCell.Tab.0.bottom" timestamp="1631021648704">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631012747855" />
-    <state width="1340" height="249" key="GridCell.Tab.0.center" timestamp="1631012747855">
+    <state width="1340" height="249" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631021648704" />
+    <state width="1340" height="249" key="GridCell.Tab.0.center" timestamp="1631021648704">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="249" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631012747855" />
-    <state width="1340" height="249" key="GridCell.Tab.0.left" timestamp="1631012747855">
+    <state width="1340" height="249" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631021648704" />
+    <state width="1340" height="249" key="GridCell.Tab.0.left" timestamp="1631021648704">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="249" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631012747855" />
-    <state width="1340" height="249" key="GridCell.Tab.0.right" timestamp="1631012747855">
+    <state width="1340" height="249" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631021648704" />
+    <state width="1340" height="249" key="GridCell.Tab.0.right" timestamp="1631021648704">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1340" height="249" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631012747855" />
+    <state width="1340" height="249" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631021648704" />
     <state width="1876" height="342" key="GridCell.Tab.1.bottom" timestamp="1630557115328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
