@@ -1,9 +1,9 @@
 package _04_Class_Object_java.exercise;
 
 public class Fan {
-    final int SLOW = 1;
-    final int MEDIUM = 2;
-    final int FAST = 3;
+    public static final int SLOW = 1;
+    public static final int MEDIUM = 2;
+    public static final int FAST = 3;
     private int speed = SLOW;
     private boolean on = false;
     private double radius = 5;
@@ -70,8 +70,8 @@ public class Fan {
     }
 
     public static void main(String[] args) {
-        Fan fan1 = new Fan(3, 10, "yellow", true);
-        Fan fan2 = new Fan(2, 5, "blue", false);
+        Fan fan1 = new Fan(FAST, 10, "yellow", true);
+        Fan fan2 = new Fan(MEDIUM, 5, "blue", false);
 
         System.out.println(fan1);
         System.out.println(fan2);

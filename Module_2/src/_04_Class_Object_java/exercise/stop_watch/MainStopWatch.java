@@ -1,16 +1,18 @@
-package _04_Class_Object_java.exercise.StopWatch;
+package _04_Class_Object_java.exercise.stop_watch;
 
 public class MainStopWatch {
     public static void main(String[] args) {
         StopWatch stopwatch = new StopWatch();
-        stopwatch.start();
+
         int arr[] = new int[100000];
-        for (int i = arr.length -1; i >= 0; i--) {
-            arr[i] = i;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) Math.floor(((Math.random() * 100000) + 1));
         }
-        stopwatch.sort(arr);
+        stopwatch.start();
+        SelectionSort.sort(arr);
         stopwatch.stop();
         stopwatch.getElapsedTime();
         System.out.println(stopwatch.getElapsedTime() + " milisecond giay");
+
     }
 }
