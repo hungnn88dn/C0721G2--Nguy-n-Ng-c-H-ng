@@ -20,15 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_05_static_modifier_java/exercise/access_modifier_circle/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_05_static_modifier_java/exercise/access_modifier_circle/TestCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_05_static_modifier_java/exercise/access_modifier_only_write/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_05_static_modifier_java/exercise/access_modifier_only_write/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_05_static_modifier_java/pratice/car/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_05_static_modifier_java/pratice/car/TestStaticProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_05_static_modifier_java/pratice/student_teststaticmethod/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_05_static_modifier_java/pratice/student_teststaticmethod/TestStaticMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_06_inheritance_java/practice/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_06_inheritance_java/practice/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_06_inheritance_java/practice/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_06_inheritance_java/practice/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_06_inheritance_java/practice/TestCircle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_06_inheritance_java/practice/TestRectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_06_inheritance_java/practice/TestShape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_06_inheritance_java/practice/TestSquare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/Fan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_object_java/exercise/Fan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/QuadraticEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_object_java/exercise/QuadraticEquation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/stop_watch/MainStopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_object_java/exercise/stop_watch/MainStopWatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/stop_watch/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_object_java/exercise/stop_watch/SelectionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/exercise/stop_watch/StopWatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_object_java/exercise/stop_watch/StopWatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/practice/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_object_java/practice/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_04_Class_Object_java/practice/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_04_class_object_java/practice/Rectangle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +70,11 @@
   </component>
   <component name="RunManager" selected="Application.Test">
     <configuration name="MainStopWatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_04_Class_Object_java.exercise.stop_watch.MainStopWatch" />
+      <option name="MAIN_CLASS_NAME" value="_04_class_object_java.exercise.stop_watch.MainStopWatch" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_04_Class_Object_java.exercise.stop_watch.*" />
+          <option name="PATTERN" value="_04_class_object_java.exercise.stop_watch.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,7 +164,8 @@
       <workItem from="1630893499639" duration="9764000" />
       <workItem from="1630976122721" duration="3008000" />
       <workItem from="1630987727759" duration="18799000" />
-      <workItem from="1631076211710" duration="5894000" />
+      <workItem from="1631076211710" duration="6492000" />
+      <workItem from="1631148177662" duration="982000" />
     </task>
     <servers />
   </component>
@@ -197,22 +205,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1876" height="272" key="GridCell.Tab.0.bottom" timestamp="1631085361309">
+    <state width="1876" height="272" key="GridCell.Tab.0.bottom" timestamp="1631100860380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631085361309" />
-    <state width="1876" height="272" key="GridCell.Tab.0.center" timestamp="1631085361308">
+    <state width="1876" height="272" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631100860380" />
+    <state width="1876" height="272" key="GridCell.Tab.0.center" timestamp="1631100860380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="272" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631085361308" />
-    <state width="1876" height="272" key="GridCell.Tab.0.left" timestamp="1631085361308">
+    <state width="1876" height="272" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631100860380" />
+    <state width="1876" height="272" key="GridCell.Tab.0.left" timestamp="1631100860380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="272" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631085361308" />
-    <state width="1876" height="272" key="GridCell.Tab.0.right" timestamp="1631085361309">
+    <state width="1876" height="272" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631100860380" />
+    <state width="1876" height="272" key="GridCell.Tab.0.right" timestamp="1631100860380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1876" height="272" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631085361309" />
+    <state width="1876" height="272" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631100860380" />
     <state width="1876" height="342" key="GridCell.Tab.1.bottom" timestamp="1630557115328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

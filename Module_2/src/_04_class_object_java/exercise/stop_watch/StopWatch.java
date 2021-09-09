@@ -1,4 +1,4 @@
-package _04_Class_Object_java.exercise.stop_watch;
+package _04_class_object_java.exercise.stop_watch;
 
 public class StopWatch {
     private double startTime;

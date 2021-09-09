@@ -1,4 +1,4 @@
-package _04_Class_Object_java.practice;
+package _04_class_object_java.practice;
 
 public class Rectangle {
 
