@@ -1,8 +1,10 @@
 package _06_inheritance_java.practice;
 
 import _06_inheritance_java.practice.Rectangle;
+import _07_abstract_interfacce_java.exercise.colorable.Colorable;
+import _07_abstract_interfacce_java.exercise.resizeable.Resizeable;
 
-public class Square extends Rectangle {
+public class Square extends Rectangle implements Resizeable, Colorable {
     public Square() {
     }
 
@@ -33,11 +35,11 @@ public class Square extends Rectangle {
         setSide(length);
     }
 
-    @Override
-    public String toString() {
-        return "A Square with side="
-                + getSide()
-                + ", which is a subclass of "
-                + super.toString();
-    }
+//    @Override
+//    public String toString() {
+//        return "A Square with side="
+//                + getSide()
+//                + ", which is a subclass of "
+//                + super.toString();
+//    }
 }

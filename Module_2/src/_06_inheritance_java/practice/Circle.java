@@ -1,6 +1,9 @@
 package _06_inheritance_java.practice;
 
-public class Circle extends Shape {
+import _07_abstract_interfacce_java.exercise.colorable.Colorable;
+import _07_abstract_interfacce_java.exercise.resizeable.Resizeable;
+
+public class Circle extends Shape implements Resizeable {
     private double radius = 1.0;
 
     public Circle() {
@@ -24,7 +27,7 @@ public class Circle extends Shape {
     }
 
     public double getArea() {
-        return radius * radius * Math.PI;
+        return this.radius * this.radius * Math.PI;
     }
 
     public double getPerimeter() {
@@ -33,9 +36,13 @@ public class Circle extends Shape {
 
     @Override
     public String toString() {
-        return "A Circle with radius="
-                + getRadius()
-                + ", which is a subclass of "
-                + super.toString();
+        return "Diện tích là " +
+                getArea() + " "
+               ;
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.radius= this.radius*percent;
     }
 }

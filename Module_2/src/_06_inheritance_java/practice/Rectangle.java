@@ -1,6 +1,9 @@
 package _06_inheritance_java.practice;
 
-public class Rectangle extends Shape {
+import _07_abstract_interfacce_java.exercise.colorable.Colorable;
+import _07_abstract_interfacce_java.exercise.resizeable.Resizeable;
+
+public class Rectangle extends Shape implements Resizeable, Colorable {
     private double width = 1.0;
     private double length = 1.0;
 
@@ -44,11 +47,20 @@ public class Rectangle extends Shape {
 
     @Override
     public String toString() {
-        return "A Rectangle with width="
-                + getWidth()
-                + " and length="
-                + getLength()
-                + ", which is a subclass of "
-                + super.toString();
+        return "Diện tích là:" +
+                 getArea() + "-" +
+                howToColor()
+                ;
+    }
+
+    @Override
+    public void resize(double percent) {
+        this.width= width*percent;
+        this.length= length*percent;
+    }
+
+    @Override
+    public String howToColor() {
+        return  "Color all four sides";
     }
 }

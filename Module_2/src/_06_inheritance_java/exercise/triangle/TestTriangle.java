@@ -1,5 +1,5 @@
 package _06_inheritance_java.exercise.triangle;
-import java.awt.geom.CubicCurve2D;
+
 import java.util.Scanner;
 public class TestTriangle {
     public static void main(String[] args) {
