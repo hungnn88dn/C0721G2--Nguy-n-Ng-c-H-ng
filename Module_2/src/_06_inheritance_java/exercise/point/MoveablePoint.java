@@ -1,8 +1,8 @@
 package _06_inheritance_java.exercise.point;
 
 public class MoveablePoint extends Point {
-    float xSpeed = 0.0f;
-    float ySpeed = 0.0f;
+    private float xSpeed = 0.0f;
+    private float ySpeed = 0.0f;
 
     MoveablePoint() {
 
@@ -48,13 +48,13 @@ public class MoveablePoint extends Point {
     @Override
     public String toString() {
         return "MoveablePoint{" +
-                "(" + x + "," + y + ")" + ",speed=(" + xSpeed + "," + ySpeed + ")" +
+                "(" + getX() + "," + getY() + ")" + ",speed=(" + xSpeed + "," + ySpeed + ")" +
                 '}';
     }
 
-    public String move() {
-        x += xSpeed;
-        y += ySpeed;
-        return "(" + x + "," + y + ")";
+    public MoveablePoint move() {
+        setX(getX() + getxSpeed());
+        setY(getY() + getySpeed());
+        return this;
     }
 }

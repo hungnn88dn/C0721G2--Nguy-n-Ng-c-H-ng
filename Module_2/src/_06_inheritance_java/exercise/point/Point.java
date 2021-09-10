@@ -1,13 +1,12 @@
 package _06_inheritance_java.exercise.point;
 
 public class Point {
-    float x = 0.0f;
-    float y = 0.0f;
+    private float x = 0.0f;
+    private float y = 0.0f;
 
     Point() {
 
     }
-
     Point(float x, float y) {
         this.x = x;
         this.y = y;
@@ -40,8 +39,8 @@ public class Point {
     @Override
     public String toString() {
         return "Point (" +
-                "x=" + x +
-                ", y=" + y +
+                "x=" + this.x +
+                ", y=" + this.y +
                 ')';
     }
 }

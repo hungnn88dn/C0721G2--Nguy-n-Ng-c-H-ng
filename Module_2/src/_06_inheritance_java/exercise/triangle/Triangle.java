@@ -3,9 +3,9 @@ package _06_inheritance_java.exercise.triangle;
 import _06_inheritance_java.practice.Shape;
 
 public class Triangle extends Shape {
-    double side1=1.0;
-    double side2=1.0;
-    double side3=1.0;
+    private double side1=1.0;
+    private double side2=1.0;
+    private double side3=1.0;
   Triangle(){
 
   }

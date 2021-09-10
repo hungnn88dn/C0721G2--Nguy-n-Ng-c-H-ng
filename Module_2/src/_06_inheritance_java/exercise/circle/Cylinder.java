@@ -1,7 +1,7 @@
 package _06_inheritance_java.exercise.circle;
 
 public class Cylinder extends Circle{
-    double height;
+   private double height;
     Cylinder(double radius, String color, double height ) {
         super(radius,color);
         this.height = height;
@@ -15,15 +15,15 @@ public class Cylinder extends Circle{
         this.height = height;
     }
     double volume() {
-        return this.radius*this.radius*height*3.14;
+        return super.getRadius()*super.getRadius()*this.height*3.14;
     }
 
     @Override
     public String toString() {
         return "Cylinder{" +
                 "height=" + height +
-                ", radius=" + radius +
-                ", color='" + color + '\'' +
+                ", radius=" + super.getRadius() +
+                ", color='" + super.getColor() + '\'' +
                 '}';
     }
 }

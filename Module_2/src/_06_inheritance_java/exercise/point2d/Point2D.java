@@ -1,8 +1,8 @@
 package _06_inheritance_java.exercise.point2d;
 
 public class Point2D {
-    float x = 0.0f;
-    float y = 0.0f;
+    private float x = 0.0f;
+    private float y = 0.0f;
 
     protected Point2D() {
 
@@ -28,12 +28,14 @@ public class Point2D {
     public void setY(float y) {
         this.y = y;
     }
+
     public void setXY(float x, float y) {
-        this.x=x;
-        this.y=y;
+        this.x = x;
+        this.y = y;
     }
+
     public float[] getXY() {
-        float[] array = {this.x,this.y};
+        float[] array = {this.x, this.y};
         return array;
     }
 
