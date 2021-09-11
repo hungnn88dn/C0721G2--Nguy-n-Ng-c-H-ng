@@ -12,7 +12,9 @@ public class TestColorable {
         Shape retangle= new Rectangle(3.0,4.0);
         Shape circle= new Circle(5.0);
         Shape square= new Square(6.0);
+        System.out.println(((Square)square).howToColor());
         Shape[] shapes= {retangle,circle,square};
         System.out.println(Arrays.toString(shapes));
+
     }
 }

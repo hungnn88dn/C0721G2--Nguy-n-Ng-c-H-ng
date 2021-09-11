@@ -35,11 +35,13 @@ public class Square extends Rectangle implements Resizeable, Colorable {
         setSide(length);
     }
 
-//    @Override
-//    public String toString() {
-//        return "A Square with side="
-//                + getSide()
-//                + ", which is a subclass of "
-//                + super.toString();
-//    }
+    @Override
+    public String howToColor() {
+        return " Color all four sides";
+    }
+
+    @Override
+    public String toString() {
+        return "Diện tích là : " + getArea() + " -" + howToColor() + " ";
+    }
 }

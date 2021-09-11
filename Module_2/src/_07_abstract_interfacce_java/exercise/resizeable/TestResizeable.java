@@ -20,15 +20,31 @@ public class TestResizeable {
 //        ((Square)square).resize(((Math.random() * 100) + 1));
 //        System.out.println(Arrays.toString(shapes));
 
-        Rectangle rectangle= new Rectangle(3.0,4.0);
-        Circle circle= new Circle(4.0);
-        Square square= new Square(6.0);
-        double[] shapes= {rectangle.getArea(),circle.getArea(),square.getArea()};
-        System.out.println(Arrays.toString(shapes));
-        rectangle.resize(((float) Math.floor(((Math.random() * 100) + 1))/100));
-        circle.resize(((float) Math.floor(((Math.random() * 100) + 1))/100));
-        square.resize(((float) Math.floor(((Math.random() * 100) + 1))/100));
-        double[] shapes1= {rectangle.getArea(),circle.getArea(),square.getArea()};
-        System.out.println(Arrays.toString(shapes1));
+        Rectangle rectangle = new Rectangle(3.0, 4.0);
+        Circle circle = new Circle(4.0);
+        Square square = new Square(6.0);
+        Shape[] shapes = {rectangle, circle, square};
+
+        System.out.println("Diện tích các hình trước khi chạy phương thức resize: ");
+        for (int i = 0; i < shapes.length; i++) {
+            if (shapes[i] instanceof Rectangle) {
+                System.out.println(((Rectangle) shapes[i]).getArea());
+            }
+            if (shapes[i] instanceof Circle) {
+                System.out.println(((Circle) shapes[i]).getArea());
+            }
+        }
+
+        System.out.println("Diện tích các hình sau khi chạy phương thức resize: ");
+        for (int i = 0; i < shapes.length; i++) {
+            if (shapes[i] instanceof Rectangle) {
+                ((Rectangle) shapes[i]).resize(((float) Math.floor(((Math.random() * 100) + 1)) / 100));
+                System.out.println(((Rectangle) shapes[i]).getArea());
+            }
+            if (shapes[i] instanceof Circle) {
+                ((Circle) shapes[i]).resize(((float) Math.floor(((Math.random() * 100) + 1)) / 100));
+                System.out.println(((Circle) shapes[i]).getArea());
+            }
+        }
     }
 }

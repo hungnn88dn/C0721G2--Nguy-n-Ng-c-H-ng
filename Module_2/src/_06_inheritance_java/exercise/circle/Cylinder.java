@@ -15,7 +15,7 @@ public class Cylinder extends Circle{
         this.height = height;
     }
     double volume() {
-        return super.getRadius()*super.getRadius()*this.height*3.14;
+        return super.getRadius()*super.getRadius()*this.height*Math.PI;
     }
 
     @Override
