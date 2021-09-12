@@ -20,13 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/exercise/TenisGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/exercise/TenisGameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/calculator/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/calculator/CalculatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/cylinder/Cylinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/cylinder/CylinderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/fizzbuzz/FizzBuzz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/fizzbuzz/FizzBuzzTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_06_inheritance_java/exercise/circle/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inheritance_java/exercise/circle/Circle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_06_inheritance_java/exercise/circle/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inheritance_java/exercise/circle/Cylinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_06_inheritance_java/practice/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inheritance_java/practice/Rectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_06_inheritance_java/practice/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_inheritance_java/practice/Square.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_07_abstract_interfacce_java/exercise/colorable/TestColorable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_interfacce_java/exercise/colorable/TestColorable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_07_abstract_interfacce_java/exercise/resizeable/TestResizeable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_07_abstract_interfacce_java/exercise/resizeable/TestResizeable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Module_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Module_2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_07_abstract_interfacce_java/exercise/resizeable/TestResizeable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_07_abstract_interfacce_java/exercise/resizeable/TestResizeable.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,55 +55,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.TestColorable">
-    <configuration name="AbstractAndInterfaceTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_abstract_interfacce_java.practice.animal.AbstractAndInterfaceTests" />
-      <module name="Module_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_07_abstract_interfacce_java.practice.animal.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CircleComparatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_abstract_interfacce_java.practice.interface_comparator.CircleComparatorTest" />
-      <module name="Module_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_07_abstract_interfacce_java.practice.interface_comparator.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ComparableCircleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_abstract_interfacce_java.practice.comparable.ComparableCircleTest" />
-      <module name="Module_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_07_abstract_interfacce_java.practice.comparable.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.CalculatorTest.testCalculateMul">
     <configuration name="TestColorable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_07_abstract_interfacce_java.exercise.colorable.TestColorable" />
       <module name="Module_2" />
@@ -126,13 +96,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CalculatorTest.testCalculateMul" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_08_cleancode_refactoring_java.practice.calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="_08_cleancode_refactoring_java.practice.calculator" />
+      <option name="MAIN_CLASS_NAME" value="_08_cleancode_refactoring_java.practice.calculator.CalculatorTest" />
+      <option name="METHOD_NAME" value="testCalculateMul" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CylinderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_08_cleancode_refactoring_java.practice.cylinder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="_08_cleancode_refactoring_java.practice.cylinder" />
+      <option name="MAIN_CLASS_NAME" value="_08_cleancode_refactoring_java.practice.cylinder.CylinderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FizzBuzzTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_08_cleancode_refactoring_java.practice.fizzbuzz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="_08_cleancode_refactoring_java.practice.fizzbuzz" />
+      <option name="MAIN_CLASS_NAME" value="_08_cleancode_refactoring_java.practice.fizzbuzz.FizzBuzzTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CalculatorTest.testCalculateMul" />
+        <item itemvalue="JUnit.CylinderTest" />
+        <item itemvalue="JUnit.FizzBuzzTest" />
         <item itemvalue="Application.TestColorable" />
         <item itemvalue="Application.TestResizeable" />
-        <item itemvalue="Application.CircleComparatorTest" />
-        <item itemvalue="Application.ComparableCircleTest" />
-        <item itemvalue="Application.AbstractAndInterfaceTests" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +177,8 @@
       <workItem from="1631234562750" duration="21005000" />
       <workItem from="1631327386527" duration="380000" />
       <workItem from="1631329061609" duration="617000" />
-      <workItem from="1631367469232" duration="6096000" />
+      <workItem from="1631367469232" duration="6235000" />
+      <workItem from="1631443669148" duration="2974000" />
     </task>
     <servers />
   </component>
@@ -197,6 +214,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="914" y="421" width="482" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1631258877149" />
+    <state x="857" y="380" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog" timestamp="1631444913727">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="857" y="380" key="#com.intellij.refactoring.move.moveMembers.MoveMembersDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631444913727" />
     <state x="874" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1631262265695">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -205,38 +226,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1347" height="275" key="GridCell.Tab.0.bottom" timestamp="1631373449956">
+    <state width="1347" height="275" key="GridCell.Tab.0.bottom" timestamp="1631446408100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631373449956" />
-    <state width="1347" height="275" key="GridCell.Tab.0.center" timestamp="1631373449956">
+    <state width="1347" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631446408100" />
+    <state width="1347" height="275" key="GridCell.Tab.0.center" timestamp="1631446408100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631373449956" />
-    <state width="1347" height="275" key="GridCell.Tab.0.left" timestamp="1631373449956">
+    <state width="1347" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631446408100" />
+    <state width="1347" height="275" key="GridCell.Tab.0.left" timestamp="1631446408100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631373449956" />
-    <state width="1347" height="275" key="GridCell.Tab.0.right" timestamp="1631373449956">
+    <state width="1347" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631446408100" />
+    <state width="1347" height="275" key="GridCell.Tab.0.right" timestamp="1631446408100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631373449956" />
-    <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631372706508">
+    <state width="1347" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631446408100" />
+    <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631373708626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="313" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631372706508" />
-    <state width="1347" height="313" key="GridCell.Tab.1.center" timestamp="1631372706507">
+    <state width="1347" height="313" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631373708626" />
+    <state width="1347" height="313" key="GridCell.Tab.1.center" timestamp="1631373708625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="313" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631372706507" />
-    <state width="1347" height="313" key="GridCell.Tab.1.left" timestamp="1631372706507">
+    <state width="1347" height="313" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631373708625" />
+    <state width="1347" height="313" key="GridCell.Tab.1.left" timestamp="1631373708625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="313" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631372706507" />
-    <state width="1347" height="313" key="GridCell.Tab.1.right" timestamp="1631372706507">
+    <state width="1347" height="313" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631373708625" />
+    <state width="1347" height="313" key="GridCell.Tab.1.right" timestamp="1631373708625">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="313" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631372706507" />
+    <state width="1347" height="313" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631373708625" />
+    <state x="955" y="496" key="ReplaceDuplicatesPrompt" timestamp="1631445775035">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="955" y="496" key="ReplaceDuplicatesPrompt/0.0.1920.1040@0.0.1920.1040" timestamp="1631445775035" />
+    <state x="845" y="454" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1631445073324">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="845" y="454" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1631445073324" />
+    <state x="919" y="455" key="extract.method.dialog" timestamp="1631445832537">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="919" y="455" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631445832537" />
     <state x="346" y="160" key="new project wizard" timestamp="1630400207996">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
