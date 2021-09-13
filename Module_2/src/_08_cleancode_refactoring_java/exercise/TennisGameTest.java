@@ -1,6 +1,6 @@
 package _08_cleancode_refactoring_java.exercise;
 
-import org.junit.Before;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -8,10 +8,8 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
-import static org.junit.Assert.*;
-
 @RunWith(Parameterized.class)
-class TennisGameTest {
+public class TennisGameTest {
 
     private int player1Score;
     private int player2Score;
@@ -78,6 +76,6 @@ class TennisGameTest {
             if (i < this.player2Score)
                 m_score2 += 1;
         }
-        assertEquals(this.expectedScore, TennisGame.getScore("John", "Bill", m_score1, m_score2));
+        Assert.assertEquals(this.expectedScore, TennisGame.getScore("John", "Bill", m_score1, m_score2));
     }
 }

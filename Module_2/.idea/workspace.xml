@@ -20,17 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/exercise/TenisGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/exercise/TenisGameTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/calculator/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/calculator/CalculatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/cylinder/Cylinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/cylinder/CylinderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/fizzbuzz/FizzBuzz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/practice/fizzbuzz/FizzBuzzTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/exercise/TennisGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/exercise/TennisGameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Module_2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Module_2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_07_abstract_interfacce_java/exercise/resizeable/TestResizeable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_07_abstract_interfacce_java/exercise/resizeable/TestResizeable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_08_cleancode_refactoring_java/exercise/TennisGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_08_cleancode_refactoring_java/exercise/TennisGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_08_cleancode_refactoring_java/exercise/TennisGameTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_08_cleancode_refactoring_java/exercise/TennisGameTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/exercise/TenisGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/exercise/TenisGameTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,33 +66,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorTest.testCalculateMul">
-    <configuration name="TestColorable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_abstract_interfacce_java.exercise.colorable.TestColorable" />
-      <module name="Module_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_07_abstract_interfacce_java.exercise.colorable.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestResizeable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_07_abstract_interfacce_java.exercise.resizeable.TestResizeable" />
-      <module name="Module_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_07_abstract_interfacce_java.exercise.resizeable.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TennisGameTest.checkAllScores">
     <configuration name="CalculatorTest.testCalculateMul" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Module_2" />
       <extension name="coverage">
@@ -142,13 +113,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TennisGameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_08_cleancode_refactoring_java.exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="_08_cleancode_refactoring_java.exercise" />
+      <option name="MAIN_CLASS_NAME" value="_08_cleancode_refactoring_java.exercise.TennisGameTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TennisGameTest.checkAllScores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_08_cleancode_refactoring_java.exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="_08_cleancode_refactoring_java.exercise" />
+      <option name="MAIN_CLASS_NAME" value="_08_cleancode_refactoring_java.exercise.TennisGameTest" />
+      <option name="METHOD_NAME" value="checkAllScores" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TennisGameTest.checkAllScores" />
+        <item itemvalue="JUnit.TennisGameTest" />
         <item itemvalue="JUnit.CalculatorTest.testCalculateMul" />
         <item itemvalue="JUnit.CylinderTest" />
         <item itemvalue="JUnit.FizzBuzzTest" />
-        <item itemvalue="Application.TestColorable" />
-        <item itemvalue="Application.TestResizeable" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +181,8 @@
       <workItem from="1631329061609" duration="617000" />
       <workItem from="1631367469232" duration="6235000" />
       <workItem from="1631443669148" duration="2974000" />
+      <workItem from="1631495056976" duration="3576000" />
+      <workItem from="1631504595720" duration="13540000" />
     </task>
     <servers />
   </component>
@@ -202,6 +206,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="444" y="114" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1630400229785" />
+    <state x="231" y="121" width="1207" height="785" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1631526434109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="231" y="121" width="1207" height="785" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631526434109" />
     <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1630652179228">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -226,22 +234,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1347" height="275" key="GridCell.Tab.0.bottom" timestamp="1631446408100">
+    <state width="1347" height="275" key="GridCell.Tab.0.bottom" timestamp="1631527399761">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631446408100" />
-    <state width="1347" height="275" key="GridCell.Tab.0.center" timestamp="1631446408100">
+    <state width="1347" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631527399761" />
+    <state width="1347" height="275" key="GridCell.Tab.0.center" timestamp="1631527399760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631446408100" />
-    <state width="1347" height="275" key="GridCell.Tab.0.left" timestamp="1631446408100">
+    <state width="1347" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631527399760" />
+    <state width="1347" height="275" key="GridCell.Tab.0.left" timestamp="1631527399760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631446408100" />
-    <state width="1347" height="275" key="GridCell.Tab.0.right" timestamp="1631446408100">
+    <state width="1347" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631527399760" />
+    <state width="1347" height="275" key="GridCell.Tab.0.right" timestamp="1631527399760">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631446408100" />
+    <state width="1347" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631527399760" />
     <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631373708626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
