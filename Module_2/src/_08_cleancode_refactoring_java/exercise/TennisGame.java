@@ -52,13 +52,13 @@ public class TennisGame {
             }
         }
         if ((player1Scores >= DEUCE || player2Scores >= DEUCE) && (player1Scores != player2Scores)) {
-            score=  winGame( player1Scores,  player2Scores);
+            score=  showWinPlayer( player1Scores,  player2Scores);
         }
         return score;
     }
 
 
-    static String winGame(int player1Scores, int player2Scores) {
+    static String showWinPlayer(int player1Scores, int player2Scores) {
         String score= "";
         if ((player1Scores >= DEUCE || player2Scores >= DEUCE) && (player1Scores != player2Scores)) {
             int minusResult = player1Scores - player2Scores;
