@@ -2,7 +2,7 @@ package _08_cleancode_refactoring_java.exercise;
 
 public class TennisGame {
     static final int LOVE = 0;
-    static final int FIFTEEN = 1;
+    static final int FIFTEEN = 1;   
     static final int THIRTY = 2;
     static final int FORTY = 3;
     static final int DEUCE = 4;
