@@ -20,17 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_10_list_java/exercise/arraylist/MyArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_10_list_java/exercise/arraylist/TestMyArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_10_list_java/exercise/linkedlist/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_10_list_java/exercise/linkedlist/TestLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_10_list_java/pratice/mylinkedlist/MyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_10_list_java/pratice/mylinkedlist/TestMyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_10_list_java/pratice/mylist/MyList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_10_list_java/pratice/mylist/MyListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_11_stack_queue_java/exercise/DecimalToBinary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_11_stack_queue_java/exercise/reverse_stack/ReverseIntergerStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_11_stack_queue_java/exercise/reverse_stack/ReverseStringStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_11_stack_queue_java/exercise/string/map/StringMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_11_stack_queue_java/pratice/genericstack/GenericStackClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_11_stack_queue_java/pratice/genericstack/MyGenericStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_11_stack_queue_java/pratice/queue/LinkedListQueueClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_11_stack_queue_java/pratice/queue/MyLinkedListQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_08_cleancode_refactoring_java/exercise/TennisGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_08_cleancode_refactoring_java/exercise/TennisGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/exercise/TennisGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_08_cleancode_refactoring_java/exercise/TennisGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_10_list_java/exercise/linkedlist/LinkedList$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_10_list_java/exercise/linkedlist/LinkedList$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_10_list_java/exercise/linkedlist/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_10_list_java/exercise/linkedlist/LinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_10_list_java/exercise/linkedlist/TestLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_10_list_java/exercise/linkedlist/TestLinkedList.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,17 +66,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.TestLinkedList">
-    <configuration name="MyListTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_10_list_java.pratice.mylist.MyListTest" />
+  <component name="RunManager" selected="Application.DecimalToBinary">
+    <configuration name="DecimalToBinary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_11_stack_queue_java.exercise.DecimalToBinary" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_10_list_java.pratice.mylist.*" />
+          <option name="PATTERN" value="_11_stack_queue_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,12 +85,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_10_list_java.exercise.linkedlist.TestLinkedList" />
+    <configuration name="LinkedListQueueClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_11_stack_queue_java.pratice.queue.LinkedListQueueClient" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_10_list_java.exercise.linkedlist.*" />
+          <option name="PATTERN" value="_11_stack_queue_java.pratice.queue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,12 +98,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMyArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_10_list_java.exercise.arraylist.TestMyArrayList" />
+    <configuration name="ReverseIntergerStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_11_stack_queue_java.exercise.reverse_stack.ReverseIntergerStack" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_10_list_java.exercise.arraylist.*" />
+          <option name="PATTERN" value="_11_stack_queue_java.exercise.reverse_stack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,12 +111,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_10_list_java.pratice.mylinkedlist.TestMyLinkedList" />
+    <configuration name="ReverseStringStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_11_stack_queue_java.exercise.reverse_stack.ReverseStringStack" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_10_list_java.pratice.mylinkedlist.*" />
+          <option name="PATTERN" value="_11_stack_queue_java.exercise.reverse_stack.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,29 +124,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TennisGameTest.checkAllScores" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="StringMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_11_stack_queue_java.exercise.string.map.StringMap" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_08_cleancode_refactoring_java.exercise.*" />
+          <option name="PATTERN" value="_11_stack_queue_java.exercise.string.map.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="_08_cleancode_refactoring_java.exercise" />
-      <option name="MAIN_CLASS_NAME" value="_08_cleancode_refactoring_java.exercise.TennisGameTest" />
-      <option name="METHOD_NAME" value="checkAllScores" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestLinkedList" />
-        <item itemvalue="Application.TestMyLinkedList" />
-        <item itemvalue="Application.TestMyArrayList" />
-        <item itemvalue="Application.MyListTest" />
-        <item itemvalue="JUnit.TennisGameTest.checkAllScores" />
+        <item itemvalue="Application.DecimalToBinary" />
+        <item itemvalue="Application.StringMap" />
+        <item itemvalue="Application.ReverseStringStack" />
+        <item itemvalue="Application.ReverseIntergerStack" />
+        <item itemvalue="Application.LinkedListQueueClient" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +178,7 @@
       <workItem from="1631504595720" duration="15115000" />
       <workItem from="1631580373066" duration="14877000" />
       <workItem from="1631614646609" duration="9142000" />
+      <workItem from="1631666837431" duration="14163000" />
     </task>
     <servers />
   </component>
@@ -230,22 +230,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1347" height="275" key="GridCell.Tab.0.bottom" timestamp="1631627336516">
+    <state width="1876" height="275" key="GridCell.Tab.0.bottom" timestamp="1631701144119">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631627336516" />
-    <state width="1347" height="275" key="GridCell.Tab.0.center" timestamp="1631627336516">
+    <state width="1876" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631701144119" />
+    <state width="1876" height="275" key="GridCell.Tab.0.center" timestamp="1631701144119">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631627336516" />
-    <state width="1347" height="275" key="GridCell.Tab.0.left" timestamp="1631627336516">
+    <state width="1876" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631701144119" />
+    <state width="1876" height="275" key="GridCell.Tab.0.left" timestamp="1631701144119">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631627336516" />
-    <state width="1347" height="275" key="GridCell.Tab.0.right" timestamp="1631627336516">
+    <state width="1876" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631701144119" />
+    <state width="1876" height="275" key="GridCell.Tab.0.right" timestamp="1631701144119">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631627336516" />
+    <state width="1876" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631701144119" />
     <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631373708626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -282,10 +282,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="629" y="260" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631610778649" />
-    <state x="825" y="250" key="run.anything.popup" timestamp="1631078240080">
+    <state x="825" y="250" width="672" height="677" key="run.anything.popup" timestamp="1631694160641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="825" y="250" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1631078240080" />
+    <state x="825" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1631694160641" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1630747217889">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
