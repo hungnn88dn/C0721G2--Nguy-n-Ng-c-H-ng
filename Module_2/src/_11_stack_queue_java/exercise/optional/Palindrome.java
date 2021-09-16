@@ -1,4 +1,4 @@
-package _11_stack_queue_java.exercise;
+package _11_stack_queue_java.exercise.optional;
 
 import java.util.*;
 

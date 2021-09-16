@@ -14,7 +14,7 @@ public class StringMap {
 
         for (int i = 0; i < str.length(); i++) {
             if (myMap.containsKey(str.charAt(i))) {
-                myMap.replace(str.charAt(i),myMap.get(str.charAt(i)) + 1 );
+                myMap.put(str.charAt(i),myMap.get(str.charAt(i)) + 1 );
             } else {
                 myMap.put(str.charAt(i), 1);
             }

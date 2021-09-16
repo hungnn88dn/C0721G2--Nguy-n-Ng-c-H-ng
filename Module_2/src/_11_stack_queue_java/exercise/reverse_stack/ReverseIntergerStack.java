@@ -21,7 +21,7 @@ public class ReverseIntergerStack {
             myStack.push(array[i]);
         }
         for( int i=0; i < array.length; i++) {
-            array[i] = myStack.get(array.length -i - 1);
+            array[i] = myStack.pop();
         }
         System.out.println("---------");
         System.out.println("Giá trị của mảng sau khi đảo ");
