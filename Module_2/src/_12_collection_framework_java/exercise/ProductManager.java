@@ -4,13 +4,16 @@ public class ProductManager {
     private String name;
     private String nameProduct;
     private int price;
+    private int id;
+
     ProductManager() {
    }
 
-    public ProductManager(String name, String nameProduct, int price) {
+    public ProductManager(String name, String nameProduct, int price, int id) {
         this.name = name;
         this.nameProduct = nameProduct;
         this.price = price;
+        this.id = id;
     }
 
     public String getName() {
@@ -37,12 +40,21 @@ public class ProductManager {
         this.price = price;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "ProductManager{" +
-                "='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", nameProduct='" + nameProduct + '\'' +
                 ", price=" + price +
+                ", id=" + id +
                 '}';
     }
 }

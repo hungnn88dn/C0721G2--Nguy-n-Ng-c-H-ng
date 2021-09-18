@@ -20,19 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/ProductManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/SortPriceProductDown.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/SortPriceProductUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/practice/comparable_comparator/AgeComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/practice/comparable_comparator/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/practice/comparable_comparator/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/practice/hashmap_hashset/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/practice/hashmap_hashset/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/practice/list_student/TestMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/AddProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/DeleteProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/EditProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/SearchProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/SortProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_11_stack_queue_java/exercise/optional/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_11_stack_queue_java/exercise/optional/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_12_collection_framework_java/exercise/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_12_collection_framework_java/exercise/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_12_collection_framework_java/exercise/ProductManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_12_collection_framework_java/exercise/ProductManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/ProductManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +76,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="_12_collection_framework_java.practice.comparable_comparator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_12_collection_framework_java.exercise.Main" />
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_12_collection_framework_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -181,7 +191,8 @@
       <workItem from="1631614646609" duration="9142000" />
       <workItem from="1631666837431" duration="17523000" />
       <workItem from="1631755179684" duration="4827000" />
-      <workItem from="1631839576541" duration="14819000" />
+      <workItem from="1631839576541" duration="16765000" />
+      <workItem from="1631940696132" duration="5901000" />
     </task>
     <servers />
   </component>
@@ -213,10 +224,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1630652179228" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1631874493970">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1631961606511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631874493970" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1631961606511" />
     <state x="914" y="421" width="482" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1631258877149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -237,22 +248,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1347" height="274" key="GridCell.Tab.0.bottom" timestamp="1631874956433">
+    <state width="1347" height="274" key="GridCell.Tab.0.bottom" timestamp="1631962396878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631874956433" />
-    <state width="1347" height="274" key="GridCell.Tab.0.center" timestamp="1631874956433">
+    <state width="1347" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631962396878" />
+    <state width="1347" height="274" key="GridCell.Tab.0.center" timestamp="1631962396877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631874956433" />
-    <state width="1347" height="274" key="GridCell.Tab.0.left" timestamp="1631874956433">
+    <state width="1347" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631962396877" />
+    <state width="1347" height="274" key="GridCell.Tab.0.left" timestamp="1631962396877">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631874956433" />
-    <state width="1347" height="274" key="GridCell.Tab.0.right" timestamp="1631874956433">
+    <state width="1347" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631962396877" />
+    <state width="1347" height="274" key="GridCell.Tab.0.right" timestamp="1631962396878">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631874956433" />
+    <state width="1347" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631962396878" />
     <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631373708626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -277,10 +288,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="845" y="454" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1631445073324" />
-    <state x="919" y="455" key="extract.method.dialog" timestamp="1631445832537">
+    <state x="919" y="455" key="extract.method.dialog" timestamp="1631961719889">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="919" y="455" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631445832537" />
+    <state x="919" y="455" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631961719889" />
+    <state x="859" y="145" width="585" height="795" key="find.popup" timestamp="1631958556207">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="859" y="145" width="585" height="795" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1631958556207" />
     <state x="346" y="160" key="new project wizard" timestamp="1630400207996">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
