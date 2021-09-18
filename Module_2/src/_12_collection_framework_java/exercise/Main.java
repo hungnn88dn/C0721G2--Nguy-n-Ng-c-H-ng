@@ -22,16 +22,13 @@ public class Main {
             System.out.println("Nhập lựa chọn của bạn :");
             choose = Integer.parseInt(scanner.nextLine());
             if (choose == 1) {
-                AddProduct addProduct= new AddProduct();
-                addProduct.addProduct(productManagerList);
+                AddProduct.addProduct(productManagerList);
             }
             if (choose == 2) {
-               EditProduct editProduct= new EditProduct();
-               editProduct.editProduct(productManagerList);
+               EditProduct.editProduct(productManagerList);
             }
             if (choose == 3) {
-                DeleteProduct deleteProduct = new DeleteProduct();
-                deleteProduct.deleteProduct(productManagerList);
+                DeleteProduct.deleteProduct(productManagerList);
             }
             if (choose == 4) {
                 for (ProductManager productManager : productManagerList) {
@@ -40,12 +37,10 @@ public class Main {
                 System.out.println("__________________________________");
             }
             if (choose == 5) {
-                  SearchProduct searchProduct = new SearchProduct();
-                  searchProduct.searchProduct(productManagerList);
+                  SearchProduct.searchProduct(productManagerList);
             }
             if (choose == 6) {
-                SortProduct sortProduct= new SortProduct();
-                sortProduct.sortProduct(productManagerList);
+                SortProduct.sortProduct(productManagerList);
             }
         } while (choose != 0);
     }

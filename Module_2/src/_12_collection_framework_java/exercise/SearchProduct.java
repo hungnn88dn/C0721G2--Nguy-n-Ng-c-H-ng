@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SearchProduct  {
-    public void searchProduct(List<ProductManager> productManagerList) {
+    public static void searchProduct(List<ProductManager> productManagerList) {
         System.out.println("Nhập tên sản phẩm bạn muốn tìm kiếm: ");
         Scanner scanner = new Scanner(System.in);
         String phone = scanner.nextLine();

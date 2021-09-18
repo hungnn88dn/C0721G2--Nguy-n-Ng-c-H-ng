@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class SortProduct {
-    public void sortProduct(List<ProductManager> productManagerList) {
+    public static void sortProduct(List<ProductManager> productManagerList) {
         Scanner scanner = new Scanner(System.in);
         int chooseSort;
         do {

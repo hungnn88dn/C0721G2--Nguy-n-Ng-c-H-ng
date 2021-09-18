@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EditProduct {
-    public void editProduct(List<ProductManager> productManagerList) {
+    public static void editProduct(List<ProductManager> productManagerList) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập ID của sản phẫm cần sửa : ");
         int number = Integer.parseInt(scanner.nextLine());

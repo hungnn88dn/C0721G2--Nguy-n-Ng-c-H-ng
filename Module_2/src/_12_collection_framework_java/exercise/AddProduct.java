@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class AddProduct {
 
-    public void addProduct(List<ProductManager> productManagerList) {
+    public static void addProduct(List<ProductManager> productManagerList) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập tên sản phẩm :");
         String phone = scanner.nextLine();
