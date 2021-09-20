@@ -20,22 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_12_collection_framework_java/exercise/AddProduct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_12_collection_framework_java/exercise/DeleteProduct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_12_collection_framework_java/exercise/EditProduct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_12_collection_framework_java/exercise/SearchProduct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_12_collection_framework_java/exercise/SortProduct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/AddProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/DeleteProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/EditProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/SearchProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/SortPriceProductDown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/SortPriceProductDown.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/SortPriceProductUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/SortPriceProductUp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_12_collection_framework_java/exercise/SortProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_13_algorithm_search_java/exercise/SearchString.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_13_algorithm_search_java/exercise/SearchString.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_13_algorithm_search_java/exercise/SearchString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_13_algorithm_search_java/exercise/SearchString.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +62,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Main (2)">
+  <component name="RunManager" selected="Application.SearchString">
     <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_13_algorithm_search_java.practice.BinarySearch" />
       <module name="Module_2" />
@@ -141,12 +128,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_12_collection_framework_java.practice.list_student.TestMap" />
+    <configuration name="SearchString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_13_algorithm_search_java.exercise.SearchString" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_12_collection_framework_java.practice.list_student.*" />
+          <option name="PATTERN" value="_13_algorithm_search_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SearchString" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.BinarySearch" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.TestMap" />
       </list>
     </recent_temporary>
   </component>
@@ -201,7 +188,7 @@
       <workItem from="1631940696132" duration="7153000" />
       <workItem from="1632021102328" duration="652000" />
       <workItem from="1632050183053" duration="599000" />
-      <workItem from="1632098562443" duration="3625000" />
+      <workItem from="1632098562443" duration="17362000" />
     </task>
     <servers />
   </component>
@@ -257,22 +244,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1347" height="274" key="GridCell.Tab.0.bottom" timestamp="1632120611615">
+    <state width="1467" height="275" key="GridCell.Tab.0.bottom" timestamp="1632136035860">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="274" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632120611615" />
-    <state width="1347" height="274" key="GridCell.Tab.0.center" timestamp="1632120611615">
+    <state width="1467" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632136035860" />
+    <state width="1467" height="275" key="GridCell.Tab.0.center" timestamp="1632136035860">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="274" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632120611615" />
-    <state width="1347" height="274" key="GridCell.Tab.0.left" timestamp="1632120611615">
+    <state width="1467" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632136035860" />
+    <state width="1467" height="275" key="GridCell.Tab.0.left" timestamp="1632136035860">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="274" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632120611615" />
-    <state width="1347" height="274" key="GridCell.Tab.0.right" timestamp="1632120611615">
+    <state width="1467" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632136035860" />
+    <state width="1467" height="275" key="GridCell.Tab.0.right" timestamp="1632136035860">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1347" height="274" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632120611615" />
+    <state width="1467" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632136035860" />
     <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631373708626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -313,10 +300,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="629" y="260" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631865970586" />
-    <state x="825" y="250" width="672" height="677" key="run.anything.popup" timestamp="1631694160641">
+    <state x="825" y="250" width="672" height="677" key="run.anything.popup" timestamp="1632126049964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="825" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1631694160641" />
+    <state x="825" y="250" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1632126049964" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1631872721180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
