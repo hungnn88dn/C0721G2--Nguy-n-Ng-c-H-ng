@@ -5,11 +5,11 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        List<ProductManager> productManagerList = new LinkedList<>();
-        productManagerList.add(new ProductManager("Iphone6", "Apple", 7000,1));
-        productManagerList.add(new ProductManager("SonyXZ3", "Sony", 6000,2));
-        productManagerList.add(new ProductManager("PassPort", "Blackberry", 5000,3));
-        productManagerList.add(new ProductManager("Mi 8", "Xiaomi", 4000,4));
+        List<Product> productList = new LinkedList<>();
+        productList.add(new Product("Iphone6", "Apple", 7000,1));
+        productList.add(new Product("SonyXZ3", "Sony", 6000,2));
+        productList.add(new Product("PassPort", "Blackberry", 5000,3));
+        productList.add(new Product("Mi 8", "Xiaomi", 4000,4));
         int choose;
         do {
             System.out.println("1.Thêm sản phẩm");
@@ -22,25 +22,25 @@ public class Main {
             System.out.println("Nhập lựa chọn của bạn :");
             choose = Integer.parseInt(scanner.nextLine());
             if (choose == 1) {
-                AddProduct.addProduct(productManagerList);
+                ProductManager.addProduct(productList);
             }
             if (choose == 2) {
-               EditProduct.editProduct(productManagerList);
+               ProductManager.editProduct(productList);
             }
             if (choose == 3) {
-                DeleteProduct.deleteProduct(productManagerList);
+                ProductManager.deleteProduct(productList);
             }
             if (choose == 4) {
-                for (ProductManager productManager : productManagerList) {
-                    System.out.println(productManager);
+                for (Product product : productList) {
+                    System.out.println(product);
                 }
                 System.out.println("__________________________________");
             }
             if (choose == 5) {
-                  SearchProduct.searchProduct(productManagerList);
+                  ProductManager.searchProduct(productList);
             }
             if (choose == 6) {
-                SortProduct.sortProduct(productManagerList);
+                ProductManager.sortProduct(productList);
             }
         } while (choose != 0);
     }
