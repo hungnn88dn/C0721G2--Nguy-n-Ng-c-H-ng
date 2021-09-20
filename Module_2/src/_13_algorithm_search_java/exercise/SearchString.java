@@ -9,7 +9,6 @@ public class SearchString {
         System.out.println("Nhập chuỗi cần sắp xếp");
         String str = scanner.nextLine();
         List<String> listMax = new ArrayList<>();
-        listMax.add(Character.toString(str.charAt(0)));
         for (int i = 0; i < str.length(); i++) {
             List<String> listTemp = new ArrayList<>();
             listTemp.add(Character.toString(str.charAt(i)));
