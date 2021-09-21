@@ -1,6 +1,6 @@
 package models;
 
-public class Villa {
+public class Villa extends Facility{
     private int standardRoom;
     private double areaPool;
     private int floor;

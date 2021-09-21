@@ -19,23 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/controllers/FuramaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Facility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/models/House.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Villa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/models/test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_14_algorithm_sort_java/exercise/InsertionSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_14_algorithm_sort_java/exercise/InsertionSortByStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_14_algorithm_sort_java/practice/BubbleSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_14_algorithm_sort_java/practice/BubbleSortByStep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_14_algorithm_sort_java/practice/SelectionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_13_algorithm_search_java/exercise/SearchString.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_13_algorithm_search_java/exercise/SearchString.class" afterDir="false" />
-    </list>
+    <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -205,7 +189,7 @@
       <workItem from="1632137900447" duration="1803000" />
       <workItem from="1632184107190" duration="2468000" />
       <workItem from="1632206900305" duration="317000" />
-      <workItem from="1632218142033" duration="2304000" />
+      <workItem from="1632218142033" duration="2581000" />
     </task>
     <servers />
   </component>
@@ -261,22 +245,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1467" height="277" key="GridCell.Tab.0.bottom" timestamp="1632220130665">
+    <state width="1467" height="277" key="GridCell.Tab.0.bottom" timestamp="1632220723959">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1467" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632220130665" />
-    <state width="1467" height="277" key="GridCell.Tab.0.center" timestamp="1632220130665">
+    <state width="1467" height="277" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632220723959" />
+    <state width="1467" height="277" key="GridCell.Tab.0.center" timestamp="1632220723958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1467" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632220130665" />
-    <state width="1467" height="277" key="GridCell.Tab.0.left" timestamp="1632220130665">
+    <state width="1467" height="277" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632220723958" />
+    <state width="1467" height="277" key="GridCell.Tab.0.left" timestamp="1632220723958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1467" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632220130665" />
-    <state width="1467" height="277" key="GridCell.Tab.0.right" timestamp="1632220130665">
+    <state width="1467" height="277" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632220723958" />
+    <state width="1467" height="277" key="GridCell.Tab.0.right" timestamp="1632220723958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1467" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632220130665" />
+    <state width="1467" height="277" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632220723958" />
     <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631373708626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

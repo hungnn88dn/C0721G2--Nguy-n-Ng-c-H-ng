@@ -1,6 +1,6 @@
 package models;
 
-public class House {
+public class House extends Facility{
     private int standardRoom;
     private int floor;
      House() {

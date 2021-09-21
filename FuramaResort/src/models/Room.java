@@ -1,6 +1,6 @@
 package models;
 
-public class Room {
+public class Room extends Facility{
     private String serviceFree;
 
     public Room() {
