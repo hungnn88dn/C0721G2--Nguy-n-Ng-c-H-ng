@@ -88,7 +88,7 @@ public class Employee extends Person{
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "Employee{" +
                 "codeEmployee=" + codeEmployee +
                 ", cmnd=" + cmnd +
                 ", phoneNumber=" + phoneNumber +
@@ -96,6 +96,7 @@ public class Employee extends Person{
                 ", level='" + level + '\'' +
                 ", office='" + office + '\'' +
                 ", salary=" + salary +
-                '}';
+                "} " + super.toString();
     }
+
 }

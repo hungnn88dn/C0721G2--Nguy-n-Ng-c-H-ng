@@ -1,9 +1,20 @@
 package controllers;
 
+import models.Customer;
+import models.Employee;
+import services.CustomerServiceImpl;
+import services.EmployeeService;
+import services.EmployeeServiceImpl;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class FuramaController {
     Scanner scanner = new Scanner(System.in);
+    EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
+    List<Employee> employeeServiceList = new ArrayList<>();
+    List<Customer> customerArrayList = new ArrayList<>();
 
     public void displayMainMenu() {
         int choose;
@@ -25,6 +36,16 @@ public class FuramaController {
                     System.out.println("4. Return main menu");
                     System.out.println("Nhập lựa chọc của bạn");
                     chooseEmployee = Integer.parseInt(scanner.nextLine());
+                    if (chooseEmployee == 1) {
+                        EmployeeServiceImpl.displayEmployee(employeeServiceList);
+                    }
+                    if (chooseEmployee == 2) {
+                        EmployeeServiceImpl.addEmployee(employeeServiceList);
+                    }
+                    if (chooseEmployee == 3) {
+                        EmployeeServiceImpl.editEmployee(employeeServiceList);
+                    }
+
                 } while (chooseEmployee != 4);
             }
             if (choose == 2) {
@@ -36,6 +57,15 @@ public class FuramaController {
                     System.out.println("4. Return main menu");
                     System.out.println("Nhập lựa chọc của bạn");
                     chooseCustomer = Integer.parseInt(scanner.nextLine());
+                    if (chooseCustomer == 1) {
+                        CustomerServiceImpl.displayCustomer(customerArrayList);
+                    }
+                    if (chooseCustomer == 2) {
+                        CustomerServiceImpl.addCustomer(customerArrayList);
+                    }
+                    if (chooseCustomer == 3) {
+                        CustomerServiceImpl.editCustomer(customerArrayList);
+                    }
                 } while (chooseCustomer != 4);
             }
             if (choose == 3) {

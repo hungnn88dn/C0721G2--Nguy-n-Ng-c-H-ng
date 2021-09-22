@@ -1,6 +1,6 @@
 package models;
 
-public class Customer extends Person{
+public class Customer extends Person {
     private int codeCustomer;
     private int cmnd;
     private int phoneNumber;
@@ -84,6 +84,6 @@ public class Customer extends Person{
                 ", email='" + email + '\'' +
                 ", customerType='" + customerType + '\'' +
                 ", address='" + address + '\'' +
-                '}';
+                "} " + super.toString();
     }
 }
