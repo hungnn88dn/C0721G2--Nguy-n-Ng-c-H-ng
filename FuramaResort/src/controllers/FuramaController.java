@@ -7,6 +7,7 @@ import services.EmployeeService;
 import services.EmployeeServiceImpl;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,7 +15,7 @@ public class FuramaController {
     Scanner scanner = new Scanner(System.in);
     EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
     List<Employee> employeeServiceList = new ArrayList<>();
-    List<Customer> customerArrayList = new ArrayList<>();
+    List<Customer> customerArrayList = new LinkedList<>();
 
     public void displayMainMenu() {
         int choose;
