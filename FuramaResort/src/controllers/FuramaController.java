@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class FuramaController {
     Scanner scanner = new Scanner(System.in);
     EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
-    List<Employee> employeeServiceList = new ArrayList<>();
+  public static List<Employee> employeeServiceList = new ArrayList<>();
     List<Customer> customerArrayList = new LinkedList<>();
 
     public void displayMainMenu() {

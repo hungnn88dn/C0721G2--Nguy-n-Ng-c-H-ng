@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadAndWriteFile {
-    public List<Integer> readFile(String filePath){
+    public  static List<Integer> readFile(String filePath){
         List<Integer> numbers = new ArrayList<>();
         try {
             File file = new File(filePath);
@@ -45,9 +45,10 @@ public class ReadAndWriteFile {
         return max;
     }
     public static void main(String[] args) {
-        ReadAndWriteFile readAndWriteFile = new ReadAndWriteFile();
-        List<Integer> numbers = readAndWriteFile.readFile("numbers.txt");
-        int maxValue = findMax(numbers);
-        readAndWriteFile.writeFile("result.txt", maxValue);
+//        ReadAndWriteFile readAndWriteFile = new ReadAndWriteFile();
+//        List<Integer> numbers = readAndWriteFile.readFile("numbers.txt");
+//        int maxValue = findMax(numbers);
+//        readAndWriteFile.writeFile("result.txt", maxValue);
+        ReadAndWriteFile.readFile("src\\_16_io_textfile_java\\exercise\\copy_file_text\\source");
     }
 }

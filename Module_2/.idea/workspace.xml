@@ -20,15 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_16_io_textfile_java/practice/ReadAndWriteFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_16_io_textfile_java/practice/ReadFileExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_16_io_textfile_java/exercise/copy_file_text/CopyText.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_16_io_textfile_java/exercise/copy_file_text/source.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_16_io_textfile_java/exercise/read_file_csv/NationalCSV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_16_io_textfile_java/exercise/read_file_csv/list" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/controllers/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/controllers/FuramaController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/CustomerServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/EmployeeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/controllers/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/controllers/FuramaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/EmployeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_15_exception_debug_java/exercise/TriangleException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_15_exception_debug_java/exercise/TriangleException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/META-INF/Module_2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_16_io_textfile_java/practice/ReadAndWriteFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_16_io_textfile_java/practice/ReadAndWriteFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_16_io_textfile_java/practice/ReadFileExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_16_io_textfile_java/practice/ReadFileExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_16_io_textfile_java/practice/ReadAndWriteFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_16_io_textfile_java/practice/ReadAndWriteFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_16_io_textfile_java/practice/ReadFileExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_16_io_textfile_java/practice/ReadFileExample.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,13 +76,13 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.TriangleException">
-    <configuration name="ArrayExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_15_exception_debug_java.practice.ArrayExample" />
+  <component name="RunManager" selected="Application.CopyText">
+    <configuration name="CopyFileText" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_16_io_textfile_java.exercise.copy_file_text.CopyFileText" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_15_exception_debug_java.practice.*" />
+          <option name="PATTERN" value="_16_io_textfile_java.exercise.copy_file_text.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,12 +90,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculationExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_15_exception_debug_java.practice.CalculationExample" />
+    <configuration name="CopyText" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_16_io_textfile_java.exercise.copy_file_text.CopyText" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_15_exception_debug_java.practice.*" />
+          <option name="PATTERN" value="_16_io_textfile_java.exercise.copy_file_text.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,12 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinearEquationResolver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_15_exception_debug_java.practice.LinearEquationResolver" />
+    <configuration name="NationalCSV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_16_io_textfile_java.exercise.read_file_csv.NationalCSV" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_15_exception_debug_java.practice.*" />
+          <option name="PATTERN" value="_16_io_textfile_java.exercise.read_file_csv.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,12 +129,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TriangleException" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_15_exception_debug_java.exercise.TriangleException" />
+    <configuration name="ReadFileExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_16_io_textfile_java.practice.ReadFileExample" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_15_exception_debug_java.exercise.*" />
+          <option name="PATTERN" value="_16_io_textfile_java.practice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TriangleException" />
+        <item itemvalue="Application.CopyText" />
+        <item itemvalue="Application.NationalCSV" />
         <item itemvalue="Application.ReadAndWriteFile" />
-        <item itemvalue="Application.CalculationExample" />
-        <item itemvalue="Application.ArrayExample" />
-        <item itemvalue="Application.LinearEquationResolver" />
+        <item itemvalue="Application.CopyFileText" />
+        <item itemvalue="Application.ReadFileExample" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +195,9 @@
       <workItem from="1632206900305" duration="317000" />
       <workItem from="1632218142033" duration="2581000" />
       <workItem from="1632271642400" duration="3836000" />
-      <workItem from="1632357857650" duration="798000" />
+      <workItem from="1632357857650" duration="12633000" />
+      <workItem from="1632385971017" duration="532000" />
+      <workItem from="1632393489345" duration="358000" />
     </task>
     <servers />
   </component>
@@ -216,14 +225,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="231" y="121" width="1207" height="785" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631526434109" />
-    <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1630652179228">
+    <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1632384117999">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1630652179228" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1632286007061">
+    <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1632384117999" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1632384370264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1632286007061" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1632384370264" />
     <state x="914" y="421" width="482" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1631258877149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -244,22 +253,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1173" height="276" key="GridCell.Tab.0.bottom" timestamp="1632358269002">
+    <state width="1173" height="276" key="GridCell.Tab.0.bottom" timestamp="1632386502580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632358269002" />
-    <state width="1173" height="276" key="GridCell.Tab.0.center" timestamp="1632358269001">
+    <state width="1173" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632386502580" />
+    <state width="1173" height="276" key="GridCell.Tab.0.center" timestamp="1632386502580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632358269001" />
-    <state width="1173" height="276" key="GridCell.Tab.0.left" timestamp="1632358269001">
+    <state width="1173" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632386502580" />
+    <state width="1173" height="276" key="GridCell.Tab.0.left" timestamp="1632386502580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632358269001" />
-    <state width="1173" height="276" key="GridCell.Tab.0.right" timestamp="1632358269002">
+    <state width="1173" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632386502580" />
+    <state width="1173" height="276" key="GridCell.Tab.0.right" timestamp="1632386502580">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632358269002" />
+    <state width="1173" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632386502580" />
     <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631373708626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

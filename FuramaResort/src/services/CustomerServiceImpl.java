@@ -13,7 +13,13 @@ public class CustomerServiceImpl implements CustomerSerivce {
             System.out.println(customer);
         }
     }
-
+    static {
+        Customer customer1= new Customer("Nguyen Van E",1988,"Nam",5,555,5555,"e@gmail.com","Diamond","HN");
+        Customer customer2= new Customer("Nguyen Thi F",1989,"Nữ",6,666,6666,"f@gmail.com","Platinium","HCM");
+        Customer customer3= new Customer("Nguyen Van G",1990,"Nam",7,777,777,"g@gmail.com","Gold","QN");
+        Customer customer4= new Customer("Nguyen Thi H",1991,"Nữ",8,888,8888,"h@gmail.com","Silver","QT");
+        Customer customer5= new Customer("Nguyen Thi K",1992,"Nữ",9,999,9999,"k@gmail.com","Member","Hue");
+    }
     public static void addCustomer(List<Customer> list) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập mã khách hàng : ");
