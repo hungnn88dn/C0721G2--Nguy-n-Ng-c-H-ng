@@ -46,7 +46,9 @@ public class EmployeeServiceImpl implements EmployeeService {
         for (Employee employee : list) {
             if (employee.getCodeEmployee() == codeCheck) {
                 int chooseEdit;
+
                 do {
+                    System.out.println(employee);
                     System.out.println("1.Sửa họ tên: ");
                     System.out.println("2.Sửa năm sinh: ");
                     System.out.println("3.Sửa giới tính: ");

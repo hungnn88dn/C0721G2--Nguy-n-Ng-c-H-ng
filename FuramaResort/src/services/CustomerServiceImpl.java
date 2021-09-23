@@ -45,6 +45,7 @@ public class CustomerServiceImpl implements CustomerSerivce {
             if (customer.getCodeCustomer() == codeCheck) {
                 int chooseEdit;
                 do {
+                    System.out.println(customer);
                     System.out.println("1.Sửa họ tên: ");
                     System.out.println("2.Sửa năm sinh: ");
                     System.out.println("3.Sửa giới tính: ");
