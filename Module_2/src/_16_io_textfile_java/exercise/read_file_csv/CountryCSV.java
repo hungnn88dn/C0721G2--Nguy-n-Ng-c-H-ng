@@ -7,23 +7,23 @@ import java.util.List;
 public class CountryCSV {
 
    public static List<Country> readNational(String pathFile) {
-       ArrayList<Country>  nationalList= new ArrayList<>();
+       ArrayList<Country>  countryList= new ArrayList<>();
        try{
           File file = new File(pathFile);
           if(!file.exists()) {
               throw new FileNotFoundException();
           }
            BufferedReader bufferedReader= new BufferedReader(new FileReader(file));
-           String line= null;
+           String line= "";
            while((line = bufferedReader.readLine()) !=null) {
                String[] lineSplit=  line.split(",");
                Country country= new Country(Integer.parseInt(lineSplit[0]),lineSplit[1],lineSplit[2]);
-               nationalList.add(country);
+               countryList.add(country);
            }
        } catch (IOException e) {
            e.printStackTrace();
        }
-       return nationalList;
+       return countryList;
    }
 
     public static void main(String[] args) {
