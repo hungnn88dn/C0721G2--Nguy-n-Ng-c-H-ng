@@ -19,7 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="" />
+    <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/ProductManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/product.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_16_io_textfile_java/exercise/read_file_csv/CountryCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_16_io_textfile_java/exercise/read_file_csv/CountryCSV.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_17_binaryfile_serialization_java/practice/binaryfilestudent/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_17_binaryfile_serialization_java/practice/binaryfilestudent/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/practice/binaryfilestudent/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/practice/binaryfilestudent/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +69,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.CountryCSV">
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="CountryCSV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_16_io_textfile_java.exercise.read_file_csv.CountryCSV" />
       <module name="Module_2" />
@@ -79,6 +89,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="_17_binaryfile_serialization_java.practice.binaryfilestudent.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_17_binaryfile_serialization_java.exercise.Main" />
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_17_binaryfile_serialization_java.exercise.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,26 +135,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadAndWriteFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_16_io_textfile_java.practice.ReadAndWriteFile" />
-      <module name="Module_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_16_io_textfile_java.practice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.CountryCSV" />
         <item itemvalue="Application.NationalCSV" />
-        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.ReadAndWriteFile" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +191,8 @@
       <workItem from="1632357857650" duration="12633000" />
       <workItem from="1632385971017" duration="532000" />
       <workItem from="1632393489345" duration="851000" />
-      <workItem from="1632444143207" duration="2893000" />
+      <workItem from="1632444143207" duration="19151000" />
+      <workItem from="1632478313478" duration="1337000" />
     </task>
     <servers />
   </component>
@@ -213,10 +224,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1632444255940" />
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1632453453498">
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1632455936214">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1632453453498" />
+    <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1632455936214" />
     <state x="914" y="421" width="482" height="221" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1631258877149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -237,22 +248,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1173" height="276" key="GridCell.Tab.0.bottom" timestamp="1632454832897">
+    <state width="1173" height="276" key="GridCell.Tab.0.bottom" timestamp="1632479223391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632454832897" />
-    <state width="1173" height="276" key="GridCell.Tab.0.center" timestamp="1632454832897">
+    <state width="1173" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632479223391" />
+    <state width="1173" height="276" key="GridCell.Tab.0.center" timestamp="1632479223391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632454832897" />
-    <state width="1173" height="276" key="GridCell.Tab.0.left" timestamp="1632454832897">
+    <state width="1173" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632479223391" />
+    <state width="1173" height="276" key="GridCell.Tab.0.left" timestamp="1632479223391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632454832897" />
-    <state width="1173" height="276" key="GridCell.Tab.0.right" timestamp="1632454832897">
+    <state width="1173" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632479223391" />
+    <state width="1173" height="276" key="GridCell.Tab.0.right" timestamp="1632479223391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632454832897" />
+    <state width="1173" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632479223391" />
     <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631373708626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -289,10 +300,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="346" y="160" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1632206799385" />
-    <state x="629" y="260" key="refactoring.ChangeSignatureDialog" timestamp="1631865970586">
+    <state x="629" y="260" key="refactoring.ChangeSignatureDialog" timestamp="1632458295398">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="629" y="260" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631865970586" />
+    <state x="629" y="260" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1632458295398" />
     <state x="825" y="250" width="672" height="677" key="run.anything.popup" timestamp="1632126049964">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
