@@ -4,19 +4,21 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NationalCSV {
+public class CountryCSV {
 
-   public static List<String> readNational(String pathFile) {
-       List<String>  nationalList= new ArrayList<>();
+   public static List<Country> readNational(String pathFile) {
+       ArrayList<Country>  nationalList= new ArrayList<>();
        try{
           File file = new File(pathFile);
           if(!file.exists()) {
               throw new FileNotFoundException();
           }
            BufferedReader bufferedReader= new BufferedReader(new FileReader(file));
-           String line= "";
+           String line= null;
            while((line = bufferedReader.readLine()) !=null) {
-               nationalList.add(line);
+               String[] lineSplit=  line.split(",");
+               Country country= new Country(Integer.parseInt(lineSplit[0]),lineSplit[1],lineSplit[2]);
+               nationalList.add(country);
            }
        } catch (IOException e) {
            e.printStackTrace();
@@ -25,9 +27,10 @@ public class NationalCSV {
    }
 
     public static void main(String[] args) {
-        List<String> list= NationalCSV.readNational("src\\_16_io_textfile_java\\exercise\\read_file_csv\\list");
-        for(String l: list){
+        List<Country> list= CountryCSV.readNational("src\\_16_io_textfile_java\\exercise\\read_file_csv\\list");
+        for(Country l: list){
             System.out.println(l);
         }
+
     }
 }
