@@ -36,6 +36,7 @@ public class ProductManager {
 
     public static void addProduct(List<Product> list) throws IOException {
         try {
+            File file = new File("src\\_17_binaryfile_serialization_java\\exercise\\product.csv");
             Scanner scanner = new Scanner(System.in);
             System.out.println("input ID: ");
             int id = Integer.parseInt(scanner.nextLine());
@@ -45,12 +46,14 @@ public class ProductManager {
             String brand = scanner.nextLine();
             System.out.println("input price: ");
             int price = Integer.parseInt(scanner.nextLine());
+            if (file.length() > 0) {
+                list = readProductFile();
+            }
             list.add(new Product(id, name, brand, price));
             ProductManager.writeObjectProduct(list);
         } catch (NumberFormatException e) {
             System.out.println("wrong input");
         }
-
     }
 
     public static void showProduct() {

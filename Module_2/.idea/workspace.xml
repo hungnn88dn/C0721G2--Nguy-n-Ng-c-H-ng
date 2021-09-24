@@ -20,15 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/ProductManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/product.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_16_io_textfile_java/exercise/read_file_csv/CountryCSV.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_16_io_textfile_java/exercise/read_file_csv/CountryCSV.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_17_binaryfile_serialization_java/practice/binaryfilestudent/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_17_binaryfile_serialization_java/practice/binaryfilestudent/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/practice/binaryfilestudent/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/practice/binaryfilestudent/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_17_binaryfile_serialization_java/exercise/ProductManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_17_binaryfile_serialization_java/exercise/ProductManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_17_binaryfile_serialization_java/exercise/product.csv" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_17_binaryfile_serialization_java/exercise/product.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/ProductManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/product.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/_17_binaryfile_serialization_java/exercise/product.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +190,7 @@
       <workItem from="1632385971017" duration="532000" />
       <workItem from="1632393489345" duration="851000" />
       <workItem from="1632444143207" duration="19151000" />
-      <workItem from="1632478313478" duration="1337000" />
+      <workItem from="1632478313478" duration="4924000" />
     </task>
     <servers />
   </component>
@@ -248,22 +246,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1173" height="276" key="GridCell.Tab.0.bottom" timestamp="1632479223391">
+    <state width="1173" height="280" key="GridCell.Tab.0.bottom" timestamp="1632484077185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632479223391" />
-    <state width="1173" height="276" key="GridCell.Tab.0.center" timestamp="1632479223391">
+    <state width="1173" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632484077185" />
+    <state width="1173" height="280" key="GridCell.Tab.0.center" timestamp="1632484077184">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632479223391" />
-    <state width="1173" height="276" key="GridCell.Tab.0.left" timestamp="1632479223391">
+    <state width="1173" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632484077184" />
+    <state width="1173" height="280" key="GridCell.Tab.0.left" timestamp="1632484077184">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632479223391" />
-    <state width="1173" height="276" key="GridCell.Tab.0.right" timestamp="1632479223391">
+    <state width="1173" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632484077184" />
+    <state width="1173" height="280" key="GridCell.Tab.0.right" timestamp="1632484077184">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632479223391" />
+    <state width="1173" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632484077184" />
     <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631373708626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
