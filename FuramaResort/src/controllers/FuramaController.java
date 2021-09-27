@@ -26,7 +26,7 @@ public class FuramaController {
             System.out.println("4.Booking Management");
             System.out.println("5.Promotion Management");
             System.out.println("6.Exit");
-            System.out.println("Nhập lựa chọn của bạn: ");
+            System.out.println("Your choose: ");
             choose = Integer.parseInt(scanner.nextLine());
             if (choose == 1) {
                 int chooseEmployee;
@@ -35,7 +35,7 @@ public class FuramaController {
                     System.out.println("2. Add new employees");
                     System.out.println("3. Edit list employees");
                     System.out.println("4. Return main menu");
-                    System.out.println("Nhập lựa chọc của bạn");
+                    System.out.println("Your choose: ");
                     chooseEmployee = Integer.parseInt(scanner.nextLine());
                     if (chooseEmployee == 1) {
                         EmployeeServiceImpl.displayEmployee(employeeServiceList);
@@ -56,7 +56,7 @@ public class FuramaController {
                     System.out.println("2. Add new customers");
                     System.out.println("3. Edit list customers");
                     System.out.println("4. Return main menu");
-                    System.out.println("Nhập lựa chọc của bạn");
+                    System.out.println("Your choose: ");
                     chooseCustomer = Integer.parseInt(scanner.nextLine());
                     if (chooseCustomer == 1) {
                         CustomerServiceImpl.displayCustomer(customerArrayList);
@@ -76,7 +76,7 @@ public class FuramaController {
                     System.out.println("2. Add new facility");
                     System.out.println("3. Edit list facility");
                     System.out.println("4. Return main menu");
-                    System.out.println("Nhập lựa chọc của bạn");
+                    System.out.println("Your choose: ");
                     chooseFacility = Integer.parseInt(scanner.nextLine());
                 } while (chooseFacility != 4);
             }
@@ -89,7 +89,7 @@ public class FuramaController {
                     System.out.println("4. Display new contracts");
                     System.out.println("5. Edit contracts");
                     System.out.println("6. Return main menu");
-                    System.out.println("Nhập lựa chọc của bạn");
+                    System.out.println("Your choose: ");
                     chooseBooking = Integer.parseInt(scanner.nextLine());
                 } while (chooseBooking != 6);
             }
@@ -99,7 +99,7 @@ public class FuramaController {
                     System.out.println("1. Display list customers use service");
                     System.out.println("2. Display list customers use voucher");
                     System.out.println("3. Return main menu");
-                    System.out.println("Nhập lựa chọc của bạn");
+                    System.out.println("Your choose: ");
                     choosePromotion = Integer.parseInt(scanner.nextLine());
                 } while (choosePromotion != 3);
             }

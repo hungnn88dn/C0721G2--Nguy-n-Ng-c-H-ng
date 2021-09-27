@@ -1,22 +1,28 @@
 package models;
 
 public class House extends Facility{
-    private int standardRoom;
+    private String standardRoom;
     private int floor;
      House() {
 
      }
 
-    public House(int standardRoom, int floor) {
+    public House(String standardRoom, int floor) {
         this.standardRoom = standardRoom;
         this.floor = floor;
     }
 
-    public int getStandardRoom() {
+    public House(String nameService, Double areaUsable, int rentalCost, int maxPeople, String rentalType, String standardRoom, int floor) {
+        super(nameService, areaUsable, rentalCost, maxPeople, rentalType);
+        this.standardRoom = standardRoom;
+        this.floor = floor;
+    }
+
+    public String getStandardRoom() {
         return standardRoom;
     }
 
-    public void setStandardRoom(int standardRoom) {
+    public void setStandardRoom(String standardRoom) {
         this.standardRoom = standardRoom;
     }
 

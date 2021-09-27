@@ -1,24 +1,31 @@
 package models;
 
 public class Villa extends Facility{
-    private int standardRoom;
+    private String standardRoom;
     private double areaPool;
     private int floor;
     Villa() {
 
     }
 
-    public Villa(int standardRoom, double areaPool, int floor) {
+    public Villa(String standardRoom, double areaPool, int floor) {
         this.standardRoom = standardRoom;
         this.areaPool = areaPool;
         this.floor = floor;
     }
 
-    public int getStandardRoom() {
+    public Villa(String nameService, Double areaUsable, int rentalCost, int maxPeople, String rentalType, String standardRoom, double areaPool, int floor) {
+        super(nameService, areaUsable, rentalCost, maxPeople, rentalType);
+        this.standardRoom = standardRoom;
+        this.areaPool = areaPool;
+        this.floor = floor;
+    }
+
+    public String getStandardRoom() {
         return standardRoom;
     }
 
-    public void setStandardRoom(int standardRoom) {
+    public void setStandardRoom(String standardRoom) {
         this.standardRoom = standardRoom;
     }
 

@@ -15,40 +15,40 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
     }
     static {
-        Employee employee1= new Employee("Nguyen Van A",1988,"Nam",1,111,1111,"a@gmail.com","Dai hoc","Bao ve",1000);
-        Employee employee2= new Employee("Nguyen Thi B",1989,"Nữ",2,222,2222,"b@gmail.com","Dai hoc","Le Tan",1500);
-        Employee employee3= new Employee("Nguyen Van C",1990,"Nam",3,333,3333,"c@gmail.com","Thac si","Truong Phong",3000);
-        Employee employee4= new Employee("Nguyen Thi D",1991,"Nữ",4,444,4444,"d@gmail.com","Dai hoc","Ke Toan",2000);
+        Employee employee1= new Employee("Nguyen Van A",1988,"Male",1,111,1111,"a@gmail.com","12/12","Protector",1000);
+        Employee employee2= new Employee("Nguyen Thi B",1989,"Female",2,222,2222,"b@gmail.com","University","Receptionist",1500);
+        Employee employee3= new Employee("Nguyen Van C",1990,"Male",3,333,3333,"c@gmail.com","Master","Manager",3000);
+        Employee employee4= new Employee("Nguyen Thi D",1991,"Female",4,444,4444,"d@gmail.com","University","Accountant",2000);
     }
 
     public static void addEmployee(List<Employee> list) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập mã nhân viên : ");
+        System.out.println("input codeEmployee : ");
         int codeEmp = Integer.parseInt(scanner.nextLine());
-        System.out.println("Nhập họ tên nhân viên : ");
+        System.out.println("input Name: ");
         String nameEmp = scanner.nextLine();
-        System.out.println("Nhập năm sinh của nhân viên: ");
+        System.out.println("input Age: ");
         int ageEmp = Integer.parseInt(scanner.nextLine());
-        System.out.println("Nhập giới tính của nhân viên : ");
+        System.out.println("input Gender: ");
         String genderEmp = scanner.nextLine();
-        System.out.println("Nhập chứng minh nhân dân của nhân viên : ");
+        System.out.println("input CMND : ");
         int cmdnEmp = Integer.parseInt(scanner.nextLine());
-        System.out.println("Nhập số điện thoại  của nhân viên : ");
+        System.out.println("input Phone Number : ");
         int phoneEmp = Integer.parseInt(scanner.nextLine());
-        System.out.println("Nhập email của nhân viên : ");
+        System.out.println("input Email : ");
         String emailEmp = scanner.nextLine();
-        System.out.println("Nhập trình độ của nhân viên : ");
+        System.out.println("input Level : ");
         String levelEmp = scanner.nextLine();
-        System.out.println("Nhập vị trí của nhân viên : ");
+        System.out.println("input Office : ");
         String officeEmp = scanner.nextLine();
-        System.out.println("Nhập lương của nhân viên : ");
+        System.out.println("input salary: ");
         int salaryEmp = Integer.parseInt(scanner.nextLine());
         list.add(new Employee(nameEmp, ageEmp, genderEmp, codeEmp, cmdnEmp, phoneEmp, emailEmp, levelEmp, officeEmp, salaryEmp));
     }
 
     public static void editEmployee(List<Employee> list) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhập mã nhân viên cần chỉnh sửa thông tin : ");
+        System.out.println("Input Employee'code you need to edit : ");
         int codeCheck = Integer.parseInt(scanner.nextLine());
         for (Employee employee : list) {
             if (employee.getCodeEmployee() == codeCheck) {
@@ -56,57 +56,57 @@ public class EmployeeServiceImpl implements EmployeeService {
 
                 do {
                     System.out.println(employee);
-                    System.out.println("1.Sửa họ tên: ");
-                    System.out.println("2.Sửa năm sinh: ");
-                    System.out.println("3.Sửa giới tính: ");
-                    System.out.println("4.Sửa mã nhân viên: ");
-                    System.out.println("5.Sửa chứng minh nhân dân: ");
-                    System.out.println("6.Sửa sửa số điện thoại: ");
-                    System.out.println("7.Sửa email: ");
-                    System.out.println("8.Sửa trình độ: ");
-                    System.out.println("9.Sửa vị trí: ");
-                    System.out.println("10.Sửa mức lương: ");
-                    System.out.println("0.Thoát tính năng ");
-                    System.out.println("Nhập lựa chọn của bạn");
+                    System.out.println("1.Edit Name: ");
+                    System.out.println("2.Edit Age: ");
+                    System.out.println("3.Edit Gender: ");
+                    System.out.println("4.Edit Employee's code: ");
+                    System.out.println("5.Edit CMND: ");
+                    System.out.println("6.Edit Phone Number: ");
+                    System.out.println("7.Edit Email: ");
+                    System.out.println("8.Edit Level: ");
+                    System.out.println("9.Edit Office: ");
+                    System.out.println("10.Edit Salary: ");
+                    System.out.println("0.Exit. ");
+                    System.out.println("Your choose: ");
                     chooseEdit = Integer.parseInt(scanner.nextLine());
                     if (chooseEdit == 1) {
-                        System.out.println("Nhập tên: ");
+                        System.out.println("input Name: ");
                         employee.setName(scanner.nextLine());
                     }
                     if (chooseEdit == 2) {
-                        System.out.println("Nhập năm sinh :");
+                        System.out.println("input Age :");
                         employee.setAge(Integer.parseInt(scanner.nextLine()));
                     }
                     if (chooseEdit == 3) {
-                        System.out.println("Nhập giới tính: ");
+                        System.out.println("input Gender: ");
                         employee.setGender(scanner.nextLine());
                     }
                     if (chooseEdit == 4) {
-                        System.out.println("Nhập mã nhân viên: ");
+                        System.out.println("input codeEmployer: ");
                         employee.setCodeEmployee(Integer.parseInt(scanner.nextLine()));
                     }
                     if (chooseEdit == 5) {
-                        System.out.println("Nhập chứng minh nhân dân: ");
+                        System.out.println("input CMND: ");
                         employee.setCmnd(Integer.parseInt(scanner.nextLine()));
                     }
                     if (chooseEdit == 6) {
-                        System.out.println("Nhập số điện thoại: ");
+                        System.out.println("input PhoneNumber: ");
                         employee.setPhoneNumber(Integer.parseInt(scanner.nextLine()));
                     }
                     if (chooseEdit == 7) {
-                        System.out.println("Nhập email: ");
+                        System.out.println("input Email: ");
                         employee.setEmail(scanner.nextLine());
                     }
                     if (chooseEdit == 8) {
-                        System.out.println("Nhập trình độ: ");
+                        System.out.println("input Level: ");
                         employee.setEmail(scanner.nextLine());
                     }
                     if (chooseEdit == 9) {
-                        System.out.println("Nhập vị trí: ");
+                        System.out.println("input Office: ");
                         employee.setOffice(scanner.nextLine());
                     }
                     if (chooseEdit == 10) {
-                        System.out.println("Nhập mức lương: ");
+                        System.out.println("input Salary: ");
                         employee.setSalary(Integer.parseInt(scanner.nextLine()));
                     }
                 } while (chooseEdit != 0);
