@@ -16,5 +16,6 @@ public class Test {
         furamaController.displayMainMenu();
         LinkedHashMap<Facility, Integer> linkedHashMap= new LinkedHashMap<>();
 
+
     }
 }
