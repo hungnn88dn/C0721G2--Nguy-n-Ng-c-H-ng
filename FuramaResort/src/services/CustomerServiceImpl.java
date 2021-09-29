@@ -20,6 +20,7 @@ public class CustomerServiceImpl implements CustomerSerivce {
         Customer customer4= new Customer("Nguyen Thi H",1991,"Female",8,888,8888,"h@gmail.com","Silver","QT");
         Customer customer5= new Customer("Nguyen Thi K",1992,"Female",9,999,9999,"k@gmail.com","Member","Hue");
     }
+
     public static void addCustomer(List<Customer> list) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("input codeCustomer : ");

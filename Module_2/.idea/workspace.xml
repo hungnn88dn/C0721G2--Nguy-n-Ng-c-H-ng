@@ -20,36 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_19_string_regex_java/exercise/validate_class_name/NameClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_19_string_regex_java/exercise/validate_class_name/NameClassTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_19_string_regex_java/exercise/validate_phone_number/PhoneNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_19_string_regex_java/exercise/validate_phone_number/PhoneNumberTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_19_string_regex_java/practice/crawl_song/CrawlSongExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_19_string_regex_java/practice/validate_account/AccountExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_19_string_regex_java/practice/validate_account/AccountExampleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_19_string_regex_java/practice/validate_email/EmailExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_19_string_regex_java/practice/validate_email/EmailExampleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/controllers/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/controllers/FuramaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/controllers/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/controllers/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Facility.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Facility.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/House.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Villa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/EmployeeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/FacilityServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/FacilityServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/controllers/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/controllers/FuramaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/controllers/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/controllers/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Facility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Villa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/test.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/animal/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/animal/AnimalFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/animal/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/animal/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/animal/FactoryDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/singleton/BookBorrower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/singleton/BookSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/singleton/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/taxi/ObjectPoolDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/taxi/Taxi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/taxi/TaxiNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/taxi/TaxiPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/taxi/TaxiThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/BookingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerSerivce.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerSerivce.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/EmployeeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/FacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/FacilityServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_19_string_regex_java/exercise/validate_class_name/NameClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_19_string_regex_java/exercise/validate_class_name/NameClassTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_19_string_regex_java/exercise/validate_phone_number/PhoneNumberTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_19_string_regex_java/exercise/validate_phone_number/PhoneNumberTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,20 +84,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
   </component>
-  <component name="RunManager" selected="Application.PhoneNumberTest">
-    <configuration name="AccountExampleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_19_string_regex_java.practice.validate_account.AccountExampleTest" />
-      <module name="Module_2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="_19_string_regex_java.practice.validate_account.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Test">
     <configuration name="CrawlSongExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="_19_string_regex_java.practice.crawl_song.CrawlSongExample" />
       <module name="Module_2" />
@@ -158,13 +137,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_21_design_patterns_java.practice.singleton.Test" />
+      <module name="Module_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="_21_design_patterns_java.practice.singleton.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.PhoneNumberTest" />
         <item itemvalue="Application.NameClassTest" />
         <item itemvalue="Application.EmailExampleTest" />
         <item itemvalue="Application.CrawlSongExample" />
-        <item itemvalue="Application.AccountExampleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -218,6 +210,9 @@
       <workItem from="1632478313478" duration="4924000" />
       <workItem from="1632533070831" duration="316000" />
       <workItem from="1632703069794" duration="6029000" />
+      <workItem from="1632790265665" duration="679000" />
+      <workItem from="1632877241811" duration="1482000" />
+      <workItem from="1632909109564" duration="661000" />
     </task>
     <servers />
   </component>
@@ -245,10 +240,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="231" y="121" width="1207" height="785" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1631526434109" />
-    <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1632713383028">
+    <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1632877295107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1632713383028" />
+    <state x="721" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1632877295107" />
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1632455936214">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -273,22 +268,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1173" height="280" key="GridCell.Tab.0.bottom" timestamp="1632724221174">
+    <state width="1268" height="280" key="GridCell.Tab.0.bottom" timestamp="1632886509390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632724221174" />
-    <state width="1173" height="280" key="GridCell.Tab.0.center" timestamp="1632724221173">
+    <state width="1268" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632886509390" />
+    <state width="1268" height="280" key="GridCell.Tab.0.center" timestamp="1632886509390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632724221173" />
-    <state width="1173" height="280" key="GridCell.Tab.0.left" timestamp="1632724221173">
+    <state width="1268" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632886509390" />
+    <state width="1268" height="280" key="GridCell.Tab.0.left" timestamp="1632886509390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632724221173" />
-    <state width="1173" height="280" key="GridCell.Tab.0.right" timestamp="1632724221173">
+    <state width="1268" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632886509390" />
+    <state width="1268" height="280" key="GridCell.Tab.0.right" timestamp="1632886509390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1173" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632724221173" />
+    <state width="1268" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632886509390" />
     <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631373708626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
