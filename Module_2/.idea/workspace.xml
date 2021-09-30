@@ -20,28 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/animal/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/animal/AnimalFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/animal/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/animal/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/animal/FactoryDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/singleton/BookBorrower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/singleton/BookSingleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/singleton/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/taxi/ObjectPoolDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/taxi/Taxi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/taxi/TaxiNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/taxi/TaxiPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_21_design_patterns_java/practice/taxi/TaxiThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/services/BookingComparator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/Facebook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/LinkedIn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/SocialMediaFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/SocialShare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/Twitter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/proxy/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/proxy/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/proxy/MathCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/proxy/MathCalculatorProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/BookingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/BookingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerSerivce.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerSerivce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_19_string_regex_java/exercise/validate_class_name/NameClassTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_19_string_regex_java/exercise/validate_class_name/NameClassTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Module_2/_19_string_regex_java/exercise/validate_phone_number/PhoneNumberTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Module_2/_19_string_regex_java/exercise/validate_phone_number/PhoneNumberTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +204,10 @@
       <workItem from="1632703069794" duration="6029000" />
       <workItem from="1632790265665" duration="679000" />
       <workItem from="1632877241811" duration="1482000" />
-      <workItem from="1632909109564" duration="661000" />
+      <workItem from="1632909109564" duration="1269000" />
+      <workItem from="1632963182470" duration="312000" />
+      <workItem from="1632983687162" duration="97000" />
+      <workItem from="1632986521097" duration="3188000" />
     </task>
     <servers />
   </component>

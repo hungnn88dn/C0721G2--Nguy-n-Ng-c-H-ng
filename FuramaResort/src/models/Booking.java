@@ -2,10 +2,10 @@ package models;
 
 import java.util.Date;
 
-public class Booking {
+public class Booking implements Comparable<Booking>{
     private int bookingCode;
-    private Date startDay;
-    private Date endDay;
+    private String startDay;
+    private String endDay;
     private int customerCode;
     private String serviceName;
     private String serviceType;
@@ -14,7 +14,7 @@ public class Booking {
 
     }
 
-    public Booking(int bookingCode, Date startDay, Date endDay, int customerCode, String serviceName, String serviceType) {
+    public Booking(int bookingCode, String startDay, String endDay, int customerCode, String serviceName, String serviceType) {
         this.bookingCode = bookingCode;
         this.startDay = startDay;
         this.endDay = endDay;
@@ -36,19 +36,19 @@ public class Booking {
         this.bookingCode = bookingCode;
     }
 
-    public Date getStartDay() {
+    public String getStartDay() {
         return startDay;
     }
 
-    public void setStartDay(Date startDay) {
+    public void setStartDay(String startDay) {
         this.startDay = startDay;
     }
 
-    public Date getEndDay() {
+    public String getEndDay() {
         return endDay;
     }
 
-    public void setEndDay(Date endDay) {
+    public void setEndDay(String endDay) {
         this.endDay = endDay;
     }
 
@@ -86,5 +86,14 @@ public class Booking {
                 ", serviceName='" + serviceName + '\'' +
                 ", serviceType='" + serviceType + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Booking o) {
+        if (o.getStartDay().compareTo(this.getStartDay()) ==0 ) {
+            return o.getEndDay().compareTo(this.getEndDay());
+        }else {
+            return o.getStartDay().compareTo(this.getStartDay());
+        }
     }
 }
