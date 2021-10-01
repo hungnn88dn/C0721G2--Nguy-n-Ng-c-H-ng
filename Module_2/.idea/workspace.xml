@@ -20,19 +20,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c85230e-2fda-4e84-ae27-8a99aae5b602" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/services/BookingComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/Facebook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/LinkedIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/SocialMediaFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/SocialShare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/facade/Twitter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/proxy/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/proxy/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/proxy/MathCalculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_22_structural_design_pattern_java/practice/proxy/MathCalculatorProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/BookingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/BookingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/data/booking" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/data/contract" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/data/customer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FuramaResort/src/data/employee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/observer/BinObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/observer/HexObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/observer/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/observer/ObserverDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/observer/OctObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/observer/Subject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/strategy/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/strategy/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/strategy/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/strategy/SelectionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/strategy/SortStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/strategy/SortedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/template/method/HamburgerMeal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/template/method/Meal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/template/method/TacoMeal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_23_behavioral_design_pattern_java/practice/template/method/TemplateMethodDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/controllers/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/controllers/FuramaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/controllers/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/controllers/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Employee.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/models/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/BookingServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/BookingServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/out/production/FuramaResort/services/CustomerServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/controllers/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/controllers/FuramaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/controllers/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/controllers/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/CustomerServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FuramaResort/src/services/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FuramaResort/src/services/EmployeeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,13 +98,13 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="CrawlSongExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_19_string_regex_java.practice.crawl_song.CrawlSongExample" />
+  <component name="RunManager" selected="Application.CountryCSV">
+    <configuration name="CountryCSV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_16_io_textfile_java.exercise.read_file_csv.CountryCSV" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_19_string_regex_java.practice.crawl_song.*" />
+          <option name="PATTERN" value="_16_io_textfile_java.exercise.read_file_csv.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,12 +112,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmailExampleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_19_string_regex_java.practice.validate_email.EmailExampleTest" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_23_behavioral_design_pattern_java.practice.strategy.Main" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_19_string_regex_java.practice.validate_email.*" />
+          <option name="PATTERN" value="_23_behavioral_design_pattern_java.practice.strategy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,12 +125,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NameClassTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_19_string_regex_java.exercise.validate_class_name.NameClassTest" />
+    <configuration name="ObserverDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_23_behavioral_design_pattern_java.practice.observer.ObserverDemo" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_19_string_regex_java.exercise.validate_class_name.*" />
+          <option name="PATTERN" value="_23_behavioral_design_pattern_java.practice.observer.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,12 +138,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PhoneNumberTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="_19_string_regex_java.exercise.validate_phone_number.PhoneNumberTest" />
+    <configuration name="TemplateMethodDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="_23_behavioral_design_pattern_java.practice.template.method.TemplateMethodDemo" />
       <module name="Module_2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="_19_string_regex_java.exercise.validate_phone_number.*" />
+          <option name="PATTERN" value="_23_behavioral_design_pattern_java.practice.template.method.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CountryCSV" />
+        <item itemvalue="Application.ObserverDemo" />
+        <item itemvalue="Application.TemplateMethodDemo" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.PhoneNumberTest" />
-        <item itemvalue="Application.NameClassTest" />
-        <item itemvalue="Application.EmailExampleTest" />
-        <item itemvalue="Application.CrawlSongExample" />
       </list>
     </recent_temporary>
   </component>
@@ -208,6 +230,8 @@
       <workItem from="1632963182470" duration="312000" />
       <workItem from="1632983687162" duration="97000" />
       <workItem from="1632986521097" duration="3188000" />
+      <workItem from="1633049028801" duration="1764000" />
+      <workItem from="1633071788982" duration="4268000" />
     </task>
     <servers />
   </component>
@@ -263,22 +287,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="281" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1630400192138" />
-    <state width="1268" height="280" key="GridCell.Tab.0.bottom" timestamp="1632886509390">
+    <state width="1268" height="280" key="GridCell.Tab.0.bottom" timestamp="1633064877899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632886509390" />
-    <state width="1268" height="280" key="GridCell.Tab.0.center" timestamp="1632886509390">
+    <state width="1268" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1633064877899" />
+    <state width="1268" height="280" key="GridCell.Tab.0.center" timestamp="1633064877899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632886509390" />
-    <state width="1268" height="280" key="GridCell.Tab.0.left" timestamp="1632886509390">
+    <state width="1268" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1633064877899" />
+    <state width="1268" height="280" key="GridCell.Tab.0.left" timestamp="1633064877899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632886509390" />
-    <state width="1268" height="280" key="GridCell.Tab.0.right" timestamp="1632886509390">
+    <state width="1268" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1633064877899" />
+    <state width="1268" height="280" key="GridCell.Tab.0.right" timestamp="1633064877899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1268" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632886509390" />
+    <state width="1268" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1633064877899" />
     <state width="1347" height="313" key="GridCell.Tab.1.bottom" timestamp="1631373708626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

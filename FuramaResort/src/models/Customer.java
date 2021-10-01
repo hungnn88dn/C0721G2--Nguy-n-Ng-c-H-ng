@@ -17,7 +17,7 @@ public class Customer extends Person {
         this.address = address;
     }
 
-    public Customer(String name, int age, String gender, int codeCustomer, int cmnd, int phoneNumber, String email, String customerType, String address) {
+    public Customer(String name, String age, String gender, int codeCustomer, int cmnd, int phoneNumber, String email, String customerType, String address) {
         super(name, age, gender);
         this.codeCustomer = codeCustomer;
         this.cmnd = cmnd;
@@ -77,13 +77,24 @@ public class Customer extends Person {
 
     @Override
     public String toString() {
-        return "Customer{" +
-                "codeCustomer=" + codeCustomer +
-                ", cmnd=" + cmnd +
-                ", phoneNumber=" + phoneNumber +
-                ", email='" + email + '\'' +
-                ", customerType='" + customerType + '\'' +
-                ", address='" + address + '\'' +
-                "} " + super.toString();
+        return super.getName() + "," + super.getAge() + ","+ super.getGender() +
+                "," + codeCustomer +
+                "," + cmnd +
+                "," + phoneNumber +
+                "," + email +
+                "," + customerType +
+                "," + address
+                ;
+    }
+
+    public String showCustomer() {
+       return  "name='" + super.getName() + ",age=" + super.getAge() + ",gender='"+ super.getGender() +
+               ",codeCustomer=" + codeCustomer +
+               ",cmnd=" + cmnd +
+               ",phoneNumber=" + phoneNumber +
+               ",email='" + email + '\'' +
+               ",customerType='" + customerType + '\'' +
+               ",address='" + address + '\''
+               ;
     }
 }

@@ -2,13 +2,13 @@ package models;
 
 public class Person {
     private  String name;
-    private  int age;
+    private  String age;
     private String gender;
 
     public Person() {
     }
 
-    public Person(String name, int age, String gender) {
+    public Person(String name, String age, String gender) {
         this.name = name;
         this.age = age;
         this.gender = gender;
@@ -22,11 +22,11 @@ public class Person {
         this.name = name;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -42,8 +42,8 @@ public class Person {
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
-                ", age=" + age +
-                ", gender='" + gender + '\'' +
+                ",age=" + age +
+                ",gender='" + gender + '\'' +
                 '}';
     }
 }

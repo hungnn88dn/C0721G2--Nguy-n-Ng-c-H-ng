@@ -59,7 +59,7 @@ public class FuramaController {
                     System.out.println("Your choose: ");
                     chooseCustomer = Integer.parseInt(scanner.nextLine());
                     if (chooseCustomer == 1) {
-                        CustomerServiceImpl.displayCustomer(customerArrayList);
+                        CustomerServiceImpl.displayCustomer();
                     }
                     if (chooseCustomer == 2) {
                         CustomerServiceImpl.addCustomer(customerArrayList);

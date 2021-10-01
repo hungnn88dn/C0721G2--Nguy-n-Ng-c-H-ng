@@ -3,22 +3,60 @@ package services;
 import models.Customer;
 import models.Employee;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
-    List<Employee> employeeList= new ArrayList<>();
+    static File file = new File("src\\data\\employee");
+
+    public static List<Employee> readEmployee() {
+        List<Employee> listEmp= new ArrayList<>();
+      try {
+          if (!file.exists()) {
+              throw new FileNotFoundException();
+          }
+          BufferedReader bufferedReader= new BufferedReader(new FileReader(file));
+          String line = "";
+          while((line = bufferedReader.readLine()) != null) {
+              String[] lineSplit= line.split(",");
+              Employee employee= new Employee(lineSplit[0],lineSplit[1],lineSplit[2],Integer.parseInt(lineSplit[3]),Integer.parseInt(lineSplit[4]),Integer.parseInt(lineSplit[5]),lineSplit[6],lineSplit[7],lineSplit[8],Integer.parseInt(lineSplit[9]));
+              listEmp.add(employee);
+          }
+      } catch (IOException e) {
+          e.printStackTrace();
+      }
+        return listEmp;
+    }
+
+    public static void writerEmployee(List<Employee> list) {
+        try {
+            if (!file.exists()) {
+                throw new FileNotFoundException();
+            }
+            BufferedWriter bufferedWriter= new BufferedWriter(new FileWriter(file));
+            for (Employee employee: list) {
+                bufferedWriter.write(String.valueOf(employee));
+            }
+           bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
     public static void displayEmployee(List<Employee> list) {
         for (Employee Employee : list) {
             System.out.println(Employee);
         }
     }
     static {
-        Employee employee1= new Employee("Nguyen Van A",1988,"Male",1,111,1111,"a@gmail.com","12/12","Protector",1000);
-        Employee employee2= new Employee("Nguyen Thi B",1989,"Female",2,222,2222,"b@gmail.com","University","Receptionist",1500);
-        Employee employee3= new Employee("Nguyen Van C",1990,"Male",3,333,3333,"c@gmail.com","Master","Manager",3000);
-        Employee employee4= new Employee("Nguyen Thi D",1991,"Female",4,444,4444,"d@gmail.com","University","Accountant",2000);
+        Employee employee1= new Employee("Nguyen Van A","1/1/1988","Male",1,111,1111,"a@gmail.com","12/12","Protector",1000);
+        Employee employee2= new Employee("Nguyen Thi B","2/2/1989","Female",2,222,2222,"b@gmail.com","University","Receptionist",1500);
+        Employee employee3= new Employee("Nguyen Van C","3/3/1990","Male",3,333,3333,"c@gmail.com","Master","Manager",3000);
+        Employee employee4= new Employee("Nguyen Thi D","4/4/1991","Female",4,444,4444,"d@gmail.com","University","Accountant",2000);
     }
 
     public static void addEmployee(List<Employee> list) {
@@ -28,7 +66,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         System.out.println("input Name: ");
         String nameEmp = scanner.nextLine();
         System.out.println("input Age: ");
-        int ageEmp = Integer.parseInt(scanner.nextLine());
+        String ageEmp = scanner.nextLine();
         System.out.println("input Gender: ");
         String genderEmp = scanner.nextLine();
         System.out.println("input CMND : ");
@@ -75,7 +113,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                     }
                     if (chooseEdit == 2) {
                         System.out.println("input Age :");
-                        employee.setAge(Integer.parseInt(scanner.nextLine()));
+                        employee.setAge(scanner.nextLine());
                     }
                     if (chooseEdit == 3) {
                         System.out.println("input Gender: ");

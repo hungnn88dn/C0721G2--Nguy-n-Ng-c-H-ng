@@ -19,7 +19,7 @@ public class Employee extends Person{
         this.salary = salary;
     }
 
-    public Employee(String name, int age, String gender, int codeEmployee, Integer cmnd, int phoneNumber, String email, String level, String office, double salary) {
+    public Employee(String name, String age, String gender, int codeEmployee, Integer cmnd, int phoneNumber, String email, String level, String office, double salary) {
         super(name, age, gender);
         this.codeEmployee = codeEmployee;
         this.cmnd = cmnd;
@@ -90,13 +90,14 @@ public class Employee extends Person{
     public String toString() {
         return "Employee{" +
                 "codeEmployee=" + codeEmployee +
-                ", cmnd=" + cmnd +
-                ", phoneNumber=" + phoneNumber +
-                ", email='" + email + '\'' +
-                ", level='" + level + '\'' +
-                ", office='" + office + '\'' +
-                ", salary=" + salary +
-                "} " + super.toString();
+                ",cmnd=" + cmnd +
+                ",phoneNumber=" + phoneNumber +
+                ",email='" + email + '\'' +
+                ",level='" + level + '\'' +
+                ",office='" + office + '\'' +
+                ",salary=" + salary +
+                "} " + super.getName() ;
     }
+
 
 }
