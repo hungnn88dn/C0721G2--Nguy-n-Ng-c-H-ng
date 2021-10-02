@@ -13,10 +13,10 @@ import java.util.Set;
 
 public class FacilityServiceImpl implements FacilityService{
   static Scanner scanner= new Scanner(System.in);
-    static LinkedHashMap<Facility, Integer> facilityServiceList= new LinkedHashMap<>();
-   static File file = new File("src\\data\\booking.csv");
+   static File file = new File("src\\data\\facility.csv");
 
     static LinkedHashMap<Facility, Integer> readFacility() {
+        LinkedHashMap<Facility, Integer> facilityServiceList= new LinkedHashMap<>();
         try {
             if(!file.exists()) {
                 throw new FileNotFoundException();
@@ -24,36 +24,76 @@ public class FacilityServiceImpl implements FacilityService{
             BufferedReader bufferedReader= new BufferedReader(new FileReader(file));
             String line= "";
             while((line = bufferedReader.readLine()) !=null) {
-
+                String[] lineSplit= line.split(",");
+                if ( lineSplit.length == 7) {
+                    Facility facility = new Room(lineSplit[0],Double.parseDouble(lineSplit[1]),Integer.parseInt(lineSplit[2]),Integer.parseInt(lineSplit[3]),lineSplit[4],lineSplit[5]);
+                    int value = Integer.parseInt(lineSplit[6]);
+                    facilityServiceList.put(facility,value);
+                } else if (lineSplit.length == 8) {
+                    Facility facility = new House(lineSplit[0],Double.parseDouble(lineSplit[1]),Integer.parseInt(lineSplit[2]),Integer.parseInt(lineSplit[3]),lineSplit[4],lineSplit[5],Integer.parseInt(lineSplit[6]));
+                    int value = Integer.parseInt(lineSplit[7]);
+                    facilityServiceList.put(facility,value);
+                } else {
+                    Facility facility = new Villa(lineSplit[0],Double.parseDouble(lineSplit[1]),Integer.parseInt(lineSplit[2]),Integer.parseInt(lineSplit[3]),lineSplit[4],lineSplit[5],Double.parseDouble(lineSplit[6]),Integer.parseInt(lineSplit[7]));
+                    int value = Integer.parseInt(lineSplit[8]);
+                    facilityServiceList.put(facility,value);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return facilityServiceList;
     }
 
-    static {
-        facilityServiceList.put(new Room("Room1",20.0,1000,2,"day","massage"),0);
-        facilityServiceList.put(new Room("Room2",20.0,5000,2,"week","massage"),0);
-        facilityServiceList.put(new House("House1",50.0,2000,4,"day","standard",3),0);
-        facilityServiceList.put(new House("House2",40.0,6500,4,"week","VIP",2),0);
-        facilityServiceList.put(new Villa("Villa1",70.0,1500,4,"day","VIP",20.0,2),0);
-        facilityServiceList.put(new Villa("Villa1",70.0,8000,4,"week","VIP",20.0,2),0);
+    static void writerFacility(LinkedHashMap<Facility, Integer> list) {
+        try {
+            if(!file.exists()) {
+                throw new FileNotFoundException();
+            }
+            BufferedWriter bufferedWriter= new BufferedWriter(new FileWriter(file));
+            Set<Facility> keySet= list.keySet();
+            for (Facility key: keySet) {
+               bufferedWriter.write(key + "," + list.get(key));
+               bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
+
+//    static {
+//        facilityServiceList.put(new Room("Room1",20.0,1000,2,"day","massage"),0);
+//        facilityServiceList.put(new Room("Room2",20.0,5000,2,"week","massage"),0);
+//        facilityServiceList.put(new House("House1",50.0,2000,4,"day","standard",3),0);
+//        facilityServiceList.put(new House("House2",40.0,6500,4,"week","VIP",2),0);
+//        facilityServiceList.put(new Villa("Villa1",70.0,1500,4,"day","VIP",20.0,2),0);
+//        facilityServiceList.put(new Villa("Villa1",70.0,8000,4,"week","VIP",20.0,2),0);
+//    }
 
 
     public static void displayFacility(LinkedHashMap<Facility, Integer> facilityServiceList) {
+        facilityServiceList = FacilityServiceImpl.readFacility();
         Set<Facility> keySet= facilityServiceList.keySet();
         for (Facility key: keySet) {
-            System.out.println(key + " : " + facilityServiceList.get(key));
+            if(key instanceof Room) {
+                System.out.println(((Room) key).showRoom()+ " : " + facilityServiceList.get(key));
+            }else if (key instanceof House){
+                System.out.println(((House) key).showHouse()+ " : " + facilityServiceList.get(key));
+            }else {
+                System.out.println(((Villa) key).showVilla()+ " : " + facilityServiceList.get(key));
+            }
         }
     }
 
     public static void main(String[] args) {
 //        FacilityServiceImpl.displayFacility(facilityServiceList);
-        facilityServiceList.keySet();
+//        facilityServiceList.keySet();
     }
     public static void addNewFacility(LinkedHashMap<Facility,Integer> list) {
         int choose;
+        list = FacilityServiceImpl.readFacility();
         do{
             System.out.println("1. Add New Villa");
             System.out.println("2. Add New House");
@@ -111,19 +151,21 @@ public class FacilityServiceImpl implements FacilityService{
                 String serviceFree= scanner.nextLine();
                 list.put(new Room(name,usableArea,rentalCost,maxPeople,rentalType,serviceFree),0);
             }
+            FacilityServiceImpl.writerFacility(list);
         }while(choose!=0);
     }
 
     public static void editFacility(LinkedHashMap<Facility,Integer> list) {
         System.out.println("input name facility you need to edit: ");
         String name = scanner.nextLine();
+        list = FacilityServiceImpl.readFacility();
         Set<Facility> keySet = list.keySet();
         for (Facility key : keySet) {
              if (key.getNameService().equals(name)) {
                  if (key instanceof Villa) {
-                     System.out.println(key);
                      int chooseVilla;
                      do {
+                         System.out.println(((Villa) key).showVilla());
                          System.out.println("1.Edit NameService: ");
                          System.out.println("2.Edit UsableArea: ");
                          System.out.println("3.Edit RentalCost: ");
@@ -167,12 +209,13 @@ public class FacilityServiceImpl implements FacilityService{
                              System.out.println("input floor: ");
                              ((Villa) key).setFloor(Integer.parseInt(scanner.nextLine()));
                          }
-                         System.out.println(key);
+                         FacilityServiceImpl.writerFacility(list);
                      }while(chooseVilla != 0);
                  }
                  if (key instanceof House) {
                      int chooseHouse;
                      do {
+                         System.out.println(((House) key).showHouse());
                          System.out.println("1.Edit NameService: ");
                          System.out.println("2.Edit UsableArea: ");
                          System.out.println("3.Edit RentalCost: ");
@@ -211,12 +254,15 @@ public class FacilityServiceImpl implements FacilityService{
                              System.out.println("input floor: ");
                              ((House) key).setFloor(Integer.parseInt(scanner.nextLine()));
                          }
-                         System.out.println(key);
+                         System.out.println(((House) key).showHouse());
+                         FacilityServiceImpl.writerFacility(list);
                      }while(chooseHouse != 0);
                  }
                  if (key instanceof Room) {
+
                      int chooseRoom;
                      do {
+                         System.out.println(((Room) key).showRoom());
                          System.out.println("1.Edit NameService: ");
                          System.out.println("2.Edit UsableArea: ");
                          System.out.println("3.Edit RentalCost: ");
@@ -251,7 +297,8 @@ public class FacilityServiceImpl implements FacilityService{
                              System.out.println("input free service: ");
                              ((Room) key).setServiceFree(scanner.nextLine());
                          }
-                         System.out.println(key);
+                         System.out.println(((Room) key).showRoom());
+                         FacilityServiceImpl.writerFacility(list);
                      }while(chooseRoom != 0);
                  }
              }
