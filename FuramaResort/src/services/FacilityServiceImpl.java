@@ -6,6 +6,7 @@ import models.House;
 import models.Room;
 import models.Villa;
 
+import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 import java.util.Set;
@@ -13,7 +14,22 @@ import java.util.Set;
 public class FacilityServiceImpl implements FacilityService{
   static Scanner scanner= new Scanner(System.in);
     static LinkedHashMap<Facility, Integer> facilityServiceList= new LinkedHashMap<>();
+   static File file = new File("src\\data\\booking.csv");
 
+    static LinkedHashMap<Facility, Integer> readFacility() {
+        try {
+            if(!file.exists()) {
+                throw new FileNotFoundException();
+            }
+            BufferedReader bufferedReader= new BufferedReader(new FileReader(file));
+            String line= "";
+            while((line = bufferedReader.readLine()) !=null) {
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     static {
         facilityServiceList.put(new Room("Room1",20.0,1000,2,"day","massage"),0);

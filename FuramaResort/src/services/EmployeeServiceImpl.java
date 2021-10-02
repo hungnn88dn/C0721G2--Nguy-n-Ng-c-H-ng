@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
-    static File file = new File("src\\data\\employee");
+    static File file = new File("src\\data\\employee.csv");
 
     public static List<Employee> readEmployee() {
         List<Employee> listEmp= new ArrayList<>();
@@ -38,6 +38,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             BufferedWriter bufferedWriter= new BufferedWriter(new FileWriter(file));
             for (Employee employee: list) {
                 bufferedWriter.write(String.valueOf(employee));
+                bufferedWriter.newLine();
             }
            bufferedWriter.close();
         } catch (IOException e) {
@@ -48,27 +49,23 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 
     public static void displayEmployee(List<Employee> list) {
+         list = EmployeeServiceImpl.readEmployee();
         for (Employee Employee : list) {
-            System.out.println(Employee);
+            System.out.println(Employee.showEmployee());
         }
     }
-    static {
-        Employee employee1= new Employee("Nguyen Van A","1/1/1988","Male",1,111,1111,"a@gmail.com","12/12","Protector",1000);
-        Employee employee2= new Employee("Nguyen Thi B","2/2/1989","Female",2,222,2222,"b@gmail.com","University","Receptionist",1500);
-        Employee employee3= new Employee("Nguyen Van C","3/3/1990","Male",3,333,3333,"c@gmail.com","Master","Manager",3000);
-        Employee employee4= new Employee("Nguyen Thi D","4/4/1991","Female",4,444,4444,"d@gmail.com","University","Accountant",2000);
-    }
+
 
     public static void addEmployee(List<Employee> list) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("input codeEmployee : ");
-        int codeEmp = Integer.parseInt(scanner.nextLine());
         System.out.println("input Name: ");
         String nameEmp = scanner.nextLine();
         System.out.println("input Age: ");
         String ageEmp = scanner.nextLine();
         System.out.println("input Gender: ");
         String genderEmp = scanner.nextLine();
+        System.out.println("input codeEmployee : ");
+        int codeEmp = Integer.parseInt(scanner.nextLine());
         System.out.println("input CMND : ");
         int cmdnEmp = Integer.parseInt(scanner.nextLine());
         System.out.println("input Phone Number : ");
@@ -81,19 +78,21 @@ public class EmployeeServiceImpl implements EmployeeService {
         String officeEmp = scanner.nextLine();
         System.out.println("input salary: ");
         int salaryEmp = Integer.parseInt(scanner.nextLine());
+        list= EmployeeServiceImpl.readEmployee();
         list.add(new Employee(nameEmp, ageEmp, genderEmp, codeEmp, cmdnEmp, phoneEmp, emailEmp, levelEmp, officeEmp, salaryEmp));
+        EmployeeServiceImpl.writerEmployee(list);
     }
 
     public static void editEmployee(List<Employee> list) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input Employee'code you need to edit : ");
         int codeCheck = Integer.parseInt(scanner.nextLine());
+        list= EmployeeServiceImpl.readEmployee();
         for (Employee employee : list) {
             if (employee.getCodeEmployee() == codeCheck) {
                 int chooseEdit;
-
                 do {
-                    System.out.println(employee);
+                    System.out.println(employee.showEmployee());
                     System.out.println("1.Edit Name: ");
                     System.out.println("2.Edit Age: ");
                     System.out.println("3.Edit Gender: ");
@@ -147,6 +146,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                         System.out.println("input Salary: ");
                         employee.setSalary(Integer.parseInt(scanner.nextLine()));
                     }
+                    EmployeeServiceImpl.writerEmployee(list);
                 } while (chooseEdit != 0);
             }
         }

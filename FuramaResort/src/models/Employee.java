@@ -7,9 +7,9 @@ public class Employee extends Person{
     private String email;
     private String level;
     private String office;
-    private double salary;
+    private int salary;
 
-    public Employee(int codeEmployee, Integer cmnd, int phoneNumber, String email, String level, String office, double salary) {
+    public Employee(int codeEmployee, Integer cmnd, int phoneNumber, String email, String level, String office, int salary) {
         this.codeEmployee = codeEmployee;
         this.cmnd = cmnd;
         this.phoneNumber = phoneNumber;
@@ -19,7 +19,7 @@ public class Employee extends Person{
         this.salary = salary;
     }
 
-    public Employee(String name, String age, String gender, int codeEmployee, Integer cmnd, int phoneNumber, String email, String level, String office, double salary) {
+    public Employee(String name, String age, String gender, int codeEmployee, Integer cmnd, int phoneNumber, String email, String level, String office, int salary) {
         super(name, age, gender);
         this.codeEmployee = codeEmployee;
         this.cmnd = cmnd;
@@ -78,26 +78,34 @@ public class Employee extends Person{
         this.office = office;
     }
 
-    public double getSalary() {
+    public int getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(int salary) {
         this.salary = salary;
     }
 
     @Override
     public String toString() {
+        return    super.getName() + "," + super.getAge() + "," + super.getGender()  + "," +codeEmployee+
+        "," + cmnd +
+                "," + phoneNumber +
+                "," + email  +
+                "," + level+
+                "," + office  +
+                "," + salary
+                ;
+    }
+    public String showEmployee() {
         return "Employee{" +
-                "codeEmployee=" + codeEmployee +
+                "name=" + super.getName() + ",age=" + super.getAge() + ",gender=" + super.getGender() + ",codeEmployee=" + codeEmployee +
                 ",cmnd=" + cmnd +
                 ",phoneNumber=" + phoneNumber +
                 ",email='" + email + '\'' +
                 ",level='" + level + '\'' +
                 ",office='" + office + '\'' +
                 ",salary=" + salary +
-                "} " + super.getName() ;
-    }
-
-
+                "} "  ;
+   }
 }

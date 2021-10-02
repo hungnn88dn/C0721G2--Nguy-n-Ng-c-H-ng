@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerSerivce {
-    static File file = new File("src\\data\\customer");
+    static File file = new File("src\\data\\customer.csv");
 
     public static List<Customer> readCustomerCSV() {
         List<Customer> readList= new LinkedList<>();
