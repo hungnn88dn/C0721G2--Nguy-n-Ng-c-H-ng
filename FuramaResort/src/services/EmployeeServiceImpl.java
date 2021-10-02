@@ -12,21 +12,21 @@ public class EmployeeServiceImpl implements EmployeeService {
     static File file = new File("src\\data\\employee.csv");
 
     public static List<Employee> readEmployee() {
-        List<Employee> listEmp= new ArrayList<>();
-      try {
-          if (!file.exists()) {
-              throw new FileNotFoundException();
-          }
-          BufferedReader bufferedReader= new BufferedReader(new FileReader(file));
-          String line = "";
-          while((line = bufferedReader.readLine()) != null) {
-              String[] lineSplit= line.split(",");
-              Employee employee= new Employee(lineSplit[0],lineSplit[1],lineSplit[2],Integer.parseInt(lineSplit[3]),Integer.parseInt(lineSplit[4]),Integer.parseInt(lineSplit[5]),lineSplit[6],lineSplit[7],lineSplit[8],Integer.parseInt(lineSplit[9]));
-              listEmp.add(employee);
-          }
-      } catch (IOException e) {
-          e.printStackTrace();
-      }
+        List<Employee> listEmp = new ArrayList<>();
+        try {
+            if (!file.exists()) {
+                throw new FileNotFoundException();
+            }
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            String line = "";
+            while ((line = bufferedReader.readLine()) != null) {
+                String[] lineSplit = line.split(",");
+                Employee employee = new Employee(lineSplit[0], lineSplit[1], lineSplit[2], Integer.parseInt(lineSplit[3]), Integer.parseInt(lineSplit[4]), Integer.parseInt(lineSplit[5]), lineSplit[6], lineSplit[7], lineSplit[8], Integer.parseInt(lineSplit[9]));
+                listEmp.add(employee);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return listEmp;
     }
 
@@ -35,26 +35,24 @@ public class EmployeeServiceImpl implements EmployeeService {
             if (!file.exists()) {
                 throw new FileNotFoundException();
             }
-            BufferedWriter bufferedWriter= new BufferedWriter(new FileWriter(file));
-            for (Employee employee: list) {
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
+            for (Employee employee : list) {
                 bufferedWriter.write(String.valueOf(employee));
                 bufferedWriter.newLine();
             }
-           bufferedWriter.close();
+            bufferedWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
 
-
     public static void displayEmployee(List<Employee> list) {
-         list = EmployeeServiceImpl.readEmployee();
+        list = EmployeeServiceImpl.readEmployee();
         for (Employee Employee : list) {
             System.out.println(Employee.showEmployee());
         }
     }
-
 
     public static void addEmployee(List<Employee> list) {
         Scanner scanner = new Scanner(System.in);
@@ -78,7 +76,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         String officeEmp = scanner.nextLine();
         System.out.println("input salary: ");
         int salaryEmp = Integer.parseInt(scanner.nextLine());
-        list= EmployeeServiceImpl.readEmployee();
+        list = EmployeeServiceImpl.readEmployee();
         list.add(new Employee(nameEmp, ageEmp, genderEmp, codeEmp, cmdnEmp, phoneEmp, emailEmp, levelEmp, officeEmp, salaryEmp));
         EmployeeServiceImpl.writerEmployee(list);
     }
@@ -87,7 +85,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input Employee'code you need to edit : ");
         int codeCheck = Integer.parseInt(scanner.nextLine());
-        list= EmployeeServiceImpl.readEmployee();
+        list = EmployeeServiceImpl.readEmployee();
         for (Employee employee : list) {
             if (employee.getCodeEmployee() == codeCheck) {
                 int chooseEdit;

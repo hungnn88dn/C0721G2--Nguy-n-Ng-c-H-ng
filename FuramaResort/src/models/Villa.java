@@ -1,9 +1,10 @@
 package models;
 
-public class Villa extends Facility{
+public class Villa extends Facility {
     private String standardRoom;
     private double areaPool;
     private int floor;
+
     Villa() {
 
     }
@@ -47,11 +48,11 @@ public class Villa extends Facility{
 
     @Override
     public String toString() {
-        return super.getNameService()+"," +super.getAreaUsable()+","+super.getRentalCost()+","+super.getMaxPeople()+","+super.getRentalType()+","+standardRoom+","+areaPool+","+floor;
+        return super.getNameService() + "," + super.getAreaUsable() + "," + super.getRentalCost() + "," + super.getMaxPeople() + "," + super.getRentalType() + "," + standardRoom + "," + areaPool + "," + floor;
     }
 
     public String showVilla() {
-        return  "Villa{" +
+        return "Villa{" +
                 "nameService='" + super.getNameService() +
                 ", areaUsable=" + super.getAreaUsable() +
                 ", rentalCost=" + super.getRentalCost() +

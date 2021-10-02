@@ -12,7 +12,7 @@ public class CustomerServiceImpl implements CustomerSerivce {
     static File file = new File("src\\data\\customer.csv");
 
     public static List<Customer> readCustomerCSV() {
-        List<Customer> readList= new LinkedList<>();
+        List<Customer> readList = new LinkedList<>();
         try {
             if (!file.exists()) {
                 throw new FileNotFoundException();
@@ -20,8 +20,8 @@ public class CustomerServiceImpl implements CustomerSerivce {
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
-                String[] lineSplit= line.split(",");
-                Customer customer = new Customer(lineSplit[0],lineSplit[1],lineSplit[2],Integer.parseInt(lineSplit[3]),Integer.parseInt(lineSplit[4]),Integer.parseInt(lineSplit[5]),lineSplit[6],lineSplit[7],lineSplit[8]);
+                String[] lineSplit = line.split(",");
+                Customer customer = new Customer(lineSplit[0], lineSplit[1], lineSplit[2], Integer.parseInt(lineSplit[3]), Integer.parseInt(lineSplit[4]), Integer.parseInt(lineSplit[5]), lineSplit[6], lineSplit[7], lineSplit[8]);
                 readList.add(customer);
             }
         } catch (IOException e) {
@@ -31,29 +31,24 @@ public class CustomerServiceImpl implements CustomerSerivce {
     }
 
     public static void writerCustomerCSV(List<Customer> list) {
-       try {
-           if (!file.exists()) {
-               throw new FileNotFoundException();
-           }
-           FileWriter fileWriter= new FileWriter(file);
-           BufferedWriter bufferedWriter= new BufferedWriter(fileWriter);
-           for (Customer customer: list) {
-               bufferedWriter.write(String.valueOf(customer));
-               bufferedWriter.newLine();
-           }
-           bufferedWriter.close();
-       } catch (IOException e) {
-           e.printStackTrace();
-       }
-    }
-
-    public static void main(String[] args) {
-
-        CustomerServiceImpl.displayCustomer();
+        try {
+            if (!file.exists()) {
+                throw new FileNotFoundException();
+            }
+            FileWriter fileWriter = new FileWriter(file);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            for (Customer customer : list) {
+                bufferedWriter.write(String.valueOf(customer));
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void displayCustomer() {
-      List<Customer> list = CustomerServiceImpl.readCustomerCSV();
+        List<Customer> list = CustomerServiceImpl.readCustomerCSV();
         for (Customer customer : list) {
             System.out.println(customer.showCustomer());
         }
