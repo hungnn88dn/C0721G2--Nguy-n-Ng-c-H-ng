@@ -75,7 +75,7 @@ public class FacilityServiceImpl implements FacilityService {
             }
         }
     }
-    
+
     public static void addNewFacility(LinkedHashMap<Facility, Integer> list) {
         int choose;
         list = FacilityServiceImpl.readFacility();

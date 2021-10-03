@@ -13,9 +13,9 @@ import java.util.*;
 public class FuramaController {
     Scanner scanner = new Scanner(System.in);
     EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
-  public static List<Employee> employeeServiceList = new ArrayList<>();
+    public static List<Employee> employeeServiceList = new ArrayList<>();
     List<Customer> customerArrayList = new LinkedList<>();
-    LinkedHashMap<Facility, Integer> facilityList= new LinkedHashMap<>();
+    LinkedHashMap<Facility, Integer> facilityList = new LinkedHashMap<>();
 
     public void displayMainMenu() {
         int choose;
@@ -78,13 +78,13 @@ public class FuramaController {
                     System.out.println("0. Return main menu");
                     System.out.println("Your choose: ");
                     chooseFacility = Integer.parseInt(scanner.nextLine());
-                    if(chooseFacility == 1) {
+                    if (chooseFacility == 1) {
                         FacilityServiceImpl.displayFacility(facilityList);
                     }
-                    if(chooseFacility == 2) {
+                    if (chooseFacility == 2) {
                         FacilityServiceImpl.addNewFacility(facilityList);
                     }
-                    if(chooseFacility == 3) {
+                    if (chooseFacility == 3) {
                         FacilityServiceImpl.editFacility(facilityList);
                     }
                 } while (chooseFacility != 0);
