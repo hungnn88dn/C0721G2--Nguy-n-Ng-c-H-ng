@@ -54,7 +54,43 @@ public class CustomerServiceImpl implements CustomerSerivce {
         }
     }
 
-    public static void addCustomer(List<Customer> list) {
+    public static void checkMember() {
+        Scanner scanner= new Scanner(System.in);
+        int choose;
+        do {
+            System.out.println("1.You are Member");
+            System.out.println("2.You are new Customer ? Press 2 to sign up");
+            System.out.println("0.Back to Menu");
+            System.out.println("Your chosse: ");
+            choose = Integer.parseInt(scanner.nextLine());
+            if (choose == 1) {
+                int count = 0;
+                System.out.println("Input Member Code: ");
+                int customerCode = Integer.parseInt(scanner.nextLine());
+                List<Customer>  list= CustomerServiceImpl.readCustomerCSV();
+                for (Customer customer:  list) {
+                    if (customer.getCodeCustomer() == customerCode) {
+                        System.out.println(customer.showCustomer());
+                        break;
+                    }else {
+                        count++;
+                    }
+                }
+                if (count == list.size()) {
+                    System.out.println("You are not member, please sign up");
+                    CustomerServiceImpl.addCustomer();
+                    choose = 0;
+                }
+             choose =0;
+            }
+            if (choose == 2) {
+                CustomerServiceImpl.addCustomer();
+                choose = 0;
+            }
+        } while(choose != 0);
+    }
+
+    public static void addCustomer() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("input codeCustomer : ");
         int codeCtm = Integer.parseInt(scanner.nextLine());
@@ -74,6 +110,7 @@ public class CustomerServiceImpl implements CustomerSerivce {
         String typeCtm = scanner.nextLine();
         System.out.println("input Address: ");
         String addressCtm = scanner.nextLine();
+        List<Customer> list = new LinkedList<>();
         list = CustomerServiceImpl.readCustomerCSV();
         list.add(new Customer(nameCtm, ageCtm, genderCtm, codeCtm, cmdnCtm, phoneCtm, emailCtm, typeCtm, addressCtm));
         CustomerServiceImpl.writerCustomerCSV(list);

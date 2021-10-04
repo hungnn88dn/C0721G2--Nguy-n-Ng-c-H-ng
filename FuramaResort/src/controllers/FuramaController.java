@@ -3,10 +3,7 @@ package controllers;
 import models.Customer;
 import models.Employee;
 import models.Facility;
-import services.CustomerServiceImpl;
-import services.EmployeeService;
-import services.EmployeeServiceImpl;
-import services.FacilityServiceImpl;
+import services.*;
 
 import java.util.*;
 
@@ -62,7 +59,7 @@ public class FuramaController {
                         CustomerServiceImpl.displayCustomer();
                     }
                     if (chooseCustomer == 2) {
-                        CustomerServiceImpl.addCustomer(customerArrayList);
+                        CustomerServiceImpl.addCustomer();
                     }
                     if (chooseCustomer == 3) {
                         CustomerServiceImpl.editCustomer(customerArrayList);
@@ -100,6 +97,14 @@ public class FuramaController {
                     System.out.println("0. Return main menu");
                     System.out.println("Your choose: ");
                     chooseBooking = Integer.parseInt(scanner.nextLine());
+                    switch (chooseBooking) {
+                        case 1:
+                            BookingServiceImpl.addBooking();
+                            break;
+                        case 2:
+                            BookingServiceImpl.displayBooking();
+                            break;
+                    }
                 } while (chooseBooking != 0);
             }
             if (choose == 5) {
