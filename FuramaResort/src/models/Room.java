@@ -1,6 +1,7 @@
 package models;
 
 public class Room extends Facility{
+
     private String serviceFree;
 
     public Room() {
@@ -10,8 +11,8 @@ public class Room extends Facility{
         this.serviceFree = serviceFree;
     }
 
-    public Room(String nameService, Double areaUsable, int rentalCost, int maxPeople, String rentalType, String serviceFree) {
-        super(nameService, areaUsable, rentalCost, maxPeople, rentalType);
+    public Room(String serviceType, String nameService, Double areaUsable, int rentalCost, int maxPeople, String rentalType, String serviceFree) {
+        super(serviceType, nameService, areaUsable, rentalCost, maxPeople, rentalType);
         this.serviceFree = serviceFree;
     }
 
@@ -25,11 +26,11 @@ public class Room extends Facility{
 
     @Override
     public String toString() {
-        return  super.getNameService()+"," +super.getAreaUsable()+","+super.getRentalCost()+","+super.getMaxPeople()+","+super.getRentalType()+","+serviceFree;
+        return  super.getServiceType()+","+super.getNameService()+"," +super.getAreaUsable()+","+super.getRentalCost()+","+super.getMaxPeople()+","+super.getRentalType()+","+serviceFree;
     }
     public String showRoom(){
-      return    "Room{" +
-              "nameService='" + super.getNameService() +
+      return    "Room{" + "serviceType= " + super.getServiceType() +
+              ", nameService='" + super.getNameService() +
               ", areaUsable=" + super.getAreaUsable() +
               ", rentalCost=" + super.getRentalCost() +
               ", maxPeople=" + super.getMaxPeople() +

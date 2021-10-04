@@ -5,7 +5,6 @@ import models.Facility;
 import models.House;
 import models.Room;
 import models.Villa;
-
 import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
@@ -25,17 +24,17 @@ public class FacilityServiceImpl implements FacilityService {
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
                 String[] lineSplit = line.split(",");
-                if (lineSplit.length == 7) {
-                    Facility facility = new Room(lineSplit[0], Double.parseDouble(lineSplit[1]), Integer.parseInt(lineSplit[2]), Integer.parseInt(lineSplit[3]), lineSplit[4], lineSplit[5]);
-                    int value = Integer.parseInt(lineSplit[6]);
-                    facilityServiceList.put(facility, value);
-                } else if (lineSplit.length == 8) {
-                    Facility facility = new House(lineSplit[0], Double.parseDouble(lineSplit[1]), Integer.parseInt(lineSplit[2]), Integer.parseInt(lineSplit[3]), lineSplit[4], lineSplit[5], Integer.parseInt(lineSplit[6]));
+                if (lineSplit[0].contains("Room")) {
+                    Facility facility = new Room(lineSplit[0],lineSplit[1], Double.parseDouble(lineSplit[2]), Integer.parseInt(lineSplit[3]), Integer.parseInt(lineSplit[4]), lineSplit[5], lineSplit[6]);
                     int value = Integer.parseInt(lineSplit[7]);
                     facilityServiceList.put(facility, value);
-                } else {
-                    Facility facility = new Villa(lineSplit[0], Double.parseDouble(lineSplit[1]), Integer.parseInt(lineSplit[2]), Integer.parseInt(lineSplit[3]), lineSplit[4], lineSplit[5], Double.parseDouble(lineSplit[6]), Integer.parseInt(lineSplit[7]));
+                } else if (lineSplit[0].contains("House")) {
+                    Facility facility = new House(lineSplit[0],lineSplit[1], Double.parseDouble(lineSplit[2]), Integer.parseInt(lineSplit[3]), Integer.parseInt(lineSplit[4]), lineSplit[5], lineSplit[6], Integer.parseInt(lineSplit[7]));
                     int value = Integer.parseInt(lineSplit[8]);
+                    facilityServiceList.put(facility, value);
+                } else {
+                    Facility facility = new Villa(lineSplit[0],lineSplit[1], Double.parseDouble(lineSplit[2]), Integer.parseInt(lineSplit[3]), Integer.parseInt(lineSplit[4]), lineSplit[5], lineSplit[6], Double.parseDouble(lineSplit[7]), Integer.parseInt(lineSplit[8]));
+                    int value = Integer.parseInt(lineSplit[9]);
                     facilityServiceList.put(facility, value);
                 }
             }
@@ -86,8 +85,10 @@ public class FacilityServiceImpl implements FacilityService {
             System.out.println("0. Back to Menu");
             choose = Integer.parseInt(scanner.nextLine());
             if (choose == 1) {
-                System.out.println("input name: ");
-                String name = scanner.nextLine();
+                System.out.println("input type service");
+                String typeService = scanner.nextLine();
+                System.out.println("input name service: ");
+                String nameService = scanner.nextLine();
                 System.out.println("input usable area: ");
                 double usableArea = Double.parseDouble(scanner.nextLine());
                 System.out.println("input rental cost: ");
@@ -102,11 +103,13 @@ public class FacilityServiceImpl implements FacilityService {
                 double areaPool = Double.parseDouble(scanner.nextLine());
                 System.out.println("input floor: ");
                 int floor = Integer.parseInt(scanner.nextLine());
-                list.put(new Villa(name, usableArea, rentalCost, maxPeople, rentalType, standarRoom, areaPool, floor), 0);
+                list.put(new Villa(typeService,nameService, usableArea, rentalCost, maxPeople, rentalType, standarRoom, areaPool, floor), 0);
             }
             if (choose == 2) {
-                System.out.println("input name: ");
-                String name = scanner.nextLine();
+                System.out.println("input type service");
+                String typeService = scanner.nextLine();
+                System.out.println("input name service: ");
+                String nameService = scanner.nextLine();
                 System.out.println("input usable area: ");
                 double usableArea = Double.parseDouble(scanner.nextLine());
                 System.out.println("input rental cost: ");
@@ -119,11 +122,13 @@ public class FacilityServiceImpl implements FacilityService {
                 String standarRoom = scanner.nextLine();
                 System.out.println("input floor: ");
                 int floor = Integer.parseInt(scanner.nextLine());
-                list.put(new House(name, usableArea, rentalCost, maxPeople, rentalType, standarRoom, floor), 0);
+                list.put(new House(typeService,nameService, usableArea, rentalCost, maxPeople, rentalType, standarRoom, floor), 0);
             }
             if (choose == 3) {
-                System.out.println("input name: ");
-                String name = scanner.nextLine();
+                System.out.println("input type service");
+                String typeService = scanner.nextLine();
+                System.out.println("input name service: ");
+                String nameService = scanner.nextLine();
                 System.out.println("input usable area: ");
                 double usableArea = Double.parseDouble(scanner.nextLine());
                 System.out.println("input rental cost: ");
@@ -134,7 +139,7 @@ public class FacilityServiceImpl implements FacilityService {
                 String rentalType = scanner.nextLine();
                 System.out.println("input free service: ");
                 String serviceFree = scanner.nextLine();
-                list.put(new Room(name, usableArea, rentalCost, maxPeople, rentalType, serviceFree), 0);
+                list.put(new Room(typeService,nameService, usableArea, rentalCost, maxPeople, rentalType, serviceFree), 0);
             }
             FacilityServiceImpl.writerFacility(list);
         } while (choose != 0);

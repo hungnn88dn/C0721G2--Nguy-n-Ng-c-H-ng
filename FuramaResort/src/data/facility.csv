@@ -1,6 +1,6 @@
-Villa1,100.0,1000,4,VIP,VIP,20.0,4,0
-Villa2,200.0,2000,8,VIP,VIP,50.0,5,0
-House1,70.0,1000,4,Standard,VIP,2,0
-House2,80.0,1000,6,VIP,VIP,3,0
-Room1,30.0,1000,2,Standard,Massage,0
-Room2,30.0,1000,4,VIP,VIP,0
+Villa,Villa1,100.0,1000,6,VIP,VIP,30.0,3,0
+Villa,Villa2,150.0,2000,8,VIP,VIP,30.0,5,0
+Room,Room1,20.0,1000,2,VIP,Massaga,0
+Room,Room2,30.0,1000,3,Standard,Shisha,0
+House,House1,40.0,1000,4,VIP,VIP,2,0
+House,House2,50.0,1000,5,Standard,Standard,2,0

@@ -15,8 +15,8 @@ public class Villa extends Facility {
         this.floor = floor;
     }
 
-    public Villa(String nameService, Double areaUsable, int rentalCost, int maxPeople, String rentalType, String standardRoom, double areaPool, int floor) {
-        super(nameService, areaUsable, rentalCost, maxPeople, rentalType);
+    public Villa(String serviceType, String nameService, Double areaUsable, int rentalCost, int maxPeople, String rentalType, String standardRoom, double areaPool, int floor) {
+        super(serviceType, nameService, areaUsable, rentalCost, maxPeople, rentalType);
         this.standardRoom = standardRoom;
         this.areaPool = areaPool;
         this.floor = floor;
@@ -48,19 +48,19 @@ public class Villa extends Facility {
 
     @Override
     public String toString() {
-        return super.getNameService() + "," + super.getAreaUsable() + "," + super.getRentalCost() + "," + super.getMaxPeople() + "," + super.getRentalType() + "," + standardRoom + "," + areaPool + "," + floor;
+        return super.getServiceType()+","+super.getNameService() + "," + super.getAreaUsable() + "," + super.getRentalCost() + "," + super.getMaxPeople() + "," + super.getRentalType() + "," + standardRoom + "," + areaPool + "," + floor;
     }
 
     public String showVilla() {
-        return "Villa{" +
-                "nameService='" + super.getNameService() +
-                ", areaUsable=" + super.getAreaUsable() +
-                ", rentalCost=" + super.getRentalCost() +
-                ", maxPeople=" + super.getMaxPeople() +
-                ", rentalType='" + super.getRentalType() +
-                ", standardRoom='" + standardRoom +
-                ", areaPool=" + areaPool +
-                ", floor=" + floor +
+        return "Villa{" + "serviceType= " +super.getServiceType() +
+                ", nameService= " + super.getNameService() +
+                ", areaUsable= " + super.getAreaUsable() +
+                ", rentalCost= " + super.getRentalCost() +
+                ", maxPeople= " + super.getMaxPeople() +
+                ", rentalType= " + super.getRentalType() +
+                ", standardRoom= " + standardRoom +
+                ", areaPool= " + areaPool +
+                ", floor= " + floor +
                 "} ";
     }
 }

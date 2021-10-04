@@ -3,6 +3,7 @@ package models;
 public class House extends Facility{
     private String standardRoom;
     private int floor;
+
      House() {
 
      }
@@ -12,8 +13,8 @@ public class House extends Facility{
         this.floor = floor;
     }
 
-    public House(String nameService, Double areaUsable, int rentalCost, int maxPeople, String rentalType, String standardRoom, int floor) {
-        super(nameService, areaUsable, rentalCost, maxPeople, rentalType);
+    public House(String serviceType, String nameService, Double areaUsable, int rentalCost, int maxPeople, String rentalType, String standardRoom, int floor) {
+        super(serviceType, nameService, areaUsable, rentalCost, maxPeople, rentalType);
         this.standardRoom = standardRoom;
         this.floor = floor;
     }
@@ -36,17 +37,18 @@ public class House extends Facility{
 
     @Override
     public String toString() {
-        return  super.getNameService()+"," +super.getAreaUsable()+","+super.getRentalCost()+","+super.getMaxPeople()+","+super.getRentalType()+","+standardRoom+","+floor;
+        return  super.getServiceType()+","+super.getNameService()+"," +super.getAreaUsable()+","+super.getRentalCost()+","+super.getMaxPeople()+","+super.getRentalType()+","+standardRoom+","+floor;
     }
 
     public String showHouse() {
-        return "Facility{" +
-                "nameService='" + super.getNameService() +
-                ", areaUsable=" + super.getAreaUsable() +
-                ", rentalCost=" + super.getRentalCost() +
-                ", maxPeople=" + super.getMaxPeople() +
-                ", rentalType='" + super.getRentalType() +
-                "standardRoom='" + standardRoom +
-                ", floor=" + floor  + '}';
+        return  "House{" +  "serviceType= " + super.getServiceType() +
+                ", nameService= " + super.getNameService() +
+                ", areaUsable= " + super.getAreaUsable() +
+                ", rentalCost= " + super.getRentalCost() +
+                ", maxPeople= " + super.getMaxPeople() +
+                ", rentalType= " + super.getRentalType() +
+                ", standardRoom= " + standardRoom  +
+                ", floor= " + floor +
+                "} " ;
     }
 }

@@ -1,8 +1,11 @@
 package models;
 
-import java.util.Date;
+import utils.BookingComparator;
 
-public class Booking implements Comparable<Booking>{
+import java.util.Date;
+import java.util.Objects;
+
+public class Booking extends BookingComparator {
     private int bookingCode;
     private String startDay;
     private String endDay;
@@ -88,12 +91,33 @@ public class Booking implements Comparable<Booking>{
                 '}';
     }
 
-    @Override
-    public int compareTo(Booking o) {
-        if (o.getStartDay().compareTo(this.getStartDay()) ==0 ) {
-            return o.getEndDay().compareTo(this.getEndDay());
-        }else {
-            return o.getStartDay().compareTo(this.getStartDay());
-        }
-    }
+
+
+//    @Override
+//    public int compareTo(Booking o) {
+//        if (o.getStartDay().compareTo(this.getStartDay()) ==0 ) {
+//            return o.getEndDay().compareTo(this.getEndDay());
+//        }else {
+//            return o.getStartDay().compareTo(this.getStartDay());
+//        }
+//    }
+
+
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Booking booking = (Booking) o;
+//        return bookingCode == booking.bookingCode &&
+//                customerCode == booking.customerCode &&
+//                Objects.equals(startDay, booking.startDay) &&
+//                Objects.equals(endDay, booking.endDay) &&
+//                Objects.equals(serviceName, booking.serviceName) &&
+//                Objects.equals(serviceType, booking.serviceType);
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(bookingCode, startDay, endDay, customerCode, serviceName, serviceType);
+//    }
 }
