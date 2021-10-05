@@ -45,7 +45,7 @@ public class Validate {
         boolean b = maxPeople.matches("^(([1-9])|([1]+[0-9]))$");
         return b;
     }
-    public static boolean validateMaxFloor(String floor) {
+    public static boolean validateFloor(String floor) {
         boolean b = floor.matches("^(([1-9])|([1-9]+[0-9])|(([1-9]+[0-9]+[0-9])))$");
         return b;
     }
