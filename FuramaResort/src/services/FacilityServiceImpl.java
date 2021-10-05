@@ -61,8 +61,9 @@ public class FacilityServiceImpl implements FacilityService {
         }
     }
 
-    public static void displayFacility(LinkedHashMap<Facility, Integer> facilityServiceList) {
-        facilityServiceList = FacilityServiceImpl.readFacility();
+    @Override
+    public void display() {
+        LinkedHashMap<Facility, Integer> facilityServiceList = FacilityServiceImpl.readFacility();
         Set<Facility> keySet = facilityServiceList.keySet();
         for (Facility key : keySet) {
             if (key instanceof Room) {
@@ -75,9 +76,10 @@ public class FacilityServiceImpl implements FacilityService {
         }
     }
 
-    public static void addNewFacility(LinkedHashMap<Facility, Integer> list) {
+    @Override
+    public void add() {
         int choose;
-        list = FacilityServiceImpl.readFacility();
+        LinkedHashMap<Facility, Integer> list = FacilityServiceImpl.readFacility();
         do {
             System.out.println("1. Add New Villa");
             System.out.println("2. Add New House");
@@ -145,10 +147,11 @@ public class FacilityServiceImpl implements FacilityService {
         } while (choose != 0);
     }
 
-    public static void editFacility(LinkedHashMap<Facility, Integer> list) {
+    @Override
+    public void edit() {
         System.out.println("input name facility you need to edit: ");
         String name = scanner.nextLine();
-        list = FacilityServiceImpl.readFacility();
+        LinkedHashMap<Facility, Integer> list = FacilityServiceImpl.readFacility();
         Set<Facility> keySet = list.keySet();
         for (Facility key : keySet) {
             if (key.getNameService().equals(name)) {
@@ -293,5 +296,16 @@ public class FacilityServiceImpl implements FacilityService {
                 }
             }
         }
+
+    }
+
+    @Override
+    public void search() {
+
+    }
+
+    @Override
+    public void delete() {
+
     }
 }

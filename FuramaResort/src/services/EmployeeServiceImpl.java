@@ -47,14 +47,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     }
 
-    public static void displayEmployee(List<Employee> list) {
-        list = EmployeeServiceImpl.readEmployee();
+    @Override
+    public void display() {
+        List<Employee> list = EmployeeServiceImpl.readEmployee();
         for (Employee Employee : list) {
             System.out.println(Employee.showEmployee());
         }
     }
 
-    public static void addEmployee(List<Employee> list) {
+    @Override
+    public void add() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("input Name: ");
         String nameEmp = scanner.nextLine();
@@ -76,16 +78,17 @@ public class EmployeeServiceImpl implements EmployeeService {
         String officeEmp = scanner.nextLine();
         System.out.println("input salary: ");
         int salaryEmp = Integer.parseInt(scanner.nextLine());
-        list = EmployeeServiceImpl.readEmployee();
+        List<Employee> list = EmployeeServiceImpl.readEmployee();
         list.add(new Employee(nameEmp, ageEmp, genderEmp, codeEmp, cmdnEmp, phoneEmp, emailEmp, levelEmp, officeEmp, salaryEmp));
         EmployeeServiceImpl.writerEmployee(list);
     }
 
-    public static void editEmployee(List<Employee> list) {
+    @Override
+    public void edit() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input Employee'code you need to edit : ");
         int codeCheck = Integer.parseInt(scanner.nextLine());
-        list = EmployeeServiceImpl.readEmployee();
+        List<Employee> list = EmployeeServiceImpl.readEmployee();
         for (Employee employee : list) {
             if (employee.getCodeEmployee() == codeCheck) {
                 int chooseEdit;
@@ -148,5 +151,15 @@ public class EmployeeServiceImpl implements EmployeeService {
                 } while (chooseEdit != 0);
             }
         }
+    }
+
+    @Override
+    public void search() {
+
+    }
+
+    @Override
+    public void delete() {
+
     }
 }

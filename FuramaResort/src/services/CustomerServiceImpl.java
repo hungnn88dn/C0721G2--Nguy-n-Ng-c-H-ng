@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class CustomerServiceImpl implements CustomerSerivce {
     static File file = new File("src\\data\\customer.csv");
+    CustomerServiceImpl customerService;
 
     public static List<Customer> readCustomerCSV() {
         List<Customer> readList = new LinkedList<>();
@@ -47,14 +48,8 @@ public class CustomerServiceImpl implements CustomerSerivce {
         }
     }
 
-    public static void displayCustomer() {
-        List<Customer> list = CustomerServiceImpl.readCustomerCSV();
-        for (Customer customer : list) {
-            System.out.println(customer.showCustomer());
-        }
-    }
-
     public static void checkMember() {
+        CustomerServiceImpl customerService = new CustomerServiceImpl();
         Scanner scanner= new Scanner(System.in);
         int choose;
         do {
@@ -78,19 +73,28 @@ public class CustomerServiceImpl implements CustomerSerivce {
                 }
                 if (count == list.size()) {
                     System.out.println("You are not member, please sign up");
-                    CustomerServiceImpl.addCustomer();
+                    customerService.add();
                     choose = 0;
                 }
              choose =0;
             }
             if (choose == 2) {
-                CustomerServiceImpl.addCustomer();
+                customerService.add();
                 choose = 0;
             }
         } while(choose != 0);
     }
 
-    public static void addCustomer() {
+    @Override
+    public void display() {
+        List<Customer> list = CustomerServiceImpl.readCustomerCSV();
+        for (Customer customer : list) {
+            System.out.println(customer.showCustomer());
+        }
+    }
+
+    @Override
+    public void add() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("input codeCustomer : ");
         int codeCtm = Integer.parseInt(scanner.nextLine());
@@ -116,12 +120,14 @@ public class CustomerServiceImpl implements CustomerSerivce {
         CustomerServiceImpl.writerCustomerCSV(list);
     }
 
-    public static void editCustomer(List<Customer> list) {
+    @Override
+    public void edit() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("input codeCustomer you need to edit: ");
+        List<Customer> customerList = new LinkedList<>();
         int codeCheck = Integer.parseInt(scanner.nextLine());
-        list = CustomerServiceImpl.readCustomerCSV();
-        for (Customer customer : list) {
+        customerList = CustomerServiceImpl.readCustomerCSV();
+        for (Customer customer : customerList) {
             if (customer.getCodeCustomer() == codeCheck) {
                 int chooseEdit;
                 do {
@@ -174,9 +180,19 @@ public class CustomerServiceImpl implements CustomerSerivce {
                         System.out.println("input Address: ");
                         customer.setAddress(scanner.nextLine());
                     }
-                    CustomerServiceImpl.writerCustomerCSV(list);
+                    CustomerServiceImpl.writerCustomerCSV(customerList);
                 } while (chooseEdit != 0);
             }
         }
+    }
+
+    @Override
+    public void search() {
+
+    }
+
+    @Override
+    public void delete() {
+
     }
 }

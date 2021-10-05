@@ -10,9 +10,9 @@ import java.util.*;
 public class FuramaController {
     Scanner scanner = new Scanner(System.in);
     EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
-    public static List<Employee> employeeServiceList = new ArrayList<>();
-    List<Customer> customerArrayList = new LinkedList<>();
-    LinkedHashMap<Facility, Integer> facilityList = new LinkedHashMap<>();
+    CustomerServiceImpl customerService = new CustomerServiceImpl();
+    FacilityServiceImpl facilityService = new FacilityServiceImpl();
+
 
     public void displayMainMenu() {
         int choose;
@@ -35,13 +35,13 @@ public class FuramaController {
                     System.out.println("Your choose: ");
                     chooseEmployee = Integer.parseInt(scanner.nextLine());
                     if (chooseEmployee == 1) {
-                        EmployeeServiceImpl.displayEmployee(employeeServiceList);
+                        employeeService.display();
                     }
                     if (chooseEmployee == 2) {
-                        EmployeeServiceImpl.addEmployee(employeeServiceList);
+                        employeeService.add();
                     }
                     if (chooseEmployee == 3) {
-                        EmployeeServiceImpl.editEmployee(employeeServiceList);
+                        employeeService.edit();
                     }
 
                 } while (chooseEmployee != 0);
@@ -56,13 +56,13 @@ public class FuramaController {
                     System.out.println("Your choose: ");
                     chooseCustomer = Integer.parseInt(scanner.nextLine());
                     if (chooseCustomer == 1) {
-                        CustomerServiceImpl.displayCustomer();
+                        customerService.display();
                     }
                     if (chooseCustomer == 2) {
-                        CustomerServiceImpl.addCustomer();
+                        customerService.add();
                     }
                     if (chooseCustomer == 3) {
-                        CustomerServiceImpl.editCustomer(customerArrayList);
+                        customerService.edit();
                     }
                 } while (chooseCustomer != 0);
             }
@@ -76,13 +76,13 @@ public class FuramaController {
                     System.out.println("Your choose: ");
                     chooseFacility = Integer.parseInt(scanner.nextLine());
                     if (chooseFacility == 1) {
-                        FacilityServiceImpl.displayFacility(facilityList);
+                        facilityService.display();
                     }
                     if (chooseFacility == 2) {
-                        FacilityServiceImpl.addNewFacility(facilityList);
+                        facilityService.add();
                     }
                     if (chooseFacility == 3) {
-                        FacilityServiceImpl.editFacility(facilityList);
+                        facilityService.edit();
                     }
                 } while (chooseFacility != 0);
             }
