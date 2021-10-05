@@ -21,7 +21,9 @@ public class EmployeeServiceImpl implements EmployeeService {
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
                 String[] lineSplit = line.split(",");
-                Employee employee = new Employee(lineSplit[0], lineSplit[1], lineSplit[2], Integer.parseInt(lineSplit[3]), Integer.parseInt(lineSplit[4]), Integer.parseInt(lineSplit[5]), lineSplit[6], lineSplit[7], lineSplit[8], Integer.parseInt(lineSplit[9]));
+                Employee employee = new Employee(lineSplit[0], lineSplit[1], lineSplit[2],
+                        Integer.parseInt(lineSplit[3]), Integer.parseInt(lineSplit[4]), Integer.parseInt(lineSplit[5]),
+                        lineSplit[6], lineSplit[7], lineSplit[8], Integer.parseInt(lineSplit[9]));
                 listEmp.add(employee);
             }
         } catch (IOException e) {
@@ -79,7 +81,8 @@ public class EmployeeServiceImpl implements EmployeeService {
         System.out.println("input salary: ");
         int salaryEmp = Integer.parseInt(scanner.nextLine());
         List<Employee> list = EmployeeServiceImpl.readEmployee();
-        list.add(new Employee(nameEmp, ageEmp, genderEmp, codeEmp, cmdnEmp, phoneEmp, emailEmp, levelEmp, officeEmp, salaryEmp));
+        list.add(new Employee(nameEmp, ageEmp, genderEmp, codeEmp, cmdnEmp, phoneEmp, emailEmp,
+                levelEmp, officeEmp, salaryEmp));
         EmployeeServiceImpl.writerEmployee(list);
     }
 

@@ -24,7 +24,8 @@ public class BookingServiceImpl implements BookingService {
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
                 String[] lineSplit = line.split(",");
-                bookingList.add(new Booking(Integer.parseInt(lineSplit[0]), lineSplit[1], lineSplit[2], Integer.parseInt(lineSplit[3]), lineSplit[4], lineSplit[5]));
+                bookingList.add(new Booking(Integer.parseInt(lineSplit[0]), lineSplit[1],
+                        lineSplit[2], Integer.parseInt(lineSplit[3]), lineSplit[4], lineSplit[5]));
             }
         } catch (IOException e) {
             e.printStackTrace();

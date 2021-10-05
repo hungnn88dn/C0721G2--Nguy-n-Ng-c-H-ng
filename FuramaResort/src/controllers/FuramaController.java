@@ -12,6 +12,7 @@ public class FuramaController {
     EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
     CustomerServiceImpl customerService = new CustomerServiceImpl();
     FacilityServiceImpl facilityService = new FacilityServiceImpl();
+    BookingServiceImpl bookingService = new BookingServiceImpl();
 
 
     public void displayMainMenu() {
@@ -99,10 +100,10 @@ public class FuramaController {
                     chooseBooking = Integer.parseInt(scanner.nextLine());
                     switch (chooseBooking) {
                         case 1:
-                            BookingServiceImpl.addBooking();
+                            bookingService.add();
                             break;
                         case 2:
-                            BookingServiceImpl.displayBooking();
+                            bookingService.display();
                             break;
                     }
                 } while (chooseBooking != 0);

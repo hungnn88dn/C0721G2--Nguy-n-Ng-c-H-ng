@@ -22,7 +22,9 @@ public class CustomerServiceImpl implements CustomerSerivce {
             String line = "";
             while ((line = bufferedReader.readLine()) != null) {
                 String[] lineSplit = line.split(",");
-                Customer customer = new Customer(lineSplit[0], lineSplit[1], lineSplit[2], Integer.parseInt(lineSplit[3]), Integer.parseInt(lineSplit[4]), Integer.parseInt(lineSplit[5]), lineSplit[6], lineSplit[7], lineSplit[8]);
+                Customer customer = new Customer(lineSplit[0], lineSplit[1], lineSplit[2],
+                        Integer.parseInt(lineSplit[3]), Integer.parseInt(lineSplit[4]),
+                        Integer.parseInt(lineSplit[5]), lineSplit[6], lineSplit[7], lineSplit[8]);
                 readList.add(customer);
             }
         } catch (IOException e) {
