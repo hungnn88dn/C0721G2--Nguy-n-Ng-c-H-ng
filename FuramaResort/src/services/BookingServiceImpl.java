@@ -63,16 +63,14 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public void add() {
         Set<Booking> listBookings= BookingServiceImpl.readBooking();
-        CustomerServiceImpl.checkMember();
-        System.out.println("input bookingCode");
-        int bookingCode = Integer.parseInt(scanner.nextLine());
+        int customerCode = CustomerServiceImpl.checkMember();
+        List<Booking> list= new ArrayList<>(listBookings);
+        int bookingCode = list.get(list.size() -1).getBookingCode() + 1;
         System.out.println("input startDay");
         String startDay = scanner.nextLine();
         System.out.println("input endDay");
         String endDay = scanner.nextLine();
-        System.out.println("input customerCode");
-        int customerCode = Integer.parseInt(scanner.nextLine());
-        System.out.println("input sericeName");
+        System.out.println("input seviceName");
         String serviceName = scanner.nextLine();
         System.out.println("input serviceType");
         String serviceType = scanner.nextLine();

@@ -31,8 +31,8 @@ public class Customer extends Person {
         return codeCustomer;
     }
 
-    public void setCodeCustomer(int codeCustomer) {
-        this.codeCustomer = codeCustomer;
+    public  void setCodeCustomer(int codeCustomer) {
+        this.codeCustomer = codeCustomer + 1;
     }
 
     public int getCmnd() {
