@@ -59,9 +59,6 @@ public class Validate {
         return b;
     }
 
-
-
-
     public static void main(String[] args) {
         System.out.println(Validate.validateBirthOfDay("01/10/1988"));
     }

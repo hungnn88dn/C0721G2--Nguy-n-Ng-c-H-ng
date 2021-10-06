@@ -13,6 +13,7 @@ public class FuramaController {
     CustomerServiceImpl customerService = new CustomerServiceImpl();
     FacilityServiceImpl facilityService = new FacilityServiceImpl();
     BookingServiceImpl bookingService = new BookingServiceImpl();
+    ContactServiceImpl contactService= new ContactServiceImpl();
 
 
     public void displayMainMenu() {
@@ -98,13 +99,20 @@ public class FuramaController {
                     System.out.println("0. Return main menu");
                     System.out.println("Your choose: ");
                     chooseBooking = Integer.parseInt(scanner.nextLine());
-                    switch (chooseBooking) {
-                        case 1:
-                            bookingService.add();
-                            break;
-                        case 2:
-                            bookingService.display();
-                            break;
+                    if (chooseBooking == 1) {
+                        bookingService.add();
+                    }
+                    if (chooseBooking ==2) {
+                        bookingService.display();
+                    }
+                    if (chooseBooking ==3) {
+                        contactService.add();
+                    }
+                    if (chooseBooking ==4) {
+                        contactService.display();
+                    }
+                    if (chooseBooking ==5) {
+                        contactService.edit();
                     }
                 } while (chooseBooking != 0);
             }

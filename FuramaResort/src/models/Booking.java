@@ -4,7 +4,7 @@ import utils.BookingComparator;
 
 import java.util.Objects;
 
-public class Booking implements Comparable <Booking> {
+public class Booking {
     private int bookingCode;
     private String startDay;
     private String endDay;
@@ -97,16 +97,6 @@ public class Booking implements Comparable <Booking> {
                 ", serviceName='" + serviceName + '\'' +
                 ", serviceType='" + serviceType + '\'' +
                 '}';
-    }
-
-
-    @Override
-    public int compareTo(Booking o) {
-        if (o.getStartDay().compareTo(this.getStartDay()) ==0 ) {
-            return o.getEndDay().compareTo(this.getEndDay());
-        }else {
-            return o.getStartDay().compareTo(this.getStartDay());
-        }
     }
 
 

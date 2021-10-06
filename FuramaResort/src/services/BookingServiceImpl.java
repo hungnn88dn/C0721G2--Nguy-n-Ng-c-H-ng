@@ -49,12 +49,12 @@ public class BookingServiceImpl implements BookingService {
         }
     }
 
-
     @Override
     public void display() {
         Set<Booking> list = BookingServiceImpl.readBooking();
-        list = new TreeSet<>(list);
-        for (Booking booking : list) {
+        List<Booking> newList = new LinkedList<>(list);
+        Collections.sort(newList,new BookingComparator());
+        for (Booking booking : newList) {
             System.out.println(booking.showBooking());
         }
     }
@@ -62,7 +62,7 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public void add() {
         Set<Booking> listBookings= BookingServiceImpl.readBooking();
-        CustomerServiceImpl.checkMember();
+//        CustomerServiceImpl.checkMember();
         System.out.println("input bookingCode");
         int bookingCode = Integer.parseInt(scanner.nextLine());
         System.out.println("input startDay");

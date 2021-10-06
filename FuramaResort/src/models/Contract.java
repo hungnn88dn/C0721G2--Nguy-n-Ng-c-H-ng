@@ -50,10 +50,16 @@ public class Contract extends Booking{
 
     @Override
     public String toString() {
+        return super.getBookingCode()+","+ super.getCustomerCode()+","+contractNumber+","+deposit+","+totalPayment;
+    }
+
+    public String showContract() {
         return "Contract{" +
-                "contractNumber=" + contractNumber +
+                "contractNumber= " + contractNumber +
+                ", bookingCode= " + super.getBookingCode() +
                 ", deposit=" + deposit +
                 ", totalPayment=" + totalPayment +
-                "} " + super.toString();
+                ", customerCode= " + super.getCustomerCode() +
+                "} ";
     }
 }
