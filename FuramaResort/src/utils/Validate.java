@@ -14,11 +14,6 @@ public class Validate {
         return b;
     }
 
-    public static boolean validateServiceType(String serviceType) {
-        boolean b = serviceType.matches("^[A-Z][a-z]+$");
-        return b;
-    }
-
     public static boolean validateArea(String area) {
         boolean b = area.matches("^(([3-9]+[0-9])|(([1-9]+[0-9]+[0-9]))).[0-9]+$");
         return b;

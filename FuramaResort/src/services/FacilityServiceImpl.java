@@ -101,7 +101,7 @@ public class FacilityServiceImpl implements FacilityService {
                 do {
                     System.out.println("input type service");
                     typeService = scanner.nextLine();
-                    b = Validate.validateServiceType(typeService);
+                    b = Validate.validateAllName(typeService);
                 } while (!b);
                 String nameService;
                 do {
@@ -159,7 +159,7 @@ public class FacilityServiceImpl implements FacilityService {
                 do {
                     System.out.println("input type service");
                     typeService = scanner.nextLine();
-                    b = Validate.validateServiceType(typeService);
+                    b = Validate.validateAllName(typeService);
                 } while (!b);
                 String nameService;
                 do {
@@ -211,7 +211,7 @@ public class FacilityServiceImpl implements FacilityService {
                 do {
                     System.out.println("input type service");
                     typeService = scanner.nextLine();
-                    b = Validate.validateServiceType(typeService);
+                    b = Validate.validateAllName(typeService);
                 } while (!b);
                 String nameService;
                 do {
