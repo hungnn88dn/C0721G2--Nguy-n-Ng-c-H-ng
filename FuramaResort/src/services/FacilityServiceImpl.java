@@ -101,13 +101,13 @@ public class FacilityServiceImpl implements FacilityService {
                 do {
                     System.out.println("input type service");
                     typeService = scanner.nextLine();
-                    b = Validate.validateVillaType(typeService);
+                    b = Validate.validateServiceType(typeService);
                 } while (!b);
                 String nameService;
                 do {
                     System.out.println("input name service (SVVL-XXXX, X is number): ");
                     nameService = scanner.nextLine();
-                    b = Validate.validateVillaName(nameService);
+                    b = Validate.validateServiceName(nameService);
                 } while (!b);
                 double usableArea;
                 do {
@@ -119,7 +119,7 @@ public class FacilityServiceImpl implements FacilityService {
                 do {
                     System.out.println("input rental cost: ");
                     rentalCost = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateRentalCost(String.valueOf(rentalCost));
+                    b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
                 } while (!b);
                 int maxPeople;
                 do {
@@ -149,7 +149,7 @@ public class FacilityServiceImpl implements FacilityService {
                 do {
                     System.out.println("input floor: ");
                     floor = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateFloor(String.valueOf(floor));
+                    b = Validate.validateCostAndFloor(String.valueOf(floor));
                 } while (!b);
                 list.put(new Villa(typeService, nameService, usableArea, rentalCost, maxPeople, rentalType,
                         standarRoom, areaPool, floor), 0);
@@ -159,13 +159,13 @@ public class FacilityServiceImpl implements FacilityService {
                 do {
                     System.out.println("input type service");
                     typeService = scanner.nextLine();
-                    b = Validate.validateHouseType(typeService);
+                    b = Validate.validateServiceType(typeService);
                 } while (!b);
                 String nameService;
                 do {
                     System.out.println("input name service (SVHO-XXXX, X is number): ");
                     nameService = scanner.nextLine();
-                    b = Validate.validateHouseName(nameService);
+                    b = Validate.validateServiceName(nameService);
                 } while (!b);
                 double usableArea;
                 do {
@@ -177,7 +177,7 @@ public class FacilityServiceImpl implements FacilityService {
                 do {
                     System.out.println("input rental cost: ");
                     rentalCost = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateRentalCost(String.valueOf(rentalCost));
+                    b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
                 } while (!b);
                 int maxPeople;
                 do {
@@ -201,7 +201,7 @@ public class FacilityServiceImpl implements FacilityService {
                 do {
                     System.out.println("input floor: ");
                     floor = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateFloor(String.valueOf(floor));
+                    b = Validate.validateCostAndFloor(String.valueOf(floor));
                 } while (!b);
                 list.put(new House(typeService, nameService, usableArea, rentalCost, maxPeople,
                         rentalType, standarRoom, floor), 0);
@@ -211,13 +211,13 @@ public class FacilityServiceImpl implements FacilityService {
                 do {
                     System.out.println("input type service");
                     typeService = scanner.nextLine();
-                    b = Validate.validateRoomType(typeService);
+                    b = Validate.validateServiceType(typeService);
                 } while (!b);
                 String nameService;
                 do {
                     System.out.println("input name service (SVHO-XXXX, X is number): ");
                     nameService = scanner.nextLine();
-                    b = Validate.validateRoomName(nameService);
+                    b = Validate.validateServiceName(nameService);
                 } while (!b);
                 double usableArea;
                 do {
@@ -229,7 +229,7 @@ public class FacilityServiceImpl implements FacilityService {
                 do {
                     System.out.println("input rental cost: ");
                     rentalCost = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateRentalCost(String.valueOf(rentalCost));
+                    b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
                 } while (!b);
                 int maxPeople;
                 do {
@@ -280,7 +280,7 @@ public class FacilityServiceImpl implements FacilityService {
                             do {
                                 System.out.println("input name service (SVVL-XXXX, X is number): ");
                                 nameService = scanner.nextLine();
-                                b = Validate.validateVillaName(nameService);
+                                b = Validate.validateServiceName(nameService);
                             } while (!b);
                             key.setNameService(nameService);
                         }
@@ -298,7 +298,7 @@ public class FacilityServiceImpl implements FacilityService {
                             do {
                                 System.out.println("input rental cost: ");
                                 rentalCost = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateRentalCost(String.valueOf(rentalCost));
+                                b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
                             } while (!b);
                             key.setRentalCost(rentalCost);
                         }
@@ -343,7 +343,7 @@ public class FacilityServiceImpl implements FacilityService {
                             do {
                                 System.out.println("input floor: ");
                                 floor = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateFloor(String.valueOf(floor));
+                                b = Validate.validateCostAndFloor(String.valueOf(floor));
                             } while (!b);
                             ((Villa) key).setFloor(floor);
                         }
@@ -369,7 +369,7 @@ public class FacilityServiceImpl implements FacilityService {
                             do {
                                 System.out.println("input name service (SVVL-XXXX, X is number): ");
                                 nameService = scanner.nextLine();
-                                b = Validate.validateHouseName(nameService);
+                                b = Validate.validateServiceName(nameService);
                             } while (!b);
                             key.setNameService(nameService);
                         }
@@ -387,7 +387,7 @@ public class FacilityServiceImpl implements FacilityService {
                             do {
                                 System.out.println("input rental cost: ");
                                 rentalCost = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateRentalCost(String.valueOf(rentalCost));
+                                b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
                             } while (!b);
                             key.setRentalCost(rentalCost);
                         }
@@ -423,7 +423,7 @@ public class FacilityServiceImpl implements FacilityService {
                             do {
                                 System.out.println("input floor: ");
                                 floor = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateFloor(String.valueOf(floor));
+                                b = Validate.validateCostAndFloor(String.valueOf(floor));
                             } while (!b);
                             ((Villa) key).setFloor(floor);
                         }
@@ -451,7 +451,7 @@ public class FacilityServiceImpl implements FacilityService {
                             do {
                                 System.out.println("input name service (SVVL-XXXX, X is number): ");
                                 nameService = scanner.nextLine();
-                                b = Validate.validateRoomName(nameService);
+                                b = Validate.validateServiceName(nameService);
                             } while (!b);
                             key.setNameService(nameService);
                         }
@@ -469,7 +469,7 @@ public class FacilityServiceImpl implements FacilityService {
                             do {
                                 System.out.println("input rental cost: ");
                                 rentalCost = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateRentalCost(String.valueOf(rentalCost));
+                                b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
                             } while (!b);
                             key.setRentalCost(rentalCost);
                         }
