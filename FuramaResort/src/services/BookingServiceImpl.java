@@ -49,6 +49,7 @@ public class BookingServiceImpl implements BookingService {
         }
     }
 
+
     @Override
     public void display() {
         Set<Booking> list = BookingServiceImpl.readBooking();
@@ -62,7 +63,7 @@ public class BookingServiceImpl implements BookingService {
     @Override
     public void add() {
         Set<Booking> listBookings= BookingServiceImpl.readBooking();
-//        CustomerServiceImpl.checkMember();
+        CustomerServiceImpl.checkMember();
         System.out.println("input bookingCode");
         int bookingCode = Integer.parseInt(scanner.nextLine());
         System.out.println("input startDay");
@@ -71,7 +72,7 @@ public class BookingServiceImpl implements BookingService {
         String endDay = scanner.nextLine();
         System.out.println("input customerCode");
         int customerCode = Integer.parseInt(scanner.nextLine());
-        System.out.println("input serviceName");
+        System.out.println("input sericeName");
         String serviceName = scanner.nextLine();
         System.out.println("input serviceType");
         String serviceType = scanner.nextLine();
@@ -79,6 +80,10 @@ public class BookingServiceImpl implements BookingService {
         BookingServiceImpl.writerBooking(listBookings);
     }
 
+    public static void main(String[] args) {
+        BookingServiceImpl bookingService= new BookingServiceImpl();
+        bookingService.add();
+    }
     @Override
     public void edit() {
 //         update later

@@ -12,7 +12,7 @@ import java.util.LinkedHashMap;
 import java.util.Scanner;
 import java.util.Set;
 
-public class FacilityServiceImpl implements FacilityService {
+public class FacilityServiceImpl  implements FacilityService {
     static Scanner scanner = new Scanner(System.in);
     static File file = new File("src\\data\\facility.csv");
     boolean b = false;
@@ -71,6 +71,24 @@ public class FacilityServiceImpl implements FacilityService {
         }
     }
 
+    public static String validateInput(String str, String regex) {
+        boolean b = true;
+        do {
+            b =Validate.validateInput(str,regex);
+           if (b) {
+               return str;
+           }else {
+               System.out.println("Wrong, please input again");
+               str =scanner.nextLine();
+           }
+        } while (!b);
+        return str;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(FacilityServiceImpl.validateInput(scanner.nextLine(),Validate.NAME_SERVICE_VILLA));
+    }
+
     @Override
     public void display() {
         LinkedHashMap<Facility, Integer> facilityServiceList = FacilityServiceImpl.readFacility();
@@ -97,154 +115,62 @@ public class FacilityServiceImpl implements FacilityService {
             System.out.println("0. Back to Menu");
             choose = Integer.parseInt(scanner.nextLine());
             if (choose == 1) {
-                String typeService;
-                do {
-                    System.out.println("input type service");
-                    typeService = scanner.nextLine();
-                    b = Validate.validateAllName(typeService);
-                } while (!b);
-                String nameService;
-                do {
-                    System.out.println("input name service (SVVL-XXXX, X is number): ");
-                    nameService = scanner.nextLine();
-                    b = Validate.validateServiceName(nameService);
-                } while (!b);
-                double usableArea;
-                do {
-                    System.out.println("input usable area: ");
-                    usableArea = Double.parseDouble(scanner.nextLine());
-                    b = Validate.validateArea(String.valueOf(usableArea));
-                } while (!b);
-                int rentalCost;
-                do {
-                    System.out.println("input rental cost: ");
-                    rentalCost = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
-                } while (!b);
-                int maxPeople;
-                do {
-                    System.out.println("input maximum number of people: ");
-                    maxPeople = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateMaxPeople(String.valueOf(maxPeople));
-                } while (!b);
-                String rentalType;
-                do {
-                    System.out.println("input rental type: ");
-                    rentalType = scanner.nextLine();
-                    b = Validate.validateAllName(rentalType);
-                } while (!b);
-                String standarRoom;
-                do {
-                    System.out.println("input standar room: ");
-                    standarRoom = scanner.nextLine();
-                    b = Validate.validateAllName(standarRoom);
-                } while (!b);
-                double areaPool;
-                do {
-                    System.out.println("input pool area: ");
-                    areaPool = Double.parseDouble(scanner.nextLine());
-                    b = Validate.validateArea(String.valueOf(areaPool));
-                } while (!b);
-                int floor;
-                do {
-                    System.out.println("input floor: ");
-                    floor = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateCostAndFloor(String.valueOf(floor));
-                } while (!b);
+                System.out.println("input name service");
+                String typeService = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE);
+                System.out.println("input id service (SVVL-XXXX, X is number): ");
+                String nameService = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.NAME_SERVICE_VILLA);
+                System.out.println("input usable area: ");
+                double usableArea = Double.parseDouble(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.AREA));
+                System.out.println("input rental cost: ");
+                int rentalCost = Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.COST_FLOOR));
+                System.out.println("input maximum number of people: ");
+                int maxPeople = Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.MAX_PEOPLE));
+                System.out.println("input rental type: ");
+                String rentalType = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE);
+                System.out.println("input standar room: ");
+                String standarRoom = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE);
+                System.out.println("input pool area: ");
+                double areaPool = Double.parseDouble(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.AREA));
+                System.out.println("input floor: ");
+                int floor = Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.COST_FLOOR));
                 list.put(new Villa(typeService, nameService, usableArea, rentalCost, maxPeople, rentalType,
                         standarRoom, areaPool, floor), 0);
             }
             if (choose == 2) {
-                String typeService;
-                do {
-                    System.out.println("input type service");
-                    typeService = scanner.nextLine();
-                    b = Validate.validateAllName(typeService);
-                } while (!b);
-                String nameService;
-                do {
-                    System.out.println("input name service (SVHO-XXXX, X is number): ");
-                    nameService = scanner.nextLine();
-                    b = Validate.validateServiceName(nameService);
-                } while (!b);
-                double usableArea;
-                do {
-                    System.out.println("input usable area: ");
-                    usableArea = Double.parseDouble(scanner.nextLine());
-                    b = Validate.validateArea(String.valueOf(usableArea));
-                } while (!b);
-                int rentalCost;
-                do {
-                    System.out.println("input rental cost: ");
-                    rentalCost = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
-                } while (!b);
-                int maxPeople;
-                do {
-                    System.out.println("input maximum number of people: ");
-                    maxPeople = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateMaxPeople(String.valueOf(maxPeople));
-                } while (!b);
-                String rentalType;
-                do {
-                    System.out.println("input rental type: ");
-                    rentalType = scanner.nextLine();
-                    b = Validate.validateAllName(rentalType);
-                } while (!b);
-                String standarRoom;
-                do {
-                    System.out.println("input standar room: ");
-                     standarRoom = scanner.nextLine();
-                    b = Validate.validateAllName(standarRoom);
-                } while (!b);
-                int floor;
-                do {
-                    System.out.println("input floor: ");
-                    floor = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateCostAndFloor(String.valueOf(floor));
-                } while (!b);
+                System.out.println("input name service");
+                String typeService = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE);
+                System.out.println("input id service (SVVL-XXXX, X is number): ");
+                String nameService = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.NAME_SERVICE_HOUSE);
+                System.out.println("input usable area: ");
+                double usableArea = Double.parseDouble(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.AREA));
+                System.out.println("input rental cost: ");
+                int rentalCost = Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.COST_FLOOR));
+                System.out.println("input maximum number of people: ");
+                int maxPeople = Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.MAX_PEOPLE));
+                System.out.println("input rental type: ");
+                String rentalType = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE);
+                System.out.println("input standar room: ");
+                String standarRoom = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE);
+                System.out.println("input floor: ");
+                int floor = Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.COST_FLOOR));
                 list.put(new House(typeService, nameService, usableArea, rentalCost, maxPeople,
                         rentalType, standarRoom, floor), 0);
             }
             if (choose == 3) {
-                String typeService;
-                do {
-                    System.out.println("input type service");
-                    typeService = scanner.nextLine();
-                    b = Validate.validateAllName(typeService);
-                } while (!b);
-                String nameService;
-                do {
-                    System.out.println("input name service (SVHO-XXXX, X is number): ");
-                    nameService = scanner.nextLine();
-                    b = Validate.validateServiceName(nameService);
-                } while (!b);
-                double usableArea;
-                do {
-                    System.out.println("input usable area: ");
-                    usableArea = Double.parseDouble(scanner.nextLine());
-                    b = Validate.validateArea(String.valueOf(usableArea));
-                } while (!b);
-                int rentalCost;
-                do {
-                    System.out.println("input rental cost: ");
-                    rentalCost = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
-                } while (!b);
-                int maxPeople;
-                do {
-                    System.out.println("input maximum number of people: ");
-                    maxPeople = Integer.parseInt(scanner.nextLine());
-                    b = Validate.validateMaxPeople(String.valueOf(maxPeople));
-                } while (!b);
-                String rentalType;
-                do {
-                    System.out.println("input rental type: ");
-                    rentalType = scanner.nextLine();
-                    b = Validate.validateAllName(rentalType);
-                } while (!b);
+                System.out.println("input name service");
+                String typeService = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE);
+                System.out.println("input id service (SVVL-XXXX, X is number): ");
+                String nameService = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.NAME_SERVICE_HOUSE);
+                System.out.println("input usable area: ");
+                double usableArea = Double.parseDouble(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.AREA));
+                System.out.println("input rental cost: ");
+                int rentalCost = Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.COST_FLOOR));
+                System.out.println("input maximum number of people: ");
+                int maxPeople = Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.MAX_PEOPLE));
+                System.out.println("input rental type: ");
+                String rentalType = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE);
                 System.out.println("input free service: ");
-                String serviceFree = scanner.nextLine();
+                String serviceFree = FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE);
                 list.put(new Room(typeService, nameService, usableArea, rentalCost, maxPeople, rentalType,
                         serviceFree), 0);
             }
@@ -259,12 +185,12 @@ public class FacilityServiceImpl implements FacilityService {
         LinkedHashMap<Facility, Integer> list = FacilityServiceImpl.readFacility();
         Set<Facility> keySet = list.keySet();
         for (Facility key : keySet) {
-            if (key.getNameService().equals(name)) {
+            if (key.getServiceID().equals(name)) {
                 if (key instanceof Villa) {
                     int chooseVilla;
                     do {
                         System.out.println(((Villa) key).showVilla());
-                        System.out.println("1.Edit NameService: ");
+                        System.out.println("1.Edit ServiceID: ");
                         System.out.println("2.Edit UsableArea: ");
                         System.out.println("3.Edit RentalCost: ");
                         System.out.println("4.Edit MaxPeople: ");
@@ -276,76 +202,36 @@ public class FacilityServiceImpl implements FacilityService {
                         System.out.println("Your choose: ");
                         chooseVilla = Integer.parseInt(scanner.nextLine());
                         if (chooseVilla == 1) {
-                            String nameService;
-                            do {
-                                System.out.println("input name service (SVVL-XXXX, X is number): ");
-                                nameService = scanner.nextLine();
-                                b = Validate.validateServiceName(nameService);
-                            } while (!b);
-                            key.setNameService(nameService);
+                            System.out.println("input service ID (SVVL-XXXX, X is number): ");
+                            key.setServiceID(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.NAME_SERVICE_VILLA));
                         }
                         if (chooseVilla == 2) {
-                            double usableArea;
-                            do {
-                                System.out.println("input usable area: ");
-                                usableArea = Double.parseDouble(scanner.nextLine());
-                                b = Validate.validateArea(String.valueOf(usableArea));
-                            } while (!b);
-                            key.setAreaUsable(usableArea);
+                            System.out.println("input usable area: ");
+                            key.setAreaUsable(Double.parseDouble(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.AREA)));
                         }
                         if (chooseVilla == 3) {
-                            int rentalCost;
-                            do {
-                                System.out.println("input rental cost: ");
-                                rentalCost = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
-                            } while (!b);
-                            key.setRentalCost(rentalCost);
+                            System.out.println("input rental cost: ");
+                            key.setRentalCost(Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.COST_FLOOR)));
                         }
                         if (chooseVilla == 4) {
-                            int maxPeople;
-                            do {
-                                System.out.println("input maximum number of people: ");
-                                maxPeople = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateMaxPeople(String.valueOf(maxPeople));
-                            } while (!b);
-                            key.setMaxPeople(maxPeople);
+                            System.out.println("input maximum number of people: ");
+                            key.setMaxPeople(Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.MAX_PEOPLE)));
                         }
                         if (chooseVilla == 5) {
-                            String rentalType;
-                            do {
-                                System.out.println("input rental type: ");
-                                rentalType = scanner.nextLine();
-                                b = Validate.validateAllName(rentalType);
-                            } while (!b);
-                            key.setRentalType(rentalType);
+                            System.out.println("input rental type: ");
+                            key.setRentalType(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE));
                         }
                         if (chooseVilla == 6) {
-                            String standarRoom;
-                            do {
-                                System.out.println("input standar room: ");
-                                standarRoom = scanner.nextLine();
-                                b = Validate.validateAllName(standarRoom);
-                            } while (!b);
-                            ((Villa) key).setStandardRoom(standarRoom);
+                            System.out.println("input standar room: ");
+                            ((Villa) key).setStandardRoom(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE));
                         }
                         if (chooseVilla == 7) {
-                            double areaPool;
-                            do {
-                                System.out.println("input pool area: ");
-                                areaPool = Double.parseDouble(scanner.nextLine());
-                                b = Validate.validateArea(String.valueOf(areaPool));
-                            } while (!b);
-                            ((Villa) key).setAreaPool(areaPool);
+                            System.out.println("input pool area: ");
+                            ((Villa) key).setAreaPool(Double.parseDouble(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.AREA)));
                         }
                         if (chooseVilla == 8) {
-                            int floor;
-                            do {
-                                System.out.println("input floor: ");
-                                floor = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateCostAndFloor(String.valueOf(floor));
-                            } while (!b);
-                            ((Villa) key).setFloor(floor);
+                            System.out.println("input floor: ");
+                            ((Villa) key).setFloor(Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.COST_FLOOR)));
                         }
                         FacilityServiceImpl.writerFacility(list);
                     } while (chooseVilla != 0);
@@ -354,7 +240,7 @@ public class FacilityServiceImpl implements FacilityService {
                     int chooseHouse;
                     do {
                         System.out.println(((House) key).showHouse());
-                        System.out.println("1.Edit NameService: ");
+                        System.out.println("1.Edit ServiceID: ");
                         System.out.println("2.Edit UsableArea: ");
                         System.out.println("3.Edit RentalCost: ");
                         System.out.println("4.Edit MaxPeople: ");
@@ -365,69 +251,33 @@ public class FacilityServiceImpl implements FacilityService {
                         System.out.println("Your choose: ");
                         chooseHouse = Integer.parseInt(scanner.nextLine());
                         if (chooseHouse == 1) {
-                            String nameService;
-                            do {
-                                System.out.println("input name service (SVVL-XXXX, X is number): ");
-                                nameService = scanner.nextLine();
-                                b = Validate.validateServiceName(nameService);
-                            } while (!b);
-                            key.setNameService(nameService);
+                            System.out.println("input name service (SVHO-XXXX, X is number): ");
+                            key.setServiceID(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.NAME_SERVICE_HOUSE));
                         }
                         if (chooseHouse == 2) {
-                            double usableArea;
-                            do {
-                                System.out.println("input usable area: ");
-                                usableArea = Double.parseDouble(scanner.nextLine());
-                                b = Validate.validateArea(String.valueOf(usableArea));
-                            } while (!b);
-                            key.setAreaUsable(usableArea);
+                            System.out.println("input usable area: ");
+                            key.setAreaUsable(Double.parseDouble(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.AREA)));
                         }
                         if (chooseHouse == 3) {
-                            int rentalCost;
-                            do {
-                                System.out.println("input rental cost: ");
-                                rentalCost = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
-                            } while (!b);
-                            key.setRentalCost(rentalCost);
+                            System.out.println("input rental cost: ");
+                            key.setRentalCost(Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.COST_FLOOR)));
                         }
                         if (chooseHouse == 4) {
-                            int maxPeople;
-                            do {
-                                System.out.println("input maximum number of people: ");
-                                maxPeople = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateMaxPeople(String.valueOf(maxPeople));
-                            } while (!b);
-                            key.setMaxPeople(maxPeople);
+                            System.out.println("input maximum number of people: ");
+                            key.setMaxPeople(Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.MAX_PEOPLE)));
                         }
                         if (chooseHouse == 5) {
-                            String rentalType;
-                            do {
-                                System.out.println("input rental type: ");
-                                rentalType = scanner.nextLine();
-                                b = Validate.validateAllName(rentalType);
-                            } while (!b);
-                            key.setRentalType(rentalType);
+                            System.out.println("input rental type: ");
+                            key.setRentalType(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE));
                         }
                         if (chooseHouse == 6) {
-                            String standarRoom;
-                            do {
-                                System.out.println("input standar room: ");
-                                standarRoom = scanner.nextLine();
-                                b = Validate.validateAllName(standarRoom);
-                            } while (!b);
-                            ((Villa) key).setStandardRoom(standarRoom);
+                            System.out.println("input standar room: ");
+                            ((Villa) key).setStandardRoom(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE));
                         }
                         if (chooseHouse == 7) {
-                            int floor;
-                            do {
-                                System.out.println("input floor: ");
-                                floor = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateCostAndFloor(String.valueOf(floor));
-                            } while (!b);
-                            ((Villa) key).setFloor(floor);
+                            System.out.println("input floor: ");
+                            ((House) key).setFloor(Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.COST_FLOOR)));
                         }
-                        System.out.println(((House) key).showHouse());
                         FacilityServiceImpl.writerFacility(list);
                     } while (chooseHouse != 0);
                 }
@@ -436,7 +286,7 @@ public class FacilityServiceImpl implements FacilityService {
                     int chooseRoom;
                     do {
                         System.out.println(((Room) key).showRoom());
-                        System.out.println("1.Edit NameService: ");
+                        System.out.println("1.Edit ServiceID: ");
                         System.out.println("2.Edit UsableArea: ");
                         System.out.println("3.Edit RentalCost: ");
                         System.out.println("4.Edit MaxPeople: ");
@@ -447,58 +297,28 @@ public class FacilityServiceImpl implements FacilityService {
                         System.out.println("Your choose: ");
                         chooseRoom = Integer.parseInt(scanner.nextLine());
                         if (chooseRoom == 1) {
-                            String nameService;
-                            do {
-                                System.out.println("input name service (SVVL-XXXX, X is number): ");
-                                nameService = scanner.nextLine();
-                                b = Validate.validateServiceName(nameService);
-                            } while (!b);
-                            key.setNameService(nameService);
+                            System.out.println("input name service (SVRO-XXXX, X is number): ");
+                            key.setServiceID(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.NAME_SERVICE_ROOM));
                         }
                         if (chooseRoom == 2) {
-                            double usableArea;
-                            do {
-                                System.out.println("input usable area: ");
-                                usableArea = Double.parseDouble(scanner.nextLine());
-                                b = Validate.validateArea(String.valueOf(usableArea));
-                            } while (!b);
-                            key.setAreaUsable(usableArea);
+                            System.out.println("input usable area: ");
+                            key.setAreaUsable(Double.parseDouble(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.AREA)));
                         }
                         if (chooseRoom == 3) {
-                            int rentalCost;
-                            do {
-                                System.out.println("input rental cost: ");
-                                rentalCost = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateCostAndFloor(String.valueOf(rentalCost));
-                            } while (!b);
-                            key.setRentalCost(rentalCost);
+                            System.out.println("input rental cost: ");
+                            key.setRentalCost(Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.COST_FLOOR)));
                         }
                         if (chooseRoom == 4) {
-                            int maxPeople;
-                            do {
-                                System.out.println("input maximum number of people: ");
-                                maxPeople = Integer.parseInt(scanner.nextLine());
-                                b = Validate.validateMaxPeople(String.valueOf(maxPeople));
-                            } while (!b);
-                            key.setMaxPeople(maxPeople);
+                            System.out.println("input maximum number of people: ");
+                            key.setMaxPeople(Integer.parseInt(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.MAX_PEOPLE)));
                         }
                         if (chooseRoom == 5) {
-                            String rentalType;
-                            do {
-                                System.out.println("input rental type: ");
-                                rentalType = scanner.nextLine();
-                                b = Validate.validateAllName(rentalType);
-                            } while (!b);
-                            key.setRentalType(rentalType);
+                            System.out.println("input rental type: ");
+                            key.setRentalType(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE));
                         }
                         if (chooseRoom == 6) {
-                            String serviceFree;
-                            do {
-                                System.out.println("input free service: ");
-                                serviceFree = scanner.nextLine();
-                                b = Validate.validateAllName(serviceFree);
-                            } while (!b);
-                            ((Room) key).setServiceFree(serviceFree);
+                            System.out.println("input free service: ");
+                            ((Room) key).setServiceFree(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.SERVICE_TYPE));
                         }
                         System.out.println(((Room) key).showRoom());
                         FacilityServiceImpl.writerFacility(list);
