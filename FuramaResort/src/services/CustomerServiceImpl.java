@@ -50,10 +50,10 @@ public class CustomerServiceImpl implements CustomerSerivce {
         }
     }
 
-    public static int  checkMember() {
+    public static int checkMember() {
         CustomerServiceImpl customerService = new CustomerServiceImpl();
-        Scanner scanner= new Scanner(System.in);
-        List<Customer>  list= CustomerServiceImpl.readCustomerCSV();
+        Scanner scanner = new Scanner(System.in);
+        List<Customer> list = CustomerServiceImpl.readCustomerCSV();
         int choose;
         do {
             System.out.println("1.You are Member");
@@ -66,32 +66,29 @@ public class CustomerServiceImpl implements CustomerSerivce {
                 int count = 0;
                 System.out.println("Input Your Email: ");
                 String email = scanner.nextLine();
-                for (Customer customer:  list) {
+                for (Customer customer : list) {
                     if (customer.getEmail().equals(email)) {
                         System.out.println(customer.showCustomer());
                         return customer.getCodeCustomer();
-                    }else {
+                    } else {
                         count++;
                     }
                 }
                 if (count == list.size()) {
                     System.out.println("You are not member, please sign up");
                     customerService.add();
-                    return list.get(list.size() -1).getCodeCustomer();
+                    return list.get(list.size() - 1).getCodeCustomer();
                 }
-             choose =0;
+                choose = 0;
             }
             if (choose == 2) {
                 customerService.add();
-                return list.get(list.size() -1).getCodeCustomer();
+                return list.get(list.size() - 1).getCodeCustomer();
             }
-        } while(choose != 0);
-        return list.get(list.size() -1).getCodeCustomer();
+        } while (choose != 0);
+        return list.get(list.size() - 1).getCodeCustomer();
     }
 
-    public static void main(String[] args) {
-        CustomerServiceImpl.checkMember();
-    }
     @Override
     public void display() {
         List<Customer> list = CustomerServiceImpl.readCustomerCSV();
@@ -119,8 +116,9 @@ public class CustomerServiceImpl implements CustomerSerivce {
         String typeCtm = scanner.nextLine();
         System.out.println("input Address: ");
         String addressCtm = scanner.nextLine();
-        List<Customer> list = CustomerServiceImpl.readCustomerCSV();;
-        int codeCtm =list.get(list.size()-1).getCodeCustomer() + 1;
+        List<Customer> list = CustomerServiceImpl.readCustomerCSV();
+        ;
+        int codeCtm = list.get(list.size() - 1).getCodeCustomer() + 1;
         list.add(new Customer(nameCtm, ageCtm, genderCtm, codeCtm, cmdnCtm, phoneCtm, emailCtm, typeCtm, addressCtm));
         CustomerServiceImpl.writerCustomerCSV(list);
     }

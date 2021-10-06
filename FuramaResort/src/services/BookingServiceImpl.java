@@ -54,7 +54,7 @@ public class BookingServiceImpl implements BookingService {
     public void display() {
         Set<Booking> list = BookingServiceImpl.readBooking();
         List<Booking> newList = new LinkedList<>(list);
-        Collections.sort(newList,new BookingComparator());
+        Collections.sort(newList, new BookingComparator());
         for (Booking booking : newList) {
             System.out.println(booking.showBooking());
         }
@@ -62,10 +62,10 @@ public class BookingServiceImpl implements BookingService {
 
     @Override
     public void add() {
-        Set<Booking> listBookings= BookingServiceImpl.readBooking();
+        Set<Booking> listBookings = BookingServiceImpl.readBooking();
         int customerCode = CustomerServiceImpl.checkMember();
-        List<Booking> list= new ArrayList<>(listBookings);
-        int bookingCode = list.get(list.size() -1).getBookingCode() + 1;
+        List<Booking> list = new ArrayList<>(listBookings);
+        int bookingCode = list.get(list.size() - 1).getBookingCode() + 1;
         System.out.println("input startDay");
         String startDay = scanner.nextLine();
         System.out.println("input endDay");
@@ -78,10 +78,6 @@ public class BookingServiceImpl implements BookingService {
         BookingServiceImpl.writerBooking(listBookings);
     }
 
-    public static void main(String[] args) {
-        BookingServiceImpl bookingService= new BookingServiceImpl();
-        bookingService.add();
-    }
     @Override
     public void edit() {
 //         update later

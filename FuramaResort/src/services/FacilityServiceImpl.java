@@ -12,7 +12,7 @@ import java.util.LinkedHashMap;
 import java.util.Scanner;
 import java.util.Set;
 
-public class FacilityServiceImpl  implements FacilityService {
+public class FacilityServiceImpl implements FacilityService {
     static Scanner scanner = new Scanner(System.in);
     static File file = new File("src\\data\\facility.csv");
     boolean b = false;
@@ -74,19 +74,19 @@ public class FacilityServiceImpl  implements FacilityService {
     public static String validateInput(String str, String regex) {
         boolean b = true;
         do {
-            b =Validate.validateInput(str,regex);
-           if (b) {
-               return str;
-           }else {
-               System.out.println("Wrong, please input again");
-               str =scanner.nextLine();
-           }
+            b = Validate.validateInput(str, regex);
+            if (b) {
+                return str;
+            } else {
+                System.out.println("Wrong, please input again");
+                str = scanner.nextLine();
+            }
         } while (!b);
         return str;
     }
 
     public static void main(String[] args) {
-        System.out.println(FacilityServiceImpl.validateInput(scanner.nextLine(),Validate.NAME_SERVICE_VILLA));
+        System.out.println(FacilityServiceImpl.validateInput(scanner.nextLine(), Validate.NAME_SERVICE_VILLA));
     }
 
     @Override
