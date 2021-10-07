@@ -15,6 +15,9 @@ public class FuramaController {
     BookingServiceImpl bookingService = new BookingServiceImpl();
     ContactServiceImpl contactService= new ContactServiceImpl();
 
+    public static void main(String[] args) {
+
+    }
 
     public void displayMainMenu() {
         int choose;

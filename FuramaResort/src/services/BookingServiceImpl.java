@@ -2,6 +2,7 @@ package services;
 
 import models.Booking;
 import models.Customer;
+import models.Facility;
 import utils.BookingComparator;
 
 import java.io.*;
@@ -12,6 +13,7 @@ import java.util.TreeSet;
 public class BookingServiceImpl implements BookingService {
     static File file = new File("src\\data\\booking.csv");
     static Scanner scanner = new Scanner(System.in);
+    FacilityServiceImpl facilityService = new FacilityServiceImpl();
 
 
     static Set<Booking> readBooking() {
@@ -70,9 +72,10 @@ public class BookingServiceImpl implements BookingService {
         String startDay = scanner.nextLine();
         System.out.println("input endDay");
         String endDay = scanner.nextLine();
+        facilityService.display();
         System.out.println("input seviceName");
         String serviceName = scanner.nextLine();
-        System.out.println("input serviceType");
+        System.out.println("choose serviceID");
         String serviceType = scanner.nextLine();
         listBookings.add(new Booking(bookingCode, startDay, endDay, customerCode, serviceName, serviceType));
         BookingServiceImpl.writerBooking(listBookings);
