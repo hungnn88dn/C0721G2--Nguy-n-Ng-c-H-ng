@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doYouloveMe</title>
+</head>
+<body>
+<script>
+
+    let count = 1;
+    let numStar = parseInt(prompt("Nhập số bắt đầu"));
+    let numEnd = parseInt(prompt("Nhập số kết thúc"));
+    let result = Math.round(Math.random() * (numEnd - numStar)) + numStar;
+    
+    do {
+        let num = prompt("Yêu cầu bạn nhập số");
+        if (num == result) {
+            alert("Xin chúc mừng bạn đã trúng giải độc đắc");
+            break;
+        } else if (num > result) {
+            alert("Cần nhập số nhỏ hơn");
+        } else {
+            alert("Cần nhập số lơn hơn.")
+        }
+        count++;
+    } while (count <= 3);
+    if (count == 4) {
+        alert("bạn hết lượt vui lòng mua thêm lượt và bạn không trúng thưởng đợt này")
+    }
+
+</script>
+</body>
+</html>

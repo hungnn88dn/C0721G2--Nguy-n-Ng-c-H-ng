@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100"></canvas>
+<script>
+    let Rectangle = function (dai, rong) {
+        this.dai = dai;
+        this.rong = rong;
+        this.dientich = function () {
+          return (this.dai*this.rong)
+        }
+        this.chuvi = function () {
+           return  ((this.dai + this.rong) * 2)
+        }
+        this.getDai = function () {
+            return this.dai
+        }
+        this.getRong = function () {
+            return this.rong
+        }
+        this.setDai = function (dai) {
+            this.dai = dai;
+        }
+        this.setRong = function (rong) {
+            this.rong = rong;
+        }
+        this.vehinh = function () {
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#ff5154";
+            ctx.fillRect(0, 0, this.dai, this.rong);
+        }
+    }
+    var rectangle = new Rectangle(200, 100)
+
+    var dai = rectangle.getDai()
+    var rong = rectangle.getRong()
+     rectangle.setDai(150)
+    rectangle.setRong(75)
+    alert("Diện tích hình chữ nhật là: " + rectangle.dientich())
+    alert("Chu vi hình chữ nhật là : " + rectangle.chuvi())
+    alert(rectangle.vehinh())
+
+</script>
+</body>
+</html>

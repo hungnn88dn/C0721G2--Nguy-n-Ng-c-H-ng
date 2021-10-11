@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    td {
+        width: 200px;
+        text-align: center;
+    }
+</style>
+<body>
+<label for="name">Name</label> <input id="name" type="text">
+
+<label for="price">Price</label> <input id="price" type="text">
+
+<label for="model">Model</label> <input id="model" type="text">
+<label for="product">Product</label> <input id="product" type="text">
+<button onclick="addModel()">ADD</button>
+<br> <br> <br>
+<p id="displayPhone"></p>
+
+
+<script>
+    class Phone {
+        constructor(name, price, model, product) {
+            this.name = name;
+            this.price = price;
+            this.model = model;
+            this.product = product;
+        }
+        toString() {
+            return "name: " + this.name
+        }
+    }
+
+    function displayPhone() {
+        let data = "<table border='1' cellpadding='5'>"
+        data += "<tr>" + "<th>Name</th>" + "<th>Price</th>" + "<th>Model</th>" + "<th style='text-align: center'>Product</th>" + "<th>Edit</th>" + "</tr>"
+        for (let i = 0; i < phone.length; i++) {
+            data += "<tr>"
+            data += "<td>" + phone[i].name + "</td>" + "<td>" + phone[i].price + "</td>" + "<td>" + phone[i].model + "</td>" + "<td>" + phone[i].product + "</td>"
+            data += "<td>" + "<button onclick='editPhone(" + i + ")'>Edit</button>" + "</td>"
+            data += "<tr>"
+        }
+        data += "</table>"
+        document.getElementById("displayPhone").innerHTML = data
+    }
+
+    function addModel() {
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        let model = document.getElementById("model").value;
+        let product = document.getElementById("product").value;
+        phone.push(new Phone(name, price, model, product))
+        displayPhone();
+        document.getElementById("name").value = ""
+        document.getElementById("price").value = ""
+        document.getElementById("model").value = ""
+        document.getElementById("product").value = ""
+    }
+
+    function editPhone(index) {
+        let data = "<table border='1' cellpadding='5'>"
+        data += "<tr>" + "<th>Name</th>" + "<th>Price</th>" + "<th>Model</th>" + "<th style='text-align: center'>Product</th>" + "<th>Edit</th>" + "</tr>"
+        for (let i = 0; i < phone.length; i++) {
+            if (i == index) {
+                data += "<tr>"
+                data += "<td><input id='editPhoneName' value='" + phone[index].name + "'></td>" + "<td><input  id='editPhonePrice' value='" + phone[index].price + "' ></td>" + "<td><input id='editPhoneModel' value='" + phone[index].model + "'></td>" + "<td><input id='editPhoneProduct' value='" + phone[index].product + "'></td>"
+                data += "<td> <button  onclick='dataSave(" + i + ")'>Save</button> </td>"
+                data += "<tr>"
+            } else {
+                data += "<tr>"
+                data += "<td>" + phone[i].name + "</td>" + "<td>" + phone[i].price + "</td>" + "<td>" + phone[i].model + "</td>" + "</td>" + "<td>" + phone[i].product + "</td>"
+                data += "<td>" + "<button onclick='editPhone(" + i + ")'>Edit</button>" + "</td>"
+
+                data += "<tr>"
+            }
+        }
+        data += "</table>"
+        document.getElementById("displayPhone").innerHTML = data
+    }
+
+    function dataSave(index) {
+        if (confirm("Bạn có muốn thay đổi nội dung thành hiện tại: ")) {
+            phone[index].name = document.getElementById("editPhoneName").value;
+            phone[index].price = document.getElementById("editPhonePrice").value;
+            phone[index].model = document.getElementById("editPhoneModel").value;
+            phone[index].product = document.getElementById("editPhoneProduct").value;
+            displayPhone()
+            document.getElementById("editPhone").innerHTML = ""
+        }
+    }
+
+
+    let phone = []
+    phone.push(new Phone("Iphone", 12345, "Iphone 6", "Apple"))
+    displayPhone()
+
+
+</script>
+</body>
+</html>

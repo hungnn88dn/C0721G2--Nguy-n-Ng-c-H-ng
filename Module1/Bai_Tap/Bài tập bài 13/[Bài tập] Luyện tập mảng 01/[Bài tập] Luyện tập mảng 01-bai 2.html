@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let num = [1, 3, "eat", 7, "sleep", 21, 55, "4", 9, 11]
+    max = num[0]
+    for (let i = 1; i < num.length; i++) {
+        if (max < num[i]) {
+            max=num[i]
+        }
+    }document.write("Phần tử có giá trị lớn nhất là"+ " " + max + "<br>")
+    document.write("Thứ tự của phần tử đó là :" + " " +num.indexOf(max))
+</script>
+
+</html>

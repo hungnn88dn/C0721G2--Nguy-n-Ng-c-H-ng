@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+    let num = prompt("Nhập số vào đây")
+    num.toString()
+    let m = 0
+    let s = 1
+    let array = num.toString().split("")
+    console.log(array)
+    for (let i = 0; i < array.length; i++) {
+        array[i] = parseInt(array[i])
+        m = m + array[i]
+    }
+    alert("Tổng của các phần tử số là" + " " + m)
+    for (let i = 0; i < array.length; i++) {
+        array[i] = parseInt(array[i])
+        s = s * array[i]
+    }
+    alert("Tích của các phần tử số là" + " " + s)
+</script>
+</body>
+</html>

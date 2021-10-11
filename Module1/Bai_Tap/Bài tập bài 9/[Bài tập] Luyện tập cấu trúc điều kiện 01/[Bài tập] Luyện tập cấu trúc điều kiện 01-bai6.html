@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Số phút gọi: <input id="number1" type="text">phút <br>
+
+<button onclick="result()"> Cước</button> <br>
+<p id="cuoc" ></p>
+
+<script>
+
+    function result() {
+        let minute = document.getElementById("number1").value;
+        minute = parseInt(minute)
+        let bill = minute * 1600
+        document.getElementById("cuoc").innerText = bill + "VND"
+    }
+</script>
+</body>
+</html>

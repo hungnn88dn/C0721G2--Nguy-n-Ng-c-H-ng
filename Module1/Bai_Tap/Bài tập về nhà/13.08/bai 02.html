@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+     let month=prompt("nhập tháng vào đây:")
+    let year=prompt(" Nhập năm vào đây")
+    month=parseInt(month)
+     year=parseInt(year)
+     let flag
+    if ( (year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
+            flag= true
+        }else {
+            flag= false
+        }
+     if ( flag == true) {
+         switch (month) {
+             case 1:
+                 case 3:
+                     case 5:
+                         case 7:
+                             case 8:
+                                 case 10:
+                                     case 12:
+                 alert("tháng" + " " + month + " " + "năm " + " " + year + " " + "có 31 ngày");
+                 break;
+             case 2: alert("tháng" + " " + month + " " + "năm " + " " + year + " " + "có 29 ngày");break;
+             case 3:
+                 case 6:
+                     case 9:
+                         case 11:
+             case 4: alert("tháng" + " " + month + " " + "năm " + " " + year + " " + "có 30 ngày");
+             break;
+             default: "Trái đất chưa có tháng này"
+         }
+     }else {
+         switch (month) {
+             case 1:
+             case 3:
+             case 5:
+             case 7:
+             case 8:
+             case 10:
+             case 12:
+                 alert("tháng" + " " + month + " " + "năm " + " " + year + " " +  "có 31 ngày");
+                 break;
+             case 2: alert("tháng" + " " + month + " " + "năm " + " " + year + " " + "có 28 ngày");break;
+             case 3:
+             case 6:
+             case 9:
+             case 11:
+             case 4: alert("tháng" + " " + month + " " + "năm " + " " + year + " " + "có 30 ngày");
+                 break;
+             default: "Trái đất chưa có tháng này"
+         }
+     }
+
+</script>
+</body>
+</html>
