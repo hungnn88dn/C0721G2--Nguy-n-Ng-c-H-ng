@@ -47,7 +47,7 @@ create table customer(
  cmnd varchar(45),
  phone varchar(45),
  email varchar(45),
- adress varchar(45),
+ address varchar(45),
  type_customer_id int,
  foreign key (type_customer_id) references type_customer(id)
 );
@@ -143,12 +143,13 @@ value (1,"Member"),
       (4,"Platinium"),
       (5,"Diamond");
       
-insert into customer (id, `name`,age,cmnd,phone,email,adress,type_customer_id)
+insert into customer (id, `name`,age,cmnd,phone,email,address,type_customer_id)
 value (1,"Nguyen Van An", "2001-5-5","66666","0900000006","an@gmail.com","Quang Nam",1),
 	  (2,"Nguyen Thi Be", "2003-6-6","77777","0900000007","be@gmail.com","Quang Binh",2),
 	  (3,"Le Van Cau", "1996-12-7","88888","0900000008","cau@gmail.com","Quang Tri",3),
 	  (4,"Sieu Van Do", "1996-8-15","99999","0900000009","do@gmail.com","Hue",4),
-	  (5,"Do Dai Hoc", "1999-3-15","00001","0900000000","hoc@gmail.com","Da Nang",5);
+	  (5,"Do Dai Hoc", "1999-3-15","00001","0900000000","hoc@gmail.com","Da Nang",5),
+	  (6,"Do Dai Hoc", "1999-4-5","00002","0900000011","hoc1@gmail.com","Quang Ngai",5);
       
 insert into type_service (id, `name`)
 value (1,"Villa"),
@@ -184,13 +185,113 @@ value (1,"Massage", 200, 10,"On"),
       (5,"Tour", 100, 5,"Off");
       
 insert into contract(id,contract_day,end_day,deposit,total_price,employee_id,customer_id,service_id)
-value (1,"2021-1-1","2022-1-1",300,10000,3,1,1),
-      (2,"2021-2-15","2022-2-15",300,15000,2,2,2),
-      (3,"2021-5-13","2021-6-13",300,1000,2,3,6),
-      (4,"2021-1-1","2021-1-3",300,800,3,4,5);
+value (1,"2019-1-1","2022-1-1",300,10000,3,1,1),
+      (2,"2019-2-15","2022-2-15",300,15000,2,2,2),
+      (3,"2019-2-13","2021-6-13",300,1000,2,3,6),
+      (4,"2018-1-1","2021-1-3",300,800,3,5,5);
       
 insert into contract_detail ( id, amount,contract_id,attachment_service_id)
 value (1,1,1,1),
 	  (2,1,2,2),
 	  (3,2,3,3),
 	  (4,3,4,4);
+      
+
+--------------------------------------------------------------------------------------------------------------------------------------------------      
+--  2.	Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong các ký tự “H”, “T” hoặc “K” và có tối đa 15 ký tự.    
+      
+select * 
+from employee 
+where (`name` like "T%" OR  `name` like "H%" OR `name` like "K%") AND length(`name`) <= 15;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------      
+-- 3.	Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.
+
+select * 
+from customer
+where ( 2021 - year(age)) >= 18  AND ( 2021 - year(age)) <= 50 AND ( address like "Quang Tri" OR address like "Da Nang" );
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------      
+-- 4.	Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần.
+-- Kết quả hiển thị được sắp xếp tăng dần theo số lần đặt phòng của khách hàng. Chỉ đếm những khách hàng nào có Tên loại khách hàng là “Diamond”.
+
+select customer.id, customer.`name`,service.`name` as service, count(service.id) as count, type_customer.`name` as type_customer
+from customer join contract on customer.id = contract.customer_id 
+join service on contract.service_id = service.id 
+join type_customer on customer.type_customer_id = type_customer.id group by customer.`name` having type_customer.`name` = "Diamond" order by count ;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------      
+-- 5.	Hiển thị IDKhachHang, HoTen, TenLoaiKhach, IDHopDong, TenDichVu, NgayLamHopDong, NgayKetThuc,
+--  TongTien (Với TongTien được tính theo công thức như sau: ChiPhiThue + SoLuong*Gia, với SoLuong và Giá là từ bảng DichVuDiKem) cho tất cả các Khách hàng đã từng đặt phỏng. 
+-- (Những Khách hàng nào chưa từng đặt phòng cũng phải hiển thị ra).
+
+select customer.id as id, customer.`name` as `name`, type_customer.`name` as type_customer, 
+ contract.id as ContractID, service.`name`, contract.contract_day, contract.end_day as Contract_Endday, (service.rental_cost + ( contract_detail.amount * attachment_service.price)) as Total_Price
+from customer left join type_customer on customer.type_customer_id = type_customer.id
+left join contract on customer.id = contract.customer_id
+left join service on contract.service_id = service.id 
+left join contract_detail on contract.id = contract_detail.contract_id
+left join attachment_service on contract_detail.attachment_service_id = attachment_service.id 
+group by customer.`name`;
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 6.	Hiển thị IDDichVu, TenDichVu, DienTich, ChiPhiThue, TenLoaiDichVu của tất cả các loại Dịch vụ 
+-- chưa từng được Khách hàng thực hiện đặt từ quý 1 của năm 2019 (Quý 1 là tháng 1, 2, 3).
+
+select s.id, s.`name`, s.area, s.rental_cost, t.`name` as Type_Service
+from service s left join type_service t on s.type_service_id = t.id
+left join contract c on c.service_id = s.id
+where ((day(c.contract_day) <= 31) AND  (month(c.contract_day ) <= 3) AND year (c.contract_day) <= 2019 ) OR (c.contract_day is null);
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 7.	Hiển thị thông tin IDDichVu, TenDichVu, DienTich, SoNguoiToiDa, ChiPhiThue, TenLoaiDichVu của tất cả các loại dịch vụ đã
+--  từng được Khách hàng đặt phòng trong năm 2018 nhưng chưa từng được Khách hàng đặt phòng  trong năm 2019.
+
+select s.id, s.`name`, s.area, s.max_people, s.rental_cost, ts.`name`
+from service s  join type_service ts on s.type_service_id = ts.id
+join contract c on c.service_id = s.id
+where year(c.contract_day) = 2018 AND year(c.contract_day) != 2019;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 8.	Hiển thị thông tin HoTenKhachHang có trong hệ thống, với yêu cầu HoThenKhachHang không trùng nhau.
+-- Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên
+
+select c.id, c.`name`
+from customer c group by c.`name`;
+
+select DISTINCT c.id, c.`name`
+from customer c group by c.`name`;
+
+select  c.`name`
+from customer c 
+union
+select  c.`name`
+from customer c ;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 9.	Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2019 
+-- thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
+
+select c.id, month(c.contract_day) as `month` , count(c.service_id) as Count
+from contract c where year(c.contract_day) = 2019 group by `month` ;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 10.	Hiển thị thông tin tương ứng với từng Hợp đồng thì đã sử dụng bao nhiêu Dịch vụ đi kèm. 
+-- Kết quả hiển thị bao gồm IDHopDong, NgayLamHopDong, NgayKetthuc, TienDatCoc, SoLuongDichVuDiKem 
+-- (được tính dựa trên việc count các IDHopDongChiTiet).
+
+select  c.id, c.contract_day,c.end_day, c.deposit, sum(cd.amount)
+from contract c join contract_detail cd on c.id = cd.contract_id
+join attachment_service ats on cd.attachment_service_id = ats.id group by c.id;
+
+
+
