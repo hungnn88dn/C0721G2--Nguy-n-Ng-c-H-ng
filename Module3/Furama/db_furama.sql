@@ -188,13 +188,15 @@ insert into contract(id,contract_day,end_day,deposit,total_price,employee_id,cus
 value (1,"2019-1-1","2022-1-1",300,10000,3,1,1),
       (2,"2019-2-15","2022-2-15",300,15000,2,2,2),
       (3,"2019-2-13","2021-6-13",300,1000,2,3,6),
-      (4,"2018-1-1","2021-1-3",300,800,3,5,5);
+      (4,"2019-10-13","2021-7-13",300,1000,2,3,4),
+      (5,"2018-1-1","2021-1-3",300,800,3,6,5);
       
 insert into contract_detail ( id, amount,contract_id,attachment_service_id)
 value (1,1,1,1),
 	  (2,1,2,2),
 	  (3,2,3,3),
-	  (4,3,4,4);
+	  (4,5,4,2),
+	  (5,5,5,4);
       
 
 --------------------------------------------------------------------------------------------------------------------------------------------------      
@@ -245,8 +247,8 @@ group by customer.`name`;
 
 select s.id, s.`name`, s.area, s.rental_cost, t.`name` as Type_Service
 from service s left join type_service t on s.type_service_id = t.id
-left join contract c on c.service_id = s.id
-where ((day(c.contract_day) <= 31) AND  (month(c.contract_day ) <= 3) AND year (c.contract_day) <= 2019 ) OR (c.contract_day is null);
+left join contract ct on ct.service_id = s.id
+where  ((month(ct.contract_day ) <= 3) AND year (ct.contract_day) <= 2019 ) OR (ct.contract_day is null);
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
@@ -263,11 +265,11 @@ where year(c.contract_day) = 2018 AND year(c.contract_day) != 2019;
 -- 8.	Hiển thị thông tin HoTenKhachHang có trong hệ thống, với yêu cầu HoThenKhachHang không trùng nhau.
 -- Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên
 
-select c.id, c.`name`
+select c.`name`
 from customer c group by c.`name`;
 
-select DISTINCT c.id, c.`name`
-from customer c group by c.`name`;
+select DISTINCT c.`name`
+from customer c ;
 
 select  c.`name`
 from customer c 
@@ -294,4 +296,67 @@ from contract c join contract_detail cd on c.id = cd.contract_id
 join attachment_service ats on cd.attachment_service_id = ats.id group by c.id;
 
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 11.	Hiển thị thông tin các Dịch vụ đi kèm đã được sử dụng bởi những Khách hàng có TenLoaiKhachHang
+--  là “Diamond” và có địa chỉ là “Vinh” hoặc “Quảng Ngãi”.
+
+select ats.id, c.`name`, tc.`name`, c.address
+from customer c join type_customer tc on c.type_customer_id = tc.id
+join contract ct on c.id = ct.customer_id
+join contract_detail ctd on ct.id = ctd.contract_id
+join attachment_service ats on ctd.attachment_service_id = ats.id  having tc.`name` like "diamond" And (c.address like "Quang Ngai" OR c.address like "Vinh");
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 12.	Hiển thị thông tin IDHopDong, TenNhanVien, TenKhachHang, SoDienThoaiKhachHang, TenDichVu, SoLuongDichVuDikem (được tính dựa trên tổng Hợp đồng chi tiết),
+--  TienDatCoc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2019 nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2019.
+
+select ct.id, e.`name` as employee , c.`name` as customer,c.phone as customer_phone,ts.`name` as type_service, sum(ctd.amount) as Attachment_service_amount, ct.deposit
+from customer c join contract ct on ct.customer_id = c.id
+join employee e on ct.employee_id = e.id
+join service s on ct.service_id = s.id
+join type_service ts on s.type_service_id = ts.id
+join contract_detail ctd on ct.id = ctd.contract_id
+join attachment_service ats on ctd.attachment_service_id = ats.id 
+where month(ct.contract_day) >= 9 AND year(ct.contract_day) = 2019  group by c.`name`;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. 
+-- (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
+
+select  ats.id, ats.`name`, ctd.amount
+from contract ct join contract_detail ctd on ct.id = ctd.contract_id
+join attachment_service ats on ctd.attachment_service_id = ats.id where ctd.amount in (select max(ctd.amount) from contract ct join contract_detail ctd on ct.id = ctd.contract_id
+join attachment_service ats on ctd.attachment_service_id = ats.id ) 
+;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. 
+-- Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung.
+
+select  ct.id, ts.`name`, ats.`name`, ctd.amount
+from contract ct join contract_detail ctd on ct.id = ctd.contract_id
+join service s on ct.service_id = s.id
+join type_service ts on s.type_service_id = ts.id
+join attachment_service ats on ctd.attachment_service_id = ats.id
+ where ctd.amount = 1;
+ 
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------------
+-- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm IDNhanVien, HoTen, TrinhDo, TenBoPhan, 
+-- SoDienThoai, DiaChi mới chỉ lập được tối đa 3 hợp đồng từ năm 2018 đến 2019.
+
+select e.id, e.`name`, l.`level`, d.`name` 
+from contract c join employee e on c.employee_id = e.id
+join `level` l on e.level_id = l.id
+join department d on e.department_id = d.id  where year(c.contract_day) = 2018 OR year(c.contract_day) = 2019 
+group by e.`name` having count(c.employee_id) >= 3 ;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2017 đến năm 2019.
+delete 
+from employee 
+where  not exists ( select *  from contract ct  where employee.id = ct.employee_id AND ( year(ct.contract_day) <= 2019 AND year(ct.contract_day) >= 2017) );
 
