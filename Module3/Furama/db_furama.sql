@@ -145,7 +145,7 @@ value (1,"Member"),
       
 insert into customer (id, `name`,age,cmnd,phone,email,address,type_customer_id)
 value (1,"Nguyen Van An", "2001-5-5","66666","0900000006","an@gmail.com","Quang Nam",1),
-	  (2,"Nguyen Thi Be", "2003-6-6","77777","0900000007","be@gmail.com","Quang Binh",2),
+	  (2,"Nguyen Thi Be", "2003-6-6","77777","0900000007","be@gmail.com","Quang Binh",4),
 	  (3,"Le Van Cau", "1996-12-7","88888","0900000008","cau@gmail.com","Quang Tri",3),
 	  (4,"Sieu Van Do", "1996-8-15","99999","0900000009","do@gmail.com","Hue",4),
 	  (5,"Do Dai Hoc", "1999-3-15","00001","0900000000","hoc@gmail.com","Da Nang",5),
@@ -189,7 +189,8 @@ value (1,"2019-1-1","2022-1-1",300,10000,3,1,1),
       (2,"2019-2-15","2022-2-15",300,15000,2,2,2),
       (3,"2019-2-13","2021-6-13",300,1000,2,3,6),
       (4,"2019-10-13","2021-7-13",300,1000,2,3,4),
-      (5,"2018-1-1","2021-1-3",300,800,3,6,5);
+      (5,"2018-1-1","2021-1-3",300,800,3,6,5),
+      (6,"2015-1-1","2021-1-3",300,800,3,4,5);
       
 insert into contract_detail ( id, amount,contract_id,attachment_service_id)
 value (1,1,1,1),
@@ -356,7 +357,49 @@ group by e.`name` having count(c.employee_id) >= 3 ;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 -- 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2017 đến năm 2019.
-delete 
-from employee 
-where  not exists ( select *  from contract ct  where employee.id = ct.employee_id AND ( year(ct.contract_day) <= 2019 AND year(ct.contract_day) >= 2017) );
+-- delete 
+-- from employee 
+-- where  not exists ( select *  from contract ct  where employee.id = ct.employee_id AND ( year(ct.contract_day) <= 2019 AND year(ct.contract_day) >= 2017) );
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 17.	Cập nhật thông tin những khách hàng có TenLoaiKhachHang từ  Platinium lên Diamond, chỉ cập nhật những khách hàng đã từng đặt phòng với
+--  tổng Tiền thanh toán trong năm 2019 là lớn hơn 10.000.000 VNĐ.
+
+create view update_type_customer as 
+select c.id,c.`name`, c.type_customer_id
+from customer c join type_customer tc  on c.type_customer_id = tc.id
+join contract ct on ct.customer_id = c.id where ct.total_price > 10000 AND  year(ct.contract_day) = 2019 AND c.type_customer_id = 4 ;
+update update_type_customer
+set type_customer_id = 5;
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+-- 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràng buộc giữa các bảng).
+
+create view delete_customer as
+select c.id, c.`name`, ct.contract_day, ct.customer_id, ct.id as contractID
+from customer c join contract ct on ct.customer_id = c.id 
+where year(ct.contract_day) < 2016 ;
+
+-- delete from contract 
+-- where year(contract.contract_day) < 2016;
+
+select * from delete_customer;
+update delete_customer 
+set delete_customer.id = 0
+-- drop view delete_customer ;
+-- update delete_customer 
+-- set id = 0 ;
+
+-- create view delete_customer as
+-- select c.id, c.`name`, ct.contract_day
+-- from customer c join contract ct on ct.customer_id = c.id 
+-- where ct.customer_id is null;
+
+-- -- delete 
+-- -- from contract  ct
+-- -- where   ct.customer_id is null  ;
+
+
 
