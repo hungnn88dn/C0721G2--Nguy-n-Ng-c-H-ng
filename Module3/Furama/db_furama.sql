@@ -26,7 +26,7 @@ create table employee(
    salary varchar(45),
    phone varchar(45),
    email varchar(45),
-   adress varchar(45),
+   address varchar(45),
    office_id int,
    level_id int,
    department_id int,
@@ -129,7 +129,7 @@ value ( 1,"Phong Bao ve"),
       ( 4,"Phong Makerting"),
       ( 5,"Phong Giam Doc");
 
-insert into employee (id,`name`,age,cmnd,salary,phone,email,adress,office_id,level_id,department_id)
+insert into employee (id,`name`,age,cmnd,salary,phone,email,address,office_id,level_id,department_id)
 value (1,"Nguyen Thi Thinh","2000-1-1","11111","1000","0911111111","thinh@gmail.com","Da Nang",1,1,1),
       (2,"Hoang Van Ha","2002-2-2","22222","2000","0911111112","ha@gmail.com","Hue",2,2,2), 
       (3,"Banh Thi Be Vy","2003-3-13","33333","3000","0911111113","vy@gmail.com","Quang Nam",3,3,3),
@@ -196,7 +196,7 @@ insert into contract_detail ( id, amount,contract_id,attachment_service_id)
 value (1,1,1,1),
 	  (2,1,2,2),
 	  (3,2,3,3),
-	  (4,5,4,2),
+	  (4,11,4,2),
 	  (5,5,5,4);
       
 
@@ -377,17 +377,17 @@ set type_customer_id = 5;
 --------------------------------------------------------------------------------------------------------------------------------------------------
 -- 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràng buộc giữa các bảng).
 
-create view delete_customer as
-select c.id, c.`name`, ct.contract_day, ct.customer_id, ct.id as contractID
-from customer c join contract ct on ct.customer_id = c.id 
-where year(ct.contract_day) < 2016 ;
+-- create view delete_customer as
+-- select c.id, c.`name`, ct.contract_day, ct.customer_id, ct.id as contractID
+-- from customer c join contract ct on ct.customer_id = c.id 
+-- where year(ct.contract_day) < 2016 ;
 
 -- delete from contract 
 -- where year(contract.contract_day) < 2016;
 
-select * from delete_customer;
-update delete_customer 
-set delete_customer.id = 0
+-- select * from delete_customer;
+-- update delete_customer 
+-- set delete_customer.id = 0;
 -- drop view delete_customer ;
 -- update delete_customer 
 -- set id = 0 ;
@@ -402,4 +402,24 @@ set delete_customer.id = 0
 -- -- where   ct.customer_id is null  ;
 
 
+---------------------------------------------------------------------------------------------------------------------------------
+-- 19.	Cập nhật giá cho các Dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2019 lên gấp đôi.
 
+create view update_attachment_service as
+select ats.id, sum(ctd.amount), ats.price
+from contract ct join contract_detail ctd on ctd.contract_id = ct.id
+join attachment_service ats on ctd.attachment_service_id = ats.id where year(ct.contract_day) = 2019 group by ats.id having sum(ctd.amount) > 10;
+
+update attachment_service 
+set attachment_service.price = attachment_service.price * 2
+where attachment_service.id in ( select id from update_attachment_service);
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+-- 20.	Hiển thị thông tin của tất cả các Nhân viên và Khách hàng có trong hệ thống, thông tin hiển thị bao gồm ID
+--  (IDNhanVien, IDKhachHang), HoTen, Email, SoDienThoai, NgaySinh, DiaChi.
+select e.id, e.`name`, e.email, e.phone, e.age, e.address, 0 as `status`
+from employee e
+union 
+select c.id, c.`name`, c.email, c.phone, c.age, c.address, 1 as `status`
+from customer c
