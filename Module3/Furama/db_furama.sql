@@ -87,7 +87,7 @@ employee_id int,
 customer_id int,
 service_id int,
 foreign key (employee_id) references employee(id),
-foreign key (customer_id) references customer(id),
+foreign key (customer_id) references customer(id) on delete set null,
 foreign key (service_id) references service(id)
 );
 
@@ -130,7 +130,7 @@ value ( 1,"Phong Bao ve"),
       ( 5,"Phong Giam Doc");
 
 insert into employee (id,`name`,age,cmnd,salary,phone,email,address,office_id,level_id,department_id)
-value (1,"Nguyen Thi Thinh","2000-1-1","11111","1000","0911111111","thinh@gmail.com","Da Nang",1,1,1),
+value (1,"Nguyen Thi Thinh","2000-1-1","11111","1000","0911111111","thinh@gmail.com","Hai Chau-Da Nang",1,1,1),
       (2,"Hoang Van Ha","2002-2-2","22222","2000","0911111112","ha@gmail.com","Hue",2,2,2), 
       (3,"Banh Thi Be Vy","2003-3-13","33333","3000","0911111113","vy@gmail.com","Quang Nam",3,3,3),
       (4,"Le Hong Nhung","1990-5-4","44444","4000","0911111114","nhung@gmail.com","Quang Tri",4,4,4),
@@ -185,7 +185,7 @@ value (1,"Massage", 200, 10,"On"),
       (5,"Tour", 100, 5,"Off");
       
 insert into contract(id,contract_day,end_day,deposit,total_price,employee_id,customer_id,service_id)
-value (1,"2019-1-1","2022-1-1",300,10000,3,1,1),
+value (1,"2019-12-12","2022-1-1",300,10000,1,1,1),
       (2,"2019-2-15","2022-2-15",300,15000,2,2,2),
       (3,"2019-2-13","2021-6-13",300,1000,2,3,6),
       (4,"2019-10-13","2021-7-13",300,1000,2,3,4),
@@ -376,30 +376,10 @@ set type_customer_id = 5;
 
 --------------------------------------------------------------------------------------------------------------------------------------------------
 -- 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràng buộc giữa các bảng).
-
--- create view delete_customer as
--- select c.id, c.`name`, ct.contract_day, ct.customer_id, ct.id as contractID
--- from customer c join contract ct on ct.customer_id = c.id 
--- where year(ct.contract_day) < 2016 ;
-
--- delete from contract 
--- where year(contract.contract_day) < 2016;
-
--- select * from delete_customer;
--- update delete_customer 
--- set delete_customer.id = 0;
--- drop view delete_customer ;
--- update delete_customer 
--- set id = 0 ;
-
--- create view delete_customer as
--- select c.id, c.`name`, ct.contract_day
--- from customer c join contract ct on ct.customer_id = c.id 
--- where ct.customer_id is null;
-
--- -- delete 
--- -- from contract  ct
--- -- where   ct.customer_id is null  ;
+delete from customer
+where customer.id  in ( select ct.customer_id
+				from contract ct
+				where year(ct.contract_day) < 2016 );
 
 
 ---------------------------------------------------------------------------------------------------------------------------------
@@ -411,7 +391,7 @@ from contract ct join contract_detail ctd on ctd.contract_id = ct.id
 join attachment_service ats on ctd.attachment_service_id = ats.id where year(ct.contract_day) = 2019 group by ats.id having sum(ctd.amount) > 10;
 
 update attachment_service 
-set attachment_service.price = attachment_service.price * 2
+set attachment_service.price = attachment_service.price * 3
 where attachment_service.id in ( select id from update_attachment_service);
 
 
@@ -422,4 +402,26 @@ select e.id, e.`name`, e.email, e.phone, e.age, e.address, 0 as `status`
 from employee e
 union 
 select c.id, c.`name`, c.email, c.phone, c.age, c.address, 1 as `status`
-from customer c
+from customer c;
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+-- 21.	Tạo khung nhìn có tên là V_NHANVIEN để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu” 
+-- và đã từng lập hợp đồng  cho 1 hoặc nhiều Khách hàng bất kỳ  với ngày lập hợp đồng là “12/12/2019”
+
+create view view_employee as
+select e.id, e.`name`, e.age,e.cmnd,e.salary,e.phone,e.email,e.address,e.office_id,e.level_id,e.department_id
+from employee e join contract ct on ct.employee_id = e.id
+where ct.contract_day like "2019-12-12" AND SUBSTRING_INDEX(e.address,'-',1) like "Hai Chau";
+
+select * from view_employee;
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+-- 22.	Thông qua khung nhìn V_NHANVIEN thực hiện cập nhật địa chỉ thành “Liên Chiểu” đối với 
+-- tất cả các Nhân viên được nhìn thấy bởi khung nhìn này.
+
+update view_employee
+set address = concat("Lien Chieu","-",SUBSTRING_INDEX(address,'-',-1));
+
+
