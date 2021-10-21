@@ -78,7 +78,7 @@ foreign key ( type_service_id) references type_service(id)
 );
 
 create table contract(
-id int primary key,
+id int primary key auto_increment,
 contract_day date,
 end_day date,
 deposit int,
@@ -425,3 +425,48 @@ update view_employee
 set address = concat("Lien Chieu","-",SUBSTRING_INDEX(address,'-',-1));
 
 
+---------------------------------------------------------------------------------------------------------------------------------
+-- 23.	Tạo Store procedure Sp_1 Dùng để xóa thông tin của một Khách hàng nào đó với Id Khách hàng được
+--  truyền vào như là 1 tham số của Sp_1
+
+
+delimiter //
+Create procedure deleteCustomer(id1 int)
+Begin
+delete from  customer 
+where id = id1;
+End //
+delimiter ;
+-- call deleteCustomer(1);
+
+---------------------------------------------------------------------------------------------------------------------------------
+-- 24.	Tạp Store procedure Sp_2 Dùng để thêm mới vào bảng HopDong với yêu cầu Sp_2 phải thực hiện kiểm tra
+--  tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khó chính và đảm bảo toàn vẹn tham
+--  chiếu đến các bảng liên quan.
+
+delimiter //
+Create procedure addContract(contract_day_add date, end_day_add date, deposit_add int, total_price_add int,
+ employee_id_add int, customer_id_add int, service_id_add int )
+Begin
+insert into contract
+value (id, contract_day_add, end_day_add, deposit_add, total_price_add, employee_id_add, customer_id_add, 
+service_id_add) ;
+End //
+delimiter ;
+
+-- call addContract("2019-1-1","2019-2-1",1000,2000,2,1,1);
+
+
+-- ---------------------------------------------------------------------------------------------------------------------------------
+
+-- 25.	Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị tổng số lượng bản ghi còn lại có trong bảng 
+-- HopDong ra giao diện console của database
+
+delimiter //
+create trigger show_contract
+after delete
+on contract for each row
+begin 
+ 
+ end //
+ delimiter ;
