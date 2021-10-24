@@ -3,23 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <style>
         * {
             box-sizing: border-box;
         }
-        .col-1 {width: 8.33%;}
-        .col-2 {width: 16.66%;}
-        .col-3 {width: 25%;}
-        .col-4 {width: 33.33%;}
-        .col-5 {width: 41.66%;}
-        .col-6 {width: 50%;}
-        .col-7 {width: 58.33%;}
-        .col-8 {width: 66.66%;}
-        .col-9 {width: 75%;}
-        .col-10 {width: 83.33%;}
-        .col-11 {width: 91.66%;}
-        .col-12 {width: 100%;}
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
 
         [class*="col-"] {
             float: left;
@@ -30,90 +67,173 @@
             display: block;
             content: "";
         }
-        .search{
+
+        .search {
             background-color: cornsilk;
             border-radius: 20%;
             font-size: 8px;
             padding: 8px;
         }
+
         .header {
             height: 30px;
             margin-top: 20px;
             display: flex;
             justify-content: center;
         }
+
         .section {
             background-color: azure;
             height: 100%;
             margin-top: 2px;
         }
+
         .section div {
             margin-top: 5px;
         }
+
         .section2 {
-            font-size:12px;
+            font-size: 12px;
             background-color: pink;
         }
+
+        .section3 {
+            height: 50px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            text-align: center;
+        }
+
         .aside {
             text-align: center;
             background-color: azure;
         }
+
         .aside div {
             margin-top: 5px;
+        }
+
+        .content {
+            margin-left: 60px;
+        }
+        .content div {
+            background-color: gray;
+            text-align: center;
+            margin: 10px;
+
         }
     </style>
 </head>
 <body>
 
-   <div class="row header">
-       <div class="col-3">
-           <i class="fab fa-facebook"></i>
-          <span class="search">Tìm kiếm trên facebook</span>
-       </div>
-       <div class="col-6" style="text-align: center">
-           <i class="fas fa-home"></i> &emsp;
-           <i class="fas fa-tv"></i>   &emsp;
-           <i class="fas fa-hotel"></i>   &emsp;
-           <i class="fas fa-users"></i>
-       </div>
-       <div class="col-3" style="text-align: right">
-           <i class="fas fa-question-circle"></i> <span>Nick</span>
-           <i class="fas fa-ellipsis-v"></i>
-           <i class="fab fa-facebook-messenger"></i>
-           <i class="fas fa-bell"></i>
-           <i class="far fa-caret-square-down"></i>
-       </div>
-   </div>
-   <div class="row ">
-       <div class="col-3 section">
-           <div>Tài khoản</div>
-           <div>Tìm kiếm bạn bè</div>
-           <div>Kỉ niệm</div>
-           <div>Đã lưu</div>
-           <div>Trang</div>
-           <div>Sự kiện</div>
-           <div>Việc làm</div>
-       </div>
-       <div class="col-6 section2">
-           <div>ĐÃ TÌM RA LỜI GIẢI CHO CÂU HỎI:
-               "BAO NHIÊU LÂU THÌ BÁN ĐƯỢC 1 TỶ GÓI MÈ?!"
-               Mới đây tại Trung Quốc đã ghi nhận kỉ lục vô tiền khoáng hậu thành tích chốt đơn khủng nhất trong 1 buổi livestream bán hàng.
-               Vâng, sau 12h26p livestream liên tục, Lý Gia Kỳ - người được coi là Ông hoàng son môi Trung Quốc đã chốt được 35 nghìn tỷ VNĐ tức 1,66 tỷ USD tiền hàng hóa bao gồm son môi, kem trộn, thực phẩm chức năng và mỹ phẩm đủ thể loại.
-               Nếu như kỷ lục livestream ở Việt Nam thuộc về CEO Đua Ngựa và Water Fairy với lượng người xem cùng 1 lúc rơi vào khoảng vài trăm nghìn mắt thì con số của Ông hoàng son môi Trung Quốc là....150 triệu.
-               Được biết, 1 gói mè ở Việt Nam sẽ rơi vào ~10nghìn đồng.
-               1 tỷ gói mè sẽ tương đương với 10 nghìn tỷ đồng và nếu tính 1 cách cơ học và xin nhấn mạnh là cơ học thì Lý Gia Kỳ sẽ bán hết 1 tỉ gói mè trên chỉ trong ~4 tiếng.
-               Vậy nhé Đại tướng Marketing, giờ thì đã có câu trả lời của câu hỏi hot nhất mấy tuần qua rồi :)))
-               Hồng Nhung gửi tin về Beatvn
-               -Tiểu Lý Phi Down-</div>
-       </div>
-       <div class="col-3 aside">
-           <div>Ad</div>
-           <div>Ad</div>
-           <div>Ad</div>
-           <div>Ad</div>
+<div class="row header">
+    <div class="col-3">
+        <i class="fab fa-facebook"></i>
+        <span class="search">Tìm kiếm trên facebook</span>
+    </div>
+    <div class="col-6" style="text-align: center">
+        <i class="fas fa-home"></i> &emsp;
+        <i class="fas fa-tv"></i> &emsp;
+        <i class="fas fa-hotel"></i> &emsp;
+        <i class="fas fa-users"></i>
+    </div>
+    <div class="col-3" style="text-align: right">
+        <i class="fas fa-question-circle"></i> <span>Nick</span>
+        <i class="fas fa-ellipsis-v"></i>
+        <i class="fab fa-facebook-messenger"></i>
+        <i class="fas fa-bell"></i>
+        <i class="far fa-caret-square-down"></i>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-3 section">
+        <div>Tài khoản</div>
+        <div>Tìm kiếm bạn bè</div>
+        <div>Kỉ niệm</div>
+        <div>Đã lưu</div>
+        <div>Trang</div>
+        <div>Sự kiện</div>
+        <div>Việc làm</div>
+    </div>
+    <div class="col-6 section2 ">
+        <div class="row">
+            <div class="col-2">
+                <div><img style="width:100px " src="https://mewxu.net/wp-content/uploads/2017/03/fb_icon.webp"/></div>
+            </div>
 
-       </div>
-   </div>
+            <div class="col-2">
+                <div><img style="width:100px " src="https://mewxu.net/wp-content/uploads/2017/03/fb_icon.webp"/></div>
+            </div>
+
+            <div class="col-2">
+                <div><img style="width:100px " src="https://mewxu.net/wp-content/uploads/2017/03/fb_icon.webp"/></div>
+            </div>
+
+            <div class="col-2">
+                <div><img style="width:100px " src="https://mewxu.net/wp-content/uploads/2017/03/fb_icon.webp"/></div>
+            </div>
+
+
+            <div class="col-2">
+                <div><img style="width:100px " src="https://mewxu.net/wp-content/uploads/2017/03/fb_icon.webp"/></div>
+            </div>
+
+
+            <div class="col-2">
+                <div><img style="width:100px " src="https://mewxu.net/wp-content/uploads/2017/03/fb_icon.webp"/></div>
+            </div>
+        </div>
+        <div class="row section3">
+            <div class="col-12">
+                <i class="fab fa-facebook"></i>
+                <span class="search">Bạn đang nghĩ gì thế ?</span>
+            </div>
+        </div>
+        <div class="row content">
+            <div class="col-3"> Video trực tiếp</div>
+            <div class="col-4"> Ảnh/Video</div>
+            <div class="col-3"> Cảm xúc/Xúc động</div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-12" style="text-align: center">
+                <iframe width="720px" height="480px" src="https://www.youtube.com/embed/1R9bOHCyQuI"
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+                   clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-12">
+                <div>ĐÃ TÌM RA LỜI GIẢI CHO CÂU HỎI:
+                    "BAO NHIÊU LÂU THÌ BÁN ĐƯỢC 1 TỶ GÓI MÈ?!"
+                    Mới đây tại Trung Quốc đã ghi nhận kỉ lục vô tiền khoáng hậu thành tích chốt đơn khủng nhất trong 1
+                    buổi livestream bán hàng.
+                    Vâng, sau 12h26p livestream liên tục, Lý Gia Kỳ - người được coi là Ông hoàng son môi Trung Quốc đã
+                    chốt được 35 nghìn tỷ VNĐ tức 1,66 tỷ USD tiền hàng hóa bao gồm son môi, kem trộn, thực phẩm chức
+                    năng và mỹ phẩm đủ thể loại.
+                    Nếu như kỷ lục livestream ở Việt Nam thuộc về CEO Đua Ngựa và Water Fairy với lượng người xem cùng 1
+                    lúc rơi vào khoảng vài trăm nghìn mắt thì con số của Ông hoàng son môi Trung Quốc là....150 triệu.
+                    Được biết, 1 gói mè ở Việt Nam sẽ rơi vào ~10nghìn đồng.
+                    1 tỷ gói mè sẽ tương đương với 10 nghìn tỷ đồng và nếu tính 1 cách cơ học và xin nhấn mạnh là cơ học
+                    thì Lý Gia Kỳ sẽ bán hết 1 tỉ gói mè trên chỉ trong ~4 tiếng.
+                    Vậy nhé Đại tướng Marketing, giờ thì đã có câu trả lời của câu hỏi hot nhất mấy tuần qua rồi :)))
+                    Hồng Nhung gửi tin về Beatvn
+                    -Tiểu Lý Phi Down-
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="col-3 aside">
+        <div>Ad</div>
+        <div>Ad</div>
+        <div>Ad</div>
+        <div>Ad</div>
+
+    </div>
+</div>
 
 </body>
 </html>
