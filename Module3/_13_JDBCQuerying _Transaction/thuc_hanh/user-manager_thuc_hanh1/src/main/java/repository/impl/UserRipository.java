@@ -35,6 +35,54 @@ public class UserRipository implements IUserRepository {
         return connection;
     }
 
+    @Override
+    public List<User> showAllUserStore()  {
+        List<User> users = new LinkedList<>();
+        try (Connection connection = getConnection();
+
+             CallableStatement callableStatement = connection.prepareCall("{Call show_all_users()}");) {
+
+            ResultSet resultSet =   callableStatement.executeQuery();
+            while (resultSet.next()) {
+
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String country = resultSet.getString("country");
+                users.add(new User(id, name, email, country));
+
+            }
+
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return users;
+    }
+
+
+    public boolean deleteUserStore(int id) throws SQLException {
+        boolean rowDeleted;
+        try (Connection connection = getConnection(); CallableStatement callableStatement = connection.prepareCall("{Call delete_user(?)}");) {
+            callableStatement.setInt(1, id);
+            rowDeleted = callableStatement.executeUpdate() > 0;
+        }
+        return rowDeleted;
+    }
+
+
+    public boolean updateUserStore(User user) throws SQLException {
+        boolean rowUpdated;
+        try (Connection connection = getConnection(); CallableStatement callableStatement= connection.prepareCall("{Call update_user(?,?,?,?)}");) {
+            callableStatement.setString(1, user.getName());
+            callableStatement.setString(2, user.getEmail());
+            callableStatement.setString(3, user.getCountry());
+            callableStatement.setInt(4, user.getId());
+
+            rowUpdated = callableStatement.executeUpdate() > 0;
+        }
+        return rowUpdated;
+    }
+
     public void insertUser(User user) throws SQLException {
         System.out.println(INSERT_USERS_SQL);
         // try-with-resource statement will auto close the connection.
@@ -123,15 +171,9 @@ public class UserRipository implements IUserRepository {
     public void addUserTransaction(User user, int[] permision) {
         Connection conn = null;
 
-        // for insert a new user
-
         PreparedStatement pstmt = null;
 
-        // for assign permision to user
-
         PreparedStatement pstmtAssignment = null;
-
-        // for getting user id
 
         ResultSet rs = null;
 
@@ -139,15 +181,7 @@ public class UserRipository implements IUserRepository {
 
             conn = getConnection();
 
-            // set auto commit to false
-
             conn.setAutoCommit(false);
-
-            //
-
-            // Insert user
-
-            //
 
             pstmt = conn.prepareStatement(INSERT_USERS_SQL, Statement.RETURN_GENERATED_KEYS);
 
@@ -242,27 +276,9 @@ public class UserRipository implements IUserRepository {
         }
     }
 
-    public boolean deleteUser(int id) throws SQLException {
-        boolean rowDeleted;
-        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
-            statement.setInt(1, id);
-            rowDeleted = statement.executeUpdate() > 0;
-        }
-        return rowDeleted;
-    }
 
-    public boolean updateUser(User user) throws SQLException {
-        boolean rowUpdated;
-        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(UPDATE_USERS_SQL);) {
-            statement.setString(1, user.getName());
-            statement.setString(2, user.getEmail());
-            statement.setString(3, user.getCountry());
-            statement.setInt(4, user.getId());
 
-            rowUpdated = statement.executeUpdate() > 0;
-        }
-        return rowUpdated;
-    }
+
 
     @Override
     public User getUserById(int id) {
@@ -312,8 +328,6 @@ public class UserRipository implements IUserRepository {
 
 
         String query = "{CALL insert_user(?,?,?)}";
-
-        // try-with-resource statement will auto close the connection.
 
         try (Connection connection = getConnection();
 
