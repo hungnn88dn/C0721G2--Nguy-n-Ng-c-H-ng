@@ -1,3 +1,3 @@
 package repository;
-public interface ContractServiceRepo extends ServiceRepo{
+public interface ContractServiceRepo {
 }

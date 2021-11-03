@@ -1,203 +1,108 @@
 package repository.impl;
 
-import models.Customer;
+import models.*;
 import repository.CustomerSerivceRepo;
 
 import java.io.*;
+import java.sql.*;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
 public class CustomerRepoImpl implements CustomerSerivceRepo {
-    static File file = new File("src\\data\\customer.csv");
-    CustomerRepoImpl customerService;
+    private String jdbcURL = "jdbc:mysql://localhost:3306/furama?SSL=false";
+    private String jdbcUsername = "root";
+    private String jdbcPassword = "Blackberry88";
 
-    public static List<Customer> readCustomerCSV() {
-        List<Customer> readList = new LinkedList<>();
+    private static final String INSERT_CUSTOMER_SQL = "insert into employee (`name`,age,cmnd,salary,phone,email,address,position_id,level_id,department_id,user_username) " +
+            "value" +
+            " ( ?,?,?,?,?,?,?,?,?,?,?);";
+    private static final String SELECT_CUSTOMER_BY_ID = "select `name`,age,cmnd,salary,phone,email,address," +
+            " position_id,level_id,department_id,user_username from employee where id =?";
+    private static final String SELECT_ALL_CUSTOMER = "select * from customer";
+    private static final String DELETE_CUSTOMERSQL = "delete from employee where id = ?;";
+    private static final String UPDATE_CUSTOMER_SQL = "update employee set name = ?,age= ?, cmnd = ?,salary =?, phone= ?," +
+            " email =? ,address = ?,position_id = ? level_id = ?,department_id =?,user_username=?  where id = ?;";
+    private static final String SELECT_ALL_TYPE_CUSTOMER = "select * from type_customer";
+
+
+    protected Connection getConnection() {
+        Connection connection = null;
         try {
-            if (!file.exists()) {
-                throw new FileNotFoundException();
-            }
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-            String line = "";
-            while ((line = bufferedReader.readLine()) != null) {
-                String[] lineSplit = line.split(",");
-                Customer customer = new Customer(lineSplit[0], lineSplit[1], lineSplit[2],
-                        Integer.parseInt(lineSplit[3]), Integer.parseInt(lineSplit[4]),
-                        Integer.parseInt(lineSplit[5]), lineSplit[6], lineSplit[7], lineSplit[8]);
-                readList.add(customer);
-            }
-        } catch (IOException e) {
+            Class.forName("com.mysql.jdbc.Driver");
+            connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return readList;
+        return connection;
     }
 
-    public static void writerCustomerCSV(List<Customer> list) {
-        try {
-            if (!file.exists()) {
-                throw new FileNotFoundException();
+    public List<TypeCustomer> selectAllTypeCustomer() {
+        List<TypeCustomer> typeCustomers = new LinkedList<>();
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_TYPE_CUSTOMER);) {
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = Integer.parseInt(rs.getString("id"));
+                String name = rs.getString("name");
+                typeCustomers.add(new TypeCustomer(id, name));
             }
-            FileWriter fileWriter = new FileWriter(file);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-            for (Customer customer : list) {
-                bufferedWriter.write(String.valueOf(customer));
-                bufferedWriter.newLine();
-            }
-            bufferedWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (SQLException ignored) {
         }
+        return typeCustomers;
     }
 
-    public static int checkMember() {
-        CustomerRepoImpl customerService = new CustomerRepoImpl();
-        Scanner scanner = new Scanner(System.in);
-        List<Customer> list = CustomerRepoImpl.readCustomerCSV();
-        int choose;
-        do {
-            System.out.println("1.You are Member");
-            System.out.println("2.You are new Customer ? Press 2 to sign up");
-            System.out.println("0.Back to Menu");
-            System.out.println("Your chosse: ");
-            choose = Integer.parseInt(scanner.nextLine());
+    @Override
+    public void insertCustomer(Customer customer) throws SQLException {
 
-            if (choose == 1) {
-                int count = 0;
-                System.out.println("Input Your Email: ");
-                String email = scanner.nextLine();
-                for (Customer customer : list) {
-                    if (customer.getEmail().equals(email)) {
-                        System.out.println(customer.showCustomer());
-                        return customer.getCodeCustomer();
-                    } else {
-                        count++;
+    }
+
+    @Override
+    public Customer selectCustomer(int id) {
+        return null;
+    }
+
+    @Override
+    public List<Customer> selectAllCustomer() {
+        List<Customer> customers = new LinkedList<>();
+        List<TypeCustomer> typeCustomers = selectAllTypeCustomer();
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_CUSTOMER);) {
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String age = rs.getString("age");
+                String gender = rs.getString("gender");
+                int cmnd = Integer.parseInt(rs.getString("cmnd"));
+                int phone = Integer.parseInt(rs.getString("phone"));
+                String email = rs.getString("email");
+                String address = rs.getString("address");
+                String type_customer_id = rs.getString("type_customer_id");
+                String type_customer = "";
+                for (TypeCustomer t : typeCustomers) {
+                    if (t.getId() == Integer.parseInt(type_customer_id)) {
+                        type_customer = t.getName();
                     }
                 }
-                if (count == list.size()) {
-                    System.out.println("You are not member, please sign up");
-                    customerService.add();
-                    return list.get(list.size() - 1).getCodeCustomer();
-                }
-                choose = 0;
+                customers.add(new Customer(name, age, gender, id, cmnd, phone, email, address, type_customer));
             }
-            if (choose == 2) {
-                customerService.add();
-                return list.get(list.size() - 1).getCodeCustomer();
-            }
-        } while (choose != 0);
-        return list.get(list.size() - 1).getCodeCustomer();
-    }
-
-    @Override
-    public void display() {
-        List<Customer> list = CustomerRepoImpl.readCustomerCSV();
-        for (Customer customer : list) {
-            System.out.println(customer.showCustomer());
+        } catch (SQLException ignored) {
         }
+        return customers;
     }
 
     @Override
-    public void add() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("input Name : ");
-        String nameCtm = scanner.nextLine();
-        System.out.println("input Age: ");
-        String ageCtm = scanner.nextLine();
-        System.out.println("input Gender : ");
-        String genderCtm = scanner.nextLine();
-        System.out.println("input CMND : ");
-        int cmdnCtm = Integer.parseInt(scanner.nextLine());
-        System.out.println("input PhoneNumber: ");
-        int phoneCtm = Integer.parseInt(scanner.nextLine());
-        System.out.println("input Email: ");
-        String emailCtm = scanner.nextLine();
-        System.out.println("input customerType: ");
-        String typeCtm = scanner.nextLine();
-        System.out.println("input Address: ");
-        String addressCtm = scanner.nextLine();
-        List<Customer> list = CustomerRepoImpl.readCustomerCSV();
-        ;
-        int codeCtm = list.get(list.size() - 1).getCodeCustomer() + 1;
-        list.add(new Customer(nameCtm, ageCtm, genderCtm, codeCtm, cmdnCtm, phoneCtm, emailCtm, typeCtm, addressCtm));
-        CustomerRepoImpl.writerCustomerCSV(list);
+    public boolean deleteCustomer(int id) throws SQLException {
+        return false;
     }
 
     @Override
-    public void edit() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("input codeCustomer you need to edit: ");
-        List<Customer> customerList = new LinkedList<>();
-        int codeCheck = Integer.parseInt(scanner.nextLine());
-        customerList = CustomerRepoImpl.readCustomerCSV();
-        for (Customer customer : customerList) {
-            if (customer.getCodeCustomer() == codeCheck) {
-                int chooseEdit;
-                do {
-                    System.out.println(customer.showCustomer());
-                    System.out.println("1.Edit Name: ");
-                    System.out.println("2.Edit Age: ");
-                    System.out.println("3.Edit Gender: ");
-                    System.out.println("4.Edit Customer's Code: ");
-                    System.out.println("5.Edit CMND: ");
-                    System.out.println("6.Edit Phone Number: ");
-                    System.out.println("7.Edit Email: ");
-                    System.out.println("8.Edit customerType: ");
-                    System.out.println("9.Edit Address: ");
-                    System.out.println("0.Exit ");
-                    System.out.println("Your choose: ");
-                    chooseEdit = Integer.parseInt(scanner.nextLine());
-                    if (chooseEdit == 1) {
-                        System.out.println("input Name: ");
-                        customer.setName(scanner.nextLine());
-                    }
-                    if (chooseEdit == 2) {
-                        System.out.println("input Age :");
-                        customer.setAge(scanner.nextLine());
-                    }
-                    if (chooseEdit == 3) {
-                        System.out.println("input Gender: ");
-                        customer.setGender(scanner.nextLine());
-                    }
-                    if (chooseEdit == 4) {
-                        System.out.println("input customerCode: ");
-                        customer.setCodeCustomer(Integer.parseInt(scanner.nextLine()));
-                    }
-                    if (chooseEdit == 5) {
-                        System.out.println("input CMND: ");
-                        customer.setCmnd(Integer.parseInt(scanner.nextLine()));
-                    }
-                    if (chooseEdit == 6) {
-                        System.out.println("input PhoneNumber: ");
-                        customer.setPhoneNumber(Integer.parseInt(scanner.nextLine()));
-                    }
-                    if (chooseEdit == 7) {
-                        System.out.println("input Email: ");
-                        customer.setEmail(scanner.nextLine());
-                    }
-                    if (chooseEdit == 8) {
-                        System.out.println("input customerType: ");
-                        customer.setCustomerType(scanner.nextLine());
-                    }
-                    if (chooseEdit == 9) {
-                        System.out.println("input Address: ");
-                        customer.setAddress(scanner.nextLine());
-                    }
-                    CustomerRepoImpl.writerCustomerCSV(customerList);
-                } while (chooseEdit != 0);
-            }
-        }
-    }
-
-    @Override
-    public void search() {
-//         update later
-
-    }
-
-    @Override
-    public void delete() {
-//         update later
-
+    public boolean updateCustomer(Customer customer) throws SQLException {
+        return false;
     }
 }

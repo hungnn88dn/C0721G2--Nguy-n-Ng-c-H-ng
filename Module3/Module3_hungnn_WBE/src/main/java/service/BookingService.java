@@ -1,5 +1,5 @@
 package service;
 
-public interface BookingService  extends Service{
+public interface BookingService {
 
 }

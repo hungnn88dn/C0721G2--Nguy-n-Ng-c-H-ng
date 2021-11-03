@@ -1,5 +1,5 @@
 package repository;
 
-public interface BookingServiceRepo extends ServiceRepo{
+public interface BookingServiceRepo {
 
 }

@@ -38,13 +38,13 @@
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
         </button>
-        <a class="navbar-brand" href="#">Enployee</a>
+        <a class="navbar-brand" href="/employee">Enployee</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
         </button>
         </button>
-        <a class="navbar-brand" href="#">Customer</a>
+        <a class="navbar-brand" href="customer">Customer</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">

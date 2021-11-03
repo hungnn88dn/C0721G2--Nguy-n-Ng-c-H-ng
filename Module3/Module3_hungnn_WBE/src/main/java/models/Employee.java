@@ -5,29 +5,39 @@ public class Employee extends Person{
     private int cmnd;
     private int phoneNumber;
     private String email;
+    private String address;
     private String level;
     private String office;
+    private String department;
     private int salary;
+    private String username;
 
-    public Employee(int codeEmployee, Integer cmnd, int phoneNumber, String email, String level, String office, int salary) {
-        this.codeEmployee = codeEmployee;
+    public Employee(String name, String age, int cmnd, int phoneNumber, String email, String address, String level, String office, String department, int salary, String username) {
+        super(name, age);
         this.cmnd = cmnd;
         this.phoneNumber = phoneNumber;
         this.email = email;
+        this.address = address;
         this.level = level;
         this.office = office;
+        this.department = department;
         this.salary = salary;
+        this.username = username;
     }
 
-    public Employee(String name, String age, String gender, int codeEmployee, Integer cmnd, int phoneNumber, String email, String level, String office, int salary) {
-        super(name, age, gender);
+    public Employee(String name, String age, int codeEmployee, int cmnd, int phoneNumber, String email, String address,
+                    String level, String office, String department, int salary, String username) {
+        super(name, age);
         this.codeEmployee = codeEmployee;
         this.cmnd = cmnd;
         this.phoneNumber = phoneNumber;
         this.email = email;
+        this.address = address;
         this.level = level;
         this.office = office;
+        this.department = department;
         this.salary = salary;
+        this.username = username;
     }
 
     public int getCodeEmployee() {
@@ -38,11 +48,11 @@ public class Employee extends Person{
         this.codeEmployee = codeEmployee;
     }
 
-    public Integer getCmnd() {
+    public int getCmnd() {
         return cmnd;
     }
 
-    public void setCmnd(Integer cmnd) {
+    public void setCmnd(int cmnd) {
         this.cmnd = cmnd;
     }
 
@@ -62,6 +72,14 @@ public class Employee extends Person{
         this.email = email;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public String getLevel() {
         return level;
     }
@@ -78,6 +96,14 @@ public class Employee extends Person{
         this.office = office;
     }
 
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
     public int getSalary() {
         return salary;
     }
@@ -86,26 +112,11 @@ public class Employee extends Person{
         this.salary = salary;
     }
 
-    @Override
-    public String toString() {
-        return    super.getName() + "," + super.getAge() + "," + super.getGender()  + "," +codeEmployee+
-        "," + cmnd +
-                "," + phoneNumber +
-                "," + email  +
-                "," + level+
-                "," + office  +
-                "," + salary
-                ;
+    public String getUsername() {
+        return username;
     }
-    public String showEmployee() {
-        return "Employee{" +
-                "name=" + super.getName() + ",age=" + super.getAge() + ",gender=" + super.getGender() + ",codeEmployee=" + codeEmployee +
-                ",cmnd=" + cmnd +
-                ",phoneNumber=" + phoneNumber +
-                ",email='" + email + '\'' +
-                ",level='" + level + '\'' +
-                ",office='" + office + '\'' +
-                ",salary=" + salary +
-                "} "  ;
-   }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 }
