@@ -49,12 +49,12 @@
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
         </button>
-        <a class="navbar-brand" href="#">Service</a>
+        <a class="navbar-brand" href="facility">Service</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
         </button>
-        <a class="navbar-brand" href="#">Contract</a>
+        <a class="navbar-brand" href="contract">Contract</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">

@@ -1,17 +1,19 @@
 package service.impl;
 
 import models.Customer;
+import repository.CustomerSerivceRepo;
+import repository.impl.CustomerRepoImpl;
 import service.CustomerSerivce;
 import java.sql.SQLException;
 import java.util.List;
 
 
 public class CustomerServiceImpl implements CustomerSerivce {
-
+    CustomerSerivceRepo customerSerivceRepo = new CustomerRepoImpl();
 
     @Override
     public void insertCustomer(Customer customer) throws SQLException {
-
+        this.customerSerivceRepo.insertCustomer(customer);
     }
 
     @Override
@@ -21,7 +23,7 @@ public class CustomerServiceImpl implements CustomerSerivce {
 
     @Override
     public List<Customer> selectAllCustomer() {
-        return null;
+        return this.customerSerivceRepo.selectAllCustomer();
     }
 
     @Override

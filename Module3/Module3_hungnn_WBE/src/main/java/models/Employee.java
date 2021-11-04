@@ -40,6 +40,9 @@ public class Employee extends Person{
         this.username = username;
     }
 
+    public Employee() {
+    }
+
     public int getCodeEmployee() {
         return codeEmployee;
     }

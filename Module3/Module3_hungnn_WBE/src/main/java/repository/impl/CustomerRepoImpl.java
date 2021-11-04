@@ -14,9 +14,9 @@ public class CustomerRepoImpl implements CustomerSerivceRepo {
     private String jdbcUsername = "root";
     private String jdbcPassword = "Blackberry88";
 
-    private static final String INSERT_CUSTOMER_SQL = "insert into employee (`name`,age,cmnd,salary,phone,email,address,position_id,level_id,department_id,user_username) " +
-            "value" +
-            " ( ?,?,?,?,?,?,?,?,?,?,?);";
+    private static final String INSERT_CUSTOMER_SQL = "insert into customer (`name`,age,gender,cmnd,phone,email,address,type_customer_id) " +
+            " value " +
+            " ( ?,?,?,?,?,?,?,?);";
     private static final String SELECT_CUSTOMER_BY_ID = "select `name`,age,cmnd,salary,phone,email,address," +
             " position_id,level_id,department_id,user_username from employee where id =?";
     private static final String SELECT_ALL_CUSTOMER = "select * from customer";
@@ -56,9 +56,21 @@ public class CustomerRepoImpl implements CustomerSerivceRepo {
         return typeCustomers;
     }
 
-    @Override
-    public void insertCustomer(Customer customer) throws SQLException {
 
+    @Override
+    public void insertCustomer(Customer customer)  {
+        try (Connection connection = getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(INSERT_CUSTOMER_SQL)) {
+            preparedStatement.setString(1, customer.getName());
+            preparedStatement.setString(2, customer.getAge());
+            preparedStatement.setString(3, String.valueOf(customer.getGender()));
+            preparedStatement.setString(4, String.valueOf(customer.getCmnd()));
+            preparedStatement.setString(5, String.valueOf(customer.getPhoneNumber()));
+            preparedStatement.setString(6, customer.getEmail());
+            preparedStatement.setString(7, customer.getAddress());
+            preparedStatement.setString(8, customer.getCustomerType());
+            preparedStatement.executeUpdate();
+        } catch (SQLException ignored) {
+        }
     }
 
     @Override

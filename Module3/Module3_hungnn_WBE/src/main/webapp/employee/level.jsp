@@ -19,10 +19,10 @@
             <th>ID</th>
             <th>Name</th>
         </tr>
-        <c:forEach var="employee" items="${listUser}">
+        <c:forEach var="facility" items="${listUser}">
             <tr>
-                <td><c:out value="${employee.id}"/></td>
-                <td><c:out value="${employee.level}"/></td>
+                <td><c:out value="${facility.id}"/></td>
+                <td><c:out value="${facility.level}"/></td>
             </tr>
         </c:forEach>
     </table>

@@ -1,23 +1,52 @@
 package models;
 
-public abstract class Facility {
+public  class Facility {
+    private int serviceID;
     private String serviceName;
-    private String serviceID;
-     private Double areaUsable;
-     private int rentalCost;
-     private int maxPeople;
-     private String rentalType;
-     Facility() {
+     private int areaUsable;
+    private int maxPeople;
+    private int rentalCost;
+     private String standardRoom;
+     private String description;
+     private double poolArea;
+     private int floor;
+     private String typeRental;
+     private String typeService;
 
-     }
-
-    public Facility(String serviceType, String nameService, Double areaUsable, int rentalCost, int maxPeople, String rentalType) {
-        this.serviceName = serviceType;
-        this.serviceID = nameService;
+    public Facility(int serviceID, String serviceName, int areaUsable, int maxPeople, int rentalCost, String
+            standardRoom, String description, double poolArea, int floor, String typeRental, String typeService) {
+        this.serviceID = serviceID;
+        this.serviceName = serviceName;
         this.areaUsable = areaUsable;
-        this.rentalCost = rentalCost;
         this.maxPeople = maxPeople;
-        this.rentalType = rentalType;
+        this.rentalCost = rentalCost;
+        this.standardRoom = standardRoom;
+        this.description = description;
+        this.poolArea = poolArea;
+        this.floor = floor;
+        this.typeRental = typeRental;
+        this.typeService = typeService;
+    }
+
+    public Facility(String serviceName, int areaUsable, int maxPeople, int rentalCost, String standardRoom, String description, double poolArea, int floor, String typeRental, String typeService) {
+        this.serviceName = serviceName;
+        this.areaUsable = areaUsable;
+        this.maxPeople = maxPeople;
+        this.rentalCost = rentalCost;
+        this.standardRoom = standardRoom;
+        this.description = description;
+        this.poolArea = poolArea;
+        this.floor = floor;
+        this.typeRental = typeRental;
+        this.typeService = typeService;
+    }
+
+    public int getServiceID() {
+        return serviceID;
+    }
+
+    public void setServiceID(int serviceID) {
+        this.serviceID = serviceID;
     }
 
     public String getServiceName() {
@@ -28,28 +57,12 @@ public abstract class Facility {
         this.serviceName = serviceName;
     }
 
-    public String getServiceID() {
-        return serviceID;
-    }
-
-    public void setServiceID(String serviceID) {
-        this.serviceID = serviceID;
-    }
-
-    public Double getAreaUsable() {
+    public int getAreaUsable() {
         return areaUsable;
     }
 
-    public void setAreaUsable(Double areaUsable) {
+    public void setAreaUsable(int areaUsable) {
         this.areaUsable = areaUsable;
-    }
-
-    public int getRentalCost() {
-        return rentalCost;
-    }
-
-    public void setRentalCost(int rentalCost) {
-        this.rentalCost = rentalCost;
     }
 
     public int getMaxPeople() {
@@ -60,24 +73,59 @@ public abstract class Facility {
         this.maxPeople = maxPeople;
     }
 
-    public String getRentalType() {
-        return rentalType;
+    public int getRentalCost() {
+        return rentalCost;
     }
 
-    public void setRentalType(String rentalType) {
-        this.rentalType = rentalType;
+    public void setRentalCost(int rentalCost) {
+        this.rentalCost = rentalCost;
     }
 
-    @Override
-    public String toString() {
-        return "Facility{" +
-                "serviceName='" + serviceName + '\'' +
-                ", serviceID='" + serviceID + '\'' +
-                ", areaUsable=" + areaUsable +
-                ", rentalCost=" + rentalCost +
-                ", maxPeople=" + maxPeople +
-                ", rentalType='" + rentalType + '\'' +
-                '}';
+    public String getStandardRoom() {
+        return standardRoom;
     }
 
+    public void setStandardRoom(String standardRoom) {
+        this.standardRoom = standardRoom;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPoolArea() {
+        return poolArea;
+    }
+
+    public void setPoolArea(double poolArea) {
+        this.poolArea = poolArea;
+    }
+
+    public int getFloor() {
+        return floor;
+    }
+
+    public void setFloor(int floor) {
+        this.floor = floor;
+    }
+
+    public String getTypeRental() {
+        return typeRental;
+    }
+
+    public void setTypeRental(String typeRental) {
+        this.typeRental = typeRental;
+    }
+
+    public String getTypeService() {
+        return typeService;
+    }
+
+    public void setTypeService(String typeService) {
+        this.typeService = typeService;
+    }
 }

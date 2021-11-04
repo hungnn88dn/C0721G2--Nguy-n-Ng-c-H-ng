@@ -32,20 +32,20 @@
             <th>Department</th>
             <th>Username</th>
         </tr>
-        <c:forEach var="employee" items="${listEmployeeServlet}">
+        <c:forEach var="facility" items="${listEmployeeServlet}">
             <tr>
-                <td><c:out value="${employee.codeEmployee}"/></td>
-                <td><c:out value="${employee.name}"/></td>
-                <td><c:out value="${employee.age}"/></td>
-                <td><c:out value="${employee.cmnd}"/></td>
-                <td><c:out value="${employee.salary}"/></td>
-                <td><c:out value="${employee.phoneNumber}"/></td>
-                <td><c:out value="${employee.email}"/></td>
-                <td><c:out value="${employee.address}"/></td>
-                <td><c:out value="${employee.office}"/></td>
-                <td><c:out value="${employee.level}"/></td>
-                <td><c:out value="${employee.department}"/></td>
-                <td><c:out value="${employee.username}"/></td>
+                <td><c:out value="${facility.codeEmployee}"/></td>
+                <td><c:out value="${facility.name}"/></td>
+                <td><c:out value="${facility.age}"/></td>
+                <td><c:out value="${facility.cmnd}"/></td>
+                <td><c:out value="${facility.salary}"/></td>
+                <td><c:out value="${facility.phoneNumber}"/></td>
+                <td><c:out value="${facility.email}"/></td>
+                <td><c:out value="${facility.address}"/></td>
+                <td><c:out value="${facility.office}"/></td>
+                <td><c:out value="${facility.level}"/></td>
+                <td><c:out value="${facility.department}"/></td>
+                <td><c:out value="${facility.username}"/></td>
                 <td>
                     <a href="/users?action=edit&id=${user.id}">Edit</a>
                     <a href="/users?action=delete&id=${user.id}">Delete</a>

@@ -29,17 +29,17 @@
             <th>Address</th>
             <th>TypeCustomer</th>
         </tr>
-        <c:forEach var="customer" items="${listCustomerServlet}">
+        <c:forEach var="contract" items="${listCustomerServlet}">
             <tr>
-                <td><c:out value="${customer.codeCustomer}"/></td>
-                <td><c:out value="${customer.name}"/></td>
-                <td><c:out value="${customer.age}"/></td>
-                <td><c:out value="${customer.gender}"/></td>
-                <td><c:out value="${customer.cmnd}"/></td>
-                <td><c:out value="${customer.phoneNumber}"/></td>
-                <td><c:out value="${customer.email}"/></td>
-                <td><c:out value="${customer.address}"/></td>
-                <td><c:out value="${customer.customerType}"/></td>
+                <td><c:out value="${contract.codeCustomer}"/></td>
+                <td><c:out value="${contract.name}"/></td>
+                <td><c:out value="${contract.age}"/></td>
+                <td><c:out value="${contract.gender}"/></td>
+                <td><c:out value="${contract.cmnd}"/></td>
+                <td><c:out value="${contract.phoneNumber}"/></td>
+                <td><c:out value="${contract.email}"/></td>
+                <td><c:out value="${contract.address}"/></td>
+                <td><c:out value="${contract.customerType}"/></td>
                 <td>
                     <a href="/users?action=edit&id=${user.id}">Edit</a>
                     <a href="/users?action=delete&id=${user.id}">Delete</a>

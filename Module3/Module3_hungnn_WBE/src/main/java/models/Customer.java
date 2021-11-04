@@ -36,7 +36,51 @@ public class Customer extends Person {
         this.customerType = customerType;
     }
 
+    public int getCodeCustomer() {
+        return codeCustomer;
+    }
 
+    public void setCodeCustomer(int codeCustomer) {
+        this.codeCustomer = codeCustomer;
+    }
 
+    public int getCmnd() {
+        return cmnd;
+    }
 
+    public void setCmnd(int cmnd) {
+        this.cmnd = cmnd;
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCustomerType() {
+        return customerType;
+    }
+
+    public void setCustomerType(String customerType) {
+        this.customerType = customerType;
+    }
 }
