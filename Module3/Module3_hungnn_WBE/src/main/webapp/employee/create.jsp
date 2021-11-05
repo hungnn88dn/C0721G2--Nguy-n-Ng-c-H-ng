@@ -1,4 +1,4 @@
-<%--
+`<%--
   Created by IntelliJ IDEA.
   User: Administrator
   Date: 3/11/2021
@@ -30,67 +30,85 @@
             <tr>
                 <th>Employee Name:</th>
                 <td>
-                    <input type="text" name="name" id="name" size="45"/>
+                    <input type="text" name="name" id="name"   value="${employee.getName()}" size="45"/>
                 </td>
             </tr>
             <tr>
                 <th>Employee Age:</th>
                 <td>
-                    <input type="text" name="age" id="age" size="45"/>
+                    <input type="text" name="age" id="age"  value="${employee.getAge()}" size="45"/>
                 </td>
             </tr>
             <tr>
                 <th>Employee CMND</th>
                 <td>
-                    <input type="text" name="cmnd" id="cmnd" size="15"/>
+                    <input type="text" name="cmnd" id="cmnd" value="${employee.getCmnd()}" size="15"/>
                 </td>
             </tr>
             <tr>
                 <th>Employee Salary</th>
                 <td>
-                    <input type="text" name="salary" id="salary" size="15"/>
+                    <input type="text" name="salary" id="salary"  value="${employee.getSalary()}" size="15"/>
                 </td>
             </tr>
             <tr>
                 <th>Employee Phone</th>
                 <td>
-                    <input type="text" name="phone" id="phone" size="15"/>
+                    <input type="text" name="phone" id="phone" value="${employee.getPhoneNumber()}" size="15"/>
+                    <p style="color: red"> <c:if test='${phoneError != null}'>
+                        ${phoneError}
+                    </c:if></p>
                 </td>
             </tr>
             <tr>
                 <th>Employee Email</th>
                 <td>
-                    <input type="text" name="email" id="email" size="15"/>
+                    <input type="text" name="email" id="email" value="${employee.getEmail()}" size="15"/>
+                    <p style="color: red"> <c:if test='${emailError != null}'>
+                        ${emailError}
+                    </c:if></p>
                 </td>
             </tr>
             <tr>
                 <th>Employee Address</th>
                 <td>
-                    <input type="text" name="address" id="address" size="15"/>
+                    <input type="text" name="address" id="address"  value="${employee.getAddress()}" />
                 </td>
             </tr>
             <tr>
                 <th>Employee Position</th>
                 <td>
-                    <input type="text" name="position" id="position" size="15"/>
+                    <select name="position" id="position">
+                        <option value="1">Le Tan</option>
+                        <option value="2">Phuc Vu</option>
+                        <option value="3">Chuyen Vien</option>
+                        <option value="4">Giam Sat</option>
+                        <option value="5">Quan Ly</option>
+                        <option value="6">Giam Doc</option>
+                    </select>
                 </td>
             </tr>
             <tr>
                 <th>Employee Level</th>
                 <td>
-                    <input type="text" name="level" id="level" size="15"/>
+                    <select name="level" id="level">
+                        <option value="1">12/12</option>
+                        <option value="2">Trung Cap</option>
+                        <option value="3">Cao Dang</option>
+                        <option value="4">Dai Hoc</option>
+                        <option value="5">Thac si</option>
+                    </select>
                 </td>
             </tr>
             <tr>
                 <th>Employee Department</th>
                 <td>
-                    <input type="text" name="department" id="department" size="15"/>
-                </td>
-            </tr>
-            <tr>
-                <th>Employee Username</th>
-                <td>
-                    <input type="text" name="username" id="username" size="15"/>
+                    <select name="department" id="department">
+                        <option value="1">Sale – Marketing</option>
+                        <option value="2">Hanh Chinh</option>
+                        <option value="3">Phuc Vu</option>
+                        <option value="4">Quan Ly</option>
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -103,3 +121,4 @@
 </div>
 </body>
 </html>
+`

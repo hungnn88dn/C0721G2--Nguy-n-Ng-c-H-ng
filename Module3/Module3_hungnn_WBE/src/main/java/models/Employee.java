@@ -3,7 +3,7 @@ package models;
 public class Employee extends Person{
     private int codeEmployee;
     private int cmnd;
-    private int phoneNumber;
+    private String phoneNumber;
     private String email;
     private String address;
     private String level;
@@ -12,7 +12,7 @@ public class Employee extends Person{
     private int salary;
     private String username;
 
-    public Employee(String name, String age, int cmnd, int phoneNumber, String email, String address, String level, String office, String department, int salary, String username) {
+    public Employee(String name, String age, int cmnd, String phoneNumber, String email, String address, String level, String office, String department, int salary, String username) {
         super(name, age);
         this.cmnd = cmnd;
         this.phoneNumber = phoneNumber;
@@ -25,7 +25,7 @@ public class Employee extends Person{
         this.username = username;
     }
 
-    public Employee(String name, String age, int codeEmployee, int cmnd, int phoneNumber, String email, String address,
+    public Employee(String name, String age, int codeEmployee, int cmnd, String phoneNumber, String email, String address,
                     String level, String office, String department, int salary, String username) {
         super(name, age);
         this.codeEmployee = codeEmployee;
@@ -59,11 +59,11 @@ public class Employee extends Person{
         this.cmnd = cmnd;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

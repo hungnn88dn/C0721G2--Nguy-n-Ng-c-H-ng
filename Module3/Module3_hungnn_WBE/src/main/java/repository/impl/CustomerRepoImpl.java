@@ -91,7 +91,7 @@ public class CustomerRepoImpl implements CustomerSerivceRepo {
                 String age = rs.getString("age");
                 String gender = rs.getString("gender");
                 int cmnd = Integer.parseInt(rs.getString("cmnd"));
-                int phone = Integer.parseInt(rs.getString("phone"));
+                String phone = rs.getString("phone");
                 String email = rs.getString("email");
                 String address = rs.getString("address");
                 String type_customer_id = rs.getString("type_customer_id");

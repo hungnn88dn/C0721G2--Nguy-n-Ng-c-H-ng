@@ -7,6 +7,7 @@ import repository.impl.CustomerRepoImpl;
 import service.CustomerSerivce;
 import service.impl.CustomerServiceImpl;
 import service.impl.EmployeeServiceImpl;
+import util.Validate;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -85,15 +86,34 @@ public class CustomerServlet extends HttpServlet {
 
     private void insertCustomer(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
+        String phoneError = null;
+        String emailError = null;
+        Boolean flag =false;
         String name = request.getParameter("name");
         String age = request.getParameter("age");
         int cmnd = Integer.parseInt(request.getParameter("cmnd"));
         String gender = request.getParameter("gender");
-        int phone = Integer.parseInt(request.getParameter("phone"));
+        String phone = request.getParameter("phone");
+        if (!Validate.validateInput(String.valueOf(phone),Validate.PHONE)) {
+            phoneError = "Phone khong dung dinh dang (09xxxxxxx)";
+            flag = true;
+        }
         String email = request.getParameter("email");
+        if (!Validate.validateInput(String.valueOf(email),Validate.EMAIL)) {
+            emailError = "Email khong dung dinh dang (abc@xyz.com(.vn))";
+            flag = true;
+        }
         String address = request.getParameter("address");
         String type_customer = request.getParameter("type_customer");
-        customerDAO.insertCustomer(new Customer(name,age,gender,cmnd,phone,email,address,type_customer));
-        listCustomer(request,response);
+        Customer customer = new Customer(name,age,gender,cmnd,phone,email,address,type_customer);
+        if (flag) {
+            request.setAttribute("phoneError", phoneError);
+            request.setAttribute("emailError", emailError);
+            request.setAttribute("customer", customer);
+            showCreateForm(request, response);
+        } else {
+            customerDAO.insertCustomer(customer);
+            listCustomer(request, response);
+        }
     }
 }

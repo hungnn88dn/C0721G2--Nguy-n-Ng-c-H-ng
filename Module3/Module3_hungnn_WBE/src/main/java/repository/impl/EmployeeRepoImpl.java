@@ -18,7 +18,7 @@ public class EmployeeRepoImpl implements EmployeeServiceRepo {
     private String jdbcPassword = "Blackberry88";
 
     private static final String INSERT_EMPLOYEE_SQL = "insert into employee (`name`,age,cmnd,salary,phone,email,address,position_id,level_id,department_id,user_username) " +
-            "value" +
+            " value" +
             " ( ?,?,?,?,?,?,?,?,?,?,?);";
     private static final String SELECT_EMPLOYEE_BY_ID = "select `name`,age,cmnd,salary,phone,email,address," +
             " position_id,level_id,department_id,user_username from employee where id =?";
@@ -107,7 +107,7 @@ public class EmployeeRepoImpl implements EmployeeServiceRepo {
                 String age = rs.getString("age");
                 int cmnd = Integer.parseInt(rs.getString("cmnd"));
                 int salary = Integer.parseInt(rs.getString("salary"));
-                int phone = Integer.parseInt(rs.getString("phone"));
+                String phone = rs.getString("phone");
                 String email = rs.getString("email");
                 String address = rs.getString("address");
                 String position_id = rs.getString("position_id");

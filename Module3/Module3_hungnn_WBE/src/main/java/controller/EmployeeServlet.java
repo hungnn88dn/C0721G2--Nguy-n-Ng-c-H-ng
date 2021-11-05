@@ -5,6 +5,7 @@ import models.Level;
 import repository.impl.EmployeeRepoImpl;
 import service.EmployeeService;
 import service.impl.EmployeeServiceImpl;
+import util.Validate;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -81,18 +82,37 @@ public class EmployeeServlet extends HttpServlet {
     }
     private void insertEmployee(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
+        String phoneError = null;
+        String emailError = null;
+        Boolean flag =false;
         String name = request.getParameter("name");
         String age = request.getParameter("age");
         int cmnd = Integer.parseInt(request.getParameter("cmnd"));
         int salary = Integer.parseInt(request.getParameter("salary"));
-        int phone = Integer.parseInt(request.getParameter("phone"));
+        String phone = request.getParameter("phone");
+        if (!Validate.validateInput(String.valueOf(phone),Validate.PHONE)) {
+            phoneError = "Phone khong dung dinh dang (09xxxxxxx)";
+            flag = true;
+        }
         String email = request.getParameter("email");
+        if (!Validate.validateInput(String.valueOf(email),Validate.EMAIL)) {
+            emailError = "Email khong dung dinh dang (abc@xyz.com(.vn))";
+            flag = true;
+        }
         String address = request.getParameter("address");
         String position = request.getParameter("position");
         String level = request.getParameter("level");
         String department = request.getParameter("department");
-        String username = request.getParameter("username");
-        employeeDAO.insertUser(new Employee(name,age,cmnd,phone,email,address,level,position,department,salary,username));
-        listEmployees(request,response);
+        String username = request.getParameter("email");
+        Employee employee = new Employee(name,age,cmnd,phone,email,address,level,position,department,salary,username);
+        if (flag) {
+            request.setAttribute("phoneError", phoneError);
+            request.setAttribute("emailError", emailError);
+            request.setAttribute("employee", employee);
+            showCreateForm(request, response);
+        } else {
+            employeeDAO.insertUser(employee);
+            listEmployees(request, response);
+        }
     }
 }

@@ -3,12 +3,12 @@ package models;
 public class Customer extends Person {
     private int codeCustomer;
     private int cmnd;
-    private int phoneNumber;
+    private String phoneNumber;
     private String email;
     private String address;
     private String customerType;
 
-    public Customer(int codeCustomer, int cmnd, int phoneNumber, String email, String customerType, String address) {
+    public Customer(int codeCustomer, int cmnd, String phoneNumber, String email, String customerType, String address) {
         this.codeCustomer = codeCustomer;
         this.cmnd = cmnd;
         this.phoneNumber = phoneNumber;
@@ -17,7 +17,7 @@ public class Customer extends Person {
         this.address = address;
     }
 
-    public Customer(String name, String age, String gender, int codeCustomer, int cmnd, int phoneNumber, String email, String address, String customerType) {
+    public Customer(String name, String age, String gender, int codeCustomer, int cmnd, String phoneNumber, String email, String address, String customerType) {
         super(name, age, gender);
         this.codeCustomer = codeCustomer;
         this.cmnd = cmnd;
@@ -27,7 +27,7 @@ public class Customer extends Person {
         this.customerType = customerType;
     }
 
-    public Customer(String name, String age, String gender, int cmnd, int phoneNumber, String email, String address, String customerType) {
+    public Customer(String name, String age, String gender, int cmnd, String phoneNumber, String email, String address, String customerType) {
         super(name, age, gender);
         this.cmnd = cmnd;
         this.phoneNumber = phoneNumber;
@@ -52,11 +52,11 @@ public class Customer extends Person {
         this.cmnd = cmnd;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

@@ -14,6 +14,7 @@ public class Validate  {
     public static final String COST_FLOOR = "^(([1-9])|([1-9]+\\d)|(([1-9]+\\d]+\\d)))$";
     public static final String MAX_PEOPLE = "^(([3-9]+\\d)|(([1-9]+\\d+\\d))).\\d+$";
     public static final String SERVICE_TYPE = "^[A-Z][a-z]*$";
+    public static final String PHONE = "^([0]|[84])\\d{9}*$";
     static Scanner scanner = new Scanner(System.in);
    public static boolean validateInput(String str, String regex) {
        boolean b = str.matches(regex);
@@ -42,6 +43,6 @@ public class Validate  {
     }
 
     public static void main(String[] args) {
-        Validate.inputBirthday();
+        System.out.println(Validate.validateInput("0938655065",PHONE));
     }
 }
