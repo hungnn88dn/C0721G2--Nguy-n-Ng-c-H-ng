@@ -34,7 +34,8 @@
                     <a href="/login?action=login">Sign In</a>
                 </c:if></p>
             <p style="color: red"> <c:if test='${usernameSession != null}'>
-                <%=request.getSession().getAttribute("usernameSession")%>
+
+                <a href="/login?action=hungnn"> <%=request.getSession().getAttribute("usernameSession")%></a>
             </c:if></p>
         </div>
     </div>
@@ -114,7 +115,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row fixed-bottom">
         <div class="col-md-12 col-lg-12 col-sm-12  bg-success d-flex justify-content-center">
             <h3>CodeGym</h3>
         </div>

@@ -37,7 +37,9 @@ public class LoginServlet extends HttpServlet {
             case "login":
                 showLoginForm(request,response);
                 break;
-
+            case "hungnn":
+                showMe(request,response);
+                break;
             default:
                 showHome(request,response);
                 break;
@@ -52,6 +54,12 @@ public class LoginServlet extends HttpServlet {
     private void showHome(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+        dispatcher.forward(request, response);
+    }
+
+    private void showMe(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("hungnn.jsp");
         dispatcher.forward(request, response);
     }
 
