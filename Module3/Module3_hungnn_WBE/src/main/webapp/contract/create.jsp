@@ -18,7 +18,7 @@
 <center>
     <h1>User Management</h1>
     <h2>
-        <a href="contract?action=create">List All Contract</a>
+        <a href="contract">List All Contract</a>
     </h2>
 </center>
 <div align="center">
@@ -26,17 +26,17 @@
         <table border="1" cellpadding="5">
             <caption>
                 <h2>Add New Contract</h2>
-            </caption>e
+            </caption>
             <tr>
                 <th>Contract Start Day:</th>
                 <td>
-                    <input type="text" name="startDay" id="name" size="45"/>
+                    <input type="date" name="startDay" id="name" size="45"/>
                 </td>
             </tr>
             <tr>
                 <th>Contract End Day:</th>
                 <td>
-                    <input type="text" name="endDay" id="age" size="45"/>
+                    <input type="date" name="endDay" id="age" size="45"/>
                 </td>
             </tr>
             <tr>

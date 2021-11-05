@@ -36,7 +36,7 @@
             <tr>
                 <th>Employee Age:</th>
                 <td>
-                    <input type="text" name="age" id="age"  value="${employee.getAge()}" size="45"/>
+                    <input type="date" name="age" id="age"  value="${employee.getAge()}" size="45"/>
                 </td>
             </tr>
             <tr>

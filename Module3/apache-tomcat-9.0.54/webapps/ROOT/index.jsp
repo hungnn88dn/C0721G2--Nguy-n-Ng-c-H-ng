@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>$Title$</title>
@@ -29,7 +30,12 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12"></div>
         <div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-md-end">
-            <p>Nguyễn Ngọc Hưng</p>
+                <p style="color: red"> <c:if test='${usernameSession == null}'>
+                    <a href="/login?action=login">Sign In</a>
+                </c:if></p>
+            <p style="color: red"> <c:if test='${usernameSession != null}'>
+                <%=request.getSession().getAttribute("usernameSession")%>
+            </c:if></p>
         </div>
     </div>
     <div class="row bg-light p-xl-3 d-flex justify-content-center">

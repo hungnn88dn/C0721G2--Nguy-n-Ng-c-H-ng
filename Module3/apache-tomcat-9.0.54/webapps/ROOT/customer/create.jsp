@@ -32,7 +32,7 @@
             <tr>
                 <th>Customer Age:</th>
                 <td>
-                    <input type="text" name="age" id="age" value="${customer.getAge()}" size="45"/>
+                    <input type="date" name="age" id="age" value="${customer.getAge()}" size="45"/>
                 </td>
             </tr>
             <tr>
