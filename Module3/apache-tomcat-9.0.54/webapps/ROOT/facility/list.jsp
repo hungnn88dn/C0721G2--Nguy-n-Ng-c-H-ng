@@ -43,19 +43,19 @@
         </tr>
         </thead>
        <tbody>
-       <c:forEach var="facility" items="${listFacilityServlet}">
+       <c:forEach var="employee" items="${listFacilityServlet}">
            <tr>
-               <td><c:out value="${facility.serviceID}"/></td>
-               <td><c:out value="${facility.serviceName}"/></td>
-               <td><c:out value="${facility.areaUsable}"/></td>
-               <td><c:out value="${facility.maxPeople}"/></td>
-               <td><c:out value="${facility.rentalCost}"/></td>
-               <td><c:out value="${facility.standardRoom}"/></td>
-               <td><c:out value="${facility.description}"/></td>
-               <td><c:out value="${facility.poolArea}"/></td>
-               <td><c:out value="${facility.floor}"/></td>
-               <td><c:out value="${facility.typeRental}"/></td>
-               <td><c:out value="${facility.typeService}"/></td>
+               <td><c:out value="${employee.serviceID}"/></td>
+               <td><c:out value="${employee.serviceName}"/></td>
+               <td><c:out value="${employee.areaUsable}"/></td>
+               <td><c:out value="${employee.maxPeople}"/></td>
+               <td><c:out value="${employee.rentalCost}"/></td>
+               <td><c:out value="${employee.standardRoom}"/></td>
+               <td><c:out value="${employee.description}"/></td>
+               <td><c:out value="${employee.poolArea}"/></td>
+               <td><c:out value="${employee.floor}"/></td>
+               <td><c:out value="${employee.typeRental}"/></td>
+               <td><c:out value="${employee.typeService}"/></td>
                <td>
                    <a href="/facility?action=edit&id=${user.id}">Edit</a>
                    <a href="/facility?action=delete&id=${user.id}">Delete</a>

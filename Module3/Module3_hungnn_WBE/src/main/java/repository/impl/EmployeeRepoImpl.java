@@ -20,16 +20,18 @@ public class EmployeeRepoImpl implements EmployeeServiceRepo {
     private static final String INSERT_EMPLOYEE_SQL = "insert into employee (`name`,age,cmnd,salary,phone,email,address,position_id,level_id,department_id,user_username) " +
             " value" +
             " ( ?,?,?,?,?,?,?,?,?,?,?);";
-    private static final String SELECT_EMPLOYEE_BY_ID = "select `name`,age,cmnd,salary,phone,email,address," +
-            " position_id,level_id,department_id,user_username from employee where id =?";
+    private static final String SELECT_EMPLOYEE_BY_ID = "select `name`,age,cmnd,salary,phone,email,address, " +
+            "  position_id,level_id,department_id,user_username from employee where id =? ;";
     private static final String SELECT_ALL_EMPLOYEE = "select * from employee";
     private static final String DELETE_EMPLOYEE_SQL = "delete from employee where id = ?;";
-    private static final String UPDATE_EMPLOYEE_SQL = "update employee set name = ?,age= ?, cmnd = ?,salary =?, phone= ?," +
-            " email =? ,address = ?,position_id = ? level_id = ?,department_id =?,user_username=?  where id = ?;";
+    private static final String UPDATE_EMPLOYEE_SQL = "update employee set `name` = ?,age= ?, cmnd = ?,salary =?, phone= ?, " +
+            " email =? ,address = ?,position_id = ? , level_id = ?,department_id =?,user_username=?  where id = ?;";
     private static final String SELECT_ALL_LEVEL = "select * from `level`";
     private static final String SELECT_ALL_POSITION = "select * from `position`";
     private static final String SELECT_ALL_DEPARTMENT = "select * from `department`";
-
+    List<Level> levels = selectAllLevel();
+    List<Position> positions = selectAllPosition();
+    List<Department> departments = selectAllDepartment();
 
     protected Connection getConnection() {
         Connection connection = null;
@@ -141,16 +143,37 @@ public class EmployeeRepoImpl implements EmployeeServiceRepo {
 
     @Override
     public boolean deleteEmployee(int id) throws SQLException {
-        return false;
+        boolean rowDeleted;
+        try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(DELETE_EMPLOYEE_SQL);) {
+            statement.setInt(1, id);
+            rowDeleted = statement.executeUpdate() > 0;
+        }
+        return rowDeleted;
     }
 
     @Override
     public boolean updateEmployee(Employee employee) throws SQLException {
-        return false;
+        boolean rowUpdated;
+        try (Connection connection = getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_EMPLOYEE_SQL);) {
+            preparedStatement.setString(1, employee.getName());
+            preparedStatement.setString(2, employee.getAge());
+            preparedStatement.setString(3, String.valueOf(employee.getCmnd()));
+            preparedStatement.setString(4, String.valueOf(employee.getSalary()));
+            preparedStatement.setString(5, String.valueOf(employee.getPhoneNumber()));
+            preparedStatement.setString(6, employee.getEmail());
+            preparedStatement.setString(7, employee.getAddress());
+            preparedStatement.setString(8, employee.getOffice());
+            preparedStatement.setString(9, employee.getLevel());
+            preparedStatement.setString(10, employee.getDepartment());
+            preparedStatement.setString(11, employee.getUsername());
+            preparedStatement.setInt(12, employee.getCodeEmployee());
+            rowUpdated = preparedStatement.executeUpdate() > 0;
+        }
+        return rowUpdated;
     }
 
     @Override
-    public void insertUser(Employee employee) {
+    public void insertEmployee(Employee employee) {
         try (Connection connection = getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(INSERT_EMPLOYEE_SQL)) {
             preparedStatement.setString(1, employee.getName());
             preparedStatement.setString(2, employee.getAge());
@@ -170,7 +193,51 @@ public class EmployeeRepoImpl implements EmployeeServiceRepo {
 
     @Override
     public Employee selectEmployee(int id) {
-        return null;
-    }
+        Employee employee = null;
+        // Step 1: Establishing a Connection
+        try (Connection connection = getConnection();
+             // Step 2:Create a statement using connection object
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_EMPLOYEE_BY_ID);) {
+            preparedStatement.setInt(1, id);
+            System.out.println(preparedStatement);
+            // Step 3: Execute the query or update query
+            ResultSet rs = preparedStatement.executeQuery();
 
+            // Step 4: Process the ResultSet object.
+            while (rs.next()) {
+                String name = rs.getString("name");
+                String age = rs.getString("age");
+                int cmnd = Integer.parseInt(rs.getString("cmnd"));
+                int salary = Integer.parseInt(rs.getString("salary"));
+                String phone = rs.getString("phone");
+                String email = rs.getString("email");
+                String address = rs.getString("address");
+                String position_id = rs.getString("position_id");
+                String position = "";
+                for (Position p : positions) {
+                    if (p.getId() == Integer.parseInt(position_id)) {
+                        position = p.getName();
+                    }
+                }
+                String level_id = rs.getString("level_id");
+                String level = "";
+                for (Level l : levels) {
+                    if (l.getId() == Integer.parseInt(level_id)) {
+                        level = l.getLevel();
+                    }
+                }
+                String department_id = rs.getString("department_id");
+                String department = "";
+                for (Department d : departments) {
+                    if (d.getId() == Integer.parseInt(department_id)) {
+                        department = d.getName();
+                    }
+                }
+                String user_username = rs.getString("user_username");
+                employee = new Employee(name, age, id, cmnd, phone, email, address, level, position, department, salary, user_username);
+            }
+        } catch (SQLException ignored) {
+        }
+        return employee;
+    }
 }

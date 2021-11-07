@@ -25,9 +25,18 @@
     </h3>
 </center>
 <div align="center">
+    <form  method="post" action="/employee?action=find">
+            <input type="input" placeholder="What're you searching for?" aria-describedby="button-addon2"
+                   class="form-control border-0 bg-light" name="search">
+            <input type="submit" value="Search">
+    </form>
+
     <table border="1" cellpadding="5" id="tableEmployee" class="table table-striped table-bordered" style="width: 100%">
-        <caption><h2>List of Employees</h2></caption>
+        <caption>
+            <a href="/employee"><h2>List of Employees</h2></a>
+        </caption>
         <thead>
+
         <tr>
             <th>ID</th>
             <th>Name</th>
@@ -46,23 +55,23 @@
         </thead>
         <tbody>
 
-        <c:forEach var="facility" items="${listEmployeeServlet}">
+        <c:forEach var="employee" items="${listEmployeeServlet}">
             <tr>
-                <td><c:out value="${facility.codeEmployee}"/></td>
-                <td><c:out value="${facility.name}"/></td>
-                <td><c:out value="${facility.age}"/></td>
-                <td><c:out value="${facility.cmnd}"/></td>
-                <td><c:out value="${facility.salary}"/></td>
-                <td><c:out value="${facility.phoneNumber}"/></td>
-                <td><c:out value="${facility.email}"/></td>
-                <td><c:out value="${facility.address}"/></td>
-                <td><c:out value="${facility.office}"/></td>
-                <td><c:out value="${facility.level}"/></td>
-                <td><c:out value="${facility.department}"/></td>
-                <td><c:out value="${facility.username}"/></td>
+                <td><c:out value="${employee.codeEmployee}"/></td>
+                <td><c:out value="${employee.name}"/></td>
+                <td><c:out value="${employee.age}"/></td>
+                <td><c:out value="${employee.cmnd}"/></td>
+                <td><c:out value="${employee.salary}"/></td>
+                <td><c:out value="${employee.phoneNumber}"/></td>
+                <td><c:out value="${employee.email}"/></td>
+                <td><c:out value="${employee.address}"/></td>
+                <td><c:out value="${employee.office}"/></td>
+                <td><c:out value="${employee.level}"/></td>
+                <td><c:out value="${employee.department}"/></td>
+                <td><c:out value="${employee.username}"/></td>
                 <td>
-                    <a href="/users?action=edit&id=${user.id}">Edit</a>
-                    <a href="/users?action=delete&id=${user.id}">Delete</a>
+                    <a href="/employee?action=edit&id=${employee.codeEmployee}">Edit</a>
+                    <a href="/employee?action=delete&id=${employee.codeEmployee}">Delete</a>
                 </td>
             </tr>
         </c:forEach>

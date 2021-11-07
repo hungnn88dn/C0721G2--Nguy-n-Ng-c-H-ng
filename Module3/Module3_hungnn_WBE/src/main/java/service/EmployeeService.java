@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface EmployeeService{
-    public void insertUser(Employee employee) throws SQLException;
+    public void insertEmployee(Employee employee) throws SQLException;
 
     public Employee selectEmployee(int id);
 

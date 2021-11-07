@@ -5,18 +5,15 @@ import repository.EmployeeServiceRepo;
 import repository.impl.EmployeeRepoImpl;
 import service.EmployeeService;
 
-import java.io.*;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class EmployeeServiceImpl implements EmployeeService {
     private EmployeeServiceRepo employeeService = new EmployeeRepoImpl();
 
     @Override
-    public void insertUser(Employee employee) throws SQLException {
-          this.employeeService.insertUser(employee);
+    public void insertEmployee(Employee employee) throws SQLException {
+          this.employeeService.insertEmployee(employee);
     }
 
     @Override
@@ -31,11 +28,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public boolean deleteEmployee(int id) throws SQLException {
-        return false;
+        return this.employeeService.deleteEmployee(id);
     }
 
     @Override
     public boolean updateEmployee(Employee employee) throws SQLException {
-        return false;
+        return this.employeeService.updateEmployee(employee);
     }
 }
