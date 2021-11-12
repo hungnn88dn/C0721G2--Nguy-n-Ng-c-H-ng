@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập  số tuổi <input id="number1"  type="text">
+
+
+<button onclick="kiemtra()" >Kiểm tra</button>
+<p id="result"></p><br>
+
+
+<script>
+
+    function kiemtra() {
+        let yearOld = document.getElementById("number1").value;
+
+       if ( yearOld > 0)   {
+           if (yearOld < 120) {
+               document.getElementById("result").innerText = "Tuổi của bạn là " + " " + yearOld; }
+            else {
+               document.getElementById("result").innerText = "Bạn thành tinh rồi"; }
+
+       }
+    }
+</script>
+</body>
+</html>

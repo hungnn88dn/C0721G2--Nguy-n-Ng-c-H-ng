@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+
+
+    class Cell {
+        constructor(x, y, value) {
+            this.x = x; //Tạo độ theo hàng
+            this.y = y; // Tạo độ theo cột
+            this.value = value; //Giá trị của ô đó.
+            this.color ="white";
+        }
+
+        changeValue(value) {
+            this.value = value;
+        }
+        changeColor(color) {
+            this.color = color;
+        }
+    }
+
+    class Caro {
+        constructor(name1, name2, width, height) {
+            this.name1 = name1;
+            this.name2 = name2;
+            this.width = width;
+            this.height = height;
+            this.status = true;
+        }
+
+        init() {
+            this.arrayCell = [];
+            for (let i = 0; i < this.height; i++) {
+                this.arrayCell[i] = [];
+                for (let j = 0; j < this.width; j++) {
+                    this.arrayCell[i][j] = new Cell(i,j,"  ");
+                }
+            }
+            console.log(this.arrayCell)
+        }
+        displayCaro() {
+            document.body.innerHTML = "";
+            let display = "<table border='1'>";
+            for (let i = 0; i < this.height; i++) {
+                display += "<tr>"
+                for (let j = 0; j < this.width; j++) {
+                    display += "<td onclick='changeValue(" + i + "," + j + ")' style='width: 50px; height: 50px;text-align: center; background-color: "+this.arrayCell[i][j].color+"'>" + this.arrayCell[i][j].value + "</td>"
+                }
+                display += "</tr>"
+            }
+            display += "</table>"
+            document.write(display)
+        }
+        changeValue(i,j) {
+            if(this.arrayCell[i][j].value =="  ") {
+                if(this.status) {
+                    this.arrayCell[i][j].changeValue("X");
+                    this.arrayCell[i][j].changeColor("red")
+                    this.checkWin("X")
+                } else {
+                    this.arrayCell[i][j].changeValue("O");
+                    this.arrayCell[i][j].changeColor("blue")
+                    this.checkWin("O")
+                }
+                this.status = !this.status; //Đảo ngược giá trị status sau đó gán lại cho biến status
+                this.displayCaro()
+            }
+        }
+        checkWin(temp) {
+            for (let i = 0; i < this.height; i++) {
+                //This.width -2 để khi j+2 thì sẽ triệt tiêu và không bị lỗi underfine ở 2 vòng lặp 2 cuối cùng của j
+                for (let j = 0; j < this.width-2; j++) {
+
+                    if (this.arrayCell[i][j].value === temp && this.arrayCell[i][j + 1].value === temp && this.arrayCell[i][j + 2].value === temp) {
+                        alert(temp + " thang");
+                        this.init();
+                        this.displayCaro();
+                    }
+                }
+            }
+
+        }
+    }
+
+    let caro = new Caro("haitt","c0721g1",10,10);
+    caro.init();
+    caro.displayCaro()
+    function changeValue(i,j) {
+        caro.changeValue(i,j);
+    }
+</script>
+</body>
+
+</html>

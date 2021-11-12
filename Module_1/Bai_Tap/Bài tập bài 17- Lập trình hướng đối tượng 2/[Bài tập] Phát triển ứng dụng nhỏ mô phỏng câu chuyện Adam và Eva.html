@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="Adam()">AdamEatApple</button>
+<button onclick="Eva()">EvaEatApple</button>
+<p id="AdamWeight"></p>
+<p id="EvaWeight"></p>
+<p id="apple"></p>
+<script>
+    class Apple {
+        constructor(weightApple) {
+            this.weightApple=weightApple;
+        }
+    }
+    class Human {
+        constructor(name,gender,weight) {
+            this.name= name;
+            this.gender=gender;
+            this.weight=weight;
+        }
+        speak() {
+            alert("Tôi là: " + this.name)
+        }
+        eat(apple) {
+            if ( apple.weightApple > 0) {
+                apple.weightApple--
+                this.weight++
+            } else {
+                alert("Táo đã bị ăn sạch")
+            }
+
+        }
+    }
+    let human1= new Human("Adam", "Male", 80)
+    let human2= new Human("Eva", "Female", 50)
+    let apple= new Apple(10)
+    function Adam() {
+        alert("Adam đã ăn 1 miếng Apple");
+        human1.eat(apple);
+        document.getElementById("AdamWeight").innerHTML="Weight của Adam là "  +human1.weight
+        document.getElementById("apple").innerHTML="Weight của Apple là "  +apple.weightApple
+    }
+    function Eva() {
+        alert("Eva đã ăn 1 miếng Apple");
+        human2.eat(apple);
+        document.getElementById("EvaWeight").innerHTML="Weight của Eva là " + human2.weight
+        document.getElementById("apple").innerHTML="Weight của Apple là "  +apple.weightApple
+    }
+
+</script>
+</body>
+</html>

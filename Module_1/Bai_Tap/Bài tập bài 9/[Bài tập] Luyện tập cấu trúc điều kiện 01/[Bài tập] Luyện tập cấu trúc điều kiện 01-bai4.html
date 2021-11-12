@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Điểm kiểm tra: <input id="number1" type="text"> <br>
+Điển thi giữa kì: <input id="number2" type="text"><br>
+Điểm thi cuối kì: <input id="number3" type="text"><br>
+
+<button onclick="result()"> Xếp loại</button> <br>
+<p id="xeploai" ></p>
+
+<script>
+
+    function result() {
+        let point1 = document.getElementById("number1").value;
+        let point2 = document.getElementById("number2").value;
+        let point3 = document.getElementById("number3").value;
+        point1 = parseInt(point1);
+        point2 = parseInt(point2);
+        point3 = parseInt(point3);
+        result = (point1 + point2 + point3)/3;
+        result= parseInt(result);
+        console.log(result);
+
+        if (result >= 7.5) {
+             document.getElementById("xeploai").innerText="Giỏi";
+        }
+         else if (7.5 >= result && result >= 6) {
+            document.getElementById("xeploai").innerText = "Khá";  }
+             else if (5.9 >= result && result >= 4) {
+                 document.getElementById("xeploai").innerText = "Trung bình";
+             } else  {
+                 document.getElementById("xeploai").innerText = "Yếu";
+             }
+         }
+
+</script>
+</body>
+</html>

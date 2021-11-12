@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    input {
+        width: 50px;
+    }
+</style>
+<body>
+
+<H2>Xổ số CodeGym</H2>
+<br>
+<input id="number1" type="text"> <input id="number2" type="text"> <input id="number3" type="text"> <input id="number4"
+                                                                                                          type="text">
+<input id="number5" type="text"> <input id="number6" type="text"><br> <br>
+<input id="number11" type="text"> <input id="number22" type="text"> <input id="number33" type="text"> <input id="number44" type="text">
+<input id="number55" type="text"> <input id="number66" type="text">
+<br>
+<br>
+<button onclick="buy()">Mua vé</button>
+<button onclick="result()">Kết quả</button>
+
+<script>
+    class Buyticket {
+        constructor(number) {
+            this.number = number
+        }
+        buy(number) {
+            let num = parseInt(prompt("Vui lòng chọn: " + " \n" + "1 . Quý khách tự nhập số" + " \n" + "2. Chọn số tự động" + "\n"))
+            if (num == 1) {
+            }
+            if (num == 2) {
+                this.number1 = document.getElementById("number1").value = Math.floor(Math.random() * 100);
+                this.number2 = document.getElementById("number2").value = Math.floor(Math.random() * 100);
+                this.number3 = document.getElementById("number3").value = Math.floor(Math.random() * 100);
+                this.number4 = document.getElementById("number4").value = Math.floor(Math.random() * 100);
+                this.number5 = document.getElementById("number5").value = Math.floor(Math.random() * 100);
+                this.number6 = document.getElementById("number6").value = Math.floor(Math.random() * 100);
+            }
+        }
+
+        result(number) {
+            this.number11 = document.getElementById("number11").value = Math.floor(Math.random() * 100);
+            this.number22 = document.getElementById("number22").value = Math.floor(Math.random() * 100);
+            this.number33 = document.getElementById("number33").value = Math.floor(Math.random() * 100);
+            this.number44 = document.getElementById("number44").value = Math.floor(Math.random() * 100);
+            this.number55 = document.getElementById("number55").value = Math.floor(Math.random() * 100);
+            this.number66 = document.getElementById("number66").value = Math.floor(Math.random() * 100);
+        }
+
+    }
+
+    let buyticket = new Buyticket()
+
+    function buy() {
+        buyticket.buy()
+    }
+
+    function result() {
+        buyticket.result()
+        this.number1 = document.getElementById("number1").value;
+        this.number2 = document.getElementById("number2").value;
+        this.number3 = document.getElementById("number3").value;
+        this.number4 = document.getElementById("number4").value;
+        this.number5 = document.getElementById("number5").value;
+        this.number6 = document.getElementById("number6").value;
+        this.number11 = document.getElementById("number11").value
+        this.number22 = document.getElementById("number22").value
+        this.number33 = document.getElementById("number33").value
+        this.number44 = document.getElementById("number44").value
+        this.number55 = document.getElementById("number55").value
+        this.number66 = document.getElementById("number66").value
+        let arr1=[this.number1,this.number2,this.number3,this.number4,this.number5,this.number6]
+        let arr2=[this.number11,this.number22,this.number33,this.number44,this.number55,this.number66]
+        let point1= 0
+        let point2= 0
+        let point3= 0
+        for(let i =0; i< 6; i ++) {
+            if( arr1[i] == arr2[i]) {
+                point1=point1 +1
+            }
+        }
+        for(let i =1; i< 6; i ++) {
+            if( arr1[i] == arr2[i]) {
+                point2=point2 +1
+            }
+        }
+        for(let i =3; i< 6; i ++) {
+            if( arr1[i] == arr2[i]) {
+                point3=point3 +1
+            }
+        }
+        if ( point1 == 6) {
+            alert("Bạn đã trúng giải nhất 1 tỉ USD")
+        } else if ( point2 == 5 ) {
+            alert(" Bạn đã trúng giải nhì 500 ngàn USD")
+        }else if( point3 == 3) {
+            alert("Bạn đã trúng giải ba 100 ngàn USD")
+        }else {
+            alert("Chúc bạn may mắn lần sau")
+        }
+    }
+      // Nhờ Hải nhận xét kĩ dùm baì này vì cảm thấy code dài và hình như hơi sai mục địch câu hỏi, xem có cách nào gọn và dễ hiểu hơn không. Tks
+</script>
+</body>
+</html>

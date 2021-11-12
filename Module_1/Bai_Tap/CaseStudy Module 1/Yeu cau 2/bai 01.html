@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let money = parseFloat(prompt("Nhập lương của bạn vào đây( Đơn vị là triệu): " ))
+
+    if (money >= 15) {
+        alert("Lương ròng của bạn là: " + (money - (money * 0.2)) + " triệu")
+    } else if (7 <= money < 15) {
+        alert("Lương ròng của bạn là: " + (money - (money * 0.10))+ " triệu")
+    } else if (money < 7) {
+        alert("Lương ròng của bạn là: " + (money - (money * 0.05))+ " triệu")
+    }
+
+</script>
+</body>
+</html>

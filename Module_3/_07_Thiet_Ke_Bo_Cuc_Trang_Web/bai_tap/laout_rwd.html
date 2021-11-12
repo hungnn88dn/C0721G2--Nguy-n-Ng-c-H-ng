@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        [class*="col-"] {
+            float: left;
+        }
+
+        .row::after {
+            clear: both;
+            display: block;
+            content: "";
+        }
+        .header {
+            background-color: black;
+            color: white;
+        }
+        .header ul li {
+            float: left;
+            margin-left: 10px;
+            list-style: none;
+        }
+        .header ul li:hover {
+            background-color: red;
+        }
+        .header ul ul {
+            visibility: hidden;
+            position: absolute;
+        }
+        .header ul li:hover ul {
+            visibility: visible;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .section {
+            background-color: pink;
+            height: 500px;
+        }
+        .footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+   <div class="row header">
+       <div class="col-12">
+        <ul>
+            <li class="dropdown">Logo
+                <ul class ="dropdown-content">
+                    <li>Apple</li>
+                    <li>Nokia</li>
+                    <li>Samsung</li>
+                    <li>BlackBerry</li>
+                </ul>
+            </li>
+            <li class="dropdown">Home
+                <ul class ="dropdown-content">
+                    <li>Home1</li>
+                    <li>Home2</li>
+                    <li>Home3</li>
+                    <li>Home4</li>
+                </ul>
+            </li>
+            <li>About</li>
+            <li>Projects</li>
+            <li>Contact</li>
+        </ul>
+          <div style="text-align: right">LogIn</div>
+       </div>
+   </div>
+   <div class="row ">
+       <div class="col-2 section">
+           <div>Link</div>
+           <div>Link</div>
+           <div>Link</div>
+       </div>
+       <div class="col-8">
+           <div>ĐÃ TÌM RA LỜI GIẢI CHO CÂU HỎI:
+               "BAO NHIÊU LÂU THÌ BÁN ĐƯỢC 1 TỶ GÓI MÈ?!"
+               Mới đây tại Trung Quốc đã ghi nhận kỉ lục vô tiền khoáng hậu thành tích chốt đơn khủng nhất trong 1 buổi livestream bán hàng.
+               Vâng, sau 12h26p livestream liên tục, Lý Gia Kỳ - người được coi là Ông hoàng son môi Trung Quốc đã chốt được 35 nghìn tỷ VNĐ tức 1,66 tỷ USD tiền hàng hóa bao gồm son môi, kem trộn, thực phẩm chức năng và mỹ phẩm đủ thể loại.
+               Nếu như kỷ lục livestream ở Việt Nam thuộc về CEO Đua Ngựa và Water Fairy với lượng người xem cùng 1 lúc rơi vào khoảng vài trăm nghìn mắt thì con số của Ông hoàng son môi Trung Quốc là....150 triệu.
+               Được biết, 1 gói mè ở Việt Nam sẽ rơi vào ~10nghìn đồng.
+               1 tỷ gói mè sẽ tương đương với 10 nghìn tỷ đồng và nếu tính 1 cách cơ học và xin nhấn mạnh là cơ học thì Lý Gia Kỳ sẽ bán hết 1 tỉ gói mè trên chỉ trong ~4 tiếng.
+               Vậy nhé Đại tướng Marketing, giờ thì đã có câu trả lời của câu hỏi hot nhất mấy tuần qua rồi :)))
+               Hồng Nhung gửi tin về Beatvn
+               -Tiểu Lý Phi Down-</div>
+       </div>
+       <div class="col-2 section">
+           <div>Ads</div>
+           <div>Ads</div>
+           <div>Ads</div>
+       </div>
+   </div>
+    <div class="col-12 footer">
+        <div>Footer Text</div>
+    </div>
+</body>
+</html>

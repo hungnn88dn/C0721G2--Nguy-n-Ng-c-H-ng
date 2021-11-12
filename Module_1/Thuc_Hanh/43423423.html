@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function birthdayCakeCandles(candles) {
+        candles.sort((function(a, b){return a - b}));
+        let result= 1
+        let num= candles[0]
+        for (let i = 1; i < candles.length ; i ++) {
+            if( num == candles[i]) {
+                result = result + 1
+            }else{
+                num = candles[i]
+            }
+        }
+        return result
+    }
+    let candles= [3,1,2,3,4,3,5,]
+    console.log(birthdayCakeCandles(candles))
+</script>
+</body>
+</html>

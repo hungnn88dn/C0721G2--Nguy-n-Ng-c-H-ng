@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    let array1 = []
+    for (let i = 0; i < 10; i++) {
+        let num = prompt("Nhập vào các số mảng 1")
+        num = parseInt(num)
+        array1.push(num)
+
+    }
+    let array2 = []
+    for (let i = 0; i < 10; i++) {
+        let num = prompt("Nhập vào các số mảng 2")
+        num = parseInt(num)
+        array2.push(num)
+    }
+    let array3 = []
+       for ( i=0; i<10; i++) {
+           array3.push(array1[i])
+           array3.push(array2[i])
+       }
+       document.write(array3)
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    let m = parseInt(prompt("Nhập m:"))
+    let n = parseInt(prompt("Nhập n:"))
+    let sum = 0
+    let arr = []
+    let flag = true
+    for (let i = 0; i < m; i++) {
+        arr[i] = []
+        for (let j = 0; j < n; j++) {
+            num = parseInt(prompt("Nhập số"))
+            arr[i].push(num)
+            document.write(num + " ")
+        }
+        document.write("<br>")
+    }
+
+    function maxNum() {
+        let max = arr[0][0]
+        console.log(max)
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 1; j < arr.length; j++) {
+                if (max > arr[i][j]) {
+                    let temp = max;
+                    max = arr[i][j];
+                    arr[i][j] = temp;
+                } else {
+                    max = arr[i][j]
+                }
+            }
+        }
+        document.write("<br>" + "Số lớn nhất trong mảng là: " + max)
+
+    }
+    function minNum() {
+        let min = arr[0][0]
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 1; j < arr.length; j++) {
+                if (min < arr[i][j]) {
+                    min = min
+                } else {
+                    min = arr[i][j]
+                }
+            }
+        }
+        document.write("<br>" +  "Số nhỏ nhất trong mảng là: " + min)
+    }
+
+    minNum(arr)
+    maxNum(arr)
+</script>
+</body>
+</html>

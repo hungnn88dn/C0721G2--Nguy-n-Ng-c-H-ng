@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<script>
+     let n= prompt("nhập n vào đây")
+     n=parseInt(n)
+     let s=0
+     for (let i=1; i <= n; i++) {
+        if ( i %2 != 0) {
+            s= s - 1/i
+        } else {
+            s= s + 1/i
+        }
+     } s= 15 + s
+    alert(s)
+</script>
+</body>
+</html>

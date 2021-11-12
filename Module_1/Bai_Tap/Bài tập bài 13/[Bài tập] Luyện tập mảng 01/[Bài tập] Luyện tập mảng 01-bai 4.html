@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let count=prompt("Nhập vào số lượng các số cần nhập")
+    count=parseInt(count)
+   let array=[]
+
+      for ( let i=0; i < count ; i++ ) {
+          let num=prompt("Nhập vào các số cần đảo")
+           num=parseInt(num)
+          array.push(num)
+      }
+      alert("Các số bạn vừa nhập vào là :" + " " + array)
+    array=array.reverse()
+    alert("Đảo lại là" + " " + array)
+</script>
+
+</html>

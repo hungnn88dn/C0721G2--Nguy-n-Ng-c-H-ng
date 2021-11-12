@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May tinh</title>
+</head>
+<body>
+<h2>Caculator</h2>
+<table>
+    <tr>
+        <td ><input id="value1" type="number"> </td>
+        <td ><input id="value2" type="number"> </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td><button onclick="cong()" >AdparseIntn</button></td>
+        <td><button onclick="tru()">Subtraction</button></td>
+        <td><button onclick="nhan()" >Multiplication(X)</button></td>
+        <td><button onclick="chia()" >Division(/)</button></td>
+
+    </tr>
+</table>
+<script>
+    function cong() {
+        let a=document.getElementById("value1").value
+        let b=document.getElementById("value2").value;
+        a=parseInt(a)
+        b=parseInt(b)
+        document.write( a + b)
+    }
+    function tru() {
+        let a=document.getElementById("value1").value
+        let b=document.getElementById("value2").value;
+        a=parseInt(a)
+        b=parseInt(b)
+        document.write( a - b)
+    }
+    function nhan() {
+        let a = document.getElementById("value1").value
+        let b = document.getElementById("value2").value;
+        a = parseInt(a)
+        b = parseInt(b)
+        document.write(a * b)
+    }
+
+    function chia() {
+        let a = document.getElementById("value1").value
+        let b = document.getElementById("value2").value;
+        a = parseInt(a)
+        b = parseInt(b)
+        if (b == 0) {
+            alert("Phép tính này không thực hiện được")
+        } else {
+        document.write(a / b)
+        }
+    }
+
+</script>
+</body>
+</html>
+

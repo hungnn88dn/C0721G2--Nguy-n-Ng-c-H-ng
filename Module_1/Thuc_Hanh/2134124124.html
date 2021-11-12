@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Phone {
+        constructor(namePhone, pin, status) {
+            this.namePhone = namePhone;
+            this.pin = pin;
+            this.status = status;
+            this.thuDen = [];
+            this.daGui = [];
+            this.soanThao = [];
+        }
+
+        isStatusPhone() {
+            this.pin--;
+            return this.status;
+        }
+
+        onPhone() {
+            this.status = true;
+            this.pin--;
+        }
+
+        offPhone() {
+            this.pin--;
+            this.status = false;
+        }
+
+        sacPinPhone() {
+            while (this.pin <= 100 ) {
+                this.pin = this.pin + 0.01;
+            }
+        }
+
+        soanMess() {
+            let mess = prompt("Mời bàn nhập tin nhắn: ")
+
+            //Yêu cầu là hiển thị 1 dòng thông báo là bạn có muốn gửi tin
+            //nhắn hiện tại hay không?
+            this.soanThao.push(mess);
+            this.pin--;
+        }
+
+        inboxMess(phoneName, mess) {
+            this.thuDen.push("Tên điện thoại: " + phoneName + " đã gửi tin" +
+                "lời nhắn: " + mess)
+            this.pin--;
+        }
+
+        sentMess(phone) {
+            let data = "";
+            for (let i = 0; i < this.soanThao.length; i++) {
+                data+= i+": "+this.soanThao[i];
+            }
+            let index = parseInt(prompt(data))
+            this.daGui.push("Đã gửi tin đến tên điện thoại: " + phone.namePhone + ",với lời nhắn: " +this.soanThao[index])
+            //Từ khóa this sẽ cho phép chúng ta truyền đi đối tượng hiện tại vào
+            // phương thức
+            phone.inboxMess(this.namePhone,this.soanThao[index]);
+            this.soanThao.splice(index,1);
+        }
+        //yêu cầu hoàn thiện
+        //Viết phương thức xem tin nhắn đã gửi và hộp thư đến?
+        //Các chức năng không thể hoạt động nếu điện thoại chưa bật.
+        //Yêu cầu là hiển thị 1 dòng thông báo là bạn có muốn gửi tin nhắn hiện tại hay không?
+    }
+    let phone = new Phone(Apple,50,true)
+    phone.sentMess()
+</script>
+</body>
+</html>

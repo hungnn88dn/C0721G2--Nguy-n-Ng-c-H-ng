@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <button onclick="on()">Bật bóng đèn</button>
+      <button onclick="off()">Tắt bóng đèn</button>
+      <p id="image"></p>
+      <p id="status"></p>
+<script>
+  class SwitchButton {
+      constructor(status) {
+          this.status= status;
+      }
+      switchOn(ligth) {
+          light.status = true;
+      }
+      switchOff(ligth) {
+          light.status = false;
+      }
+  }
+  class Light {
+      constructor(status) {
+          this.status=status;
+      }
+      turnOn() {
+          this.status = true
+      }
+      turnOff() {
+          this.status = false
+      }
+  }
+       let switchButton= new SwitchButton(false)
+        let light= new Light(false)
+    console.log(light.status)
+      function on() {
+          document.getElementById("image").innerHTML= "<img src=https://www.w3schools.com/js/pic_bulbon.gif>"
+          switchButton.switchOn(light)
+          document.getElementById("status").innerHTML= light.status
+      }
+      function off() {
+          document.getElementById("image").innerHTML= "<img src=https://www.w3schools.com/js/pic_bulboff.gif>"
+          switchButton.switchOff(light)
+          document.getElementById("status").innerHTML= light.status
+      }
+</script>
+</body>
+</html>
