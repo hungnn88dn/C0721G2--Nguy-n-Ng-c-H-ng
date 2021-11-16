@@ -12,5 +12,6 @@
 </head>
 <body>
  ${infoKBYT.hoTen}
+ ${infoKBYT.diaChiLienLac}
 </body>
 </html>

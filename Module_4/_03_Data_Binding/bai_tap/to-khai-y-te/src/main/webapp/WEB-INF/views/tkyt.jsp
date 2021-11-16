@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="tr" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Title</title>
@@ -59,6 +60,31 @@
             </td>
         </tr>
     </table>
+    <h3>Trong 14 gio qua, Anh/Chi co den tinh/thanh pho nao?</h3>
+    <td><form:textarea path="diChuyen14" cssStyle="width: 100%" /></td> <br> <br>
+    <h3>Dia chi lien lac</h3>
+    <table style="width: 100%; text-align: left">
+        <tr>
+            <th>Tinh/Thanh</th>
+            <th>Quan/Huyen</th>
+            <th>Phuong/Xa</th>
+        </tr>
+        <tr>
+            <form:form modelAttribute="diaChiLienLac" path="diaChiLienLac" >
+                <td>
+                    <form:input path="tinhThanh" cssStyle="width: 100%"/>
+                </td>
+                <td>
+                    <form:input path="quanHuyen"  cssStyle="width: 100%"/>
+                </td>
+                <td>
+                    <form:input path="phuongXa"  cssStyle="width: 100%"/>
+                </td>
+            </form:form>
+        </tr>
+
+    </table>
+
     <form:button>Update</form:button>
 </form:form>
 </body>

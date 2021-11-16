@@ -12,7 +12,7 @@ public class KhaiBaoYTe {
     private String ngayKhoiHanh;
     private String ngayKetThuc;
     private String diChuyen14;
-    private String diaChiLienLac;
+    private DiaChiLienLac diaChiLienLac;
     private String diaChiNoiO;
     private String soDienThoai;
     private String email;
@@ -24,7 +24,7 @@ public class KhaiBaoYTe {
 
     public KhaiBaoYTe(String hoTen, String tuoi, String gioiTinh, String quocTich, String cmnd, String thongTinDiLai,
                       String soHieuPhuongTien, String soGhe, String ngayKhoiHanh, String ngayKetThuc, String diChuyen14,
-                      String diaChiLienLac, String diaChiNoiO, String soDienThoai, String email, String trieuChung14,
+                      DiaChiLienLac diaChiLienLac, String diaChiNoiO, String soDienThoai, String email, String trieuChung14,
                       String phoinhiem14) {
         this.hoTen = hoTen;
         this.tuoi = tuoi;
@@ -133,11 +133,11 @@ public class KhaiBaoYTe {
         this.diChuyen14 = diChuyen14;
     }
 
-    public String getDiaChiLienLac() {
+    public DiaChiLienLac getDiaChiLienLac() {
         return diaChiLienLac;
     }
 
-    public void setDiaChiLienLac(String diaChiLienLac) {
+    public void setDiaChiLienLac(DiaChiLienLac diaChiLienLac) {
         this.diaChiLienLac = diaChiLienLac;
     }
 

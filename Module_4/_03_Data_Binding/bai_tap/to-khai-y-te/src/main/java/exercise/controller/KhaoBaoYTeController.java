@@ -1,5 +1,6 @@
 package exercise.controller;
 
+import exercise.model.DiaChiLienLac;
 import exercise.model.KhaiBaoYTe;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +22,7 @@ public class KhaoBaoYTeController {
         String[] gioiTinh = new String[] {"Nam","Nu"};
         String[] quocTich = new String[] {"Viet Nam","Lao"};
         String[] thongTinDiLai = new String[] {"Tau Bay","O To", "Thuyen", "Khac"};
+        model.addAttribute("diaChiLienLac",new DiaChiLienLac());
         model.addAttribute("namSinh",namSinh);
         model.addAttribute("gioiTinh",gioiTinh);
         model.addAttribute("quocTich",quocTich);
