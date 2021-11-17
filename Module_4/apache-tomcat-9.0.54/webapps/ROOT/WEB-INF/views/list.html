@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer List</title>
+  <style>
+    table {
+      border: 1px solid #000;
+    }
+
+    th, td {
+      border: 1px dotted #555;
+    }
+  </style>
+</head>
+<body>
+There are <span th:text="${songs.size()}"></span> songs(s).
+<p>
+  <a th:href="@{/songs/create}">
+    Add new Song
+  </a>
+</p>
+<table>
+  <caption>Songs List</caption>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Artist</th>
+    <th>Category</th>
+    <th>Url</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    <th>Viewh>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="s : ${songs}">
+    <td th:text="${s.id}"></td>
+    <td th:text="${s.name}"></td>
+    <td th:text="${s.artist}"></td>
+    <td th:text="${s.category}"></td>
+    <td th:text="${s.url}"></td>
+    <td><a th:href="@{/songs/{id}/edit(id=${s.getId()})}">edit</a></td>
+    <td><a th:href="@{/songs/{id}/delete(id=${s.getId()})}">delete</a></td>
+    <td><a th:href="@{/songs/{id}/view(id=${s.getId()})}">view</a></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

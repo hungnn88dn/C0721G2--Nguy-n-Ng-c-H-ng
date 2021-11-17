@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="/layout :: head"></head>
 <body>
 <h3>View Product</h3>
 <p>
-    <a th:href="@{/product}">
+    <a th:href="@{/songs}">
         Back to customer list
     </a>
 </p>
 <div id="detail">
-    <div class="cusdetail">
+    <div class="detail">
         <label>Name:</label>
-        <label th:text="${product.name}"></label>
+        <label th:text="${song.name}"></label>
     </div>
-    <div class="cusdetail">
-        <label>Price:</label>
-        <label th:text="${product.price}"></label>
+    <div class="detail">
+        <label>Artist:</label>
+        <label th:text="${song.artist}"></label>
     </div>
-    <div class="cusdetail">
-        <label>Description:</label>
-        <label th:text="${product.description}"></label>
+    <div class="detail">
+        <label>Categpru:</label>
+        <label th:text="${song.category}"></label>
     </div>
-    <div class="cusdetail">
-        <label>Brand:</label>
-        <label th:text="${product.brand}"></label>
+    <div class="detail">
+        <label>URL:</label>
+<!--         <audio th:src="@{${song.url}}"  />-->
+        <audio controls>
+            <source th:src="@{${song.url}}" type="Media Type">
+        </audio>
     </div>
 </div>
-<footer th:replace="/layout :: footer"></footer>
 </body>
 </html>
