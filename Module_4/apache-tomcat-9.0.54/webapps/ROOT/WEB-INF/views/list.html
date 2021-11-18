@@ -14,36 +14,34 @@
   </style>
 </head>
 <body>
-There are <span th:text="${songs.size()}"></span> songs(s).
+There are <span th:text="${blogs.size()}"></span> songs(s).
 <p>
-  <a th:href="@{/songs/create}">
-    Add new Song
+  <a th:href="@{/blogs/create}">
+    Add new Blog
   </a>
 </p>
 <table>
-  <caption>Songs List</caption>
+  <caption>Blogs List</caption>
   <thead>
   <tr>
     <th>Id</th>
     <th>Name</th>
-    <th>Artist</th>
-    <th>Category</th>
-    <th>Url</th>
+    <th>Description</th>
+    <th>Author</th>
     <th>Edit</th>
     <th>Delete</th>
-    <th>Viewh>
+    <th>View</th>
   </tr>
   </thead>
   <tbody>
-  <tr th:each="s : ${songs}">
-    <td th:text="${s.id}"></td>
-    <td th:text="${s.name}"></td>
-    <td th:text="${s.artist}"></td>
-    <td th:text="${s.category}"></td>
-    <td th:text="${s.url}"></td>
-    <td><a th:href="@{/songs/{id}/edit(id=${s.getId()})}">edit</a></td>
-    <td><a th:href="@{/songs/{id}/delete(id=${s.getId()})}">delete</a></td>
-    <td><a th:href="@{/songs/{id}/view(id=${s.getId()})}">view</a></td>
+  <tr th:each="b : ${blogs}">
+    <td th:text="${b.id}"></td>
+    <td th:text="${b.name}"></td>
+    <td th:text="${b.description}"></td>
+    <td th:text="${b.author}"></td>
+    <td><a th:href="@{/blogs/{id}/edit(id=${b.getId()})}">edit</a></td>
+    <td><a th:href="@{/blogs/{id}/delete(id=${b.getId()})}">delete</a></td>
+    <td><a th:href="@{/blogs/{id}/view(id=${b.getId()})}">view</a></td>
   </tr>
   </tbody>
 </table>

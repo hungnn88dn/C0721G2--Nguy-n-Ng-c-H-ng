@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer List</title>
+  <style>
+    table {
+      border: 1px solid #000;
+    }
+
+    th, td {
+      border: 1px dotted #555;
+    }
+  </style>
+</head>
+<body>
+There are <span th:text="${blogs.size()}"></span> songs(s).
+<p>
+  <a th:href="@{/blogs/create}">
+    Add new Blog
+  </a>
+</p>
+<table>
+  <caption>Blogs List</caption>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Author</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    <th>View</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="b : ${blogs}">
+    <td th:text="${b.id}"></td>
+    <td th:text="${b.name}"></td>
+    <td th:text="${b.description}"></td>
+    <td th:text="${b.author}"></td>
+    <td><a th:href="@{/blogs/{id}/edit(id=${b.getId()})}">edit</a></td>
+    <td><a th:href="@{/blogs/{id}/delete(id=${b.getId()})}">delete</a></td>
+    <td><a th:href="@{/blogs/{id}/view(id=${b.getId()})}">view</a></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

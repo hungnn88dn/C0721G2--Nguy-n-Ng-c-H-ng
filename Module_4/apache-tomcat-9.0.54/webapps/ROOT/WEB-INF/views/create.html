@@ -3,12 +3,12 @@
 <body>
 <h3>Add Song</h3>
 <p>
-    <a th:href="@{/songs}">
+    <a th:href="@{/blogs}">
         Back to Songs list
     </a>
 </p>
 <div id="form">
-    <form th:action="@{/songs/save}" th:object="${song}"
+    <form th:action="@{/blogs/save}" th:object="${blog}"
           method="POST" novalidate="novalidate">
         <input type="hidden" th:field="*{id}"/>
         <div>
@@ -17,15 +17,11 @@
         </div>
         <div>
             <label>Artist</label>
-            <input type="email" th:field="*{artist}"/>
+            <input type="email" th:field="*{description}"/>
         </div>
         <div>
             <label>Category</label>
-            <input type="text" th:field="*{category}"/>
-        </div>
-        <div>
-            <label>URL</label>
-            <input type="text" th:field="*{url}"/>
+            <input type="text" th:field="*{author}"/>
         </div>
         <input type="submit" value="Save"/>
     </form>
