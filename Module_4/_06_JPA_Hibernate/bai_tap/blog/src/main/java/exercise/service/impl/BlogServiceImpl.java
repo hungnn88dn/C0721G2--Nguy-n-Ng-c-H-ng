@@ -31,6 +31,6 @@ public class BlogServiceImpl implements IBlogService {
 
     @Override
     public List<Blog> searchByName(String name) {
-        return this.iBlogRepository.searchByName("%"+name+"%");
+        return null;
     }
 }

@@ -1,8 +1,11 @@
 package exercise.model;
 
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 
+@Component
 @Entity (name = "blog")
 public class Blog {
     @Id

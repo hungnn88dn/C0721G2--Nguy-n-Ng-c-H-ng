@@ -16,8 +16,8 @@ import java.util.List;
 @Controller
 public class BlogController {
 
-
-    private IBlogService iBlogService = new BlogServiceImpl();
+    @Autowired
+    private IBlogService iBlogService ;
 
     @GetMapping ("")
     public String showlist(){
@@ -27,7 +27,7 @@ public class BlogController {
     @GetMapping("blogs")
     public String index(Model model) {
         Blog blog =  new Blog(1,"a","b","d");
-        List<Blog> blogs = new ArrayList<>();
+        List<Blog> blogs = iBlogService.findAll();
         blogs.add(blog);
         model.addAttribute("blogs", blogs);
         return "list";
