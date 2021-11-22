@@ -20,6 +20,22 @@
         Add new Blogs
     </a>
 </p>
+
+<form>
+    <label>Search by Author</label>
+    <input type="text" name="author">
+    <input type="submit">
+</form>
+<form>
+    <label>Filter by Ecommerce</label>
+    <select onchange="this.form.submit()" th:name="ecomID" th:value="${ecomID}">
+        <option value="" disabled selected>Choose Ecommerce</option>
+        <th:block th:each="ecom : ${ecommerces}">
+            <option th:value="${ecom.id}" th:text="${ecom.name}"></option>
+        </th:block>
+
+    </select>
+</form>
       <table>
           <tr>
               <th scope="col">ID</th>

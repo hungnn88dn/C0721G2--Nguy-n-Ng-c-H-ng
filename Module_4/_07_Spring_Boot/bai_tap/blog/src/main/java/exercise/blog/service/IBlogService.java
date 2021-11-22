@@ -16,4 +16,8 @@ public interface IBlogService {
     Blog save(Blog blog);
     void delete(Blog blog);
     public Page<Blog> findAllBlog(Pageable pageable);
+    public Page<Blog> findAllBlogByName(String name,Pageable pageable);
+    public Page<Blog> findAllBlogByEcommerceId(int id,Pageable pageable);
+
+
 }

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class BlogController {
@@ -38,8 +39,22 @@ public class BlogController {
 
 
     @GetMapping("blogs")
-    public String displayBlog(Model model,@PageableDefault(size = 5) Pageable pageable) {
-        model.addAttribute("blogs", blogService.findAllBlog(pageable));
+    public String displayBlog(Optional<String> author,
+                              Optional<Integer> ecomID,
+                              Model model,
+                              @PageableDefault(size = 5) Pageable pageable) {
+        if(!author.isPresent()){
+            if(ecomID.isPresent()) {
+                model.addAttribute("blogs",blogService.findAllBlogByEcommerceId(ecomID.get(),pageable));
+                model.addAttribute("ecomID",ecomID.get());
+            }else {
+                model.addAttribute("blogs",blogService.findAllBlog(pageable));
+            }
+        }else {
+            model.addAttribute("blogs",blogService.findAllBlogByName(author.get(),pageable));
+            model.addAttribute("author",author.get());
+        }
+        model.addAttribute("ecommerces", ecommerceService.findAll());
         return "sort";
     }
 
@@ -87,5 +102,6 @@ public class BlogController {
         model.addAttribute("blog", blogService.findById(id));
         return "view";
     }
+
 
 }

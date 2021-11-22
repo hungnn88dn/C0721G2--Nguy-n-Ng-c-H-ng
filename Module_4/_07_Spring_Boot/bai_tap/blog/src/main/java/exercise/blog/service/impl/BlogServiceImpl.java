@@ -40,4 +40,14 @@ public class BlogServiceImpl implements IBlogService {
         return blogRepository.findAll(pageable);
     }
 
+    @Override
+    public Page<Blog> findAllBlogByName(String name, Pageable pageable) {
+        return blogRepository.findBlogByAuthorContaining(name,pageable);
+    }
+
+    @Override
+    public Page<Blog> findAllBlogByEcommerceId(int id, Pageable pageable) {
+        return blogRepository.findAllBlogByECommerceId(id,pageable);
+    }
+
 }
