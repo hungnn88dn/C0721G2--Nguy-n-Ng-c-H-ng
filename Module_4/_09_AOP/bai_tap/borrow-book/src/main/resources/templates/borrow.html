@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog List</title>
+    <style>
+        table {
+            border: 1px solid #000;
+        }
+
+        th, td {
+            border: 1px dotted #555;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <a th:href="@{/books}">
+        Back to Home
+    </a>
+</p>
+<p>
+    <a th:href="@{/borrows/create}">
+        Add new Borrow
+    </a>
+</p>
+<table>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Status</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Return</th>
+    </tr>
+    <tr th:each="borrow : ${borrows}">
+        <td scope="col" th:text="${borrow.id}"></td>
+        <td scope="col" th:text="${borrow.book.name}"></td>
+        <td scope="col" th:text="${borrow.status.getStatus()}"></td>
+        <td scope="col" ><a th:href="@{/blogs/{id}/edit(id=${borrow.getId()})}">edit</a></td>
+        <td scope="col" ><a th:href="@{/blogs/{id}/delete(id=${borrow.getId()})}">delete</a></td>
+        <td scope="col" ><a th:href="@{/blogs/{id}/return(id=${borrow.getId()})}">return</a></td>
+    </tr>
+</table>
+<div>
+    <a th:href="@{'/borrows'(page=${borrows.number - 1})}" th:if="${borrows.hasPrevious()}">Previous</a>
+    <span th:text="${borrows.number + 1}"></span>/<span th:text="${borrows.totalPages}"></span>
+    <a th:href="@{'/borrows'(page=${borrows.number + 1})}" th:if="${borrows.hasNext()}">Next</a>
+</div>
+</body>
+</html>

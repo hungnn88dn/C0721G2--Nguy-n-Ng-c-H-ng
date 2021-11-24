@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog List</title>
+    <style>
+        table {
+            border: 1px solid #000;
+        }
+
+        th, td {
+            border: 1px dotted #555;
+        }
+    </style>
+</head>
+<body>
+<form action="books">
+    <input type="submit" value="Home">
+</form>
+<p>
+    <a th:href="@{/books/create}">
+        Add new Book
+    </a>
+</p>
+
+<form>
+    <label>Search by Author</label>
+    <input type="text" name="author">
+    <input type="submit" value="Search">
+</form>
+<form>
+    <label>Search by Name</label>
+    <input type="text" name="name">
+    <input type="submit" value="Search">
+</form>
+<form action="borrows">
+    <input type="submit" value="BorrowList">
+</form>
+      <table>
+          <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Name</th>
+              <th scope="col">Author</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+              <th scope="col">Borrow</th>
+          </tr>
+          <tr th:each="book : ${books}">
+              <td scope="col" th:text="${book.id}"></td>
+              <td scope="col" th:text="${book.name}"></td>
+              <td scope="col" th:text="${book.author}"></td>
+              <td scope="col" th:text="${book.amount}"></td>
+              <td scope="col" ><a th:href="@{/books/{id}/edit(id=${book.getId()})}">edit</a></td>
+              <td scope="col" ><a th:href="@{/books/{id}/delete(id=${book.getId()})}">delete</a></td>
+              <td scope="col" ><a th:href="@{/books/{id}/borrow(id=${book.getId()})}">borrow</a></td>
+          </tr>
+      </table>
+      <div>
+          <a th:href="@{'/books'(page=${books.number - 1})}" th:if="${books.hasPrevious()}">Previous</a>
+          <span th:text="${books.number + 1}"></span>/<span th:text="${books.totalPages}"></span>
+          <a th:href="@{'/books'(page=${books.number + 1})}" th:if="${books.hasNext()}">Next</a>
+      </div>
+</body>
+</html>

@@ -8,25 +8,25 @@
     </a>
 </p>
 <div id="form">
-    <form th:action="@{/blogs/save}" th:object="${blog}"
-          method="POST" novalidate="novalidate">
-        <input type="hidden" th:field="*{id}"/>
-        <div>
-            <label>Topic</label>
-            <input type="text" th:field="*{topic}"/>
-            <td th:if="${#fields.hasErrors('topic')}" th:errors="*{topic}">Name Error</td>
-        </div>
+    <form th:action="@{/blogs/save}" th:object="${blog}">
+<!--          method="POST" novalidate="novalidate">-->
+<!--        <input type="hidden" th:field="*{id}"/>-->
+<!--        <div>-->
+<!--            <label>Topic</label>-->
+<!--            <input type="text" th:field="*{topic}"/>-->
+<!--            <td th:if="${#fields.hasErrors('topic')}" th:errors="*{topic}">Name Error</td>-->
+<!--        </div>-->
         <div>
             <label>Author</label>
             <input type="text" th:field="*{author}"/>
             <td th:if="${#fields.hasErrors('author')}" th:errors="*{author}">Name Error</td>
         </div>
 
-        <select th:name="ecomID" th:field="*{eCommerce.id}">
-            <th:block   th:each="ecom : ${ecommerces}" >
-                <option    th:value="${ecom.id}" th:text="${ecom.name}"></option>
-            </th:block>
-        </select>
+<!--        <select th:name="ecomID" th:field="*{eCommerce.id}">-->
+<!--            <th:block   th:each="ecom : ${ecommerces}" >-->
+<!--                <option    th:value="${ecom.id}" th:text="${ecom.name}"></option>-->
+<!--            </th:block>-->
+<!--        </select>-->
         <input type="submit" value="Save"/>
     </form>
 </div>

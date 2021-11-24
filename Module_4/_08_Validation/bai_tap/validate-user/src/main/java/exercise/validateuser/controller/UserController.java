@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
+
 @Controller
 public class UserController {
 
@@ -26,7 +28,8 @@ public class UserController {
     }
 
     @PostMapping("/validateUser")
-    public ModelAndView checkValidation(@Validated @ModelAttribute("user") User user, BindingResult bindingResult) {
+    public ModelAndView checkValidation(@Valid @ModelAttribute("user") User user, BindingResult bindingResult) {
+        new User().validate(user,bindingResult);
         if (bindingResult.hasFieldErrors()) {
             return new ModelAndView("/index");
         }

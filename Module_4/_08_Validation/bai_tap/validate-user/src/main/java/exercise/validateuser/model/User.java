@@ -1,11 +1,14 @@
 package exercise.validateuser.model;
 
+
+import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
+
 import javax.validation.constraints.*;
 
-public class User {
+public class User implements Validator {
 
-    @NotEmpty
-    @Size(min = 5, max = 45)
+
     private String name;
 
     @Min(18)
@@ -61,5 +64,18 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return false;
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+        User user= (User) target;
+        if(user.getName().equals("hungnn")){
+            errors.reject("name","name.invalidFormat");
+        }
     }
 }

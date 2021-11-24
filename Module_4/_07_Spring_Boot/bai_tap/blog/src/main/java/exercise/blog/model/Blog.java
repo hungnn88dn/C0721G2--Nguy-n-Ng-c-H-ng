@@ -1,15 +1,13 @@
 package exercise.blog.model;
 
-import org.springframework.data.jpa.repository.Query;
-
+import exercise.blog.annotation.AuthorConstraint;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity
-public class Blog {
+public class Blog  {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int id;
@@ -19,12 +17,10 @@ public class Blog {
     @Size(min = 5, max = 45)
     private String topic;
 
-
-    @Pattern(regexp = "^([a-zA-Z]{2,}\\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\\s?([a-zA-Z]{1,})?)", message = "Viet hoa dau chu,moi chu phai cach nhau")
+    @AuthorConstraint
     private String author;
 
-
-   @ManyToOne (targetEntity = Ecommerce.class)
+    @ManyToOne (targetEntity = Ecommerce.class)
     private Ecommerce eCommerce;
 
     public Blog() {

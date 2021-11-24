@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,7 +43,7 @@ public class BlogController {
     }
 
 
-    @GetMapping("blogs")
+    @GetMapping("books")
     public String displayBlog(Optional<String> author,
                               Optional<Integer> ecomID,
                               Model model,
@@ -70,7 +71,7 @@ public class BlogController {
     }
 
     @PostMapping("blogs/save")
-    public String save(@Validated @ModelAttribute("blog") Blog blog, BindingResult bindingResult, Model model) {
+    public String save(@Valid @ModelAttribute("blog") Blog blog, BindingResult bindingResult, Model model) {
         if (bindingResult.hasFieldErrors()) {
             model.addAttribute("ecommerces", ecommerceService.findAll());
             return "create";
