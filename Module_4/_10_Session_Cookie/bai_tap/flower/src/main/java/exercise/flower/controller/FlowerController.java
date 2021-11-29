@@ -51,6 +51,4 @@ public class FlowerController {
         cart.addFlower(productOptional.get());
         return "redirect:/shop";
     }
-
-
 }

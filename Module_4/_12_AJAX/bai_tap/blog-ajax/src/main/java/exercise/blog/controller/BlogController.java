@@ -100,15 +100,29 @@ public class BlogController {
     }
 
     @PostMapping("blogs/delete")
-    public String delete(Blog blog, RedirectAttributes redirect) {
+    public String delete(Blog blog,Pageable pageable,Model model) {
         blogService.delete(blog);
-        redirect.addFlashAttribute("success", "Removed song successfully!");
+        Page<Blog> blogs = blogService.findAllBlog(pageable);
+        model.addAttribute("blogs",blogs);
+        return "home_ajax";
+    }
+
+
+    @PostMapping("blogs/actionDelete")
+    public String delete(Blog blog) {
+        blogService.delete(blog);
         return "redirect:/blogs";
     }
 
-    @GetMapping("blogs/{id}/view")
+    @GetMapping("/blogs/view/{id}")
     public String view(@PathVariable int id, Model model) {
         model.addAttribute("blog", blogService.findById(id));
         return "view";
+    }
+
+    @GetMapping("/blogs/search")
+    public String search(@PathVariable String author, Pageable pageable, Model model) {
+        model.addAttribute("blog", blogService.findAllBlogByName(author,pageable));
+        return "search";
     }
 }

@@ -12,6 +12,7 @@
             border: 1px dotted #555;
         }
     </style>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -67,4 +68,5 @@
           <a th:href="@{'/blogs'(page=${blogs.number + 1})}" th:if="${blogs.hasNext()}">Next</a>
       </div>
 </body>
+
 </html>
