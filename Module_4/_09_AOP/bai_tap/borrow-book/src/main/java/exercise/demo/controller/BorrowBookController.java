@@ -113,4 +113,20 @@ public class BorrowBookController {
         redirect.addFlashAttribute("success", "Removed song successfully!");
         return "redirect:/books";
     }
+
+    @GetMapping("books/create")
+    public String create(Model model) {
+        model.addAttribute("book", new Book());
+        return "create-book";
+    }
+
+    @PostMapping("books/save")
+    public String b(@Validated @ModelAttribute("book") Book book, BindingResult bindingResult) {
+        if (bindingResult.hasFieldErrors()) {
+            return "create-book";
+        }
+        iBookService.save(book);
+        return "redirect:/books";
+    }
+
 }

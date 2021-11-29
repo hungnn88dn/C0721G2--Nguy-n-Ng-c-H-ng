@@ -8,6 +8,7 @@ import exercise.flower.service.IFlowerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -39,11 +40,17 @@ public class FlowerController {
         if (!productOptional.isPresent()) {
             return "error.404";
         }
-        if (action.equals("show")) {
+        if (action.equals("add")) {
             cart.addFlower(productOptional.get());
+            return "redirect:/shopping-cart";
+        }
+        if (action.equals("sub")) {
+            cart.subFlower(productOptional.get());
             return "redirect:/shopping-cart";
         }
         cart.addFlower(productOptional.get());
         return "redirect:/shop";
     }
+
+
 }
