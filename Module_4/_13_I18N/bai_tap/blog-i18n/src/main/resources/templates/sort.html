@@ -48,7 +48,7 @@
 
     </select>
     <div class="result1"></div>
-</form>
+</form >
       <table class="homeAJAX" >
           <tr>
               <th scope="col">ID</th>
@@ -74,14 +74,15 @@
              </td>
 
           </tr>
+
       </table>
       <div>
           <a th:href="@{'/blogs'(page=${blogs.number - 1})}" th:if="${blogs.hasPrevious()}">Previous</a>
           <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>
           <a th:href="@{'/blogs'(page=${blogs.number + 1})}" th:if="${blogs.hasNext()}">Next</a>
       </div>
-       <div class="result"></div>
 
+<div class="result"></div>
 </body>
 
 <script>
@@ -102,26 +103,27 @@
     })
 
     function showDelete(id) {
+        console.log("Tesst")
         $.ajax({
             type: "GET",
             url: "blogs/" + id + "/delete",
             dateType: "HTML",
             success: function (data) {
-                console.log(data);
                 $(".result").html(data);
             }
         })
     }
 
-    function  actionDelete() {
+    function  actionDelete(id) {
         console.log("Alo")
         $.ajax({
-            type: "POST",
-            url: "blogs/actionDelete",
+            type: "GET",
+            url: "blogs/actionDelete/" + id,
             dateType: "HTML",
             success: function (data) {
+                console.log("alo2")
+                $(".result").html("")
                 $(".homeAJAX").html(data);
-                $(".result1").html("Deleted");
             }
         })
     }
@@ -145,9 +147,6 @@
             success: function (data) {
                 $(".homeAJAX").html(data);
             },
-            error: function () {
-                  actionCreate();
-            }
         })
     }
 
