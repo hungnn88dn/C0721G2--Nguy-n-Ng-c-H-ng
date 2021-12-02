@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<body>
+<h3>Remove Blog</h3>
+<p>
+    <a th:href="@{/blogs}">
+        Back to Blog list
+    </a>
+</p>
+<div id="form">
+    <form action="#" th:object="${blog}"
+          novalidate="novalidate">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Topic</label>
+            <input type="text" th:field="*{topic}" th:disabled="*{topic}"/>
+        </div>
+        <div>
+            <label>Author</label>
+            <input type="text" th:field="*{author}" th:disabled="*{author}"/>
+        </div>
+        <div>
+            <label>Ecommerce</label>
+            <input type="text" th:field="*{eCommerce}" th:disabled="*{eCommerce}"/>
+        </div>
+    </form>
+    <div th:onclick="'javascript:actionDelete(\''+ ${id} + '\');'">
+        <input  type="submit" value="Remove" />
+        <!--            <button type="hidden" >  </button>-->
+    </div>
+<!--    <div>-->
+<!--        <button th:onclick="'javascript:actionDelete();'" >-->
+<!--            Delete-->
+<!--        </button>-->
+<!--    </div>-->
+</div>
+</body>
+
+</html>

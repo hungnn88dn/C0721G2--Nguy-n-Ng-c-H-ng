@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table >
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Topic</th>
+        <th scope="col">Author</th>
+        <th scope="col">Ecommerce</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        <th scope="col">View</th>
+    </tr>
+    <tr th:each="b : ${blogs}">
+        <td scope="col" th:text="${b.id}"></td>
+        <td scope="col" th:text="${b.topic}"></td>
+        <td scope="col" th:text="${b.author}"></td>
+        <td scope="col" th:text="${b.eCommerce.getName()}"></td>
+        <td scope="col" ><a  th:href="@{/blogs/{id}/edit(id=${b.getId()})}">edit</a></td>
+        <td scope="col" ><a class="delete" th:onclick="'javascript:showDelete(\''+ ${b.id} + '\');'">delete</a></td>
+        <!--              <td scope="col" ><a  th:href="@{/blogs/{id}/view(id=${b.getId()})}">view</a></td>-->
+        <td>
+            <button class="viewAjax" >
+                view
+            </button>
+            <input type="hidden" th:value="${b.id}">
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>
