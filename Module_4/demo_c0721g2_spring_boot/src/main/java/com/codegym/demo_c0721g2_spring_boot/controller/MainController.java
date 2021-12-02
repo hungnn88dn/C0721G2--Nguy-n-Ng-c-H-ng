@@ -44,7 +44,7 @@ public class MainController {
         String userInfo = WebUtils.toString(loginedUser);
         model.addAttribute("userInfo", userInfo);
 
-        return "userInfoPage";
+        return "welcomePage";
     }
 
 }
