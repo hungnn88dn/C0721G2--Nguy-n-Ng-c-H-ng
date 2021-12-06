@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        font-family: sans-serif;
+        box-sizing: border-box;
+    }
+    .container{
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    header{
+        background-color: #cccccc;
+        min-height: 70px;
+        padding: 15px;
+    }
+    main{
+        background-color: #dddddd;
+        min-height: 300px;
+        padding: 7.5px 15px;
+    }
+    footer{
+        background-color: #cccccc;
+        min-height: 70px;
+        padding: 15px;
+    }
+    h1{
+        color: #009999;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .register-form{
+        width: 100%;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        padding: 15px;
+        border: 2px dotted #cccccc;
+        border-radius: 10px;
+    }
+
+    .input-box{
+        margin-bottom: 10px;
+    }
+    .input-box input[type='text'],
+    .input-box input[type='password'],
+    .input-box input[type='date']{
+        padding: 7.5px 15px;
+        width: 400px;
+        border: 1px solid #cccccc;
+        outline: none;
+        font-size: 16px;
+        display: inline-block;
+        height: 40px;
+        color: #666666;
+    }
+    .input-box select{
+        padding: 7.5px 15px;
+        width: 100%;
+        border: 1px solid #cccccc;
+        outline: none;
+        font-size: 16px;
+        display: inline-block;
+        height: 40px;
+        color: #666666;
+    }
+    .input-box option{
+        font-size: 16px;
+    }
+    .input-box input[type='checkbox']{
+        height: 1.5em;
+        width: 1.5em;
+        vertical-align: middle;
+        line-height: 2em;
+    }
+    .input-box textarea{
+        padding: 7.5px 15px;
+        width: 100%;
+        border: 1px solid #cccccc;
+        outline: none;
+        font-size: 16px;
+        min-height: 120px;
+        color: #666666;
+    }
+    .btn-box{
+        text-align: right;
+        margin-top: 30px;
+    }
+    .btn-box button{
+        padding: 7.5px 15px;
+        border-radius: 2px;
+        background-color: #009999;
+        color: #ffffff;
+        border: none;
+        outline: none;
+    }
+    input[type=text]:focus {
+        background-color: lightblue;
+    }
+</style>
+<head>
+    <title>Create new Employee </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<header>
+    <div class=" col-md-6 col-lg-9 col-sm-12 d-flex justify-content-center ">
+        <a class="navbar-brand fw-bold " href="/home">Home</a>
+        <button class="navbar-toggler " type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <a class="navbar-brand" href="/employee">Employee</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        </button>
+        <a class="navbar-brand" href="customer">Customer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <a class="navbar-brand" href="facility">Service</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+        <a class="navbar-brand" href="contract">Contract</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+        </button>
+    </div>
+</header>
+<main>
+    <div class="container">
+        <div class="register-form" >
+            <form method="post" th:action="@{/employee/update}" th:object="${employee}">
+                <h1>Edit Employee</h1>
+                <input type="hidden" th:field="*{id}"/>
+                <table>
+                    <tr class="input-box">
+                        <th>Name</th>
+                        <td><input type="text"  th:field="*{name}"/>
+                        <td th:if="${#fields.hasErrors('name')}" style="color: red" th:errors="*{name}">Name Error</td></td>
+                    </tr>
+                    <tr class="input-box">
+                        <th>Age</th>
+                        <td><input type="date"  th:field="*{age}"/></td>
+                        <td th:if="${#fields.hasErrors('age')}" style="color: red" th:errors="*{age}">Name Error</td></td>
+                    </tr>
+                    <tr class="input-box">
+                        <th>CMND</th>
+                        <td> <input type="text"  th:field="*{cmnd}"/>
+                        <td th:if="${#fields.hasErrors('cmnd')}" style="color: red" th:errors="*{cmnd}">Name Error</td></td>
+                    </tr>
+                    <tr class="input-box">
+                        <th>Salary</th>
+                        <td> <input type="text"  th:field="*{salary}"/>
+                        <td th:if="${#fields.hasErrors('salary')}" style="color: red" th:errors="*{salary}">Name Error</td></td>
+                    </tr>
+                    <tr class="input-box">
+                        <th>Phone</th>
+                        <td><input type="text"  th:field="*{phone}"/>
+                        <td th:if="${#fields.hasErrors('phone')}" style="color: red" th:errors="*{phone}">Name Error</td></td>
+                    </tr>
+                    <tr class="input-box">
+                        <th>Email</th>
+                        <td> <input type="text" th:field="*{email}"/>
+                        <td th:if="${#fields.hasErrors('email')}" style="color: red" th:errors="*{email}">Name Error</td></td>
+                    </tr>
+                    <tr class="input-box">
+                        <th>Address</th>
+                        <td> <input type="text"   th:field="*{address}"/>
+                        <td th:if="${#fields.hasErrors('address')}" style="color: #ff0000" th:errors="*{address}">Name Error</td></td>
+                    </tr >
+                    <tr class="input-box">
+                        <th>Position</th>
+                        <td> <select th:field="*{position.id}">
+                            <th:block th:each="position : ${postions}">
+                                <option th:value="${position.id}" th:text="${position.name}"></option>
+                            </th:block>
+                        </select></td>
+                    </tr>
+                    <tr class="input-box">
+                        <th>Level</th>
+                        <td> <select th:field="*{level.id}">
+                            <th:block th:each="level : ${levels}">
+                                <option th:value="${level.id}" th:text="${level.level}"></option>
+                            </th:block>
+                        </select></td>
+                    </tr>
+                    <tr class="input-box">
+                        <th>Division</th>
+                        <td>  <select th:field="*{division.id}">
+                            <th:block th:each="division : ${divisions}">
+                                <option th:value="${division.id}" th:text="${division.name}"></option>
+                            </th:block>
+                        </select></td>
+                    </tr>
+                </table>
+
+                <div class="btn-box">
+                    <button type="submit">
+                        Create
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container" style="text-align: center">
+        CodeGym
+    </div>
+</footer>
+</body>
+</html>

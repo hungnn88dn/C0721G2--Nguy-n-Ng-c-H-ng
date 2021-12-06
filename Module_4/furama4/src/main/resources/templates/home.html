@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>$Title$</title>
@@ -37,18 +35,13 @@
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12"></div>
         <div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-md-end">
-            <p style="color: red"> <c:if test='${usernameSession == null}'>
+            <p style="color: red"> <th:if test='${usernameSession == null}'>
                 <a href="/login?action=login">Sign In</a>
-            </c:if></p>
-            <p style="color: red"> <c:if test='${usernameSession != null}'>
-
-                <a href="/login?action=hungnn"> <%=request.getSession().getAttribute("usernameSession")%></a>
-            </c:if></p>
         </div>
     </div>
     <div class="row bg-light p-xl-3 d-flex justify-content-center">
         <div class=" col-md-6 col-lg-9 col-sm-12 d-flex justify-content-center ">
-            <a class="navbar-brand fw-bold " href="#">Home</a>
+            <a class="navbar-brand fw-bold " href="">Home</a>
             <button class="navbar-toggler " type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">

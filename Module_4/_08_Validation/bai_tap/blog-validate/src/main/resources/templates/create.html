@@ -1,13 +1,15 @@
 <!DOCTYPE html>
+
 <html xmlns:th="http://www.thymeleaf.org">
-<body>
+
+<body background="">
 <h3>Add Blog</h3>
 <p>
     <a th:href="@{/blogs}">
         Back to Blog list
     </a>
 </p>
-<div id="form">
+<div id="form" >
     <form th:action="@{/blogs/save}" th:object="${blog}"
           method="POST" novalidate="novalidate">
         <input type="hidden" th:field="*{id}"/>

@@ -1,6 +1,7 @@
 package casestudy.furama4.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.List;
 
 @Entity
@@ -9,12 +10,25 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private int name;
+    @NotBlank
+    @NotEmpty
+    @Size(min = 5, max = 45)
+    private String name;
+    @NotBlank
+    @NotEmpty
     private String age;
+    @Pattern(regexp = "\\d{9}",
+            message = "cmnd phai du 9 so")
     private String cmnd;
-    private int salary;
-    private int phone;
-    private int email;
+    private String salary;
+    @Pattern(regexp = "0\\d{9}",
+            message = "Phone phai 10 so bat dau bang 0 ")
+    private String phone;
+    @Pattern(regexp = "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+            message = "Email phai dung dinh dang abc@xyz.com ")
+    private String email;
+    @NotBlank
+    @NotEmpty
     private String address;
 
     @ManyToOne(targetEntity = Position.class,fetch = FetchType.EAGER)
@@ -43,11 +57,11 @@ public class Employee {
         this.id = id;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -67,27 +81,27 @@ public class Employee {
         this.cmnd = cmnd;
     }
 
-    public int getSalary() {
+    public String getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(String salary) {
         this.salary = salary;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(int email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 

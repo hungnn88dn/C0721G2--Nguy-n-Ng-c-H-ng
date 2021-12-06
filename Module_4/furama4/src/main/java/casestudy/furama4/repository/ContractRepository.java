@@ -2,7 +2,6 @@ package casestudy.furama4.repository;
 
 
 
-
-public interface CustomerSerivceRepo  {
+public interface ContractRepository {
 
 }

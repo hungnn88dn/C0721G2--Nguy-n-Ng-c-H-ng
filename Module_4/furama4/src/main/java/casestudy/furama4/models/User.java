@@ -1,5 +1,7 @@
 package casestudy.furama4.models;
 
+import org.springframework.security.core.GrantedAuthority;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -21,6 +23,9 @@ public class User {
     private Employee employee;
 
     public User() {
+    }
+
+    public User(String username, String password, List<GrantedAuthority> grantList) {
     }
 
     public int getId() {

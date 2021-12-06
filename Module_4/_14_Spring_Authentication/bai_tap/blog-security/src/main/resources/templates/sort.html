@@ -14,7 +14,7 @@
     </style>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
-
+<body>
 <form action="" method="get">
     <select onchange="this.form.submit()"  name="lang">
         <option value="" disabled selected>Choose Language</option>
@@ -72,9 +72,7 @@
                  </button>
                  <input type="hidden" th:value="${b.id}">
              </td>
-
           </tr>
-
       </table>
       <div>
           <a th:href="@{'/blogs'(page=${blogs.number - 1})}" th:if="${blogs.hasPrevious()}">Previous</a>

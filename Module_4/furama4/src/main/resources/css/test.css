@@ -1,0 +1,7 @@
+table {
+    width: 100%;
+}
+input[type=text]:focus {
+    background-color: #e9d8f4;
+    width: 100%;
+}
