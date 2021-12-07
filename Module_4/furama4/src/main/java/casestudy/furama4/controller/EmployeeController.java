@@ -8,6 +8,7 @@ import casestudy.furama4.service.PositionService;
 import casestudy.furama4.service.impl.employee.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -94,15 +95,20 @@ public class EmployeeController {
     }
 
     @GetMapping("employee/{id}/delete")
-    public String delete(@PathVariable int id) {
-        employeeService.delete(employeeService.findById(id));
-        return "redirect:/employee";
+    public String delete(@PathVariable int id, Model model) {
+        model.addAttribute("employee", employeeService.findById(id));
+        return "employee/delete";
     }
 
-//    @PostMapping("blogs/delete")
-//    public String delete(Blog blog, RedirectAttributes redirect) {
-//        blogService.delete(blog);
-//        redirect.addFlashAttribute("success", "Removed song successfully!");
-//        return "redirect:/blogs";
+//    @GetMapping("employee/delete/{id}")
+//    public String delete(@PathVariable int id) {
+//        employeeService.delete(employeeService.findById(id));
+//        return "redirect:/employee";
 //    }
+
+    @PostMapping("employee/actionDelete")
+    public String delete(Employee employee) {
+        employeeService.delete(employee);
+        return "redirect:/employee";
+    }
 }

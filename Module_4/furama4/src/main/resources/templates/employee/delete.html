@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="form">
+    <form action="#" th:action="@{/employee/actionDelete}" th:object="${employee}"
+          method="POST" novalidate="novalidate">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Topic</label>
+            <input type="text" th:field="*{name}" th:disabled="*{name}"/>
+        </div>
+        <div>
+            <label>Author</label>
+            <input type="text" th:field="*{age}" th:disabled="*{age}"/>
+        </div>
+        <div>
+            <label>Ecommerce</label>
+            <input type="text" th:field="*{cmnd}" th:disabled="*{cmnd}"/>
+        </div>
+        <input type="submit" value="Remove" th:onclick="'javascript:actionDelete();'"/>
+    </form>
+</div>
+</body>
+</html>

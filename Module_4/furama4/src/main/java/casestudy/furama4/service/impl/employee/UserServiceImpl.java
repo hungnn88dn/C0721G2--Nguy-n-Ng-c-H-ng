@@ -17,4 +17,5 @@ public class UserServiceImpl {
     public List<User> findAll() {
         return this.userRepository.findAll();
     }
+
 }

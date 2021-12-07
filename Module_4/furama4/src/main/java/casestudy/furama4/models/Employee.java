@@ -1,11 +1,15 @@
 package casestudy.furama4.models;
-
+import org.springframework.stereotype.Component;
+import org.springframework.validation.Errors;
+import org.springframework.validation.ValidationUtils;
+import org.springframework.validation.Validator;
 import javax.persistence.*;
 import javax.validation.constraints.*;
-import java.util.List;
 
+import java.util.List;
+@Component
 @Entity
-public class Employee {
+public class Employee implements Validator {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +24,7 @@ public class Employee {
     @Pattern(regexp = "\\d{9}",
             message = "cmnd phai du 9 so")
     private String cmnd;
+
     private String salary;
     @Pattern(regexp = "0\\d{9}",
             message = "Phone phai 10 so bat dau bang 0 ")
@@ -45,6 +50,8 @@ public class Employee {
 
     @OneToOne(targetEntity = User.class)
     private User user;
+
+
 
     public Employee() {
     }
@@ -151,5 +158,28 @@ public class Employee {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+
+
+    @Override
+    public boolean supports(Class<?> clazz) {
+        return Employee.class.isAssignableFrom(clazz);
+    }
+
+    @Override
+    public void validate(Object target, Errors errors) {
+//        UserServiceImpl userService = new UserServiceImpl();
+        Employee employee= (Employee) target;
+//        for(User user: userService.findAll()){
+//            if(employee.getEmail().equals(user.getUsername())) {
+//                errors.rejectValue("email","email.unique");
+//            }
+//        }
+        ValidationUtils.rejectIfEmpty(errors, "salary", "salary.empty");
+        if(employee.getSalary().length() < 10) {
+            errors.rejectValue("salary","email.unique");
+        }
+
     }
 }

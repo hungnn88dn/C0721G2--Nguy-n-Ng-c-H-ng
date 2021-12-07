@@ -2,6 +2,8 @@ package casestudy.furama4.service.impl.employee;
 
 
 import casestudy.furama4.models.Employee;
+import casestudy.furama4.models.User;
+import casestudy.furama4.repository.UserRepository;
 import casestudy.furama4.repository.employee.EmployeeRepository;
 import casestudy.furama4.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
     @Override
     public List<Employee> findAll() {
         return this.employeeRepository.findAll();
@@ -28,6 +33,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee save(Employee employee) {
+        this.employeeRepository.save(employee);
+        User user= userRepository.findByUsername(employee.getEmail());
+        employee.setUser(user);
         return this.employeeRepository.save(employee);
     }
 

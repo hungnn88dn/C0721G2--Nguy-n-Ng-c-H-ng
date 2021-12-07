@@ -16,7 +16,7 @@
 </head>
 
 <form action="" method="get">
-    <select onchange="this.form.submit()"  name="lang">
+    <select onchange="this.form.submit()" name="lang">
         <option value="" disabled selected>Choose Language</option>
         <option value="en">English</option>
         <option value="vi">Viet Nam</option>
@@ -24,19 +24,19 @@
 </form>
 
 <p>
-    <a th:href="@{/blogs}" th:text="#{home.title}" >
+    <a th:href="@{/blogs}" th:text="#{home.title}">
 
     </a>
 </p>
-<p >
+<p>
     <button th:href="@{/blogs/create}" th:text="#{add.title}" th:onclick="'javascript:create();'">
     </button>
 </p>
 
-<form >
+<form>
     <label>Search by Author</label>
     <input type="text" name="author">
-    <input type="submit" onclick="search()" th:value="#{search.title}" >
+    <input type="submit" onclick="search()" th:value="#{search.title}">
 </form>
 <form>
     <label>Filter by Ecommerce</label>
@@ -49,56 +49,59 @@
     </select>
     <div class="result1"></div>
 </form>
-      <table class="homeAJAX" >
-          <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Topic</th>
-              <th scope="col">Author</th>
-              <th scope="col">Ecommerce</th>
-              <th scope="col">Edit</th>
-              <th scope="col">Delete</th>
-              <th scope="col">View</th>
-          </tr>
-          <tr th:each="b : ${blogs}">
-              <td scope="col" th:text="${b.id}"></td>
-              <td scope="col" th:text="${b.topic}"></td>
-              <td scope="col" th:text="${b.author}"></td>
-              <td scope="col" th:text="${b.eCommerce.getName()}"></td>
-              <td scope="col" ><button th:text="#{edit.title}"  th:onclick="'javascript:showEdit(\''+ ${b.id} + '\');'"></button></td>
-              <td scope="col" ><button th:text="#{delete.title}"  th:onclick="'javascript:showDelete(\''+ ${b.id} + '\');'"></button></td>
-             <td>
-                 <button th:text="#{view.title}" class="viewAjax" >
+<table class="homeAJAX">
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Topic</th>
+        <th scope="col">Author</th>
+        <th scope="col">Ecommerce</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        <th scope="col">View</th>
+    </tr>
+    <tr th:each="b : ${blogs}">
+        <td scope="col" th:text="${b.id}"></td>
+        <td scope="col" th:text="${b.topic}"></td>
+        <td scope="col" th:text="${b.author}"></td>
+        <td scope="col" th:text="${b.eCommerce.getName()}"></td>
+        <td scope="col">
+            <button th:text="#{edit.title}" th:onclick="'javascript:showEdit(\''+ ${b.id} + '\');'"></button>
+        </td>
+        <td scope="col">
+            <button th:text="#{delete.title}" th:onclick="'javascript:showDelete(\''+ ${b.id} + '\');'"></button>
+        </td>
+        <td>
+            <button th:text="#{view.title}" class="viewAjax">
 
-                 </button>
-                 <input type="hidden" th:value="${b.id}">
-             </td>
+            </button>
+            <input type="hidden" th:value="${b.id}">
+        </td>
 
-          </tr>
-      </table>
-      <div>
-          <a th:href="@{'/blogs'(page=${blogs.number - 1})}" th:if="${blogs.hasPrevious()}">Previous</a>
-          <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>
-          <a th:href="@{'/blogs'(page=${blogs.number + 1})}" th:if="${blogs.hasNext()}">Next</a>
-      </div>
-       <div class="result"></div>
+    </tr>
+</table>
+<div>
+    <a th:href="@{'/blogs'(page=${blogs.number - 1})}" th:if="${blogs.hasPrevious()}">Previous</a>
+    <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>
+    <a th:href="@{'/blogs'(page=${blogs.number + 1})}" th:if="${blogs.hasNext()}">Next</a>
+</div>
+<div class="result"></div>
 
 </body>
 
 <script>
     $(document).ready(function () {
-           $(".viewAjax").click(function () {
-               console.log("TESST");
+        $(".viewAjax").click(function () {
+            console.log("TESST");
             $.ajax({
                 type: "GET",
                 url: "/blogs/view/" + $(this).next().val(),
                 dateType: "HTML",
                 success: function (data) {
                     console.log(data)
-                   $(".result").html(data);
+                    $(".result").html(data);
                 }
-
             })
-           })
+        })
     })
 
     function showDelete(id) {
@@ -113,7 +116,7 @@
         })
     }
 
-    function  actionDelete() {
+    function actionDelete() {
         console.log("Alo")
         $.ajax({
             type: "POST",
@@ -146,7 +149,7 @@
                 $(".homeAJAX").html(data);
             },
             error: function () {
-                  actionCreate();
+                actionCreate();
             }
         })
     }
@@ -162,7 +165,6 @@
             }
         })
     }
-
 
 
     // function search() {
