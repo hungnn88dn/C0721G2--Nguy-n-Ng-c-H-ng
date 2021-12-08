@@ -105,7 +105,7 @@
     }
 </style>
 <head>
-    <title>Create new Employee </title>
+    <title>Create new Customer </title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -135,17 +135,17 @@
                 aria-expanded="false" aria-label="Toggle navigation">
         </button>
         </button>
-        <a class="navbar-brand" href="customer">Customer</a>
+        <a class="navbar-brand" href="/customer">Customer</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
         </button>
-        <a class="navbar-brand" href="facility">Service</a>
+        <a class="navbar-brand" href="/facility">Service</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
         </button>
-        <a class="navbar-brand" href="contract">Contract</a>
+        <a class="navbar-brand" href="/contract">Contract</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -155,7 +155,7 @@
 <main>
     <div class="container">
         <div class="register-form" >
-            <form method="post" th:action="@{/employee/save}" th:object="${employee}">
+            <form method="post" th:action="@{/customer/save}" th:object="${customer}">
                 <h1>Create New Employee</h1>
 
                 <table>
@@ -170,19 +170,21 @@
                         <td th:if="${#fields.hasErrors('age')}" style="color: red" th:errors="*{age}">Name Error</td></td>
                     </tr>
                     <tr class="input-box">
+                        <th>Gender</th>
+                        <td> <select th:field="*{gender}">
+                                <option th:value="Nam" th:text="Nam"></option>
+                                <option th:value="Nu" th:text="Nu"></option>
+                        </select></td>
+                    </tr>
+                    <tr class="input-box">
                         <th>CMND</th>
-                        <td> <input type="text" th:field="*{cmnd}"/>
+                        <td><input type="text" th:field="*{cmnd}"/></td>
                         <td th:if="${#fields.hasErrors('cmnd')}" style="color: red" th:errors="*{cmnd}">Name Error</td></td>
                     </tr>
                     <tr class="input-box">
-                        <th>Salary</th>
-                        <td> <input type="text" th:field="*{salary}"/>
-                        <td th:if="${#fields.hasErrors('salary')}" style="color: red" th:errors="*{salary}">Name Error</td></td>
-                    </tr>
-                    <tr class="input-box">
                         <th>Phone</th>
-                        <td><input type="text" th:field="*{phone}"/>
-                        <td th:if="${#fields.hasErrors('phone')}" style="color: red" th:errors="*{phone}">Name Error</td></td>
+                        <td><input type="text" th:field="*{phoneNumber}"/>
+                        <td th:if="${#fields.hasErrors('phoneNumber')}" style="color: red" th:errors="*{phoneNumber}">Name Error</td></td>
                     </tr>
                     <tr class="input-box">
                         <th>Email</th>
@@ -196,25 +198,9 @@
                     </tr >
                     <tr class="input-box">
                         <th>Position</th>
-                        <td> <select th:field="*{position.id}">
-                            <th:block th:each="position : ${postions}">
-                                <option th:value="${position.id}" th:text="${position.name}"></option>
-                            </th:block>
-                        </select></td>
-                    </tr>
-                    <tr class="input-box">
-                        <th>Level</th>
-                        <td> <select th:field="*{level.id}">
-                            <th:block th:each="level : ${levels}">
-                                <option th:value="${level.id}" th:text="${level.level}"></option>
-                            </th:block>
-                        </select></td>
-                    </tr>
-                    <tr class="input-box">
-                        <th>Division</th>
-                        <td>  <select th:field="*{division.id}">
-                            <th:block th:each="division : ${divisions}">
-                                <option th:value="${division.id}" th:text="${division.name}"></option>
+                        <td> <select th:field="*{customerType.id}">
+                            <th:block th:each="customerType : ${typeCustomers}">
+                                <option th:value="${customerType.id}" th:text="${customerType.name}"></option>
                             </th:block>
                         </select></td>
                     </tr>

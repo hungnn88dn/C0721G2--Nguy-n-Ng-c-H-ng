@@ -55,7 +55,12 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Page<Employee> findAllBlogByName(String name, Pageable pageable) {
-        return this.employeeRepository.findEmployeeByName(name,pageable);
+    public Page<Employee> findAllEmployeeByName(String name, Pageable pageable) {
+        return this.employeeRepository.findEmployeeByNameContaining(name,pageable);
+    }
+
+    @Override
+    public boolean exitEmail(String email) {
+        return employeeRepository.existsByEmail(email);
     }
 }

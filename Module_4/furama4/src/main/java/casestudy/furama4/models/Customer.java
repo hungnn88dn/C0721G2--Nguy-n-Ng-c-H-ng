@@ -1,6 +1,10 @@
 package casestudy.furama4.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 @Entity
@@ -9,12 +13,26 @@ public class Customer  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @NotBlank
+    @NotEmpty
+    @Pattern(regexp = "^[A-Z]\\w+(\\s[A-Z]\\w+)+",
+            message = "Ten sai dinh dang, ex: Nguyen Hung ")
     private String name;
+    @NotBlank
+    @NotEmpty
     private String age;
     private String gender;
+    @Pattern(regexp = "\\d{9}",
+            message = "cmnd phai du 9 so")
     private String cmnd;
+    @Pattern(regexp = "0\\d{9}",
+            message = "Phone phai 10 so bat dau bang 0 ")
     private String phoneNumber;
+    @Pattern(regexp = "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+            message = "Email phai dung dinh dang abc@xyz.com ")
     private String email;
+    @NotBlank
+    @NotEmpty
     private String address;
 
     @ManyToOne(targetEntity = TypeCustomer.class)

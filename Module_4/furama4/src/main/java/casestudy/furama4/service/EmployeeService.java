@@ -16,5 +16,6 @@ public interface EmployeeService{
     void delete(Employee employee);
     void deleteById(int id);
     public Page<Employee> findAllEmployee(Pageable pageable);
-    public Page<Employee> findAllBlogByName(String name,Pageable pageable);
+    public Page<Employee> findAllEmployeeByName(String name,Pageable pageable);
+    public boolean exitEmail(String email);
 }

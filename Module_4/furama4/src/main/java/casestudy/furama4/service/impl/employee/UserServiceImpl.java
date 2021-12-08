@@ -17,5 +17,8 @@ public class UserServiceImpl {
     public List<User> findAll() {
         return this.userRepository.findAll();
     }
+    public boolean exitUserName(String username) {
+        return userRepository.existsByUsername(username);
+    }
 
 }

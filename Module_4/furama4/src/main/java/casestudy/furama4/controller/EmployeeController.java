@@ -45,10 +45,15 @@ public class EmployeeController {
     UserServiceImpl userService;
 
     @GetMapping("/employee")
-    public String displayBlog(
+    public String displayBlog(Optional<String> name,
                               Model model,
                               @PageableDefault(size = 5) Pageable pageable) {
-        model.addAttribute("employees", employeeService.findAllEmployee(pageable));
+        if(name.isPresent()){
+            model.addAttribute("employees",employeeService.findAllEmployeeByName(name.get(),pageable));
+            model.addAttribute("name",name.get());
+        }else {
+            model.addAttribute("employees", employeeService.findAllEmployee(pageable));
+        }
         return "employee/list";
     }
 
@@ -63,7 +68,8 @@ public class EmployeeController {
 
     @PostMapping("employee/save")
     public String save(@Validated @ModelAttribute("employee") Employee employee, BindingResult bindingResult, Model model) {
-        if (bindingResult.hasFieldErrors()) {
+        new Employee().validate(employee,bindingResult);
+        if (bindingResult.hasFieldErrors() || employeeService.exitEmail(employee.getEmail())) {
             model.addAttribute("levels", levelService.findAll());
             model.addAttribute("divisions", divisionService.findAll());
             model.addAttribute("postions", positionService.findAll());
@@ -94,11 +100,11 @@ public class EmployeeController {
         return "redirect:/employee";
     }
 
-    @GetMapping("employee/{id}/delete")
-    public String delete(@PathVariable int id, Model model) {
-        model.addAttribute("employee", employeeService.findById(id));
-        return "employee/delete";
-    }
+//    @GetMapping("employee/{id}/delete")
+//    public String delete(@PathVariable int id, Model model) {
+//        model.addAttribute("employee", employeeService.findById(id));
+//        return "employee/delete";
+//    }
 
 //    @GetMapping("employee/delete/{id}")
 //    public String delete(@PathVariable int id) {
@@ -106,9 +112,15 @@ public class EmployeeController {
 //        return "redirect:/employee";
 //    }
 
-    @PostMapping("employee/actionDelete")
-    public String delete(Employee employee) {
-        employeeService.delete(employee);
+//    @PostMapping("employee/actionDelete")
+//    public String delete(Employee employee) {
+//        employeeService.delete(employee);
+//        return "redirect:/employee";
+//    }
+
+    @GetMapping("employee/actionDelete/{id}")
+    public String delete(@PathVariable int id) {
+        employeeService.deleteById(id);
         return "redirect:/employee";
     }
 }

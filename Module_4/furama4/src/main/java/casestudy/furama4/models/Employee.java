@@ -1,4 +1,9 @@
 package casestudy.furama4.models;
+import casestudy.furama4.repository.UserRepository;
+import casestudy.furama4.service.EmployeeService;
+import casestudy.furama4.service.impl.employee.EmployeeServiceImpl;
+import casestudy.furama4.service.impl.employee.UserServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
@@ -7,6 +12,7 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.util.List;
+
 @Component
 @Entity
 public class Employee implements Validator {
@@ -14,9 +20,8 @@ public class Employee implements Validator {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotBlank
-    @NotEmpty
-    @Size(min = 5, max = 45)
+    @Pattern(regexp = "^[A-Z]\\w+(\\s[A-Z]\\w+)+",
+            message = "Ten sai dinh dang, ex: Nguyen Hung ")
     private String name;
     @NotBlank
     @NotEmpty
@@ -160,26 +165,21 @@ public class Employee implements Validator {
         this.user = user;
     }
 
-
-
     @Override
     public boolean supports(Class<?> clazz) {
         return Employee.class.isAssignableFrom(clazz);
     }
 
+
     @Override
     public void validate(Object target, Errors errors) {
-//        UserServiceImpl userService = new UserServiceImpl();
-        Employee employee= (Employee) target;
-//        for(User user: userService.findAll()){
-//            if(employee.getEmail().equals(user.getUsername())) {
+//        EmployeeServiceImpl employeeService= new EmployeeServiceImpl();
+//        List<Employee> employeeList= employeeService.findAll();
+//        Employee employee= (Employee) target;
+//        for(Employee employee1: employeeList){
+//            if(employee.getEmail().equals(employee1.getEmail())) {
 //                errors.rejectValue("email","email.unique");
 //            }
 //        }
-        ValidationUtils.rejectIfEmpty(errors, "salary", "salary.empty");
-        if(employee.getSalary().length() < 10) {
-            errors.rejectValue("salary","email.unique");
-        }
-
     }
 }

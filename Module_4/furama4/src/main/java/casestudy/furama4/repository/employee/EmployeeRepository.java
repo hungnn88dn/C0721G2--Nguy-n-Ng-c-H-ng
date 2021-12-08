@@ -11,5 +11,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
-    Page<Employee> findEmployeeByName(String name, Pageable pageable);
+    Page<Employee> findEmployeeByNameContaining(String name, Pageable pageable);
+    boolean existsByEmail(String email);
 }

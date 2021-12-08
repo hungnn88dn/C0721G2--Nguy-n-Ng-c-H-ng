@@ -78,8 +78,8 @@
 <br>
 <br>
 <button style="background: darkgray; align-content: center">
-    <a th:href="@{/employee/create}">
-        Add new Employee
+    <a th:href="@{/customer/create}">
+        Add new Customer
     </a>
 </button>
 
@@ -93,41 +93,36 @@
         <th>ID</th>
         <th>Name</th>
         <th>Age</th>
+        <th>Gender</th>
         <th>CMND</th>
-        <th>Salary</th>
         <th>Phone</th>
         <th>Email</th>
         <th>Address</th>
-        <th>Position</th>
-        <th>Level</th>
-        <th>Division</th>
-        <th>Username</th>
+        <th>TypeCustomer</th>
         <th>Edit</th>
         <th>Delete</th>
     </tr>
-    <tr th:each="employee : ${employees}">
-        <td scope="col" th:text="${employee.id}"></td>
-        <td scope="col" th:text="${employee.name}"></td>
-        <td scope="col" th:text="${employee.age}"></td>
-        <td scope="col" th:text="${employee.cmnd}"></td>
-        <td scope="col" th:text="${employee.salary}"></td>
-        <td scope="col" th:text="${employee.phone}"></td>
-        <td scope="col" th:text="${employee.email}"></td>
-        <td scope="col" th:text="${employee.address}"></td>
-        <td scope="col" th:text="${employee.position.name}"></td>
-        <td scope="col" th:text="${employee.level.level}"></td>
-        <td scope="col" th:text="${employee.division.name}"></td>
-        <td scope="col" th:text="${employee.user.username}"></td>
-        <td scope="col"><a th:href="@{/employee/{id}/edit(id=${employee.getId()})}">edit</a></td>
+    <tr th:each="customer : ${customers}">
+        <td scope="col" th:text="${customer.id}"></td>
+        <td scope="col" th:text="${customer.name}"></td>
+        <td scope="col" th:text="${customer.age}"></td>
+        <td scope="col" th:text="${customer.gender}"></td>
+        <td scope="col" th:text="${customer.cmnd}"></td>
+        <td scope="col" th:text="${customer.phoneNumber}"></td>
+        <td scope="col" th:text="${customer.email}"></td>
+        <td scope="col" th:text="${customer.address}"></td>
+        <td scope="col" th:text="${customer.getCustomerType().name}"></td>
+
+        <td scope="col"><a th:href="@{/customer/{id}/edit(id=${customer.getId()})}">edit</a></td>
 <!--                <td scope="col"><a th:href="@{/employee/{id}/delete(id=${employee.getId()})}">delete</a>-->
         <td>
 <!--            <button   th:onclick="'javascript:showDelete(\''+ ${employee.id} + '\');'">Delete</button>-->
-            <button type="button" class="btn btn-primary" data-toggle="modal" th:data-target="'#'+${employee.id}" >
+            <button type="button" class="btn btn-primary" data-toggle="modal" th:data-target="'#'+${customer.id}" >
                 Delete
             </button>
 <!--            th:onclick="'javascript:showDelete(\''+ ${employee.id} + '\');'"-->
             <!-- Modal -->
-            <div class="modal fade" th:id="${employee.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" th:id="${customer.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -138,15 +133,15 @@
                         </div>
                         <div class="modal-body">
                             <p>Bạn muốn xoá : </p>
-                           <p>Name</p><p th:text="${employee.name}"></p>
-                            <p>Age</p><p th:text="${employee.age}"></p>
-                            <p>CMND</p><p th:text="${employee.cmnd}"></p>
-                            <p>Phone</p><p th:text="${employee.phone}"></p>
+                           <p>Name</p><p th:text="${customer.name}"></p>
+                            <p>Age</p><p th:text="${customer.age}"></p>
+                            <p>CMND</p><p th:text="${customer.cmnd}"></p>
+                            <p>Gender</p><p th:text="${customer.getGender()}"></p>
                             <div class="result"></div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary"> <a style="color: red" th:href="@{/employee/actionDelete/{id}(id=${employee.id})}">Delete</a></button>
+                            <button type="button" class="btn btn-primary"> <a style="color: red" th:href="@{/customer/actionDelete/{id}(id=${customer.id})}">Delete</a></button>
                         </div>
                     </div>
                 </div>
@@ -156,29 +151,29 @@
 </table>
 
 <div>
-    <a th:href="@{'/employee'(page=${employees.number - 1})}" th:if="${employees.hasPrevious()}">Previous</a>
-    <span th:text="${employees.number + 1}"></span>/<span th:text="${employees.totalPages}"></span>
-    <a th:href="@{'/employee'(page=${employees.number + 1})}" th:if="${employees.hasNext()}">Next</a>
+    <a th:href="@{'/customer'(page=${customers.number - 1})}" th:if="${customers.hasPrevious()}">Previous</a>
+    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>
+    <a th:href="@{'/customer'(page=${customers.number + 1})}" th:if="${customers.hasNext()}">Next</a>
 </div>
 
-<!--<div class="result"></div>-->
+
 
 </body>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 
-    function showDelete(id) {
-        console.log("tesst")
-        $.ajax({
-            type: "GET",
-            url: "employee/" + id + "/delete",
-            dateType: "HTML",
-            success: function (data) {
-                console.log(data);
-                $(".result").html(data);
-            }
-        })
-    }
+    // function showDelete(id) {
+    //     console.log("tesst")
+    //     $.ajax({
+    //         type: "GET",
+    //         url: "customer/" + id + "/delete",
+    //         dateType: "HTML",
+    //         success: function (data) {
+    //             console.log(data);
+    //             $(".result").html(data);
+    //         }
+    //     })
+    // }
 
 <!--    function  actionDelete() {-->
 <!--        console.log("Alo")-->
