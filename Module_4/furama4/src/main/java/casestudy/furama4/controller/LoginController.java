@@ -30,7 +30,7 @@ public class LoginController {
     @RequestMapping(value = "/logoutSuccessful", method = RequestMethod.GET)
     public String logoutSuccessfulPage(Model model) {
         model.addAttribute("title", "Logout");
-        return "login/logoutSuccessfulPage";
+        return "home";
     }
 
     @RequestMapping(value = "/userInfo", method = RequestMethod.GET)

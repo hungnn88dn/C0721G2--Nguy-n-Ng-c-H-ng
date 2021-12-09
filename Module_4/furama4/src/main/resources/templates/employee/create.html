@@ -37,7 +37,7 @@
 
     .register-form{
         width: 100%;
-        max-width: 600px;
+        max-width: 550px;
         margin: 20px auto;
         background-color: #ffffff;
         padding: 15px;
@@ -135,17 +135,17 @@
                 aria-expanded="false" aria-label="Toggle navigation">
         </button>
         </button>
-        <a class="navbar-brand" href="customer">Customer</a>
+        <a class="navbar-brand" href="/customer">Customer</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
         </button>
-        <a class="navbar-brand" href="facility">Service</a>
+        <a class="navbar-brand" href="/facility">Service</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
         </button>
-        <a class="navbar-brand" href="contract">Contract</a>
+        <a class="navbar-brand" href="/contract">Contract</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -162,38 +162,60 @@
                     <tr class="input-box">
                         <th>Name</th>
                         <td><input type="text" th:field="*{name}"/>
+                    </tr>
+                    <tr>
+                        <th></th>
                         <td th:if="${#fields.hasErrors('name')}" style="color: red" th:errors="*{name}">Name Error</td></td>
                     </tr>
                     <tr class="input-box">
                         <th>Age</th>
                         <td><input type="date" th:field="*{age}"/></td>
+                    </tr>
+                    <tr>
+                        <th></th>
                         <td th:if="${#fields.hasErrors('age')}" style="color: red" th:errors="*{age}">Name Error</td></td>
                     </tr>
                     <tr class="input-box">
                         <th>CMND</th>
-                        <td> <input type="text" th:field="*{cmnd}"/>
+                        <td> <input type="text" th:field="*{cmnd}"/> <br>
+                    </tr>
+                    <tr>
+                        <th></th>
                         <td th:if="${#fields.hasErrors('cmnd')}" style="color: red" th:errors="*{cmnd}">Name Error</td></td>
                     </tr>
                     <tr class="input-box">
                         <th>Salary</th>
-                        <td> <input type="text" th:field="*{salary}"/>
+                        <td> <input type="text" th:field="*{salary}"/><br>
+                    </tr>
+                    <tr>
+                        <th></th>
                         <td th:if="${#fields.hasErrors('salary')}" style="color: red" th:errors="*{salary}">Name Error</td></td>
                     </tr>
                     <tr class="input-box">
                         <th>Phone</th>
                         <td><input type="text" th:field="*{phone}"/>
+                    </tr>
+                    <tr>
+                        <th></th>
                         <td th:if="${#fields.hasErrors('phone')}" style="color: red" th:errors="*{phone}">Name Error</td></td>
                     </tr>
                     <tr class="input-box">
                         <th>Email</th>
                         <td> <input type="text" th:field="*{email}"/>
+                    </tr>
+                    <tr>
+                        <th></th>
                         <td th:if="${#fields.hasErrors('email')}" style="color: red" th:errors="*{email}">Name Error</td></td>
+                        <td th:if="${#fields.hasErrors('error')}" style="color: red" th:errors="*{email}">Name Error</td></td>
                     </tr>
                     <tr class="input-box">
                         <th>Address</th>
                         <td> <input type="text" th:field="*{address}"/>
-                        <td th:if="${#fields.hasErrors('address')}" style="color: red" th:errors="*{address}">Name Error</td></td>
                     </tr >
+                    <tr>
+                        <th></th>
+                        <td th:if="${#fields.hasErrors('address')}" style="color: red" th:errors="*{address}">Name Error</td></td>
+                    </tr>
                     <tr class="input-box">
                         <th>Position</th>
                         <td> <select th:field="*{position.id}">

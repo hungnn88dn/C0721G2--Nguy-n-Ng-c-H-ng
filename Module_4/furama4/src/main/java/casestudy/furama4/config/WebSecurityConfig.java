@@ -53,7 +53,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/", "/login", "/logout","/home").permitAll();
 
         http.authorizeRequests()
-                .antMatchers("/userInfo", "/employee","/employee/create","/employee/edit/*","/employee/delete/*")
+                .antMatchers("/userInfo", "/employee","/employee/**","/customer","customer/**")
                 .access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
         // Trang chỉ dành cho ADMIN

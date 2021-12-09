@@ -126,17 +126,31 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Delete Customer</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>Bạn muốn xoá : </p>
-                           <p>Name</p><p th:text="${customer.name}"></p>
-                            <p>Age</p><p th:text="${customer.age}"></p>
-                            <p>CMND</p><p th:text="${customer.cmnd}"></p>
-                            <p>Gender</p><p th:text="${customer.getGender()}"></p>
+                            <p>Do you want to delete : </p>
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <td th:text="${customer.name}"></td>
+                                </tr>
+                                <tr>
+                                    <th>Age</th>
+                                    <td th:text="${customer.age}"></td>
+                                </tr>
+                                <tr>
+                                    <th>CMND</th>
+                                    <td th:text="${customer.cmnd}"></td>
+                                </tr>
+                                <tr>
+                                    <th>Gender</th>
+                                    <td th:text="${customer.gender}"></td>
+                                </tr>
+                            </table>
                             <div class="result"></div>
                         </div>
                         <div class="modal-footer">

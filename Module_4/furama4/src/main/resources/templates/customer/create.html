@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <style>
-    *{
+    * {
         padding: 0px;
         margin: 0px;
         font-family: sans-serif;
         box-sizing: border-box;
     }
-    .container{
+
+    .container {
         width: 100%;
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    header{
+    header {
         background-color: #cccccc;
         min-height: 70px;
         padding: 15px;
     }
-    main{
+
+    main {
         background-color: #dddddd;
         min-height: 300px;
         padding: 7.5px 15px;
     }
-    footer{
+
+    footer {
         background-color: #cccccc;
         min-height: 70px;
         padding: 15px;
     }
-    h1{
+
+    h1 {
         color: #009999;
         font-size: 20px;
         margin-bottom: 30px;
     }
 
-    .register-form{
+    .register-form {
         width: 100%;
-        max-width: 600px;
+        max-width: 800px;
         margin: 20px auto;
         background-color: #ffffff;
         padding: 15px;
@@ -45,12 +49,13 @@
         border-radius: 10px;
     }
 
-    .input-box{
+    .input-box {
         margin-bottom: 10px;
     }
+
     .input-box input[type='text'],
     .input-box input[type='password'],
-    .input-box input[type='date']{
+    .input-box input[type='date'] {
         padding: 7.5px 15px;
         width: 400px;
         border: 1px solid #cccccc;
@@ -60,7 +65,8 @@
         height: 40px;
         color: #666666;
     }
-    .input-box select{
+
+    .input-box select {
         padding: 7.5px 15px;
         width: 100%;
         border: 1px solid #cccccc;
@@ -70,16 +76,19 @@
         height: 40px;
         color: #666666;
     }
-    .input-box option{
+
+    .input-box option {
         font-size: 16px;
     }
-    .input-box input[type='checkbox']{
+
+    .input-box input[type='checkbox'] {
         height: 1.5em;
         width: 1.5em;
         vertical-align: middle;
         line-height: 2em;
     }
-    .input-box textarea{
+
+    .input-box textarea {
         padding: 7.5px 15px;
         width: 100%;
         border: 1px solid #cccccc;
@@ -88,11 +97,13 @@
         min-height: 120px;
         color: #666666;
     }
-    .btn-box{
+
+    .btn-box {
         text-align: right;
         margin-top: 30px;
     }
-    .btn-box button{
+
+    .btn-box button {
         padding: 7.5px 15px;
         border-radius: 2px;
         background-color: #009999;
@@ -100,6 +111,7 @@
         border: none;
         outline: none;
     }
+
     input[type=text]:focus {
         background-color: lightblue;
     }
@@ -154,58 +166,86 @@
 </header>
 <main>
     <div class="container">
-        <div class="register-form" >
+        <div class="register-form">
             <form method="post" th:action="@{/customer/save}" th:object="${customer}">
-                <h1>Create New Employee</h1>
+                <h1>Create New Customer</h1>
 
                 <table>
                     <tr class="input-box">
                         <th>Name</th>
                         <td><input type="text" th:field="*{name}"/>
-                        <td th:if="${#fields.hasErrors('name')}" style="color: red" th:errors="*{name}">Name Error</td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td th:if="${#fields.hasErrors('name')}" style="color: red" th:errors="*{name}">Name Error</td>
+                        </td>
                     </tr>
                     <tr class="input-box">
                         <th>Age</th>
                         <td><input type="date" th:field="*{age}"/></td>
-                        <td th:if="${#fields.hasErrors('age')}" style="color: red" th:errors="*{age}">Name Error</td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td th:if="${#fields.hasErrors('age')}" style="color: red" th:errors="*{age}">Name Error</td>
+                        </td>
                     </tr>
                     <tr class="input-box">
                         <th>Gender</th>
-                        <td> <select th:field="*{gender}">
-                                <option th:value="Nam" th:text="Nam"></option>
-                                <option th:value="Nu" th:text="Nu"></option>
+                        <td><select th:field="*{gender}">
+                            <option th:value="Nam" th:text="Nam"></option>
+                            <option th:value="Nu" th:text="Nu"></option>
                         </select></td>
                     </tr>
                     <tr class="input-box">
                         <th>CMND</th>
                         <td><input type="text" th:field="*{cmnd}"/></td>
-                        <td th:if="${#fields.hasErrors('cmnd')}" style="color: red" th:errors="*{cmnd}">Name Error</td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td th:if="${#fields.hasErrors('cmnd')}" style="color: red" th:errors="*{cmnd}">Name Error</td>
+                        </td>
                     </tr>
                     <tr class="input-box">
                         <th>Phone</th>
                         <td><input type="text" th:field="*{phoneNumber}"/>
-                        <td th:if="${#fields.hasErrors('phoneNumber')}" style="color: red" th:errors="*{phoneNumber}">Name Error</td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td th:if="${#fields.hasErrors('phoneNumber')}" style="color: red" th:errors="*{phoneNumber}">
+                            Name Error
+                        </td>
+                        </td>
                     </tr>
                     <tr class="input-box">
                         <th>Email</th>
-                        <td> <input type="text" th:field="*{email}"/>
-                        <td th:if="${#fields.hasErrors('email')}" style="color: red" th:errors="*{email}">Name Error</td></td>
+                        <td><input type="text" th:field="*{email}"/>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td th:if="${#fields.hasErrors('email')}" style="color: red" th:errors="*{email}">Name Error
+                        </td>
+                        </td>
                     </tr>
                     <tr class="input-box">
                         <th>Address</th>
-                        <td> <input type="text" th:field="*{address}"/>
-                        <td th:if="${#fields.hasErrors('address')}" style="color: red" th:errors="*{address}">Name Error</td></td>
-                    </tr >
+                        <td><input type="text" th:field="*{address}"/>
+                    <tr>
+                        <th></th>
+                        <td th:if="${#fields.hasErrors('address')}" style="color: red" th:errors="*{address}">Name
+                            Error
+                        </td>
+                        </td>
+                    </tr>
+                    </tr>
                     <tr class="input-box">
                         <th>Position</th>
-                        <td> <select th:field="*{customerType.id}">
+                        <td><select th:field="*{customerType.id}">
                             <th:block th:each="customerType : ${typeCustomers}">
                                 <option th:value="${customerType.id}" th:text="${customerType.name}"></option>
                             </th:block>
                         </select></td>
                     </tr>
                 </table>
-
                 <div class="btn-box">
                     <button type="submit">
                         Create

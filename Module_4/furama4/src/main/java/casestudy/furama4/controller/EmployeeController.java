@@ -63,17 +63,20 @@ public class EmployeeController {
         model.addAttribute("divisions", divisionService.findAll());
         model.addAttribute("postions", positionService.findAll());
         model.addAttribute("employee", new Employee());
-        return "employee/create";
+        return "employee/test";
     }
 
     @PostMapping("employee/save")
     public String save(@Validated @ModelAttribute("employee") Employee employee, BindingResult bindingResult, Model model) {
         new Employee().validate(employee,bindingResult);
-        if (bindingResult.hasFieldErrors() || employeeService.exitEmail(employee.getEmail())) {
+        if (bindingResult.hasFieldErrors() ) {
             model.addAttribute("levels", levelService.findAll());
             model.addAttribute("divisions", divisionService.findAll());
             model.addAttribute("postions", positionService.findAll());
-            return "employee/create";
+            return "employee/test";
+        }
+        if(employeeService.exitEmail(employee.getEmail())) {
+            return "employee/error";
         }
         employeeService.save(employee);
         return "redirect:/employee";
@@ -90,7 +93,7 @@ public class EmployeeController {
 
     @PostMapping("employee/update")
     public String update(@Validated @ModelAttribute("employee") Employee employee,BindingResult bindingResult, Model model) {
-        if (bindingResult.hasFieldErrors()) {
+        if (bindingResult.hasFieldErrors() || employeeService.exitEmail(employee.getEmail())) {
             model.addAttribute("levels", levelService.findAll());
             model.addAttribute("divisions", divisionService.findAll());
             model.addAttribute("postions", positionService.findAll());

@@ -34,11 +34,14 @@
                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Blackberry_Logo_without_wordmark.svg/1200px-Blackberry_Logo_without_wordmark.svg.png">
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12"></div>
-        <div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-md-end">
-            <p style="color: red">
-                <th:if test='${usernameSession == null}'>
-                    <a th:href="@{/login}">Sign In</a>
-                </th:if>
+        <div class="col-lg-3 col-md-6 col-sm-12  d-flex justify-content-md-end"  >
+            <p style="color: red" th:unless="${#authorization.expression('isAuthenticated()')}">
+                <a th:href="@{/login}">Sign in</a>
+            </p>
+            <div th:if="${#authorization.expression('isAuthenticated()')}">
+                <h3 th:inline="text">Hello, <span th:text="${#authentication.name}"></span>!</h3>
+                <a  th:href="@{/logout}">Logout</a>
+            </div>
         </div>
     </div>
     <div class="row bg-light p-xl-3 d-flex justify-content-center">
@@ -75,7 +78,6 @@
             <div>
                 <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon2"
                        class="form-control border-0 bg-light">
-            </div>
         </div>
     </div>
     <div class="row ">

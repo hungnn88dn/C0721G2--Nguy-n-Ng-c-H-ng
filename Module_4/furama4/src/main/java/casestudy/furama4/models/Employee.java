@@ -29,7 +29,7 @@ public class Employee implements Validator {
     @Pattern(regexp = "\\d{9}",
             message = "cmnd phai du 9 so")
     private String cmnd;
-
+    @Min(0)
     private String salary;
     @Pattern(regexp = "0\\d{9}",
             message = "Phone phai 10 so bat dau bang 0 ")
