@@ -1,6 +1,7 @@
 package exercise.ciname.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 
@@ -14,6 +15,7 @@ public class Cinema {
     private String showCode;
     @ManyToOne(targetEntity = Film.class,fetch = FetchType.EAGER)
     private Film film;
+
     private String dayShow;
     @Min(1)
     private int ticketNumbers;

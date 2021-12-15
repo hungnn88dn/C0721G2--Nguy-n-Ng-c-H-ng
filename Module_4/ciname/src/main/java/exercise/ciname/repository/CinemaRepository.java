@@ -12,4 +12,5 @@ import org.springframework.stereotype.Repository;
 public interface CinemaRepository extends JpaRepository<Cinema,Integer> {
     @Query(value= "select * from cinema join film where cinema.film_id = film.id and film.id = :id" , nativeQuery= true)
     Page<Cinema> findAllCinemaByFilmId(@Param("id") int id, Pageable pageable );
+    boolean existsByShowCode(String showCode);
 }

@@ -11,6 +11,11 @@ import org.springframework.validation.Validator;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.List;
 
 @Component
@@ -41,21 +46,20 @@ public class Employee implements Validator {
     @NotEmpty
     private String address;
 
-    @ManyToOne(targetEntity = Position.class,fetch = FetchType.EAGER)
+    @ManyToOne(targetEntity = Position.class, fetch = FetchType.EAGER)
     private Position position;
 
-    @ManyToOne(targetEntity = Level.class,fetch = FetchType.EAGER)
+    @ManyToOne(targetEntity = Level.class, fetch = FetchType.EAGER)
     private Level level;
 
-    @ManyToOne(targetEntity = Division.class,fetch = FetchType.EAGER)
+    @ManyToOne(targetEntity = Division.class, fetch = FetchType.EAGER)
     private Division division;
 
-    @OneToMany (mappedBy = "employee")
+    @OneToMany(mappedBy = "employee")
     private List<Contract> contracts;
 
     @OneToOne(targetEntity = User.class)
     private User user;
-
 
 
     public Employee() {
@@ -173,13 +177,15 @@ public class Employee implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-//        EmployeeServiceImpl employeeService= new EmployeeServiceImpl();
-//        List<Employee> employeeList= employeeService.findAll();
-//        Employee employee= (Employee) target;
-//        for(Employee employee1: employeeList){
-//            if(employee.getEmail().equals(employee1.getEmail())) {
-//                errors.rejectValue("email","email.unique");
-//            }
-//        }
+        Employee employee = (Employee) target;
+        LocalDate today = LocalDate.now();
+        try {
+            Date dayOfBirth = new SimpleDateFormat("dd/MM/yyyy").parse(employee.getAge());
+            if (dayOfBirth.getYear() - today.getYear() < 18) {
+                errors.rejectValue("age","age.length");
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 }

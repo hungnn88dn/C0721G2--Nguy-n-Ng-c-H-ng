@@ -62,6 +62,11 @@ public class CinemaController {
             model.addAttribute("films", filmService.findAll());
             return "create";
         }
+        if (cinameService.existsByShowCode(cinema.getShowCode())) {
+            model.addAttribute("films", filmService.findAll());
+            model.addAttribute("error", "ShowCode was created");
+            return "create";
+        }
         cinameService.save(cinema);
         return "redirect:/cinema";
     }

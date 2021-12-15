@@ -69,14 +69,18 @@ public class EmployeeController {
     @PostMapping("employee/save")
     public String save(@Validated @ModelAttribute("employee") Employee employee, BindingResult bindingResult, Model model) {
         new Employee().validate(employee,bindingResult);
-        if (bindingResult.hasFieldErrors() ) {
+        if (bindingResult.hasFieldErrors() || employeeService.exitEmail(employee.getEmail())  ) {
             model.addAttribute("levels", levelService.findAll());
             model.addAttribute("divisions", divisionService.findAll());
             model.addAttribute("postions", positionService.findAll());
             return "employee/test";
         }
         if(employeeService.exitEmail(employee.getEmail())) {
-            return "employee/error";
+            model.addAttribute("levels", levelService.findAll());
+            model.addAttribute("divisions", divisionService.findAll());
+            model.addAttribute("postions", positionService.findAll());
+            model.addAttribute("error", "mail was created");
+            return "employee/test";
         }
         employeeService.save(employee);
         return "redirect:/employee";

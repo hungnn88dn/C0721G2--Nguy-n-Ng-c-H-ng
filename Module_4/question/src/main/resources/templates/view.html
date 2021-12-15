@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h3>View Question</h3>
+<p>
+    <a th:href="@{/question}">
+        Back to Question
+    </a>
+</p>
+<div id="detail">
+    <div class="detail">
+        <label>Title:</label>
+        <label th:text="${question.title}"></label>
+    </div>
+    <div class="detail">
+        <label>Status:</label>
+        <label th:text="${question.status}"></label>
+    </div>
+    <div class="detail">
+        <label>DayPost:</label>
+        <label th:text="${question.dayPost}"></label>
+    </div>
+</div>
+</body>
+</html>

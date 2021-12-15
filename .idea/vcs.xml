@@ -4,5 +4,14 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Module3" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Module_4/_02_Spring_Controller/thuc_hanh/customer-management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module_4/_05_ORM/thuc_hanh/customer-management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module_4/_06_JPA_Hibernate/thuc_hanh/spring-jpa-stored-procedure" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module_4/_07_Spring_Boot/thuc_hanh/thuc_hanh_1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module_4/_07_Spring_Boot/thuc_hanh/thuc_hanh_2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module_4/_08_Validation/thuc_hanh/spring-custom-phone-validate" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module_4/_08_Validation/thuc_hanh/spring-validate-infor-user" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module_4/_09_AOP/thuc_hanh/New folder/customer-management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module_4/_09_AOP/thuc_hanh/customer-management" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Module_4/_14_Spring_Authentication/thuc_hanh/spring-security" vcs="Git" />
   </component>
 </project>

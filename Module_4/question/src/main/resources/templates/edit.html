@@ -335,7 +335,8 @@
             min-height: auto;
             padding: 15px;
         }
-        .container{
+
+        .container {
             width: 100%;
             max-width: 1200px;
             margin-left: auto;
@@ -357,148 +358,61 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap" rel="stylesheet">
 <body>
 <header>
-    <div class=" col-md-6 col-lg-9 col-sm-12 d-flex justify-content-center  ">
-        <a class="navbar-brand fw-bold h2 " href="/home">Home</a>
-        <button class="navbar-toggler " type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-        </button>
-        <a class="navbar-brand" href="/employee">Employee</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-        </button>
-        </button>
-        <a class="navbar-brand" href="/customer">Customer</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-        </button>
-        <a class="navbar-brand" href="/facility">Service</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-        </button>
-        <a class="navbar-brand" href="/contract">Contract</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-        </button>
-    </div>
+    <a class="navbar-brand fw-bold " href="/question">Questin</a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+    </button>
 </header>
 <section class="ready__started project__form">
     <div class="container">
-        <h3 class="text-center">Create New Employee</h3>
+        <h3 class="text-center">Edit Question</h3>
         <div class="ready__started-box">
-            <form class="main__form" method="post" th:action="@{/employee/save}" th:object="${employee}">
+            <form class="main__form" method="post" th:action="@{/question/update}" th:object="${question}">
+                <input type="hidden" th:field="*{id}"/>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="text" th:field="*{name}" class="form-control" placeholder="John" required>
-                            <label>Name*</label>
-                            <span th:if="${#fields.hasErrors('name')}" style="color: red" th:errors="*{name}">
+                            <input type="text" th:field="*{title}" class="form-control" placeholder="John" required>
+                            <label>ShowCode*</label>
+                            <span th:if="${#fields.hasErrors('title')}" style="color: red" th:errors="*{title}">
                           Name Error
                         </span>
                         </div>
-
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input type="date" class="form-control" th:field="*{age}" placeholder="Doe" required>
-                            <label>Age</label>
-                            <span th:if="${#fields.hasErrors('age')}" style="color: red" th:errors="*{age}">
-                            Name Error
-                        </span>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" th:field="*{cmnd}" placeholder="Doe" required>
-                            <label>CMND</label>
-                            <span th:if="${#fields.hasErrors('cmnd')}" style="color: red" th:errors="*{cmnd}">
-                            Name Error
-                        </span>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" th:field="*{salary}" placeholder="Doe" required>
-                            <label>Salary</label>
-                            <span th:if="${#fields.hasErrors('salary')}" style="color: red" th:errors="*{salary}">
-                            Name Error
-                        </span>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" th:field="*{phone}" placeholder="Doe" required>
-                            <label>Phone</label>
-                            <span th:if="${#fields.hasErrors('phone')}" style="color: red" th:errors="*{phone}">
-                            Name Error
-                        </span>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" th:field="*{email}" placeholder="Doe" required>
-                            <label>Email</label>
-                            <span th:if="${#fields.hasErrors('email')}"  style="color: red" th:errors="*{email}">
-                            Name Error
-                        </span>
-                            <span  style="color: red" th:text="${error}"></span>
-                        </div>
-
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" th:field="*{address}" placeholder="Doe" required>
-                            <label>Address</label>
-                            <span th:if="${#fields.hasErrors('address')}"  style="color: red" th:errors="*{address}">
-                            Name Error
-                        </span>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <div>Division*</div>
-                            <select th:field="*{division.id}">
-                                <th:block th:each="division : ${divisions}">
-                                    <option th:value="${division.id}" th:text="${division.name}"></option>
-                                </th:block>
-                            </select>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <div>Postion*</div>
-                            <select th:field="*{position.id}">
-                                <th:block th:each="position : ${postions}">
-                                    <option th:value="${position.id}" th:text="${position.name}"></option>
+                            <div>TypeQuestion*</div>
+                            <select th:field="*{typeQuestion.id}">
+                                <th:block th:each="type : ${typeQuestions}">
+                                    <option th:value="${type.id}" th:text="${type.name}"></option>
                                 </th:block>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <div>Level*</div>
-                            <select th:field="*{level.id}">
-                                <th:block th:each="level : ${levels}">
-                                    <option th:value="${level.id}" th:text="${level.level}"></option>
-                                </th:block>
-                            </select>
+                            <input type="date" class="form-control" th:field="*{dayPost}" placeholder="Doe"
+                                   required>
+                            <label>DayPost</label>
+                            <span th:if="${#fields.hasErrors('dayPost')}" style="color: red"
+                                  th:errors="*{dayPost}">
+                            Name Error
+                        </span>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+
+                         <span> <select th:field="*{status}">
+                                <option th:value="Waiting" th:text="Waiting"></option>
+                                <option th:value="Responded" th:text="Responded "></option>
+                            </select></span>
+                            <label>Status</label>
                         </div>
                     </div>
                 </div>
-
                 <div class="text-right">
                     <input type="submit" style="width: 100px;height: 50px" class=" btn btn-get"
                            value="Create Now!"></input>

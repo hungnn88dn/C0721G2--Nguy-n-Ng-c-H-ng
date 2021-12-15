@@ -50,4 +50,8 @@ public class CinemaService  implements ICinameService {
     public Page<Cinema> findAllCinemaByFilmID(int id, Pageable pageable) {
         return this.cinemaRepository.findAllCinemaByFilmId(id,pageable);
     }
+
+    public boolean existsByShowCode(String showCode) {
+      return    this.cinemaRepository.existsByShowCode(showCode);
+    }
 }

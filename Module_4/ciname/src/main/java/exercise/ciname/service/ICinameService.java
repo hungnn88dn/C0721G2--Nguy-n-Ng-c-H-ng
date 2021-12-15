@@ -18,5 +18,6 @@ public interface ICinameService {
     void deleteById(int id);
     public Page<Cinema> findAllCinema(Pageable pageable);
     public Page<Cinema> findAllCinemaByFilmID(int id,Pageable pageable);
+    boolean existsByShowCode(String showCode);
 
 }
