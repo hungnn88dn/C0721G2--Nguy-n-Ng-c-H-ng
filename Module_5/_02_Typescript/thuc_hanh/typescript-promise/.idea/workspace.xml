@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="97030069-cc94-409b-b56e-577e4fcf20f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../typescript-is-shape/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-shape/src/IArea.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-shape/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-shape/src/rectangle.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-shape/src/shape.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../typescript-is-shape/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_4/_02_Spring_Controller/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_4/_02_Spring_Controller/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_4/_05_ORM/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_4/_05_ORM/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_4/_06_JPA_Hibernate/thuc_hanh/spring-jpa-stored-procedure" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_4/_06_JPA_Hibernate/thuc_hanh/spring-jpa-stored-procedure" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_4/_07_Spring_Boot/thuc_hanh/thuc_hanh_1" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_4/_07_Spring_Boot/thuc_hanh/thuc_hanh_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_4/_07_Spring_Boot/thuc_hanh/thuc_hanh_2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_4/_07_Spring_Boot/thuc_hanh/thuc_hanh_2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_4/_08_Validation/thuc_hanh/spring-custom-phone-validate" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_4/_08_Validation/thuc_hanh/spring-custom-phone-validate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Module_4/_09_AOP/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module_4/_09_AOP/thuc_hanh/customer-management" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="package.json" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="22Lwc5HeIqWccmK10AQYRdP2EPu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bai_tap/typescript-is-fibonacci" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\C0721G2--Nguy-n-Ng-c-H-ng\Module_5\_02_Typescript\thuc_hanh\typescript-promise\node_modules\typescript\lib" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="97030069-cc94-409b-b56e-577e4fcf20f9" name="Default Changelist" comment="" />
+      <created>1639630252010</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639630252010</updated>
+      <workItem from="1639630253173" duration="1810000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="721" y="278" key="FileChooserDialogImpl" timestamp="1639644452809">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="721" y="278" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1639644452809" />
+  </component>
+</project>
