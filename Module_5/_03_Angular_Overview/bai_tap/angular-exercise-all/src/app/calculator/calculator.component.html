@@ -1,0 +1,13 @@
+<div>
+  <label>Enter a:</label>
+  <input type="number" [(ngModel)]="a">
+</div>
+<div>
+  <label>Enter b:</label>
+  <input type="number"  [(ngModel)]="b">
+</div>
+<button (click)="add()" >Add</button>
+<button (click)="sub()" >Sub</button>
+<button (click)="mul()" >Mul</button>
+<button (click)="div()" >Div</button>
+<div>{{result}}</div>
