@@ -1,0 +1,23 @@
+<form [formGroup]="login" (ngSubmit)="onSubmit()">
+
+  <p>
+    <label for="email">Email </label>
+    <input type="text" id="email" name="email" formControlName="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+    <span *ngIf="login.controls.email.errors?.pattern" style="color: red" >Emai sai dinh dang</span>
+    <span *ngIf="login.controls.email.touched && login.controls.email.errors.required " style="color: red">Email required</span>
+  </p>
+
+  <p>
+    <label for="password">Password </label>
+    <input type="password" id="password" name="password" formControlName="password" minlength="6">
+    <span *ngIf="login.controls.password.touched && login.controls.password.errors?.required " style="color: red">Password required</span>
+    <span *ngIf="login.controls.password.errors?.login" style="color: red" >Password it nhat 6 ki tu</span>
+  </p>
+  <p>
+    <button type="submit">Submit</button>
+  </p>
+</form>
+
+
+
+
