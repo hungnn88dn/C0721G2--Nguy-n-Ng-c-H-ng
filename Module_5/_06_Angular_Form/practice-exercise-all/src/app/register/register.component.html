@@ -3,37 +3,37 @@
   <p>
     <label for="email">Email </label>
     <input type="text" id="email" name="email" formControlName="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
-    <span *ngIf="register.controls.email.errors?.pattern" style="color: red" >Emai sai dinh dang</span>
+    <span *ngIf="register.controls.email.errors?.pattern" style="color: red">Emai sai dinh dang</span>
     <span *ngIf="register.controls.email.touched && register.controls.email.errors.required " style="color: red">Email required</span>
   </p>
-
-  <p>
-    <label for="password">Password </label>
-    <input type="password" id="password" name="password" formControlName="password" minlength="6">
-    <span *ngIf="register.controls.password.touched && register.controls.password.errors?.required " style="color: red">Password required</span>
-    <span *ngIf="register.controls.password.errors?.minlength" style="color: red" >Password it nhat 6 ki tu</span>
-  </p>
-
-  <p>
-    <label for="confirmPassword">Comfirm Password </label>
-    <input type="password" id="confirmPassword" name="email" formControlName="confirmPassword" pattern="{{register.controls.password.value}}" minlength="6">
-    <span *ngIf="register.controls.confirmPassword.touched && register.controls.confirmPassword.errors?.required " style="color: red">Password required</span>
-    <span *ngIf="register.controls.confirmPassword.errors?.minlength" style="color: red" >Password it nhat 6 ki tu</span>
-    <span *ngIf="register.controls.confirmPassword.errors?.pattern" style="color: red" >Mat khau khong trung nhau</span>
-  </p>
+  <div formGroupName="passwordGroup">
+    <p>
+      <label for="password">Password </label>
+      <input type="password" id="password" name="password" formControlName="password" minlength="6">
+          <span *ngIf="password.touched && password.errors?.required " style="color: red">Password required</span>
+          <span *ngIf="password.errors?.minlength" style="color: red" >Password it nhat 6 ki tu</span>
+    </p>
+    <p>
+      <label for="passwordConfirm">Comfirm Password </label>
+      <input type="password" id="passwordConfirm" name="passwordConfirm" formControlName="passwordConfirm" minlength="6">
+          <span *ngIf="passwordConfirm.touched && passwordConfirm.errors?.required " style="color: red">Password required</span>
+          <span *ngIf="passwordConfirm.errors?.minlength" style="color: red" >Password it nhat 6 ki tu</span>
+    </p>
+    <div *ngIf="passwordGroup.errors?.passnotmatch" style="color: red">Mat khau khong trung nhau</div>
+  </div>
 
   <p>
     <label for="country">Country </label>
-    <select id="country" name="country"  formControlName="country">
-      <option [ngValue]="c.id" *ngFor="let c of countryList" >
-            {{c.name}}
+    <select id="country" name="country" formControlName="country">
+      <option [ngValue]="c.id" *ngFor="let c of countryList">
+        {{c.name}}
       </option>
     </select>
   </p>
   <p>
     <label for="age">Age </label>
     <input type="number" id="age" name="age" formControlName="age" min="18">
-    <span *ngIf="register.controls.age.errors?.min" style="color: red" >Khong du 18 tuoi</span>
+    <span *ngIf="register.controls.age.errors?.min" style="color: red">Khong du 18 tuoi</span>
   </p>
   <p>0
     <label for="gender">Gender </label>
