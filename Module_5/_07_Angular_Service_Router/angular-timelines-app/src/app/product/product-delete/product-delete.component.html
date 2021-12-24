@@ -1,0 +1,26 @@
+<h1>Bạn muốn xoá sản phẩm</h1>
+<form (ngSubmit)="submit()" >
+  <table>
+    <tr>
+      <td>ID</td>
+      <td>{{deleteProduct.id}}</td>
+    </tr>
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td>{{deleteProduct.name}}</td>
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td>{{deleteProduct.price}} </td>
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td>{{deleteProduct.description}}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Xoá</button></td>
+    </tr>
+  </table>
+</form>
+

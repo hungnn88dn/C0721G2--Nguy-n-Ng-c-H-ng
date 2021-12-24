@@ -42,4 +42,10 @@ export class ProductService {
   saveProduct(product) {
     this.products.push(product);
   }
+  findProductById(id: number) {
+    return this.products[id];
+  }
+  deleteProductById(id: number){
+    return this.products.splice(id, 1);
+  }
 }

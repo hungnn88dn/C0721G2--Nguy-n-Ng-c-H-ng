@@ -1,0 +1,25 @@
+<h1>Cập nhật sản phẩm</h1>
+<form [formGroup]="productForm" (ngSubmit)="submit(productForm)">
+  <table>
+    <tr>
+      <td>ID</td>
+      <td><input type="text" formControlName="id" [ngModel]="editProduct.id"></td>
+    </tr>
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td><input type="text" formControlName="name" [ngModel]="editProduct.name"></td>
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td><input type="number" formControlName="price" [ngModel]="editProduct.price" ></td>
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td><input type="text" formControlName="description" [ngModel]="editProduct.description"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Cập nhật</button></td>
+    </tr>
+  </table>
+</form>

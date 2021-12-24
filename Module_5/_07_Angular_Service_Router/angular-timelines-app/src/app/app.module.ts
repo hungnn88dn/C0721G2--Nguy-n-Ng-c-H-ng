@@ -8,9 +8,11 @@ import { YoutubePlaylistComponent } from './youtube-playlist/youtube-playlist.co
 import { YoutubePlayerComponent } from './youtube-player/youtube-player.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DictionaryComponent } from './dictionary/dictionary.component';
 import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
@@ -21,13 +23,16 @@ import { DictionaryDetailComponent } from './dictionary-detail/dictionary-detail
     ProductListComponent,
     ProductCreateComponent,
     DictionaryComponent,
-    DictionaryDetailComponent
+    DictionaryDetailComponent,
+    ProductEditComponent,
+    ProductDeleteComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        ReactiveFormsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

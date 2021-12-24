@@ -2,14 +2,19 @@
 <table>
   <tr>
     <td>STT</td>
+    <td>ID</td>
     <td>Tên</td>
     <td>Giá</td>
     <td>Mô tả</td>
+    <td>Sửa</td>
   </tr>
   <tr *ngFor="let product of products; index as i">
     <td>{{i + 1}}</td>
+    <td>{{product.id}}</td>
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
+    <td><a [routerLink]="['/product/edit', i]" >Sửa</a></td>
+    <td><a [routerLink]="['/product/delete', i]" >Xoá</a></td>
   </tr>
 </table>

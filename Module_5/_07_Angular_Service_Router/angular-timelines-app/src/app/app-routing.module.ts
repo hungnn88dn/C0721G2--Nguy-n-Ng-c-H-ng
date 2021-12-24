@@ -8,6 +8,8 @@ import {ProductListComponent} from './product/product-list/product-list.componen
 import {ProductCreateComponent} from './product/product-create/product-create.component';
 import {DictionaryComponent} from './dictionary/dictionary.component';
 import {DictionaryDetailComponent} from './dictionary-detail/dictionary-detail.component';
+import {ProductEditComponent} from './product/product-edit/product-edit.component';
+import {ProductDeleteComponent} from './product/product-delete/product-delete.component';
 
 const routes: Routes = [
   {
@@ -38,6 +40,14 @@ const routes: Routes = [
   {
     path: 'dictionary/detail/:index',
     component: DictionaryDetailComponent
+  },
+  {
+    path: 'product/edit/:index',
+    component: ProductEditComponent
+  },
+  {
+    path: 'product/delete/:index',
+    component: ProductDeleteComponent
   }
 ];
 
