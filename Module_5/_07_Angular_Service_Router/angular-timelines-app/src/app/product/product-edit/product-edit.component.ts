@@ -19,6 +19,8 @@ export class ProductEditComponent implements OnInit {
     price: new FormControl(),
     description: new FormControl(),
   });
+  id: number;
+  indexEdit: number;
 
   constructor(private activatedRoute: ActivatedRoute, private productService: ProductService) {
   }
@@ -28,10 +30,9 @@ export class ProductEditComponent implements OnInit {
     this.editProduct = this.productService.findProductById(indexEdit);
   }
 
+
   submit(productForm: FormGroup) {
-    let indexEdit = this.activatedRoute.snapshot.params['index'];
-    this.editProduct = productForm.value;
-    console.log(this.editProduct.id);
-    this.productService.products[indexEdit] = this.editProduct;
+      this.editProduct = productForm.value;
+    this.productService.updateProduct(this.editProduct.id, this.editProduct);
   }
 }

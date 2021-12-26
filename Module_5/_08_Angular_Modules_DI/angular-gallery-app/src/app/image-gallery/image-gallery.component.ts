@@ -15,7 +15,6 @@ export class ImageGalleryComponent implements OnInit {
   ];
   itemWidth: number;
   config = 4;
-
   constructor(
     @Inject(GalleryConfig)
     @Optional()
