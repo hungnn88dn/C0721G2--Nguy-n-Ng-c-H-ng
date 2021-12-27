@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<style>
+  *{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  .container{
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header{
+    background-color: #cccccc;
+    min-height: 70px;
+    padding: 15px;
+  }
+  main{
+    background-color: #dddddd;
+    min-height: 300px;
+    padding: 7.5px 15px;
+  }
+  footer{
+    background-color: #cccccc;
+    min-height: 70px;
+    padding: 15px;
+  }
+  h1{
+    color: #009999;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .register-form{
+    width: 100%;
+    max-width: 550px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 2px dotted #cccccc;
+    border-radius: 10px;
+  }
+
+  .input-box{
+    margin-bottom: 10px;
+  }
+  .input-box input[type='text'],
+  .input-box input[type='password'],
+  .input-box input[type='date']{
+    padding: 7.5px 15px;
+    width: 400px;
+    border: 1px solid #cccccc;
+    outline: none;
+    font-size: 16px;
+    display: inline-block;
+    height: 40px;
+    color: #666666;
+  }
+  .input-box select{
+    padding: 7.5px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+    font-size: 16px;
+    display: inline-block;
+    height: 40px;
+    color: #666666;
+  }
+  .input-box option{
+    font-size: 16px;
+  }
+  .input-box input[type='checkbox']{
+    height: 1.5em;
+    width: 1.5em;
+    vertical-align: middle;
+    line-height: 2em;
+  }
+  .input-box textarea{
+    padding: 7.5px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+    font-size: 16px;
+    min-height: 120px;
+    color: #666666;
+  }
+  .btn-box{
+    text-align: right;
+    margin-top: 30px;
+  }
+  .btn-box button{
+    padding: 7.5px 15px;
+    border-radius: 2px;
+    background-color: #009999;
+    color: #ffffff;
+    border: none;
+    outline: none;
+  }
+  input[type=text]:focus {
+    background-color: lightblue;
+  }
+</style>
+<head>
+  <title>Create new Employee </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<main>
+  <div class="container">
+    <div class="register-form" >
+      <form [formGroup]="employeeForm" (ngSubmit)="onSubmit(employeeForm)">
+        <h1>Create New Employee</h1>
+        <table>
+          <tr class="input-box">
+            <label for="name">Name </label>
+          </tr>
+          <tr class="input-box">
+            <input type="text" id="name" name="name" formControlName="name" pattern="^[A-Z]\w+(\s[A-Z]\w+)+">
+          </tr>
+          <tr>
+            <td *ngIf="employeeForm.controls.name.errors?.pattern" style="color: red" >Ten Sai Dinh Dang</td>
+            <td *ngIf="employeeForm.controls.name.touched && employeeForm.controls.name.errors.required "
+                style="color: red" >Vui Long Nhap Ten</td>
+          </tr>
+          <tr class="input-box">
+          <label for="age">Age </label><br>
+        </tr>
+          <tr class="input-box">
+            <input type="date" id="age" name="age" formControlName="age" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+          </tr>
+<!--          <tr>-->
+<!--            <th></th>-->
+<!--            <mat-form-field>-->
+<!--              <input matInput [matDatepicker]="picker" placeholder="Choose a date">-->
+<!--              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+<!--              <mat-datepicker #picker></mat-datepicker>-->
+<!--            </mat-form-field>-->
+<!--          </tr>-->
+          <tr class="input-box">
+            <label for="cmnd">CMND </label>
+          </tr>
+          <tr class="input-box">
+            <input type="text" id="cmnd" name="cmnd" formControlName="cmnd" pattern="\d{9}">
+          </tr>
+          <tr>
+            <td *ngIf="employeeForm.controls.cmnd.errors?.pattern" style="color: red" >CNND phai 9 so</td>
+            <td *ngIf="employeeForm.controls.cmnd.touched && employeeForm.controls.cmnd.errors.required "
+                style="color: red" >Vui Long Nhap CMND</td>
+          </tr>
+          <tr class="input-box">
+            <label for="salary">Salary </label>
+          </tr>
+          <tr class="input-box">
+            <input type="text" id="salary" name="salary" formControlName="salary" pattern="\d+">
+          </tr>
+          <tr>
+            <td *ngIf="employeeForm.controls.salary.errors?.pattern" style="color: red" >Luong khong the be hon 0</td>
+            <td *ngIf="employeeForm.controls.salary.touched && employeeForm.controls.salary.errors.required "
+                style="color: red" >Vui Long Nhap So Luong</td>
+          </tr>
+          <tr class="input-box">
+            <label for="phone">Phone </label>
+          </tr>
+          <tr>
+          <tr class="input-box">
+            <input type="text" id="phone" name="phone" formControlName="phone" pattern="^0\d{9,10}$">
+          </tr>
+          <tr>
+            <td *ngIf="employeeForm.controls.phone.errors?.pattern" style="color: red" >So dien thoai sai dinh dang (10 den 11 so)</td>
+            <td *ngIf="employeeForm.controls.phone.touched && employeeForm.controls.phone.errors.required "
+                style="color: red" >Vui Long Nhap So Dien Thoai</td>
+          </tr>
+          <tr class="input-box">
+            <label for="email">Email </label>
+          </tr>
+          <tr class="input-box">
+            <input type="text" id="email" name="email" formControlName="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
+          </tr>
+          <tr>
+            <td *ngIf="employeeForm.controls.email.errors?.pattern" style="color: red" >Email phai dung dinh dang abc@xyz.com</td>
+            <td *ngIf="employeeForm.controls.email.touched && employeeForm.controls.email.errors.required "
+                style="color: red" >Vui Long Nhap Email</td>
+          </tr>
+          <tr class="input-box">
+            <label for="address">Address </label>
+          </tr >
+          <tr class="input-box">
+            <input type="text" id="address" name="address" formControlName="address" >
+          </tr >
+          <tr>
+            <td *ngIf="employeeForm.controls.address.touched && employeeForm.controls.address.errors.required "
+                style="color: red" >Vui Long Nhap Dia Chi</td>
+          </tr>
+          <tr class="input-box">
+            <label for="username">Username </label>
+          </tr >
+          <tr class="input-box">
+            <input type="text" id="username" name="username" formControlName="username" >
+          </tr >
+          <tr>
+            <td *ngIf="employeeForm.controls.username.touched && employeeForm.controls.username.errors.required "
+                style="color: red" >Vui Long Nhap UserName</td>
+          </tr>
+          <tr class="input-box">
+            <th>Position</th>
+          </tr>
+          <tr>
+            <td>
+              <select id="position" name="position" formControlName="position">
+                <option [ngValue]="position.name" *ngFor="let position of positionList">
+                  {{position.name}}
+                </option>
+              </select></td>
+          </tr>
+          <tr class="input-box">
+            <th>Level</th>
+          </tr>
+          <tr>
+            <td>
+              <select id="level" name="level" formControlName="level">
+                <option [ngValue]="level.name" *ngFor="let level of levelList">
+                  {{level.name}}
+                </option>
+              </select></td>
+          </tr>
+          <tr class="input-box">
+            <th>Division</th>
+          </tr>
+          <tr>
+            <td>
+              <select id="division" name="division" formControlName="division">
+                <option [ngValue]="division.name" *ngFor="let division of divisionList">
+                  {{division.name}}
+                </option>
+              </select></td>
+          </tr>
+        </table>
+
+        <div class="btn-box">
+          <button type="submit">
+            Create
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>

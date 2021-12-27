@@ -1,0 +1,98 @@
+{
+  "employees": [
+    {
+      "name": "Nguyen Van",
+      "age": "2000-10-02",
+      "cmnd": "123456788",
+      "salary": "300",
+      "phone": "0911111112",
+      "email": "b@gmail.com",
+      "address": "Hue",
+      "position": "Le Tan",
+      "level": "Dai Hoc",
+      "division": "Sale-Marketing",
+      "username": "a@gmail.com",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "Nguyen Van C",
+      "age": "2000-09-01",
+      "cmnd": "123456785",
+      "salary": "5000",
+      "phone": "0911111115",
+      "email": "c@gmail.com",
+      "address": "Quang Nam",
+      "position": "Chuyen Vien",
+      "level": "Dai Hoc",
+      "division": "Sale-Marketing",
+      "username": "c@gmail.com"
+    },
+    {
+      "name": "Nguyen Van D",
+      "age": "2000-10-05",
+      "cmnd": "123456777",
+      "salary": "4000",
+      "phone": "0911112211",
+      "email": "d@gmail.com",
+      "address": "Da Nang",
+      "position": "Phuc Vu",
+      "level": "Cao Dang",
+      "division": "Sale-Marketing",
+      "username": "a@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "Do Dai Hoc",
+      "age": "2021-11-30",
+      "cmnd": "112345678",
+      "salary": "2000",
+      "phone": "0938655065",
+      "email": "hungnn@gmail.com",
+      "address": "Da Nang",
+      "position": "Phu Vu",
+      "level": "Trung Cap",
+      "division": "Hanh Chinh",
+      "username": "hungnn@gmail.com",
+      "id": 10
+    },
+    {
+      "name": "Dam Vinh Hung",
+      "age": "2021-12-13",
+      "cmnd": "112345678",
+      "salary": "200044",
+      "phone": "0938655065",
+      "email": "hoc1@gmail.com",
+      "address": "Da Nang",
+      "position": "Le Tan",
+      "level": "Cao Dang",
+      "division": "Hanh Chinh",
+      "username": "hungnn@gmail.com",
+      "id": 11
+    },
+    {
+      "name": "Ta Thi Ai Nhung",
+      "age": "2021-12-05",
+      "cmnd": "198765432",
+      "salary": "2000",
+      "phone": "0938655065",
+      "email": "hungnn@gmail.com",
+      "address": "Da Nang",
+      "position": "Le Tan",
+      "level": "Cao Dang",
+      "division": "Hanh Chinh",
+      "username": "hungnn@gmail.com",
+      "id": 12
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "services": {
+    "name": "typicode"
+  }
+}
